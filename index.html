@@ -24,7 +24,8 @@
       position: relative;
       height: 100vh;
       width: 100%;
-      background: url('images/title.png') no-repeat center center/cover;
+      background: url('images/title.png') no-repeat center center/contain;
+      background-color: #111;
     }
 
     /* Fade overlay */
@@ -36,16 +37,11 @@
       background: linear-gradient(to bottom, rgba(0,0,0,0), #111);
     }
 
-    /* Navigation section */
+    /* Main content */
     .content {
       text-align: center;
       padding: 60px 20px;
       background: #111;
-    }
-
-    h1 {
-      margin-bottom: 30px;
-      font-size: 2.5rem;
     }
 
     .links {
@@ -53,6 +49,7 @@
       justify-content: center;
       gap: 30px;
       flex-wrap: wrap;
+      margin-bottom: 50px;
     }
 
     .links a {
@@ -70,30 +67,202 @@
       color: black;
     }
 
-    /* Smooth scroll behavior */
+    .about-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+
+    .about-card {
+      background: #181818;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .about-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+      color: white;
+    }
+
+    .about-card p {
+      color: #ccc;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .features-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+
+    .features-list li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 10px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .features-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 1;
+        top: 2px;
+    }
+
+    .footer {
+      background: #0a0a0a;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-top: 40px;
+    }
+
+    .footer p {
+      margin-bottom: 10px;
+    }
+
     html {
       scroll-behavior: smooth;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        height: 70vh;
+      }
+
+      .about-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .about-card {
+        padding: 20px;
+      }
+
+      .links a {
+        font-size: 1rem;
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Title Image Section -->
   <section class="hero">
     <div class="fade"></div>
   </section>
 
-  <!-- Main Content -->
   <section class="content">
-    <h1>Your Pokémon Game</h1>
-
     <div class="links">
       <a href="downloads.html">Downloads</a>
       <a href="info.html">Game Info</a>
-      <a href="https://discord.gg/YOUR_LINK" target="_blank">Join Discord</a>
+      <a href="https://discord.gg/pavpnHGPYh" target="_blank" rel="noopener noreferrer">Discord</a>
     </div>
+
+    <section class="about-section">
+      <h2>About Pokémon Copper</h2>
+
+      <div class="about-card">
+        <h3>Background</h3>
+        <p>
+          Pokémon Copper is a fan-made Pokémon game created using Pokémon Essentials v21.1.
+          The game takes place in the Azori Region, a region inspired by the U.S. state of Arizona.
+        </p>
+        <p>
+          While the Azori Region uses the familiar route structure of traditional Pokémon games,
+          it introduces a more open progression system. After the first gym, players are free to
+          challenge the remaining gyms and experience much of the story in the order they choose.
+        </p>
+        <p>
+          Trainers and wild Pokémon scale with the player as they progress, with a few special
+          exceptions, allowing for a more flexible and personalized adventure.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>Pokémon</h3>
+        <p>
+          The Azori Region features 113 brand-new Pokémon, 10 regional variants, 10 new Mega
+          Evolutions for returning Pokémon, and 12 Mega Evolutions for new Azori Pokémon.
+        </p>
+        <p>
+          The game also includes 47 new moves, some of which are exclusive to the new Pokémon,
+          along with 10 new abilities.
+        </p>
+        <p>
+          The Azori Pokédex contains a total of 500 Pokémon, combining both new and returning
+          species. There are also rewards for completing the Pokédex, so there is plenty of reason
+          to catch as many Pokémon as possible.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>The Story</h3>
+        <p>
+          Pokémon Copper features a full Pokémon-style story. The player begins in their hometown
+          of Terah Town, receives their starter Pokémon from Professor Verde, meets their rival,
+          Ewan, and then sets out on a journey to collect all 8 gym badges.
+        </p>
+        <p>
+          Along the way, the player must also deal with a criminal organization known as Team Eclipse.
+          After earning all 8 gym badges, the player enters the Horizon Cup tournament, where they
+          compete alongside 8 other trainers for the title of Champion.
+        </p>
+        <p>
+          Once that title is earned, the player gains the right to face the Elite 4 and the Pokémon
+          League Champion. The game also includes smaller post-game story events involving two new
+          Mythical Pokémon and the newly constructed Azori Terrarium, where players can catch the
+          remaining Pokémon not found in the base game.
+        </p>
+      </div>
+
+        <div class="about-card">
+        <h3>Features</h3>
+        <ul class="features-list">
+            <li>113 New Pokémon</li>
+            <li>10 New Regional Variants</li>
+            <li>10 New Mega Evolutions for returning Pokémon</li>
+            <li>12 Mega Evolutions for Azori Pokémon</li>
+            <li>Regional Dex with 500 total Pokémon</li>
+            <li>Open-world progression</li>
+            <li>Custom day/night cycle</li>
+            <li>Full Pokémon-style story and post-game content</li>
+            <li>Level scaling for trainers and wild Pokémon based on badge count and party levels</li>
+            <li>Light character customization</li>
+            <li>Autosave</li>
+            <li>In-depth Pokédex information, including evolution methods</li>
+            <li>EXP All and EXP Candies in Poké Marts to reduce grinding</li>
+            <li>PokéSummons that replace HMs</li>
+        </ul>
+        </div>
+    </section>
   </section>
 
+  <footer class="footer">
+    <p>
+      Pokémon Copper is a fan-made project and is not affiliated with, endorsed, sponsored, or specifically approved by Nintendo, Game Freak, or The Pokémon Company.
+    </p>
+    <p>
+      Pokémon and all related trademarks, names, and characters are © Nintendo, Game Freak, and The Pokémon Company.
+    </p>
+    <p>
+      This game is distributed for free and no copyright infringement is intended.
+    </p>
+  </footer>
 </body>
 </html>

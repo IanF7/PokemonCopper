@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokémon Copper - Downloads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 20px 80px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      color: #aaa;
+      font-size: 1rem;
+    }
+
+    .nav {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .nav a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      margin: 0 8px 10px;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      background: white;
+      color: black;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid #333;
+      border-radius: 12px;
+      background: #181818;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+    }
+
+    thead {
+      background: #222;
+    }
+
+    th, td {
+      padding: 18px 16px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      border-right: 1px solid #333;
+    }
+
+    th:first-child,
+    td:first-child {
+      text-align: left;
+      font-weight: bold;
+      background: #1a1a1a;
+      min-width: 140px;
+    }
+
+    th:last-child,
+    td:last-child {
+      border-right: none;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .download-btn {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      border: 1px solid #666;
+      padding: 10px 14px;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .download-btn:hover {
+      background: white;
+      color: black;
+      border-color: white;
+    }
+
+    .unavailable {
+      color: #777;
+      font-style: italic;
+    }
+
+    .notes {
+      margin-top: 25px;
+      color: #aaa;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer {
+      background: #0a0a0a;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-top: 60px;
+    }
+
+    .footer p {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      th, td {
+        padding: 14px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+    <div class="header">
+      <h1>Downloads</h1>
+      <p>Download the latest version of Pokémon Copper for your platform.</p>
+    </div>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="info.html">Game Info</a>
+      <a href="https://discord.gg/pavpnHGPYh" target="_blank" rel="noopener noreferrer">Discord</a>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Windows</th>
+            <th>Mac</th>
+            <th>Linux</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>v1.0.0</td>
+            <td><a class="download-btn" href="downloads/pokemon-copper-v1.0.0-windows.zip">Download</a></td>
+            <td><span class="unavailable">Not available</span></td>
+            <td><span class="unavailable">Not available</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      Pokémon Copper is a fan-made project and is not affiliated with, endorsed, sponsored, or specifically approved by Nintendo, Game Freak, or The Pokémon Company.
+    </p>
+    <p>
+      Pokémon and all related trademarks, names, and characters are © Nintendo, Game Freak, and The Pokémon Company.
+    </p>
+    <p>
+      This game is distributed for free and no copyright infringement is intended.
+    </p>
+  </footer>
+
+</body>
+</html>
