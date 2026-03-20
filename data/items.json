@@ -1,0 +1,6754 @@
+[
+  {
+    "name": "Ability Capsule",
+    "id": "ABILITYCAPSULE",
+    "description": "A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.",
+    "locations": [
+      "Verde (Omno Town, Pokedex Reward)",
+      "Azori Terrarium",
+      "Trash Cans (20)"
+    ],
+    "namePlural": "Ability Capsule",
+    "pocket": "2",
+    "price": "10000",
+    "fieldUse": "OnPokemon"
+  },
+  {
+    "name": "Ability Patch",
+    "id": "ABILITYPATCH",
+    "description": "A patch that allows a Pokémon with a regular Ability to have a rare Ability.",
+    "locations": [
+      "Verde (Omno Town, Pokedex Reward)",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Ability Patches",
+    "pocket": "2",
+    "price": "10000",
+    "fieldUse": "OnPokemon"
+  },
+  {
+    "name": "Ability Shield",
+    "id": "ABILITYSHIELD",
+    "description": "An item to be held by a Pokémon. This  shield protects the holder from having its Ability changed by others.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Ability Shields",
+    "pocket": "1",
+    "price": "20000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Abomasite",
+    "id": "ABOMASITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Abomasnow hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 13"
+    ],
+    "namePlural": "Abomasites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Absolite",
+    "id": "ABSOLITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Absol hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 15"
+    ],
+    "namePlural": "Absolites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Absorb Bulb",
+    "id": "ABSORBBULB",
+    "description": "A consumable bulb. If the holder is hit by a Water-type move, its Sp. Atk will rise.",
+    "locations": [
+      "Route 11",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Absorb Bulbs",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Adamant Crystal",
+    "id": "ADAMANTCRYSTAL",
+    "description": "When held by Dialga, this large, glowing gem wells with power and allows the Pokémon to change form.",
+    "locations": [],
+    "namePlural": "Adamant Crystals",
+    "pocket": "1",
+    "price": "20000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Adamant Mint",
+    "id": "ADAMANTMINT",
+    "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Sp. Atk will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Adamant Mints",
+    "portionName": "sprig of Adamant Mint",
+    "portionNamePlural": "sprigs of Adamant Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Adamant Orb",
+    "id": "ADAMANTORB",
+    "description": "A brightly gleaming orb to be held by Dialga. It boosts the power of Dragon- and Steel-type moves.",
+    "locations": [],
+    "namePlural": "Adamant Orbs",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Adrenaline Orb",
+    "id": "ADRENALINEORB",
+    "description": "An item to be held by a Pokémon. It boosts Speed when intimidated. It can be used only once.",
+    "locations": [
+      "Route 7",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Adrenaline Orbs",
+    "pocket": "1",
+    "price": "300",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Aegislashite",
+    "id": "AEGISLASHITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Aegislash hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 16"
+    ],
+    "namePlural": "Aegislashites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Aerodactylite",
+    "id": "AERODACTYLITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Aerodactyl hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Aerodactylites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Aggronite",
+    "id": "AGGRONITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Aggron hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Seri Town Mine"
+    ],
+    "namePlural": "Aggronites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Aguav Berry",
+    "id": "AGUAVBERRY",
+    "description": "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Aguav Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_DRAGON_80"
+  },
+  {
+    "name": "Air Balloon",
+    "id": "AIRBALLOON",
+    "description": "An item to be held by a Pokémon. The holder will float in the air until hit. Once hit, this item will burst.",
+    "locations": [
+      "Rusanu City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Air Balloons",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Alakazite",
+    "id": "ALAKAZITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Alakazam hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 12"
+    ],
+    "namePlural": "Alakazites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Altarianite",
+    "id": "ALTARIANITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Altaria hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 19"
+    ],
+    "namePlural": "Altarianites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Ampharosite",
+    "id": "AMPHAROSITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Ampharos hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 11"
+    ],
+    "namePlural": "Ampharosites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Amulet Coin",
+    "id": "AMULETCOIN",
+    "description": "An item to be held by a Pokémon. It doubles a battle's prize money if the holding Pokémon joins in.",
+    "locations": [
+      "Verde (Omno Town, Pokedex Reward)"
+    ],
+    "namePlural": "Amulet Coins",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Ancient Bell",
+    "id": "ANCIENTBELL",
+    "description": "An old copper bell that has carvings of an desert oasis on it.",
+    "locations": [
+      "Verde (Omno Town, Pokedex Reward)"
+    ],
+    "namePlural": "Ancient Bell",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Antidote",
+    "id": "ANTIDOTE",
+    "description": "A spray-type medicine. It lifts the effect of poison from one Pokémon.",
+    "locations": [
+      "Pokemarts",
+      "Spiral Cave"
+    ],
+    "namePlural": "Antidotes",
+    "pocket": "2",
+    "price": "200",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Apicot Berry",
+    "id": "APICOTBERRY",
+    "description": "If held by a Pokémon, it raises its Sp. Def stat in a pinch.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Apicot Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_GROUND_100"
+  },
+  {
+    "name": "Aspear Berry",
+    "id": "ASPEARBERRY",
+    "description": "It may be used or held by a Pokémon to defrost it.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Aspear Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_ICE_80"
+  },
+  {
+    "name": "Assault Vest",
+    "id": "ASSAULTVEST",
+    "description": "An item to be held by a Pokémon. This offensive vest raises Sp. Def but prevents the use of status moves.",
+    "locations": [
+      "Victory Road",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Assault Vests",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Audinite",
+    "id": "AUDINITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Audino hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Audinites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Aurocite",
+    "id": "AUROCITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Aurocyx hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Verde (Omno Town or Verde (Omno Town, Pokedex Reward))"
+    ],
+    "namePlural": "Aurocites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Auspicious Armor",
+    "id": "AUSPICIOUSARMOR",
+    "description": "A peculiar set of armor that can make a certain Pokémon evolve. Auspicious wishes live within it.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Auspicious Armors",
+    "portionName": "set of Auspicious Armor",
+    "portionNamePlural": "sets of Auspicious Armor",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Awakening",
+    "id": "AWAKENING",
+    "description": "A spray-type medicine. It awakens a Pokémon from the clutches of sleep.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Awakenings",
+    "pocket": "2",
+    "price": "200",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Azure Ring",
+    "id": "AZURERING",
+    "description": "A ring made of Azordin's scales. It can be used to unlock the temple keeping Azordin sealed.",
+    "locations": [
+      "Agma (Tarsun City Post Game)"
+    ],
+    "namePlural": "Azure Rings",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Babiri Berry",
+    "id": "BABIRIBERRY",
+    "description": "Weakens a supereffective Steel-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Babiri Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_STEEL_80"
+  },
+  {
+    "name": "Bad Egg",
+    "id": "BADEGG",
+    "description": "An egg that overflows with malice. It is loved by a certain Pokémon.",
+    "locations": [
+      "Jepitur City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Bad Eggs",
+    "pocket": "1",
+    "price": "5000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Balm Mushroom",
+    "id": "BALMMUSHROOM",
+    "description": "A rare mushroom which gives off a nice fragrance. A maniac will buy it for a high price.",
+    "locations": [
+      "Nuves Forest",
+      "Route 13"
+    ],
+    "namePlural": "Balm Mushrooms",
+    "pocket": "1",
+    "price": "15000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Banettite",
+    "id": "BANETTITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Banette hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Kuiper Hs 3"
+    ],
+    "namePlural": "Banettites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Beast Ball",
+    "id": "BEASTBALL",
+    "description": "A special Poké Ball designed to catch Ultra Beasts. It has a low success rate for catching others.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Beast Balls",
+    "pocket": "3",
+    "price": "1000",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Beedrillite",
+    "id": "BEEDRILLITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Beedrill hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 11"
+    ],
+    "namePlural": "Beedrillites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Belue Berry",
+    "id": "BELUEBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Belue Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_ELECTRIC_100"
+  },
+  {
+    "name": "Berry Juice",
+    "id": "BERRYJUICE",
+    "description": "A 100% pure juice made of Berries. It restores the HP of one Pokémon by just 20 points.",
+    "locations": [
+      "Lake Triton",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Berry Juices",
+    "portionName": "cup of Berry Juice",
+    "portionNamePlural": "cups of Berry Juice",
+    "pocket": "2",
+    "price": "100",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Berry Sweet",
+    "id": "BERRYSWEET",
+    "description": "A berry-shaped sweet. When a Milcery holds this, it spins around happily.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Berry Sweets",
+    "pocket": "1",
+    "price": "500",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Bicycle",
+    "id": "BICYCLE",
+    "description": "A folding Bicycle that enables much faster movement than the Running Shoes.",
+    "locations": [
+      "Terah Town"
+    ],
+    "namePlural": "Bicycles",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Big Mushroom",
+    "id": "BIGMUSHROOM",
+    "description": "A large and rare mushroom. It is sought after by collectors.",
+    "locations": [
+      "Route 13"
+    ],
+    "namePlural": "Big Mushrooms",
+    "pocket": "1",
+    "price": "5000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Big Nugget",
+    "id": "BIGNUGGET",
+    "description": "A big nugget of pure gold that gives off a lustrous gleam. A maniac will buy it for a high price.",
+    "locations": [
+      "Route 12"
+    ],
+    "namePlural": "Big Nuggets",
+    "pocket": "1",
+    "price": "40000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Big Pearl",
+    "id": "BIGPEARL",
+    "description": "A quite-large pearl that sparkles in a pretty silver color. It can be sold at a high price to shops.",
+    "locations": [
+      "Lake Umbriel"
+    ],
+    "namePlural": "Big Pearls",
+    "pocket": "1",
+    "price": "8000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Big Root",
+    "id": "BIGROOT",
+    "description": "A Pokémon held item that boosts the power of HP-stealing moves to let the holder recover more HP.",
+    "locations": [
+      "Nuves Forest",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Big Roots",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Binding Band",
+    "id": "BINDINGBAND",
+    "description": "A band that increases the power of binding moves when held.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Binding Bands",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Black Augurite",
+    "id": "BLACKAUGURITE",
+    "description": "A glassy black stone that produces a sharp cutting edge when split. It’s loved by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Black Augurites",
+    "pocket": "1",
+    "price": "2100",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30,EvolutionStone"
+  },
+  {
+    "name": "Black Belt",
+    "id": "BLACKBELT",
+    "description": "An item to be held by a Pokémon. It is a belt that boosts determination and Fighting-type moves.",
+    "locations": [
+      "Route 19",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Black Belts",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Black Glasses",
+    "id": "BLACKGLASSES",
+    "description": "An item to be held by a Pokémon. It is a shady-looking pair of glasses that boosts Dark-type moves.",
+    "locations": [
+      "Route 18",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Black Glasses",
+    "portionName": "pair of Black Glasses",
+    "portionNamePlural": "pairs of Black Glasses",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Black Sludge",
+    "id": "BLACKSLUDGE",
+    "description": "A held item that gradually restores the HP of Poison-type Pokémon. It inflicts damage on all other types.",
+    "locations": [
+      "Jepitur City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Black Sludges",
+    "portionName": "blob of Black Sludge",
+    "portionNamePlural": "blobs of Black Sludge",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Blank Plate",
+    "id": "BLANKPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Normal-type moves.",
+    "locations": [],
+    "namePlural": "Blank Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90,Plate"
+  },
+  {
+    "name": "Blastoisinite",
+    "id": "BLASTOISINITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Blastoise hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Blastoisinites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Blazikenite",
+    "id": "BLAZIKENITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Blaziken hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Blazikenites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Blue Orb",
+    "id": "BLUEORB",
+    "description": "A shiny blue orb that is said to have a legend tied to it. It's known to be connected with the Hoenn region.",
+    "locations": [],
+    "namePlural": "Blue Orbs",
+    "pocket": "1",
+    "price": "10000"
+  },
+  {
+    "name": "Bluk Berry",
+    "id": "BLUKBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Bluk Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_FIRE_90"
+  },
+  {
+    "name": "Blunder Policy",
+    "id": "BLUNDERPOLICY",
+    "description": "Raises Speed sharply when a Pokémon misses with a move because of accuracy.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Blunder Policies",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Bold Mint",
+    "id": "BOLDMINT",
+    "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Attack will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Bold Mints",
+    "portionName": "sprig of Bold Mint",
+    "portionNamePlural": "sprigs of Bold Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Booster Energy",
+    "id": "BOOSTERENERGY",
+    "description": "An item to be held by Pokémon with certain Abilities. It boosts the strength of the Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Booster Energies",
+    "portionName": "capsule of Booster Energy",
+    "portionNamePlural": "capsules of Booster Energy",
+    "pocket": "1",
+    "price": "0",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Brave Mint",
+    "id": "BRAVEMINT",
+    "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Speed will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Brave Mints",
+    "portionName": "sprig of Brave Mint",
+    "portionNamePlural": "sprigs of Brave Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Bright Powder",
+    "id": "BRIGHTPOWDER",
+    "description": "An item to be held by a Pokémon. It casts a tricky glare that lowers the opponent's accuracy.",
+    "locations": [
+      "Route 12",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Bright Powders",
+    "portionName": "bag of Bright Powder",
+    "portionNamePlural": "bags of Bright Powder",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Bug Memory",
+    "id": "BUGMEMORY",
+    "description": "A memory disc containing Bug-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Bug Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Burn Drive",
+    "id": "BURNDRIVE",
+    "description": "A cassette to be held by Genesect. It changes Techno Blast to a Fire-type move.",
+    "locations": [],
+    "namePlural": "Burn Drives",
+    "pocket": "1",
+    "price": "0",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Burn Heal",
+    "id": "BURNHEAL",
+    "description": "A spray-type medicine. It heals a single Pokémon that is suffering from a burn.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Burn Heals",
+    "pocket": "2",
+    "price": "200",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Calcium",
+    "id": "CALCIUM",
+    "description": "A nutritious drink for Pokémon. It raises the base Sp. Atk (Special Attack) stat of a single Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "Calciums",
+    "portionName": "bottle of Calcium",
+    "portionNamePlural": "bottles of Calcium",
+    "pocket": "2",
+    "price": "10000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Calm Mint",
+    "id": "CALMMINT",
+    "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Attack will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Calm Mints",
+    "portionName": "sprig of Calm Mint",
+    "portionNamePlural": "sprigs of Calm Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Cameruptite",
+    "id": "CAMERUPTITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Camerupt hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 6"
+    ],
+    "namePlural": "Cameruptites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Carbos",
+    "id": "CARBOS",
+    "description": "A nutritious drink for Pokémon. It raises the base Speed stat of a single Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "Carbos",
+    "portionName": "bottle of Carbos",
+    "portionNamePlural": "bottles of Carbos",
+    "pocket": "2",
+    "price": "10000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Careful Mint",
+    "id": "CAREFULMINT",
+    "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Sp. Atk will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Careful Mints",
+    "portionName": "sprig of Careful Mint",
+    "portionNamePlural": "sprigs of Careful Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Catching Charm",
+    "id": "CATCHINGCHARM",
+    "description": "A charm said to increase the chance of getting a critical catch. The charm doesn't shake much.",
+    "locations": [
+      "Verde (Omno Town, Pokedex Reward)"
+    ],
+    "namePlural": "Catching Charms",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Cell Battery",
+    "id": "CELLBATTERY",
+    "description": "A consumable battery. If the holder is hit by an Electric-type move, its Attack will rise.",
+    "locations": [
+      "Jepitur House 5",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Cell Batteries",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Charcoal",
+    "id": "CHARCOAL",
+    "description": "An item to be held by a Pokémon. It is a combustible fuel that boosts the power of Fire-type moves.",
+    "locations": [
+      "Rasm City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Charcoals",
+    "portionName": "piece of Charcoal",
+    "portionNamePlural": "pieces of Charcoal",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Charizardite X",
+    "id": "CHARIZARDITEX",
+    "description": "One of a variety of mysterious Mega Stones. Have Charizard hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Charizardite Xs",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Charizardite Y",
+    "id": "CHARIZARDITEY",
+    "description": "One of a variety of mysterious Mega Stones. Have Charizard hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Charizardite Ys",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Charti Berry",
+    "id": "CHARTIBERRY",
+    "description": "Weakens a supereffective Rock-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Charti Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_ROCK_80"
+  },
+  {
+    "name": "Cheri Berry",
+    "id": "CHERIBERRY",
+    "description": "It may be used or held by a Pokémon to recover from paralysis.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Cheri Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_FIRE_80"
+  },
+  {
+    "name": "Cherish Ball",
+    "id": "CHERISHBALL",
+    "description": "A quite rare Poké Ball that has been specially crafted to commemorate an occasion of some sort.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Cherish Balls",
+    "pocket": "3",
+    "price": "0",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Chesto Berry",
+    "id": "CHESTOBERRY",
+    "description": "It may be used or held by a Pokémon to recover from sleep.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Chesto Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_WATER_80"
+  },
+  {
+    "name": "Chilan Berry",
+    "id": "CHILANBERRY",
+    "description": "Weakens a Normal-type attack against the Pokémon holding this berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Chilan Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_NORMAL_80"
+  },
+  {
+    "name": "Chill Drive",
+    "id": "CHILLDRIVE",
+    "description": "A cassette to be held by Genesect. It changes Techno Blast to an Ice-type move.",
+    "locations": [],
+    "namePlural": "Chill Drives",
+    "pocket": "1",
+    "price": "0",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Chipped Pot",
+    "id": "CHIPPEDPOT",
+    "description": "A peculiar chipped teapot that can make a certain species of Pokémon evolve. It makes delicious tea.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Chipped Pots",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_80"
+  },
+  {
+    "name": "Choice Band",
+    "id": "CHOICEBAND",
+    "description": "An item to be held by a Pokémon. This headband ups Attack, but allows the use of only one move.",
+    "locations": [
+      "Callisto Cave",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Choice Bands",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Choice Scarf",
+    "id": "CHOICESCARF",
+    "description": "An item to be held by a Pokémon. This scarf boosts Speed but allows the use of only one move.",
+    "locations": [
+      "Choice Scarf",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Choice Scarves",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Choice Specs",
+    "id": "CHOICESPECS",
+    "description": "An item to be held by a Pokémon. These curious glasses boost Sp. Atk but allows the use of only one move.",
+    "locations": [
+      "Statera Canyon 2",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Choice Specs",
+    "portionName": "pair of Choice Specs",
+    "portionNamePlural": "pairs of Choice Specs",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Chople Berry",
+    "id": "CHOPLEBERRY",
+    "description": "Weakens a supereffective Fighting-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Chople Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_FIGHTING_80"
+  },
+  {
+    "name": "Cleanse Tag",
+    "id": "CLEANSETAG",
+    "description": "An item to be held by a Pokémon. It helps keep wild Pokémon away if the holder is the first one in the party.",
+    "locations": [
+      "Route 16",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Cleanse Tags",
+    "pocket": "1",
+    "price": "5000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Clear Amulet",
+    "id": "CLEARAMULET",
+    "description": "An item to be held by a Pokémon. It protects the holder from having its stats lowered.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Clear Amulets",
+    "pocket": "1",
+    "price": "30000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Clover Sweet",
+    "id": "CLOVERSWEET",
+    "description": "A clover-shaped sweet. When a Milcery holds this, it spins around happily.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Clover Sweets",
+    "pocket": "1",
+    "price": "500",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Coba Berry",
+    "id": "COBABERRY",
+    "description": "Weakens a supereffective Flying-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Coba Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_FLYING_80"
+  },
+  {
+    "name": "Colbur Berry",
+    "id": "COLBURBERRY",
+    "description": "Weakens a supereffective Dark-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Colbur Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_DARK_80"
+  },
+  {
+    "name": "Comet Shard",
+    "id": "COMETSHARD",
+    "description": "A shard which fell to the ground when a comet approached. A maniac will buy it for a high price.",
+    "locations": [
+      "Spiral Cave",
+      "Penetun City"
+    ],
+    "namePlural": "Comet Shards",
+    "pocket": "1",
+    "price": "25000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Copper Ring",
+    "id": "COPPERRING",
+    "description": "A ring made of copper given to the Horizon Cup champion. It resembles the Azure and Crimson rings.",
+    "locations": [
+      "Horizon Cup Stadium"
+    ],
+    "namePlural": "Copper Rings",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Copper Scale",
+    "id": "COPPERSCALE",
+    "description": "A scale to be held by Coradios. It weakens incoming Dragon-, Fairy-, and Ice-type attacks.",
+    "locations": [
+      "Forgotten Temple"
+    ],
+    "namePlural": "Copper Scale",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Cornerstone Mask",
+    "id": "CORNERSTONEMASK",
+    "description": "A carved wooden mask to be held by Ogerpon. It allows Ogerpon to wield the Rock type during battle.",
+    "locations": [],
+    "namePlural": "Cornerstone Masks",
+    "pocket": "1",
+    "price": "0",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Cornn Berry",
+    "id": "CORNNBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Cornn Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_BUG_90"
+  },
+  {
+    "name": "Covert Cloak",
+    "id": "COVERTCLOAK",
+    "description": "An item to be held by a Pokémon. It conceals the holder, protecting it from move's additional effects.",
+    "locations": [
+      "Tulpo City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Covert Cloaks",
+    "pocket": "1",
+    "price": "20000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Cracked Pot",
+    "id": "CRACKEDPOT",
+    "description": "A peculiar cracked teapot that can make a certain species of Pokémon evolve. It makes delicious tea.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Cracked Pots",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_80"
+  },
+  {
+    "name": "Crimson Ring",
+    "id": "CRIMSONRING",
+    "description": "A ring made of Rokentro's scales. It can be used to unlock the temple keeping Rokentro sealed.",
+    "locations": [
+      "Agma (Tarsun City Post Game)"
+    ],
+    "namePlural": "Crimson Rings",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Crobatite",
+    "id": "CROBATITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Crobat hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Metis Cave"
+    ],
+    "namePlural": "Crobatites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Crustlite",
+    "id": "CRUSTLITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Crustle hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 14"
+    ],
+    "namePlural": "Crustlites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Custap Berry",
+    "id": "CUSTAPBERRY",
+    "description": "If held by a Pokémon, it gets to move first just once in a pinch.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Custap Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_GHOST_100"
+  },
+  {
+    "name": "Damp Rock",
+    "id": "DAMPROCK",
+    "description": "A Pokémon held item that extends the duration of the move Rain Dance used by the holder.",
+    "locations": [
+      "Route 13",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Damp Rocks",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Dark Memory",
+    "id": "DARKMEMORY",
+    "description": "A memory disc containing Dark-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Dark Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Dawn Stone",
+    "id": "DAWNSTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Dawn Stones",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_80"
+  },
+  {
+    "name": "Deep Sea Scale",
+    "id": "DEEPSEASCALE",
+    "description": "An item to be held by Clamperl. A scale that shines a faint pink, it raises the Sp. Def stat.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Deep Sea Scales",
+    "pocket": "1",
+    "price": "2000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Deep Sea Tooth",
+    "id": "DEEPSEATOOTH",
+    "description": "An item to be held by Clamperl. A fang that gleams a sharp silver, it raises the Sp. Atk stat.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Deep Sea Teeth",
+    "pocket": "1",
+    "price": "2000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Destiny Knot",
+    "id": "DESTINYKNOT",
+    "description": "A long, thin, bright-red string to be held by a Pokémon. If the holder becomes infatuated, so does the foe.",
+    "locations": [
+      "Kuiper Town",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Destiny Knots",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Diancite",
+    "id": "DIANCITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Diancie hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Diancites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Dire Hit",
+    "id": "DIREHIT",
+    "description": "An item that raises the critical-hit ratio greatly. It wears off if the Pokémon is withdrawn.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "Dire Hits",
+    "pocket": "7",
+    "price": "1000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Dive Ball",
+    "id": "DIVEBALL",
+    "description": "A somewhat different Poké Ball that works especially well on Pokémon that live underwater.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Dive Balls",
+    "pocket": "3",
+    "price": "1000",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "DNA Splicers",
+    "id": "DNASPLICERSUSED",
+    "description": "A splicer that separates Kyurem and a certain Pokémon when they have been fused.",
+    "locations": [],
+    "namePlural": "DNA Splicers",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Douse Drive",
+    "id": "DOUSEDRIVE",
+    "description": "A cassette to be held by Genesect. It changes Techno Blast to a Water-type move.",
+    "locations": [],
+    "namePlural": "Douse Drives",
+    "pocket": "1",
+    "price": "0",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Draco Plate",
+    "id": "DRACOPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Dragon-type moves.",
+    "locations": [],
+    "namePlural": "Draco Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Dragon Fang",
+    "id": "DRAGONFANG",
+    "description": "An item to be held by a Pokémon. It is a hard and sharp fang that ups the power of Dragon-type moves.",
+    "locations": [
+      "Statera Canyon 2",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Dragon Fangs",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Dragon Memory",
+    "id": "DRAGONMEMORY",
+    "description": "A memory disc containing Dragon-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Dragon Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Dragon Scale",
+    "id": "DRAGONSCALE",
+    "description": "A thick and tough scale. Dragon-type Pokémon may be holding this item when caught.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Dragon Scales",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Dread Plate",
+    "id": "DREADPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Dark-type moves.",
+    "locations": [],
+    "namePlural": "Dread Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Dream Ball",
+    "id": "DREAMBALL",
+    "description": "A somewhat different Poké Ball that makes it easier to catch wild Pokémon while they're asleep.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Dream Balls",
+    "pocket": "3",
+    "price": "300",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Druddigon Summon",
+    "id": "ROCKCLIMBITEM",
+    "description": "This can be used to summon an Druddigon that can carry you up sharp cliffs.",
+    "locations": [
+      "Tarsun City"
+    ],
+    "namePlural": "Druddigon Summon",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Dubious Disc",
+    "id": "DUBIOUSDISC",
+    "description": "A transparent device overflowing with dubious data.  Its producer is unknown.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Dubious Discs",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Durin Berry",
+    "id": "DURINBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Durin Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_WATER_100"
+  },
+  {
+    "name": "Dusk Ball",
+    "id": "DUSKBALL",
+    "description": "A somewhat different Poké Ball that makes it easier to catch wild Pokémon at night or in dark places like caves.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Dusk Balls",
+    "pocket": "3",
+    "price": "1000",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Dusk Stone",
+    "id": "DUSKSTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It is as dark as dark can be.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Dusk Stones",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_80"
+  },
+  {
+    "name": "Dvarmite",
+    "id": "DVARMITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Dvarmith hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Stormhelm Cave"
+    ],
+    "namePlural": "Dvarmites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Earth Plate",
+    "id": "EARTHPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Ground-type moves.",
+    "locations": [],
+    "namePlural": "Earth Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Eject Button",
+    "id": "EJECTBUTTON",
+    "description": "If the holder is hit by an attack, it will switch with another Pokémon in your party.",
+    "locations": [
+      "Tarsun House 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Eject Buttons",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Eject Pack",
+    "id": "EJECTPACK",
+    "description": "An item to be held by a Pokémon. When the holder's stats are lowered, it will be switched out of battle.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Eject Packs",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Electirizer",
+    "id": "ELECTIRIZER",
+    "description": "A box packed with a tremendous amount of electric energy. It is loved by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Electirizers",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Electric Memory",
+    "id": "ELECTRICMEMORY",
+    "description": "A memory disc containing Electric-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Electric Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Electric Seed",
+    "id": "ELECTRICSEED",
+    "description": "An item to be held by a Pokémon. It boosts Defense on Electric Terrain. It can only be used once.",
+    "locations": [
+      "Stormhelm Cave",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Electric Seeds",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Elixir",
+    "id": "ELIXIR",
+    "description": "It restores the PP of all the moves learned by the targeted Pokémon by 10 points each.",
+    "locations": [
+      "Route 17",
+      "Calisto Cave"
+    ],
+    "namePlural": "Elixirs",
+    "pocket": "2",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Empoleonite",
+    "id": null,
+    "description": null,
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ]
+  },
+  {
+    "name": "Energy Powder",
+    "id": "ENERGYPOWDER",
+    "description": "A very bitter medicinal powder. It can be used to restore 60 HP to a single Pokémon.",
+    "locations": [
+      "Route 10",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Energy Powders",
+    "portionName": "dose of Energy Powder",
+    "portionNamePlural": "doses of Energy Powder",
+    "pocket": "2",
+    "price": "500",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Energy Root",
+    "id": "ENERGYROOT",
+    "description": "An extremely bitter medicinal root. It can be used to restore 120 HP to a single Pokémon.",
+    "locations": [
+      "Route 11",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Energy Roots",
+    "pocket": "2",
+    "price": "1200",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Enigma Berry",
+    "id": "ENIGMABERRY",
+    "description": "If held by a Pokémon, it restores its HP if it is hit by any supereffective attack.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Enigma Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_BUG_100"
+  },
+  {
+    "name": "Escape Rope",
+    "id": "ESCAPEROPE",
+    "description": "A long, durable rope. Use it to escape instantly from a cave or a dungeon.",
+    "locations": [
+      "Rusanu City"
+    ],
+    "namePlural": "Escape Ropes",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Ether",
+    "id": "ETHER",
+    "description": "It restores the PP of a Pokémon's selected move by a maximum of 10 points.",
+    "locations": [
+      "Route 10",
+      "Statera Canyon 2",
+      "Kamemeka Town",
+      "Pokemon League Mart"
+    ],
+    "namePlural": "Ethers",
+    "pocket": "2",
+    "price": "1200",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Everstone",
+    "id": "EVERSTONE",
+    "description": "An item to be held by a Pokémon. The Pokémon holding this peculiar stone is prevented from evolving.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Everstones",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Eviolite",
+    "id": "EVIOLITE",
+    "description": "A mysterious evolutionary lump. When held, it raises the Defense and Sp. Def if the holder can still evolve.",
+    "locations": [
+      "Resec Town",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Eviolites",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_40"
+  },
+  {
+    "name": "EXP. All",
+    "id": "EXPALLOFF",
+    "description": "\"TURNED OFF. An item that allows for all Pokèmon in the party to gain experience simultaniously.\"",
+    "locations": [
+      "Cerrumy City"
+    ],
+    "namePlural": "EXP. Alls",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Exp. Candy L",
+    "id": "EXPCANDYL",
+    "description": "A candy packed with energy. When consumed, it will grant a Pokémon a large amount of Exp. Points.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Exp. Candy Ls",
+    "pocket": "2",
+    "price": "1400",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Exp. Candy M",
+    "id": "EXPCANDYM",
+    "description": "A candy packed with energy. When consumed, it will grant a Pokémon a moderate amount of Exp. Points.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Exp. Candy Ms",
+    "pocket": "2",
+    "price": "600",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Exp. Candy S",
+    "id": "EXPCANDYS",
+    "description": "A candy packed with energy. When consumed, it will grant a Pokémon a small amount of Exp. Points.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Exp. Candy Ss",
+    "pocket": "2",
+    "price": "200",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Exp. Candy XL",
+    "id": "EXPCANDYXL",
+    "description": "A candy packed with energy. When consumed, it will grant a Pokémon a very large amount of Exp. Points.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Exp. Candy XLs",
+    "pocket": "2",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Exp. Candy XS",
+    "id": "EXPCANDYXS",
+    "description": "A candy packed with energy. When consumed, it will grant a Pokémon a very small amount of Exp. Points.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Exp. Candy XSs",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Exp. Charm",
+    "id": "EXPCHARM",
+    "description": "A charm that increases the Exp. Points that Pokémon can get. A machine-like object is inside it.",
+    "locations": [
+      "Verde (Omno Town, Pokedex Reward)"
+    ],
+    "namePlural": "Exp. Charms",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Exp. Share",
+    "id": "EXPSHARE",
+    "description": "An item to be held by a Pokémon. The holder gets a share of a battle's Exp. Points without battling.",
+    "locations": [
+      "Cerrumy City"
+    ],
+    "namePlural": "Exp. Shares",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Expert Belt",
+    "id": "EXPERTBELT",
+    "description": "An item to be held by a Pokémon. It is a well-worn belt that slightly boosts the power of supereffective moves.",
+    "locations": [
+      "Horizon Cup Stadium",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Expert Belts",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Fairy Feather",
+    "id": "FAIRYFEATHER",
+    "description": "An item to be held by a Pokémon. It boosts the power of the holder's Fairy-type moves.",
+    "locations": [
+      "Route 12",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Fairy Feathers",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_20"
+  },
+  {
+    "name": "Fairy Memory",
+    "id": "FAIRYMEMORY",
+    "description": "A memory disc containing Fairy-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Fairy Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Fast Ball",
+    "id": "FASTBALL",
+    "description": "A Poké Ball that makes it easier to catch fast Pokémon.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Fast Balls",
+    "pocket": "3",
+    "price": "300",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Fighting Memory",
+    "id": "FIGHTINGMEMORY",
+    "description": "A memory disc containing Fighting-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Fighting Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Figy Berry",
+    "id": "FIGYBERRY",
+    "description": "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Figy Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_BUG_80"
+  },
+  {
+    "name": "Fire Memory",
+    "id": "FIREMEMORY",
+    "description": "A memory disc containing Fire-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Fire Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Fire Stone",
+    "id": "FIRESTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It is colored orange.",
+    "locations": [
+      "Jepitur Dept",
+      "Store Floor 4"
+    ],
+    "namePlural": "Fire Stones",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Fist Plate",
+    "id": "FISTPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Fighting-type moves.",
+    "locations": [],
+    "namePlural": "Fist Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Flame Orb",
+    "id": "FLAMEORB",
+    "description": "An item to be held by a Pokémon. It is a bizarre orb that inflicts a burn on the holder in battle.",
+    "locations": [
+      "Tethys Desert",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Flame Orbs",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Flame Plate",
+    "id": "FLAMEPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Fire-type moves.",
+    "locations": [],
+    "namePlural": "Flame Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Float Stone",
+    "id": "FLOATSTONE",
+    "description": "A very light stone. It reduces the weight of a Pokémon when held.",
+    "locations": [
+      "Cerrumy City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Float Stones",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Flower Sweet",
+    "id": "FLOWERSWEET",
+    "description": "A flower-shaped sweet. When a Milcery holds this, it spins around happily.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Flower Sweets",
+    "pocket": "1",
+    "price": "500",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Fluffy Tail",
+    "id": "FLUFFYTAIL",
+    "description": "An item that attracts Pokémon. Use it to flee from any battle with a wild Pokémon.",
+    "locations": [
+      "Route 3",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Fluffy Tails",
+    "pocket": "7",
+    "price": "300",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Flygonite",
+    "id": "FLYGONITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Flygon hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Tethys Desert"
+    ],
+    "namePlural": "Flygonites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Flying Memory",
+    "id": "FLYINGMEMORY",
+    "description": "A memory disc containing Flying-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Flying Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Focus Band",
+    "id": "FOCUSBAND",
+    "description": "An item to be held by a Pokémon. The holder may endure a potential KO attack, leaving it with just 1 HP.",
+    "locations": [
+      "Route 22",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Focus Bands",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Focus Sash",
+    "id": "FOCUSSASH",
+    "description": "An item to be held by a Pokémon. If it has full HP, the holder will endure one potential KO attack, leaving 1 HP.",
+    "locations": [
+      "Route 21",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Focus Sashes",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Fresh Water",
+    "id": "FRESHWATER",
+    "description": "Water with high mineral content. It can be used to restore 30 HP to a single Pokémon.",
+    "locations": [
+      "Omno Town",
+      "Jepitur Dept. Store Roof",
+      "Statera Canyon 2"
+    ],
+    "namePlural": "Fresh Waters",
+    "portionName": "bottle of Fresh Water",
+    "portionNamePlural": "bottles of Fresh Water",
+    "pocket": "2",
+    "price": "200",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Friend Ball",
+    "id": "FRIENDBALL",
+    "description": "A Poké Ball that makes caught Pokémon more friendly.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Friend Balls",
+    "pocket": "3",
+    "price": "300",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Frigidite",
+    "id": "FRIGIDITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Frigidae hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 13"
+    ],
+    "namePlural": "Frigidites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Full Heal",
+    "id": "FULLHEAL",
+    "description": "A spray-type medicine. It heals all the status problems of a single Pokémon.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Full Heals",
+    "pocket": "2",
+    "price": "400",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Full Incense",
+    "id": "FULLINCENSE",
+    "description": "An item to be held by a Pokémon. This exotic-smelling incense makes the holder bloated and slow moving.",
+    "locations": [
+      "Route 10",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Full Incenses",
+    "portionName": "jar of Full Incense",
+    "portionNamePlural": "jars of Full Incense",
+    "pocket": "1",
+    "price": "5000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Full Restore",
+    "id": "FULLRESTORE",
+    "description": "A medicine that fully restores the HP and heals any status problems of a single Pokémon.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Full Restores",
+    "pocket": "2",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Galarica Cuff",
+    "id": "GALARICACUFF",
+    "description": "A cuff made from woven-together Galarica Twigs. Giving it to a Galarian Slowpoke would make it very happy.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Galarica Cuffs",
+    "pocket": "1",
+    "price": "6000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Galarica Wreath",
+    "id": "GALARICAWREATH",
+    "description": "A wreath made from woven-together Galarica Twigs. A Galarian Slowpoke wearing this would be very happy.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Galarica Wreaths",
+    "pocket": "1",
+    "price": "6000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Galladite",
+    "id": "GALLADITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Gallade hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 12"
+    ],
+    "namePlural": "Galladites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Ganlon Berry",
+    "id": "GANLONBERRY",
+    "description": "If held by a Pokémon, it raises its Defense stat in a pinch.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Ganlon Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_ICE_100"
+  },
+  {
+    "name": "Garchompite",
+    "id": "GARCHOMPITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Garchomp hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 16"
+    ],
+    "namePlural": "Garchompites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Gardevoirite",
+    "id": "GARDEVOIRITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Gardevoir hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 12"
+    ],
+    "namePlural": "Gardevoirites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Gengarite",
+    "id": "GENGARITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Gengar hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Kuiper Hs 2"
+    ],
+    "namePlural": "Gengarites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Gentle Mint",
+    "id": "GENTLEMINT",
+    "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Defense will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Gentle Mints",
+    "portionName": "sprig of Gentle Mint",
+    "portionNamePlural": "sprigs of Gentle Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Ghost Memory",
+    "id": "GHOSTMEMORY",
+    "description": "A memory disc containing Ghost-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Ghost Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Gimmighoul Coin",
+    "id": "GIMMIGHOULCOIN",
+    "description": "An item that accidentally dropped by a Pokémon. It seems that Gimmighoul treasure and hoard these.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Gimmighoul Coins",
+    "pocket": "1",
+    "price": "1",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Glalitite",
+    "id": "GLALITITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Glalie hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Hilo Mountain"
+    ],
+    "namePlural": "Glalitites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Good Rod",
+    "id": "GOODROD",
+    "description": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pokémon.",
+    "locations": [
+      "Jepitur House 1"
+    ],
+    "namePlural": "Good Rods",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Gracidea",
+    "id": "GRACIDEA",
+    "description": "A flower sometimes bundled in bouquets to convey gratitude on special occasions like birthdays.",
+    "locations": [],
+    "namePlural": "Gracideas",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Grass Memory",
+    "id": "GRASSMEMORY",
+    "description": "A memory disc containing Grass-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Grass Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Grassy Seed",
+    "id": "GRASSYSEED",
+    "description": "An item to be held by a Pokémon. It boosts Defense on Grassy Terrain. It can only be used once.",
+    "locations": [
+      "Route 12",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Grassy Seeds",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Great Ball",
+    "id": "GREATBALL",
+    "description": "A good, high-performance Ball that provides a higher Pokémon catch rate than a standard Poké Ball.",
+    "locations": [
+      "Pokemarts",
+      "Omno Town"
+    ],
+    "namePlural": "Great Balls",
+    "pocket": "3",
+    "price": "600",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Grepa Berry",
+    "id": "GREPABERRY",
+    "description": "Using it on a Pokémon makes it more friendly, but it also lowers its base Sp. Def stat.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Grepa Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_FLYING_90"
+  },
+  {
+    "name": "Grip Claw",
+    "id": "GRIPCLAW",
+    "description": "A Pokémon held item that extends the duration of multiturn attacks like Bind and Wrap.",
+    "locations": [
+      "Route 7",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Grip Claws",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Griseous Core",
+    "id": "GRISEOUSCORE",
+    "description": "When held by Giratina, this large, glowing gem wells with power and allows the Pokémon to change form.",
+    "locations": [],
+    "namePlural": "Griseous Cores",
+    "pocket": "1",
+    "price": "20000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Griseous Orb",
+    "id": "GRISEOUSORB",
+    "description": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves.",
+    "locations": [],
+    "namePlural": "Griseous Orbs",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Ground Memory",
+    "id": "GROUNDMEMORY",
+    "description": "A memory disc containing Ground-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Ground Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Guard Spec.",
+    "id": "GUARDSPEC",
+    "description": "An item that prevents stat reduction among the Trainer's party Pokémon for five turns after use.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "Guard Specs.",
+    "pocket": "7",
+    "price": "1500",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Gyarados Summon",
+    "id": "WATERFALLITEM",
+    "description": "This can be used to summon a Gyarados that can carry you up waterfalls.",
+    "locations": [
+      "Tulpo City"
+    ],
+    "namePlural": "Gyarados Summon",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Gyaradosite",
+    "id": "GYARADOSITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Gyarados hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 2"
+    ],
+    "namePlural": "Gyaradosites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Haban Berry",
+    "id": "HABANBERRY",
+    "description": "Weakens a supereffective Dragon-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Haban Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_DRAGON_80"
+  },
+  {
+    "name": "Hard Stone",
+    "id": "HARDSTONE",
+    "description": "An item to be held by a Pokémon. It is an unbreakable stone that ups the power of Rock-type moves.",
+    "locations": [
+      "Seri Mine",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Hard Stones",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_100"
+  },
+  {
+    "name": "Hasty Mint",
+    "id": "HASTYMINT",
+    "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Defense will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Hasty Mints",
+    "portionName": "sprig of Hasty Mint",
+    "portionNamePlural": "sprigs of Hasty Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Heal Ball",
+    "id": "HEALBALL",
+    "description": "A remedial Poké Ball that restores the caught Pokémon's HP and eliminates any status problem.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Heal Balls",
+    "pocket": "3",
+    "price": "300",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Heal Powder",
+    "id": "HEALPOWDER",
+    "description": "A very bitter medicine powder. It heals all the status problems of a single Pokémon.",
+    "locations": [
+      "Nuves City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Heal Powders",
+    "portionName": "dose of Heal Powder",
+    "portionNamePlural": "doses of Heal Powder",
+    "pocket": "2",
+    "price": "300",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Heart Scale",
+    "id": "HEARTSCALE",
+    "description": "A pretty, heart-shaped scale that is extremely rare. It glows faintly in the colors of the rainbow.",
+    "locations": [
+      "Wild Luvdisc (Post Game)"
+    ],
+    "namePlural": "Heart Scales",
+    "pocket": "1",
+    "price": "100",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Hearthflame Mask",
+    "id": "HEARTHFLAMEMASK",
+    "description": "A carved wooden mask to be held by Ogerpon. It allows Ogerpon to wield the Fire type during battle.",
+    "locations": [],
+    "namePlural": "Hearthflame Masks",
+    "pocket": "1",
+    "price": "0",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Heat Rock",
+    "id": "HEATROCK",
+    "description": "A Pokémon held item that extends the duration of the move Sunny Day used by the holder.",
+    "locations": [
+      "Tethys Dig Site",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Heat Rocks",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Heavy Ball",
+    "id": "HEAVYBALL",
+    "description": "A Poké Ball for catching very heavy Pokémon.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Heavy Balls",
+    "pocket": "3",
+    "price": "300",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Heavy-Duty Boots",
+    "id": "HEAVYDUTYBOOTS",
+    "description": "These boots prevent the effects of traps set on the battlefield.",
+    "locations": [
+      "Tarsun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Heavy-Duty Boots",
+    "portionName": "pair of Heavy-Duty Boots",
+    "portionNamePlural": "pairs of Heavy-Duty Boots",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Helioliskite",
+    "id": "HELIOLISKITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Heliolisk hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 18"
+    ],
+    "namePlural": "Helioliskites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Heracronite",
+    "id": "HERACRONITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Heracross hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 12"
+    ],
+    "namePlural": "Heracronites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Hondew Berry",
+    "id": "HONDEWBERRY",
+    "description": "Using it on a Pokémon makes it more friendly, but it also lowers its base Sp. Atk stat.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Hondew Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_GROUND_90"
+  },
+  {
+    "name": "Honey",
+    "id": "HONEY",
+    "description": "A sweet honey with a lush aroma that attracts wild Pokémon when used in tall grass, in caves, or elsewhere.",
+    "locations": [
+      "Nuves Forest"
+    ],
+    "namePlural": "Honey",
+    "portionName": "jar of Honey",
+    "portionNamePlural": "jars of Honey",
+    "pocket": "1",
+    "price": "900",
+    "fieldUse": "Direct",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Hopo Berry",
+    "id": "HOPOBERRY",
+    "description": "A Berry that can be fed to a Pokémon to restore its PP.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Hopo Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_FIGHTING_80"
+  },
+  {
+    "name": "Houndoominite",
+    "id": "HOUNDOOMINITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Houndoom hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 21"
+    ],
+    "namePlural": "Houndoominites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "HP Up",
+    "id": "HPUP",
+    "description": "A nutritious drink for Pokémon. It raises the base HP of a single Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "HP Ups",
+    "portionName": "bottle of HP Up",
+    "portionNamePlural": "bottles of HP Up",
+    "pocket": "2",
+    "price": "10000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Hydreigonite",
+    "id": "HYDREIGONITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Hydreigon hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 17"
+    ],
+    "namePlural": "Hydreigonites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Hyper Potion",
+    "id": "HYPERPOTION",
+    "description": "A spray-type medicine for treating wounds. It can be used to restore 120 HP to a single Pokémon.",
+    "locations": [
+      "Pokemarts",
+      "Route 12"
+    ],
+    "namePlural": "Hyper Potions",
+    "pocket": "2",
+    "price": "1500",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Iapapa Berry",
+    "id": "IAPAPABERRY",
+    "description": "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Iapapa Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_DARK_80"
+  },
+  {
+    "name": "Ice Heal",
+    "id": "ICEHEAL",
+    "description": "A spray-type medicine. It defrosts a Pokémon that has been frozen solid.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Ice Heals",
+    "pocket": "2",
+    "price": "200",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Ice Memory",
+    "id": "ICEMEMORY",
+    "description": "A memory disc containing Ice-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Ice Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Ice Stone",
+    "id": "ICESTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It has a snowflake pattern.",
+    "locations": [
+      "Hilo Mountain",
+      "Jepitur Dept. Store Floor 4"
+    ],
+    "namePlural": "Ice Stones",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Icicle Plate",
+    "id": "ICICLEPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Ice-type moves.",
+    "locations": [],
+    "namePlural": "Icicle Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Icy Rock",
+    "id": "ICYROCK",
+    "description": "A Pokémon held item that extends the duration of the move Hail used by the holder.",
+    "locations": [
+      "Hilo Mountain 2",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Icy Rocks",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_40"
+  },
+  {
+    "name": "Impish Mint",
+    "id": "IMPISHMINT",
+    "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Sp. Atk will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Impish Mints",
+    "portionName": "sprig of Impish Mint",
+    "portionNamePlural": "sprigs of Impish Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Indigo Disk",
+    "id": "INDIGODISK",
+    "description": "A mysterious disk with an indigo shine to it, given by the Top Champion. It seems to be tied to Area Zero.",
+    "locations": [],
+    "namePlural": "Indigo Disks",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Infernoixite",
+    "id": "INFERNOIXITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Infernoix hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 19"
+    ],
+    "namePlural": "Infernoixites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Insect Plate",
+    "id": "INSECTPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Bug-type moves.",
+    "locations": [],
+    "namePlural": "Insect Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Iron",
+    "id": "IRON",
+    "description": "A nutritious drink for Pokémon. It raises the base Defense stat of a single Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "Irons",
+    "portionName": "bottle of Iron",
+    "portionNamePlural": "bottles of Iron",
+    "pocket": "2",
+    "price": "10000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Iron Ball",
+    "id": "IRONBALL",
+    "description": "A Pokémon held item that cuts Speed. It makes Flying-type and levitating holders susceptible to Ground moves.",
+    "locations": [
+      "Callisto Cave",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Iron Balls",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_130"
+  },
+  {
+    "name": "Iron Plate",
+    "id": "IRONPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Steel-type moves.",
+    "locations": [],
+    "namePlural": "Iron Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Iron Shell",
+    "id": "IRONSHELL",
+    "description": "A shell made entirely of iron. It is loved by a certain Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Iron Shells",
+    "pocket": "1",
+    "price": "5000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Jaboca Berry",
+    "id": "JABOCABERRY",
+    "description": "If held by a Pokémon and a physical attack lands, the attacker also takes damage.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Jaboca Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_DRAGON_100"
+  },
+  {
+    "name": "Jinglongite",
+    "id": "JINLONGITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Jinglong hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Statera Canyon 1"
+    ],
+    "namePlural": "Jinglongites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Jolly Mint",
+    "id": "JOLLYMINT",
+    "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Jolly Mints",
+    "portionName": "sprig of Jolly Mint",
+    "portionNamePlural": "sprigs of Jolly Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Kangaskhanite",
+    "id": "KANGASKHANITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Kangaskhan hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Kangaskhanites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Kasib Berry",
+    "id": "KASIBBERRY",
+    "description": "Weakens a supereffective Ghost-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Kasib Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_GHOST_80"
+  },
+  {
+    "name": "Kebia Berry",
+    "id": "KEBIABERRY",
+    "description": "Weakens a supereffective Poison-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Kebia Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_POISON_80"
+  },
+  {
+    "name": "Kee Berry",
+    "id": "KEEBERRY",
+    "description": "If held by a Pokémon, this Berry will increase the holder's Defense if it's hit with a physical move.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Kee Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_FAIRY_100"
+  },
+  {
+    "name": "Kelpsy Berry",
+    "id": "KELPSYBERRY",
+    "description": "Using it on a Pokémon makes it more friendly, but it also lowers its base Attack stat.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Kelpsy Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_FIGHTING_90"
+  },
+  {
+    "name": "King's Rock",
+    "id": "KINGSROCK",
+    "description": "An item to be held by a Pokémon. When the holder inflicts damage, the target may flinch.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "King's Rocks",
+    "pocket": "1",
+    "price": "5000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Krookodilite",
+    "id": "KROOKODILITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Krookodile hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Tethys Desert"
+    ],
+    "namePlural": "Krookodilites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Lagging Tail",
+    "id": "LAGGINGTAIL",
+    "description": "An item to be held by a Pokémon. It is tremendously heavy and makes the holder move slower than usual.",
+    "locations": [
+      "Metis Cave",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Lagging Tails",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Lansat Berry",
+    "id": "LANSATBERRY",
+    "description": "If held by a Pokémon, it raises its critical-hit ratio in a pinch.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Lansat Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_FLYING_100"
+  },
+  {
+    "name": "Lapras Summon",
+    "id": "SURFITEM",
+    "description": "This can be used to summon a Lapras that can carry you across bodies of water.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Lapras Summon",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Latiasite",
+    "id": "LATIASITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Latias hold it, and it will be able to Mega Evolve.",
+    "locations": [],
+    "namePlural": "Latiasites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Latiosite",
+    "id": "LATIOSITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Latios hold it, and it will be able to Mega Evolve.",
+    "locations": [],
+    "namePlural": "Latiosites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Latremorite",
+    "id": "LATREMORITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Latremor hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Verde (Omno Town or Verde (Omno Town, Pokedex Reward))"
+    ],
+    "namePlural": "Latremorites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Lava Cookie",
+    "id": "LAVACOOKIE",
+    "description": "Lavaridge Town's local specialty. It heals all the status problems of one Pokémon.",
+    "locations": [
+      "Rasm City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Lava Cookies",
+    "pocket": "2",
+    "price": "350",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Lax Incense",
+    "id": "LAXINCENSE",
+    "description": "An item to be held by a Pokémon. The tricky aroma of this incense may make attacks miss the holder.",
+    "locations": [
+      "Route 18",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Lax Incenses",
+    "portionName": "jar of Lax Incense",
+    "portionNamePlural": "jars of Lax Incense",
+    "pocket": "1",
+    "price": "5000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Lax Mint",
+    "id": "LAXMINT",
+    "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Sp. Def will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Lax Mints",
+    "portionName": "sprig of Lax Mint",
+    "portionNamePlural": "sprigs of Lax Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Leader's Crest",
+    "id": "LEADERSCREST",
+    "description": "A shard of what appears to be an old blade of some sort. It is held only by a head of certain Pokémon group.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Leader's Crests",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Leaf Stone",
+    "id": "LEAFSTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It has a leaf pattern.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4"
+    ],
+    "namePlural": "Leaf Stones",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Leek",
+    "id": "LEEK",
+    "description": "An item to be held by Farfetch'd. It is a very long and stiff stalk of leek that boosts the critical-hit ratio.",
+    "locations": [
+      "Forest Zone",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Leeks",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Leftovers",
+    "id": "LEFTOVERS",
+    "description": "An item to be held by a Pokémon. The holder's HP is gradually restored during battle.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Leftovers",
+    "portionName": "serving of Leftovers",
+    "portionNamePlural": "servings of Leftovers",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Legend Plate",
+    "id": "LEGENDPLATE",
+    "description": "A stone tablet to be held by a certain Pokémon. It the holder the power of every type there is.",
+    "locations": [],
+    "namePlural": "Legend Plates",
+    "pocket": "1",
+    "price": "20000",
+    "flags": "Fling_90,Plate"
+  },
+  {
+    "name": "Lemonade",
+    "id": "LEMONADE",
+    "description": "A very sweet and refreshing drink. It can be used to restore 70 HP to a single Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Rooftop"
+    ],
+    "namePlural": "Lemonades",
+    "portionName": "can of Lemonade",
+    "portionNamePlural": "cans of Lemonade",
+    "pocket": "2",
+    "price": "350",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Leppa Berry",
+    "id": "LEPPABERRY",
+    "description": "It may be used or held by a Pokémon to restore a move's PP by 10.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Leppa Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_FIGHTING_80"
+  },
+  {
+    "name": "Level Ball",
+    "id": "LEVELBALL",
+    "description": "A Poké Ball for catching Pokémon that are a lower level than your own.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Level Balls",
+    "pocket": "3",
+    "price": "300",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Liechi Berry",
+    "id": "LIECHIBERRY",
+    "description": "If held by a Pokémon, it raises its Attack stat in a pinch.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Liechi Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_GRASS_100"
+  },
+  {
+    "name": "Life Orb",
+    "id": "LIFEORB",
+    "description": "An item to be held by a Pokémon. It boosts the power of moves, but at the cost of some HP on each hit.",
+    "locations": [
+      "Statera Canyon 3",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Life Orbs",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Light Ball",
+    "id": "LIGHTBALL",
+    "description": "An item to be held by Pikachu. It is a puzzling orb that raises the Attack and Sp. Atk stat.",
+    "locations": [
+      "Route 14",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Light Balls",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Light Clay",
+    "id": "LIGHTCLAY",
+    "description": "An item to be held by a Pokémon. Protective moves like Light Screen and Reflect will be effective longer.",
+    "locations": [
+      "Route 8",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Light Clays",
+    "portionName": "lump of Light Clay",
+    "portionNamePlural": "lumps of Light Clay",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Linking Cord",
+    "id": "LINKINGCORD",
+    "description": "A string exuding energy that makes you feel a strange sense of connection. It’s loved by certain Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Linking Cords",
+    "pocket": "1",
+    "price": "5000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_20"
+  },
+  {
+    "name": "Loaded Dice",
+    "id": "LOADEDDICE",
+    "description": "An item to be held by a Pokémon. It ensures the holder's multistrike moves hit more times.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Loaded Dices",
+    "pocket": "1",
+    "price": "20000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Lonely Mint",
+    "id": "LONELYMINT",
+    "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Defense will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Lonely Mints",
+    "portionName": "sprig of Lonely Mint",
+    "portionNamePlural": "sprigs of Lonely Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Lopunnite",
+    "id": "LOPUNNITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Lopunny hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 10"
+    ],
+    "namePlural": "Lopunnites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Love Ball",
+    "id": "LOVEBALL",
+    "description": "A Poké Ball for catching Pokémon that are the opposite gender of your Pokémon.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Love Balls",
+    "pocket": "3",
+    "price": "300",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Love Sweet",
+    "id": "LOVESWEET",
+    "description": "A heart-shaped sweet. When a Milcery holds this, it spins around happily.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Love Sweets",
+    "pocket": "1",
+    "price": "500",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Lucarionite",
+    "id": "LUCARIONITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Lucario hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 19"
+    ],
+    "namePlural": "Lucarionites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Luck Incense",
+    "id": "LUCKINCENSE",
+    "description": "An item to be held by a Pokémon. It doubles a battle's prize money if the holding Pokémon joins in.",
+    "locations": [
+      "Victory Road",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Luck Incenses",
+    "portionName": "jar of Luck Incense",
+    "portionNamePlural": "jars of Luck Incense",
+    "pocket": "1",
+    "price": "11000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Lucky Egg",
+    "id": "LUCKYEGG",
+    "description": "An item to be held by a Pokémon. It is an egg filled with happiness that earns extra Exp. Points in battle.",
+    "locations": [
+      "Seri Town",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Lucky Eggs",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Lucky Horn",
+    "id": "LUCKYHORN",
+    "description": "An item to be held by a Pokémon. It boosts the holder's critical-hit ratio, but costs some HP on each hit.",
+    "locations": [
+      "Nuves Forest",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Lucky Horns",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Lucky Punch",
+    "id": "LUCKYPUNCH",
+    "description": "An item to be held by Chansey. It is a pair of gloves that boosts Chansey's critical-hit ratio.",
+    "locations": [
+      "Victory Road",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Lucky Punches",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_40"
+  },
+  {
+    "name": "Lum Berry",
+    "id": "LUMBERRY",
+    "description": "It may be used or held by a Pokémon to recover from any status problem.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Lum Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_FLYING_80"
+  },
+  {
+    "name": "Luminous Moss",
+    "id": "LUMINOUSMOSS",
+    "description": "An item to be held by a Pokémon. It boosts Sp. Def if hit by a Water-type attack. It can only be used once.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Luminous Moss",
+    "portionName": "clump of Luminous Moss",
+    "portionNamePlural": "clumps of Luminous Moss",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Lure Ball",
+    "id": "LUREBALL",
+    "description": "A Poké Ball for catching Pokémon hooked by a Rod when fishing.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Lure Balls",
+    "pocket": "3",
+    "price": "300",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Lustrous Globe",
+    "id": "LUSTROUSGLOBE",
+    "description": "When held by Palkia, this large, glowing orb wells with power and allows the Pokémon to change form.",
+    "locations": [],
+    "namePlural": "Lustrous Globes",
+    "pocket": "1",
+    "price": "20000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Lustrous Orb",
+    "id": "LUSTROUSORB",
+    "description": "A beautifully glowing orb to be held by Palkia. It boosts the power of Dragon- and Water-type moves.",
+    "locations": [],
+    "namePlural": "Lustrous Orbs",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Luxury Ball",
+    "id": "LUXURYBALL",
+    "description": "A comfortable Poké Ball that makes a caught wild Pokémon quickly grow friendly.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Luxury Balls",
+    "pocket": "3",
+    "price": "3000",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Macho Brace",
+    "id": "MACHOBRACE",
+    "description": "An item to be held by a Pokémon. It is a stiff, heavy brace that promotes strong growth but lowers Speed.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Macho Braces",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Machop Summon",
+    "id": "ROCKSMASHITEM",
+    "description": "This can be used to summon a Machop that can break rocks blocking your path.",
+    "locations": [
+      "Cerrumy City"
+    ],
+    "namePlural": "Machop Summon",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Magmarizer",
+    "id": "MAGMARIZER",
+    "description": "A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Magmarizers",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Magnet",
+    "id": "MAGNET",
+    "description": "An item to be held by a Pokémon. It is a powerful magnet that boosts the power of Electric-type moves.",
+    "locations": [
+      "Route 6",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Magnets",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Magnetaurite",
+    "id": "MAGNETAURITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Magnetaur hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Tethys Desert"
+    ],
+    "namePlural": "Magnetaurites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Mago Berry",
+    "id": "MAGOBERRY",
+    "description": "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Mago Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_GHOST_80"
+  },
+  {
+    "name": "Magost Berry",
+    "id": "MAGOSTBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Magost Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_ROCK_90"
+  },
+  {
+    "name": "Malicious Armor",
+    "id": "MALICIOUSARMOR",
+    "description": "A peculiar set of armor that can make a certain Pokémon evolve. Malicious will lurks within it.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Malicious Armors",
+    "portionName": "set of Malicious Armor",
+    "portionNamePlural": "sets of Malicious Armor",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Manectite",
+    "id": "MANECTITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Manectric hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Manectites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Maranga Berry",
+    "id": "MARANGABERRY",
+    "description": "If held by a Pokémon, this Berry will increase the holder's Sp. Def if it's hit with a special move.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Maranga Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_DARK_100"
+  },
+  {
+    "name": "Master Ball",
+    "id": "MASTERBALL",
+    "description": "The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.",
+    "locations": [
+      "Verde (Omno Town, Champion Beaten Reward)",
+      "Trash Cans (30)"
+    ],
+    "namePlural": "Master Balls",
+    "pocket": "3",
+    "price": "0",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Masterpiece Teacup",
+    "id": "MASTERPIECETEACUP",
+    "description": "A peculiar chipped teacup that can make a certain species of Pokémon evolve. It makes delicious tea.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Masterpiece Teacups",
+    "pocket": "1",
+    "price": "1500",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_80"
+  },
+  {
+    "name": "Mawilite",
+    "id": "MAWILITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Mawile hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Kuiper Town Mine"
+    ],
+    "namePlural": "Mawilites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Max Elixir",
+    "id": "MAXELIXIR",
+    "description": "It fully restores the PP of all the moves learned by the targeted Pokémon.",
+    "locations": [
+      "Route 13",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Max Elixirs",
+    "pocket": "2",
+    "price": "4500",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Max Ether",
+    "id": "MAXETHER",
+    "description": "It fully restores the PP of a single selected move that has been learned by the target Pokémon.",
+    "locations": [
+      "Route 17",
+      "Victory Road",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Max Ethers",
+    "pocket": "2",
+    "price": "2000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Max Potion",
+    "id": "MAXPOTION",
+    "description": "A spray-type medicine for treating wounds. It can completely restore the max HP of a single Pokémon.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Max Potions",
+    "pocket": "2",
+    "price": "2500",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Max Repel",
+    "id": "MAXREPEL",
+    "description": "An item that prevents weak wild Pokémon from appearing for 250 steps after its use.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Max Repels",
+    "pocket": "1",
+    "price": "900",
+    "fieldUse": "Direct",
+    "flags": "Repel,Fling_30"
+  },
+  {
+    "name": "Max Revive",
+    "id": "MAXREVIVE",
+    "description": "A medicine that revives a fainted Pokémon. It fully restores the Pokémon's HP.",
+    "locations": [
+      "Callisto Cave",
+      "Victory Road",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Max Revives",
+    "pocket": "2",
+    "price": "4000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Meadow Plate",
+    "id": "MEADOWPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Grass-type moves.",
+    "locations": [],
+    "namePlural": "Meadow Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Medichamite",
+    "id": "MEDICHAMITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Medicham hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Medichamites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Mega Ring",
+    "id": "MEGARING",
+    "description": "This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.",
+    "locations": [
+      "Verde (Omno Town)"
+    ],
+    "namePlural": "Mega Rings",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem,MegaRing"
+  },
+  {
+    "name": "Mental Herb",
+    "id": "MENTALHERB",
+    "description": "An item to be held by a Pokémon. It snaps the holder out of infatuation. It can be used only once.",
+    "locations": [
+      "Route 17",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Mental Herbs",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Metagrossite",
+    "id": "METAGROSSITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Metagross hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Callisto Cave"
+    ],
+    "namePlural": "Metagrossites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Metal Alloy",
+    "id": "METALALLOY",
+    "description": "A peculiar metal that can make certain species of Pokémon evolve. It is composed of many layers.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Metal Alloys",
+    "portionName": "hunk of Metal Alloy",
+    "portionNamePlural": "hunks of Metal Alloy",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Metal Coat",
+    "id": "METALCOAT",
+    "description": "An item to be held by a Pokémon. It is a special metallic film that ups the power of Steel-type moves.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Metal Coats",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Metal Powder",
+    "id": "METALPOWDER",
+    "description": "An item to be held by Ditto. Extremely fine yet hard, this odd powder boosts the Defense stat.",
+    "locations": [
+      "Seri Town Mine",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Metal Powders",
+    "portionName": "bag of Metal Powder",
+    "portionNamePlural": "bags of Metal Powder",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Meteorite",
+    "id": "METEORITE",
+    "description": "A rock that fell to earth from space. It allows a certain species of Pokémon to change forms.",
+    "locations": [],
+    "namePlural": "Meteorites",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Metronome",
+    "id": "METRONOME",
+    "description": "A Pokémon held item that boosts a move used consecutively. Its effect is reset if another move is used.",
+    "locations": [
+      "Jepitur House 7",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Metronomes",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Mewtwonite X",
+    "id": "MEWTWONITEX",
+    "description": "One of a variety of mysterious Mega Stones. Have Mewtwo hold it, and it will be able to Mega Evolve.",
+    "locations": [],
+    "namePlural": "Mewtwonite Xs",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Mewtwonite Y",
+    "id": "MEWTWONITEY",
+    "description": "One of a variety of mysterious Mega Stones. Have Mewtwo hold it, and it will be able to Mega Evolve.",
+    "locations": [],
+    "namePlural": "Mewtwonite Ys",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Micle Berry",
+    "id": "MICLEBERRY",
+    "description": "If held by a Pokémon, it raises the accuracy of a move just once in a pinch.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Micle Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_ROCK_100"
+  },
+  {
+    "name": "Mienshaoite",
+    "id": null,
+    "description": null,
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ]
+  },
+  {
+    "name": "Mild Mint",
+    "id": "MILDMINT",
+    "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Defense will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Mild Mints",
+    "portionName": "sprig of Mild Mint",
+    "portionNamePlural": "sprigs of Mild Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Mind Plate",
+    "id": "MINDPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Psychic-type moves.",
+    "locations": [],
+    "namePlural": "Mind Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Miracle Seed",
+    "id": "MIRACLESEED",
+    "description": "An item to be held by a Pokémon. It is a seed imbued with life that ups the power of Grass-type moves.",
+    "locations": [
+      "Route 11",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Miracle Seeds",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Mirror Herb",
+    "id": "MIRRORHERB",
+    "description": "An item to be held by a Pokémon. This herb will allow the holder to mirror an opponent's stat increases once.",
+    "locations": [
+      "Route 19",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Mirror Herbs",
+    "pocket": "1",
+    "price": "30000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Misty Seed",
+    "id": "MISTYSEED",
+    "description": "An item to be held by a Pokémon. It boosts Sp. Def on Misty Terrain. It can only be used once.",
+    "locations": [
+      "Tehtys Desert",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Misty Seeds",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Modest Mint",
+    "id": "MODESTMINT",
+    "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Attack will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Modest Mints",
+    "portionName": "sprig of Modest Mint",
+    "portionNamePlural": "sprigs of Modest Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Moomoo Milk",
+    "id": "MOOMOOMILK",
+    "description": "Milk with a very high nutrition content. It restores the HP of one Pokémon by 100 points.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Moomoo Milks",
+    "portionName": "bottle of Moomoo Milk",
+    "portionNamePlural": "bottles of Moomoo Milk",
+    "pocket": "2",
+    "price": "600",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Moon Ball",
+    "id": "MOONBALL",
+    "description": "A Poké Ball for catching Pokémon that evolve using the Moon Stone.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Moon Balls",
+    "pocket": "3",
+    "price": "300",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Moon Stone",
+    "id": "MOONSTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It is as black as the night sky.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Moon Stones",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Mudsdale Summon",
+    "id": "STRENGTHITEM",
+    "description": "This can be used to summon a Mudsdale that can push boulders blocking your path.",
+    "locations": [
+      "Rasm City"
+    ],
+    "namePlural": "Mudsdale Summon",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Muscle Band",
+    "id": "MUSCLEBAND",
+    "description": "An item to be held by a Pokémon. It is a headband that slightly boosts the power of physical moves.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Muscle Bands",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Mystic Water",
+    "id": "MYSTICWATER",
+    "description": "An item to be held by a Pokémon. It is a teardrop-shaped gem that ups the power of Water-type moves.",
+    "locations": [
+      "Lake Triton",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Mystic Waters",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Mythical Pecha Berry",
+    "id": "MYTHICALPECHABERRY",
+    "description": "A Pecha Berry of the highest quality. It's one of every a few years berry that carefully tended by an expert.",
+    "locations": [],
+    "namePlural": "Mythical Pecha Berries",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "N-Lunarizer",
+    "id": "NLUNARIZERUSED",
+    "description": "A machine to separate Necrozma, which needed light, from Lunala.",
+    "locations": [],
+    "namePlural": "N-Lunarizers",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "N-Solarizer",
+    "id": "NSOLARIZERUSED",
+    "description": "A machine to separate Necrozma, which needed light, from Solgaleo.",
+    "locations": [],
+    "namePlural": "N-Solarizers",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Naive Mint",
+    "id": "NAIVEMINT",
+    "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Sp. Def will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Naive Mints",
+    "portionName": "sprig of Naive Mint",
+    "portionNamePlural": "sprigs of Naive Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Nanab Berry",
+    "id": "NANABBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Nanab Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_WATER_90"
+  },
+  {
+    "name": "Naughty Mint",
+    "id": "NAUGHTYMINT",
+    "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Sp. Def will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Naughty Mints",
+    "portionName": "sprig of Naughty Mint",
+    "portionNamePlural": "sprigs of Naughty Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Nest Ball",
+    "id": "NESTBALL",
+    "description": "A somewhat different Poké Ball that works especially well on weaker Pokémon in the wild.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium",
+      "Cerrumy City"
+    ],
+    "namePlural": "Nest Balls",
+    "pocket": "3",
+    "price": "1000",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Net Ball",
+    "id": "NETBALL",
+    "description": "A somewhat different Poké Ball that works especially well on Water- and Bug-type Pokémon.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Net Balls",
+    "pocket": "3",
+    "price": "1000",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Never-Melt Ice",
+    "id": "NEVERMELTICE",
+    "description": "An item to be held by a Pokémon. It is a piece of ice that repels heat and boosts Ice-type moves.",
+    "locations": [
+      "Hilo Mountain 3",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Never-Melt Ices",
+    "portionName": "piece of Never-Melt Ice",
+    "portionNamePlural": "pieces of Never-Melt Ice",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Nomel Berry",
+    "id": "NOMELBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Nomel Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_DRAGON_90"
+  },
+  {
+    "name": "Nugget",
+    "id": "NUGGET",
+    "description": "A nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops.",
+    "locations": [
+      "Seri Town Mine",
+      "Tethys Dig Site"
+    ],
+    "namePlural": "Nuggets",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Occa Berry",
+    "id": "OCCABERRY",
+    "description": "Weakens a supereffective Fire-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Occa Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_FIRE_80"
+  },
+  {
+    "name": "Odd Incense",
+    "id": "ODDINCENSE",
+    "description": "An item to be held by a Pokémon. This exotic-smelling incense boosts the power of Psychic-type moves.",
+    "locations": [
+      "Uhaema Town",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Odd Incenses",
+    "portionName": "jar of Odd Incense",
+    "portionNamePlural": "jars of Odd Incense",
+    "pocket": "1",
+    "price": "2000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Odd Keystone",
+    "id": "ODDKEYSTONE",
+    "description": "A vital item that is needed to keep a stone tower from collapsing. Voices can be heard from it occasionally.",
+    "locations": [
+      "Tehtys Dig Site"
+    ],
+    "namePlural": "Odd Keystones",
+    "pocket": "1",
+    "price": "2100",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Old Rod",
+    "id": "OLDROD",
+    "description": "An old and beat-up fishing rod. Use it by any body of water to fish for wild aquatic Pokémon.",
+    "locations": [
+      "Route 2",
+      "Penetun Gym"
+    ],
+    "namePlural": "Old Rods",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Old Sea Map",
+    "id": "OLDSEAMAP",
+    "description": "A faded sea chart that shows the way to a certain island.",
+    "locations": [],
+    "namePlural": "Old Sea Maps",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Oran Berry",
+    "id": "ORANBERRY",
+    "description": "It may be used or held by a Pokémon to heal the user by just 10 HP.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Oran Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_POISON_80"
+  },
+  {
+    "name": "Oval Charm",
+    "id": "OVALCHARM",
+    "description": "An oval charm said to increase the chance of Eggs being found at the Day Care.",
+    "locations": [
+      "Verde (Omno Town, Pokedex Reward)"
+    ],
+    "namePlural": "Oval Charms",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Oval Stone",
+    "id": "OVALSTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Oval Stones",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Pamtre Berry",
+    "id": "PAMTREBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Pamtre Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_STEEL_90"
+  },
+  {
+    "name": "Paralyze Heal",
+    "id": "PARALYZEHEAL",
+    "description": "A spray-type medicine. It eliminates paralysis from a single Pokémon.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Paralyze Heals",
+    "pocket": "2",
+    "price": "200",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Passho Berry",
+    "id": "PASSHOBERRY",
+    "description": "Weakens a supereffective Water-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Passho Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_WATER_80"
+  },
+  {
+    "name": "Payapa Berry",
+    "id": "PAYAPABERRY",
+    "description": "Weakens a supereffective Psychic-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Payapa Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_PSYCHIC_80"
+  },
+  {
+    "name": "Pearl",
+    "id": "PEARL",
+    "description": "A somewhat-small pearl that sparkles in a pretty silver color. It can be sold cheaply to shops.",
+    "locations": [
+      "Lake Triton"
+    ],
+    "namePlural": "Pearls",
+    "pocket": "1",
+    "price": "2000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Pearl String",
+    "id": "PEARLSTRING",
+    "description": "Very large pearls that sparkle in a pretty silver color. A maniac will buy them for a high price.",
+    "locations": [
+      "Tethys Desert"
+    ],
+    "namePlural": "Pearl Strings",
+    "pocket": "1",
+    "price": "20000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Peat Block",
+    "id": "PEATBLOCK",
+    "description": "A block of muddy material that is for fuel. It’s loved by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Peat Blocks",
+    "pocket": "1",
+    "price": "2100",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30,EvolutionStone"
+  },
+  {
+    "name": "Pecha Berry",
+    "id": "PECHABERRY",
+    "description": "It may be used or held by a Pokémon to recover from poison.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Pecha Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_ELECTRIC_80"
+  },
+  {
+    "name": "Persim Berry",
+    "id": "PERSIMBERRY",
+    "description": "It may be used or held by a Pokémon to recover from confusion.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Persim Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_GROUND_80"
+  },
+  {
+    "name": "Petaya Berry",
+    "id": "PETAYABERRY",
+    "description": "If held by a Pokémon, it raises its Sp. Atk stat in a pinch.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Petaya Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_POISON_100"
+  },
+  {
+    "name": "Phantohmite",
+    "id": "PHANTOHMITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Phantohm hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Nuves Forest"
+    ],
+    "namePlural": "Phantohmites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Pidgeotite",
+    "id": "PIDGEOTITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Pidgeot hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 4"
+    ],
+    "namePlural": "Pidgeotites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Pinap Berry",
+    "id": "PINAPBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Pinap Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_GRASS_90"
+  },
+  {
+    "name": "Pink Nectar",
+    "id": "PINKNECTAR",
+    "description": "A flower nectar obtained from shrubs on Royal Avenue. It changes the form of certain species of Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Pink Nectars",
+    "portionName": "jar of Pink Nectar",
+    "portionNamePlural": "jars of Pink Nectar",
+    "pocket": "1",
+    "price": "300",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Pinsirite",
+    "id": "PINSIRITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Pinsir hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 13"
+    ],
+    "namePlural": "Pinsirites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Pixie Plate",
+    "id": "PIXIEPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Fairy-type moves.",
+    "locations": [],
+    "namePlural": "Pixie Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Platypunchite",
+    "id": "PLATYPUNCHITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Platypunch hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Verde (Omno Town or Verde (Omno Town, Pokedex Reward))"
+    ],
+    "namePlural": "Platypunchites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Poison Barb",
+    "id": "POISONBARB",
+    "description": "An item to be held by a Pokémon. It is a small, poisonous barb that ups the power of Poison-type moves.",
+    "locations": [
+      "Route 12",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Poison Barbs",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Poison Memory",
+    "id": "POISONMEMORY",
+    "description": "A memory disc containing Poison-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Poison Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Poké Ball",
+    "id": "POKEBALL",
+    "description": "A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Poké Balls",
+    "pocket": "3",
+    "price": "200",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Poké Doll",
+    "id": "POKEDOLL",
+    "description": "A doll that attracts Pokémon. Use it to flee from any battle with a wild Pokémon.",
+    "locations": [
+      "Resec House 2"
+    ],
+    "namePlural": "Poké Dolls",
+    "pocket": "7",
+    "price": "300",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Poké Toy",
+    "id": "POKETOY",
+    "description": "An item that attracts Pokémon. Use it to flee from any battle with a wild Pokémon.",
+    "locations": [
+      "Route 9"
+    ],
+    "namePlural": "Poké Toys",
+    "pocket": "7",
+    "price": "300",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Pokémon Box Link",
+    "id": "POKEMONBOXLINK",
+    "description": "A device that allows you to access the Pokémon storage system. There are some places where it won't work.",
+    "locations": [
+      "Jepitur House 5"
+    ],
+    "namePlural": "Pokémon Box Links",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Poliwrathite",
+    "id": "POLIWRATHITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Poliwrath hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Lake Triton"
+    ],
+    "namePlural": "Poliwrathites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Pomeg Berry",
+    "id": "POMEGBERRY",
+    "description": "Using it on a Pokémon makes it more friendly, but it also lowers its base HP.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Pomeg Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_ICE_90"
+  },
+  {
+    "name": "Potion",
+    "id": "POTION",
+    "description": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to a single Pokémon.",
+    "locations": [
+      "Pokemarts",
+      "Route 1",
+      "Omno Town"
+    ],
+    "namePlural": "Potions",
+    "pocket": "2",
+    "price": "200",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Power Anklet",
+    "id": "POWERANKLET",
+    "description": "A Pokémon held item that promotes Speed gain on leveling, but reduces the Speed stat.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Power Anklets",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Power Band",
+    "id": "POWERBAND",
+    "description": "A Pokémon held item that promotes Sp. Def gain on leveling, but reduces the Speed stat.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Power Bands",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Power Belt",
+    "id": "POWERBELT",
+    "description": "A Pokémon held item that promotes Defense gain on leveling, but reduces the Speed stat.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Power Belts",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Power Bracer",
+    "id": "POWERBRACER",
+    "description": "A Pokémon held item that promotes Attack gain on leveling, but reduces the Speed stat.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Power Bracers",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Power Herb",
+    "id": "POWERHERB",
+    "description": "A single-use item to be held by a Pokémon. It allows the immediate use of a move that charges up first.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Power Herbs",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Power Lens",
+    "id": "POWERLENS",
+    "description": "A Pokémon held item that promotes Sp. Atk gain on leveling, but reduces the Speed stat.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Power Lenses",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Power Weight",
+    "id": "POWERWEIGHT",
+    "description": "A Pokémon held item that promotes HP gain on leveling, but reduces the Speed stat.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Power Weights",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "PP Max",
+    "id": "PPMAX",
+    "description": "It maximally raises the top PP of a selected move that has been learned by the target Pokémon.",
+    "locations": [
+      "Route 13",
+      "Azori Terrarium"
+    ],
+    "namePlural": "PP Maxes",
+    "portionName": "bottle of PP Max",
+    "portionNamePlural": "bottles of PP Max",
+    "pocket": "2",
+    "price": "10000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "PP Up",
+    "id": "PPUP",
+    "description": "It slightly raises the maximum PP of a selected move that has been learned by the target Pokémon.",
+    "locations": [
+      "Route 20",
+      "Azori Terrarium"
+    ],
+    "namePlural": "PP Ups",
+    "portionName": "bottle of PP Up",
+    "portionNamePlural": "bottles of PP Up",
+    "pocket": "2",
+    "price": "10000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Premier Ball",
+    "id": "PREMIERBALL",
+    "description": "A somewhat rare Poké Ball that has been specially made to commemorate an event of some sort.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Premier Balls",
+    "pocket": "3",
+    "price": "200",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Prism Scale",
+    "id": "PRISMSCALE",
+    "description": "A mysterious scale that evolves certain Pokémon. It shines in rainbow colors.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Prism Scales",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Prison Bottle",
+    "id": "PRISONBOTTLE",
+    "description": "A bottle believed to have been used to seal away the power of a certain Pokémon long, long ago.",
+    "locations": [],
+    "namePlural": "Prison Bottles",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Protective Pads",
+    "id": "PROTECTIVEPADS",
+    "description": "An item to be held by a Pokémon. They protect the holder from effects caused by making contact.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Protective Pads",
+    "portionName": "set of Protective Pads",
+    "portionNamePlural": "sets of Protective Pads",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Protector",
+    "id": "PROTECTOR",
+    "description": "A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Protectors",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Protein",
+    "id": "PROTEIN",
+    "description": "A nutritious drink for Pokémon. It raises the base Attack stat of a single Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "Proteins",
+    "portionName": "bottle of Protein",
+    "portionNamePlural": "bottles of Protein",
+    "pocket": "2",
+    "price": "10000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Psychic Memory",
+    "id": "PSYCHICMEMORY",
+    "description": "A memory disc containing Psychic-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Psychic Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Psychic Seed",
+    "id": "PSYCHICSEED",
+    "description": "An item to be held by a Pokémon. It boosts Sp. Def on Psychic Terrain. It can only be used once.",
+    "locations": [
+      "Route 12",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Psychic Seeds",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Punching Glove",
+    "id": "PUNCHINGGLOVE",
+    "description": "An item to be held by a Pokémon. It boosts the holder's punching moves and prevents direct contact.",
+    "locations": [
+      "Savannah Zone",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Punching Gloves",
+    "pocket": "1",
+    "price": "15000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Pure Incense",
+    "id": "PUREINCENSE",
+    "description": "An item to be held by a Pokémon. It helps keep wild Pokémon away if the holder is the first one in the party.",
+    "locations": [
+      "Route 5",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Pure Incenses",
+    "portionName": "jar of Pure Incense",
+    "portionNamePlural": "jars of Pure Incense",
+    "pocket": "1",
+    "price": "6000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Purple Nectar",
+    "id": "PURPLENECTAR",
+    "description": "A flower nectar obtained at Poni Meadow. It changes the form of certain species of Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Purple Nectars",
+    "portionName": "jar of Purple Nectar",
+    "portionNamePlural": "jars of Purple Nectar",
+    "pocket": "1",
+    "price": "300",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Qualot Berry",
+    "id": "QUALOTBERRY",
+    "description": "Using it on a Pokémon makes it more friendly, but it also lowers its base Defense stat.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Qualot Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_POISON_90"
+  },
+  {
+    "name": "Quick Ball",
+    "id": "QUICKBALL",
+    "description": "A somewhat different Poké Ball that provides a better catch rate if used at the start of a wild encounter.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Quick Balls",
+    "pocket": "3",
+    "price": "1000",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Quick Claw",
+    "id": "QUICKCLAW",
+    "description": "An item to be held by a Pokémon. A light, sharp claw that lets the bearer move first occasionally.",
+    "locations": [
+      "Cerrumy House 1",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Quick Claws",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Quick Powder",
+    "id": "QUICKPOWDER",
+    "description": "An item to be held by Ditto. Extremely fine yet hard, this odd powder boosts the Speed stat.",
+    "locations": [
+      "Route 16",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Quick Powders",
+    "portionName": "bag of Quick Powder",
+    "portionNamePlural": "bags of Quick Powder",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Quiet Mint",
+    "id": "QUIETMINT",
+    "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Quiet Mints",
+    "portionName": "sprig of Quiet Mint",
+    "portionNamePlural": "sprigs of Quiet Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Rabuta Berry",
+    "id": "RABUTABERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Rabuta Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_GHOST_90"
+  },
+  {
+    "name": "Rage Candy Bar",
+    "id": "RAGECANDYBAR",
+    "description": "Mahogany Town's famous candy. It can be used once to heal all the status conditions of a Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Rage Candy Bars",
+    "pocket": "2",
+    "price": "350",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Rare Bone",
+    "id": "RAREBONE",
+    "description": "A bone that is extremely valuable for Pokémon archaeology. It can be sold for a high price to shops.",
+    "locations": [
+      "Ruin Zone",
+      "Tethys Dig Site"
+    ],
+    "namePlural": "Rare Bones",
+    "pocket": "1",
+    "price": "5000",
+    "flags": "Fling_100"
+  },
+  {
+    "name": "Rare Candy",
+    "id": "RARECANDY",
+    "description": "A candy that is packed with energy. It raises the level of a single Pokémon by one.",
+    "locations": [
+      "Jepitur Dept Store Floor 2",
+      "Trash Cans (10)"
+    ],
+    "namePlural": "Rare Candies",
+    "pocket": "2",
+    "price": "5000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Rash Mint",
+    "id": "RASHMINT",
+    "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Sp. Def will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Rash Mints",
+    "portionName": "sprig of Rash Mint",
+    "portionNamePlural": "sprigs of Rash Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Rawst Berry",
+    "id": "RAWSTBERRY",
+    "description": "It may be used or held by a Pokémon to recover from a burn.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Rawst Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_GRASS_80"
+  },
+  {
+    "name": "Razor Claw",
+    "id": "RAZORCLAW",
+    "description": "An item to be held by a Pokémon. It is a sharply hooked claw that ups the holder's critical-hit ratio.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Razor Claws",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Razor Fang",
+    "id": "RAZORFANG",
+    "description": "An item to be held by a Pokémon. It may make foes and allies flinch when the holder inflicts damage.",
+    "locations": [
+      "Route 11",
+      "Jepitur Dept. Store Floor 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Razor Fangs",
+    "pocket": "1",
+    "price": "5000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Razz Berry",
+    "id": "RAZZBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Razz Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_STEEL_80"
+  },
+  {
+    "name": "Reaper Cloth",
+    "id": "REAPERCLOTH",
+    "description": "A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Reaper Cloths",
+    "portionName": "scrap of Reaper Cloth",
+    "portionNamePlural": "scraps of Reaper Cloth",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Red Card",
+    "id": "REDCARD",
+    "description": "A card with a mysterious power. When the holder is struck by a foe, the attacker is removed from battle.",
+    "locations": [
+      "Route 19",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Red Cards",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Red Nectar",
+    "id": "REDNECTAR",
+    "description": "A flower nectar obtained at Ula'ula Meadow. It changes the form of certain species of Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Red Nectars",
+    "portionName": "jar of Red Nectar",
+    "portionNamePlural": "jars of Red Nectar",
+    "pocket": "1",
+    "price": "300",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Red Orb",
+    "id": "REDORB",
+    "description": "A shiny red orb that is said to have a legend tied to it. It's known to be connected with the Hoenn region.",
+    "locations": [],
+    "namePlural": "Red Orbs",
+    "pocket": "1",
+    "price": "10000"
+  },
+  {
+    "name": "Reins of Unity",
+    "id": "REINSOFUNITYUSED",
+    "description": "Reins that people presented to the king. They separate Calyrex and its beloved steed.",
+    "locations": [],
+    "namePlural": "Reins of Unity",
+    "portionName": "set of Reins of Unity",
+    "portionNamePlural": "sets of Reins of Unity",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Relaxed Mint",
+    "id": "RELAXEDMINT",
+    "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Speed will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Relaxed Mints",
+    "portionName": "sprig of Relaxed Mint",
+    "portionNamePlural": "sprigs of Relaxed Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Relic Gold",
+    "id": "RELICGOLD",
+    "description": "A gold coin used in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
+    "locations": [
+      "Tethys Dig Site"
+    ],
+    "namePlural": "Relic Golds",
+    "portionName": "Relic Gold coin",
+    "portionNamePlural": "Relic Gold coins",
+    "pocket": "1",
+    "price": "60000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Repeat Ball",
+    "id": "REPEATBALL",
+    "description": "A somewhat different Poké Ball that works especially well on Pokémon species that were previously caught.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Repeat Balls",
+    "pocket": "3",
+    "price": "1000",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Repel",
+    "id": "REPEL",
+    "description": "An item that prevents weak wild Pokémon from appearing for 100 steps after its use.",
+    "locations": [
+      "Pokemarts",
+      "Route 2"
+    ],
+    "namePlural": "Repels",
+    "pocket": "1",
+    "price": "400",
+    "fieldUse": "Direct",
+    "flags": "Repel,Fling_30"
+  },
+  {
+    "name": "Reveal Glass",
+    "id": "REVEALGLASS",
+    "description": "A glass that reveals the truth. It is a mysterious glass that returns a Pokémon back to its original shape.",
+    "locations": [],
+    "namePlural": "Reveal Glasses",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Revival Herb",
+    "id": "REVIVALHERB",
+    "description": "A very bitter medicinal herb. It revives a fainted Pokémon, fully restoring its HP.",
+    "locations": [
+      "Route 15",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Revival Herbs",
+    "pocket": "2",
+    "price": "2800",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Revive",
+    "id": "REVIVE",
+    "description": "A medicine that revives a fainted Pokémon. It restores half the Pokémon's maximum HP.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Revives",
+    "pocket": "2",
+    "price": "2000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Ribbon Sweet",
+    "id": "RIBBONSWEET",
+    "description": "A ribbon-shaped sweet. When a Milcery holds this, it spins around happily.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Ribbon Sweets",
+    "pocket": "1",
+    "price": "500",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Rindo Berry",
+    "id": "RINDOBERRY",
+    "description": "Weakens a supereffective Grass-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Rindo Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_GRASS_80"
+  },
+  {
+    "name": "Ring Target",
+    "id": "RINGTARGET",
+    "description": "Moves that would otherwise have no effect will land on the Pokémon that holds it.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Ring Targets",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Roaraclite",
+    "id": "ROARACLITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Roaracle hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 13"
+    ],
+    "namePlural": "Roaraclites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Rock Incense",
+    "id": "ROCKINCENSE",
+    "description": "An item to be held by a Pokémon. This exotic-smelling incense boosts the power of Rock-type moves.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Rock Incenses",
+    "portionName": "jar of Rock Incense",
+    "portionNamePlural": "jars of Rock Incense",
+    "pocket": "1",
+    "price": "2000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Rock Memory",
+    "id": "ROCKMEMORY",
+    "description": "A memory disc containing Rock-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Rock Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Rocky Helmet",
+    "id": "ROCKYHELMET",
+    "description": "If the holder of this item takes damage, the attacker will also be damaged upon contact.",
+    "locations": [
+      "Statera Canyon 3",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Rocky Helmets",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Room Service",
+    "id": "ROOMSERVICE",
+    "description": "An item to be held by a Pokémon. Lowers Speed when Trick Room takes effect.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Room Services",
+    "portionName": "voucher for Room Service",
+    "portionNamePlural": "vouchers for Room Service",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_100"
+  },
+  {
+    "name": "Rose Incense",
+    "id": "ROSEINCENSE",
+    "description": "An item to be held by a Pokémon. This exotic-smelling incense boosts the power of Grass-type moves.",
+    "locations": [
+      "Nuves City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Rose Incenses",
+    "portionName": "jar of Rose Incense",
+    "portionNamePlural": "jars of Rose Incense",
+    "pocket": "1",
+    "price": "2000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Roseli Berry",
+    "id": "ROSELIBERRY",
+    "description": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Fairy-type attack.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Roseli Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_FAIRY_80"
+  },
+  {
+    "name": "Roseradite",
+    "id": "ROSERADITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Roserade hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Lake Triton"
+    ],
+    "namePlural": "Roseradites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Rotom Catalog",
+    "id": "ROTOMCATALOG",
+    "description": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the devices listed within.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4"
+    ],
+    "namePlural": "Rotom Catalogs",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Rowap Berry",
+    "id": "ROWAPBERRY",
+    "description": "If held by a Pokémon and a special attack lands, the attacker also takes damage.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Rowap Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_DARK_100"
+  },
+  {
+    "name": "Rusted Shield",
+    "id": "RUSTEDSHIELD",
+    "description": "It is said that a hero used this shield to halt a disaster in ancient times. But it's grown rusty and worn.",
+    "locations": [],
+    "namePlural": "Rusted Shields",
+    "pocket": "1",
+    "price": "0"
+  },
+  {
+    "name": "Rusted Sword",
+    "id": "RUSTEDSWORD",
+    "description": "It is said that a hero used this sword to halt a disaster in ancient times. But it's grown rusty and worn.",
+    "locations": [],
+    "namePlural": "Rusted Swords",
+    "pocket": "1",
+    "price": "0"
+  },
+  {
+    "name": "Sablenite",
+    "id": "SABLENITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Sableye hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Kuiper Town Mine"
+    ],
+    "namePlural": "Sablenites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Sachet",
+    "id": "SACHET",
+    "description": "A sachet filled with slightly overwhelming fragrant perfumes. Yet it's loved by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Sachets",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Safety Goggles",
+    "id": "SAFETYGOGGLES",
+    "description": "An item to be held by a Pokémon. They protect the holder from weather-related damage and powder.",
+    "locations": [
+      "Tethys Desert",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Safety Goggles",
+    "portionName": "pair of Safety Goggles",
+    "portionNamePlural": "pairs of Safety Goggles",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Salac Berry",
+    "id": "SALACBERRY",
+    "description": "If held by a Pokémon, it raises its Speed stat in a pinch.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Salac Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_FIGHTING_100"
+  },
+  {
+    "name": "Salamencite",
+    "id": "SALAMENCITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Salamence hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Statera Canyon 3"
+    ],
+    "namePlural": "Salamencites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Sassy Mint",
+    "id": "SASSYMINT",
+    "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Speed will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Sassy Mints",
+    "portionName": "sprig of Sassy Mint",
+    "portionNamePlural": "sprigs of Sassy Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Sceptilite",
+    "id": "SCEPTILITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Sceptile hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Sceptilites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Scizorite",
+    "id": "SCIZORITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Scizor hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 13"
+    ],
+    "namePlural": "Scizorites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Scope Lens",
+    "id": "SCOPELENS",
+    "description": "An item to be held by a Pokémon. It is a lens that boosts the holder's critical-hit ratio.",
+    "locations": [
+      "Route 20",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Scope Lenses",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Scroll of Darkness",
+    "id": "SCROLLOFDARKNESS",
+    "description": "A scroll that evolves certain Pokémon. Written on it are the true secrets of the path of darkness.",
+    "locations": [],
+    "namePlural": "Scroll of Darkness",
+    "pocket": "1",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Scroll of Waters",
+    "id": "SCROLLOFWATERS",
+    "description": "A scroll that evolves certain Pokémon. Written on it are the true secrets of the path of water.",
+    "locations": [],
+    "namePlural": "Scroll of Waters",
+    "pocket": "1",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Scyther Summon",
+    "id": "CUTITEM",
+    "description": "This can be used to summon a Scyther that can cut small trees blocking your path.",
+    "locations": [
+      "Nuves City"
+    ],
+    "namePlural": "Scyther Summon",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Sea Incense",
+    "id": "SEAINCENSE",
+    "description": "An item to be held by a Pokémon. It has a curious aroma that boosts the power of Water-type moves.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Sea Incenses",
+    "portionName": "jar of Sea Incense",
+    "portionNamePlural": "jars of Sea Incense",
+    "pocket": "1",
+    "price": "2000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Serious Mint",
+    "id": "SERIOUSMINT",
+    "description": "When a Pokémon smells this mint, all of its stats will grow at an equal rate.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Serious Mints",
+    "portionName": "sprig of Serious Mint",
+    "portionNamePlural": "sprigs of Serious Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Sharp Beak",
+    "id": "SHARPBEAK",
+    "description": "An item to be held by a Pokémon. It is a long, sharp beak that boosts the power of Flying-type moves.",
+    "locations": [
+      "Route 12",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Sharp Beaks",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Sharpedonite",
+    "id": "SHARPEDONITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Sharpedo hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Lake Triton"
+    ],
+    "namePlural": "Sharpedonites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Shed Shell",
+    "id": "SHEDSHELL",
+    "description": "An item to be held by a Pokémon. This discarded carapace lets the holder switch out of battle without fail.",
+    "locations": [
+      "Route 13",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Shed Shells",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Shell Bell",
+    "id": "SHELLBELL",
+    "description": "An item to be held by a Pokémon. The holder's HP is restored a little every time it inflicts damage.",
+    "locations": [
+      "Victory Road",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Shell Bells",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Shiny Charm",
+    "id": "SHINYCHARM",
+    "description": "A shiny charm said to increase the chance of finding a Shiny Pokémon.",
+    "locations": [
+      "Verde (Omno Town, Pokedex Reward)"
+    ],
+    "namePlural": "Shiny Charms",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Shiny Stone",
+    "id": "SHINYSTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It shines with a dazzling light.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Shiny Stones",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_80"
+  },
+  {
+    "name": "Shock Drive",
+    "id": "SHOCKDRIVE",
+    "description": "A cassette to be held by Genesect. It changes Techno Blast to an Electric-type move.",
+    "locations": [],
+    "namePlural": "Shock Drives",
+    "pocket": "1",
+    "price": "0",
+    "flags": "Fling_70"
+  },
+  {
+    "name": "Shuca Berry",
+    "id": "SHUCABERRY",
+    "description": "Weakens a supereffective Ground-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Shuca Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_GROUND_80"
+  },
+  {
+    "name": "Silk Scarf",
+    "id": "SILKSCARF",
+    "description": "An item to be held by a Pokémon. It is a sumptuous scarf that boosts the power of Normal-type moves.",
+    "locations": [
+      "Route 22",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Silk Scarves",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Silver Powder",
+    "id": "SILVERPOWDER",
+    "description": "An item to be held by a Pokémon. It is a shiny, silver powder that ups the power of Bug-type moves.",
+    "locations": [
+      "Route 2",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Silver Powders",
+    "portionName": "pile of Silver Powder",
+    "portionNamePlural": "piles of Silver Powder",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Sitrus Berry",
+    "id": "SITRUSBERRY",
+    "description": "It may be used or held by a Pokémon to heal the user's HP a little.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Sitrus Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_PSYCHIC_80"
+  },
+  {
+    "name": "Sky Plate",
+    "id": "SKYPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Flying-type moves.",
+    "locations": [],
+    "namePlural": "Sky Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Sleeping Bag",
+    "id": "SLEEPINGBAG",
+    "description": "A sleeping bag designed for camping. Use it to rest until morning or night.",
+    "locations": [
+      "Terah Town"
+    ],
+    "namePlural": "Sleeping Bags",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Slowbronite",
+    "id": "SLOWBRONITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Slowbro hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Slowbronites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Smoke Ball",
+    "id": "SMOKEBALL",
+    "description": "An item to be held by a Pokémon. It enables the holder to flee from any wild Pokémon without fail.",
+    "locations": [
+      "Route 11",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Smoke Balls",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Smooth Rock",
+    "id": "SMOOTHROCK",
+    "description": "A Pokémon held item that extends the duration of the move Sandstorm used by the holder.",
+    "locations": [
+      "Callisto Cave",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Smooth Rocks",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Snowball",
+    "id": "SNOWBALL",
+    "description": "An item to be held by a Pokémon. It boosts Attack if hit by an Ice-type attack. It can only be used once.",
+    "locations": [
+      "Hilo Mountain 2",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Snowballs",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Snuffluffite",
+    "id": "SNUFFLUFFITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Snuffluff hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Omno Town"
+    ],
+    "namePlural": "Snuffluffites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Soda Pop",
+    "id": "SODAPOP",
+    "description": "A highly carbonated soda drink. It can be used to restore 50 HP to a single Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Rooftop"
+    ],
+    "namePlural": "Soda Pops",
+    "portionName": "bottle of Soda Pop",
+    "portionNamePlural": "bottles of Soda Pop",
+    "pocket": "2",
+    "price": "300",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Soft Sand",
+    "id": "SOFTSAND",
+    "description": "An item to be held by a Pokémon. It is a loose, silky sand that boosts the power of Ground-type moves.",
+    "locations": [
+      "Route 15",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Soft Sand",
+    "portionName": "bag of Soft Sand",
+    "portionNamePlural": "bags of Soft Sand",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Soothe Bell",
+    "id": "SOOTHEBELL",
+    "description": "An item to be held by a Pokémon. The comforting chime of this bell calms the holder, making it friendly.",
+    "locations": [
+      "Jepitur City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Soothe Bells",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Soul Dew",
+    "id": "SOULDEW",
+    "description": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves.",
+    "locations": [],
+    "namePlural": "Soul Dews",
+    "pocket": "1",
+    "price": "0",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Sparkling Vial",
+    "id": "SPARKLINGVIAL",
+    "description": "A vial of red liquid that sparkles extremely bright in the gleam of sunlight.",
+    "locations": [
+      "Jepitur Office Building Floor 3 (Post Game)"
+    ],
+    "namePlural": "Sparkling Vials",
+    "pocket": "2",
+    "price": "20000",
+    "fieldUse": "OnPokemon"
+  },
+  {
+    "name": "Spell Tag",
+    "id": "SPELLTAG",
+    "description": "An item to be held by a Pokémon. It is a sinister, eerie tag that boosts the power of Ghost-type moves.",
+    "locations": [
+      "Kuiper Town",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Spell Tags",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Spelon Berry",
+    "id": "SPELONBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Spelon Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_DARK_90"
+  },
+  {
+    "name": "Spine Fossil",
+    "id": "SPINEFOSSIL",
+    "description": "A fossil of an ancient Pokémon. It appears to be part of a spine of some sort.",
+    "locations": [
+      "Rock Smash Rocks"
+    ],
+    "namePlural": "Spine Fossils",
+    "pocket": "1",
+    "price": "7000",
+    "flags": "Fossil,Fling_100"
+  },
+  {
+    "name": "Splash Plate",
+    "id": "SPLASHPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Water-type moves.",
+    "locations": [],
+    "namePlural": "Splash Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Spooky Plate",
+    "id": "SPOOKYPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Ghost-type moves.",
+    "locations": [],
+    "namePlural": "Spooky Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Sport Ball",
+    "id": "SPORTBALL",
+    "description": "A special Poké Ball for the Bug-Catching Contest.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Sport Balls",
+    "pocket": "3",
+    "price": "300",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Star Piece",
+    "id": "STARPIECE",
+    "description": "A shard of a pretty gem that sparkles in a red color. It can be sold at a high price to shops.",
+    "locations": [
+      "Tethys Dig Site"
+    ],
+    "namePlural": "Star Pieces",
+    "pocket": "1",
+    "price": "12000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Star Sweet",
+    "id": "STARSWEET",
+    "description": "A star-shaped sweet. When a Milcery holds this, it spins around happily.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Star Sweets",
+    "pocket": "1",
+    "price": "500",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Stardust",
+    "id": "STARDUST",
+    "description": "Lovely, red-colored sand with a loose, silky feel. It can be sold at a high price to shops.",
+    "locations": [
+      "Route 14",
+      "Tethys Dig Site"
+    ],
+    "namePlural": "Stardusts",
+    "portionName": "bag of Stardust",
+    "portionNamePlural": "bags of Stardust",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Starf Berry",
+    "id": "STARFBERRY",
+    "description": "If held by a Pokémon, it sharply raises one of its stats in a pinch.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Starf Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_PSYCHIC_100"
+  },
+  {
+    "name": "Steel Memory",
+    "id": "STEELMEMORY",
+    "description": "A memory disc containing Steel-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Steel Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Steelixite",
+    "id": "STEELIXITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Steelix hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Callisto Cave"
+    ],
+    "namePlural": "Steelixites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Sticky Barb",
+    "id": "STICKYBARB",
+    "description": "A held item that damages the holder on every turn. It may latch on to Pokémon that touch the holder.",
+    "locations": [
+      "Route 4",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Sticky Barbs",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Stone Plate",
+    "id": "STONEPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Rock-type moves.",
+    "locations": [],
+    "namePlural": "Stone Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Strawberry Sweet",
+    "id": "STRAWBERRYSWEET",
+    "description": "A strawberry-shaped sweet. When a Milcery holds this, it will spin around happily.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Strawberry Sweets",
+    "pocket": "1",
+    "price": "500",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Sun Stone",
+    "id": "SUNSTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It is as red as the sun.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Sun Stones",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Super Potion",
+    "id": "SUPERPOTION",
+    "description": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to a single Pokémon.",
+    "locations": [
+      "Pokemarts",
+      "Spiral Cave",
+      "Route 3"
+    ],
+    "namePlural": "Super Potions",
+    "pocket": "2",
+    "price": "700",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Super Repel",
+    "id": "SUPERREPEL",
+    "description": "An item that prevents weak wild Pokémon from appearing for 200 steps after its use.",
+    "locations": [
+      "Pokemarts"
+    ],
+    "namePlural": "Super Repels",
+    "pocket": "1",
+    "price": "700",
+    "fieldUse": "Direct",
+    "flags": "Repel,Fling_30"
+  },
+  {
+    "name": "Super Rod",
+    "id": "SUPERROD",
+    "description": "An awesome, high-tech fishing rod. Use it by any body of water to fish for wild aquatic Pokémon.",
+    "locations": [
+      "Lake Triton"
+    ],
+    "namePlural": "Super Rods",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Swampertite",
+    "id": "SWAMPERTITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Swampert hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Swampertites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Sweet Apple",
+    "id": "SWEETAPPLE",
+    "description": "A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally sweet.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Sweet Apples",
+    "pocket": "1",
+    "price": "2200",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Sweet Heart",
+    "id": "SWEETHEART",
+    "description": "Very sweet chocolate. It restores the HP of one Pokémon by only 20 points.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Sweet Hearts",
+    "pocket": "2",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Syrupy Apple",
+    "id": "SYRUPYAPPLE",
+    "description": "A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally syrupy.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Syrupy Apples",
+    "pocket": "1",
+    "price": "2200",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Talonfalme Summon",
+    "id": "FLYITEM",
+    "description": "This can be used to summon a Talonflame that can fly you to places you have already been.",
+    "locations": [
+      "Rusanu City"
+    ],
+    "namePlural": "Talonflame Summon",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Tamato Berry",
+    "id": "TAMATOBERRY",
+    "description": "Using it on a Pokémon makes it more friendly, but it also lowers its base Speed stat.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Tamato Berries",
+    "pocket": "5",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Berry,Fling_10,NaturalGift_PSYCHIC_90"
+  },
+  {
+    "name": "Tanga Berry",
+    "id": "TANGABERRY",
+    "description": "Weakens a supereffective Bug-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Tanga Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_BUG_80"
+  },
+  {
+    "name": "Tart Apple",
+    "id": "TARTAPPLE",
+    "description": "A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally tart.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Tart Apples",
+    "pocket": "1",
+    "price": "2200",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Teal Mask",
+    "id": "TEALMASK",
+    "description": "A teal mask patterned after the face of an ogre. Dropped by Ogerpon after visiting the Festival of Masks.",
+    "locations": [],
+    "namePlural": "Teal Masks",
+    "pocket": "8",
+    "price": "0",
+    "flags": "KeyItem,Fling_60"
+  },
+  {
+    "name": "Terrain Extender",
+    "id": "TERRAINEXTENDER",
+    "description": "An item to be held by a Pokémon. It extends the duration of the terrain caused by the holder.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Terrain Extenders",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Thick Club",
+    "id": "THICKCLUB",
+    "description": "An item to be held by Cubone or Marowak. It is a hard bone of some sort that boosts the Attack stat.",
+    "locations": [
+      "Tethys Desert",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Thick Clubs",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Throat Spray",
+    "id": "THROATSPRAY",
+    "description": "Raises Sp. Atk when a Pokémon uses a sound-based move.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Throat Sprays",
+    "portionName": "bottle of Throat Spray",
+    "portionNamePlural": "bottles of Throat Spray",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Thunder Stone",
+    "id": "THUNDERSTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It has a thunderbolt pattern.",
+    "locations": [
+      "Jepitur Dept. Store Floor 4"
+    ],
+    "namePlural": "Thunder Stones",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Timer Ball",
+    "id": "TIMERBALL",
+    "description": "A somewhat different Ball that becomes progressively better the more turns there are in a battle.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Timer Balls",
+    "pocket": "3",
+    "price": "1000",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Timid Mint",
+    "id": "TIMIDMINT",
+    "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Attack will grow more slowly.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Timid Mints",
+    "portionName": "sprig of Timid Mint",
+    "portionNamePlural": "sprigs of Timid Mint",
+    "pocket": "2",
+    "price": "20",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Tiny Bamboo Shoot",
+    "id": "TINYBAMBOOSHOOT",
+    "description": "A small and rare bamboo shoot. It's quite popular with a certain class of gourmands.",
+    "locations": [],
+    "namePlural": "Tiny Bamboo Shoots",
+    "pocket": "1",
+    "price": "1500",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Tiny Mushroom",
+    "id": "TINYMUSHROOM",
+    "description": "A small and rare mushroom. It is sought after by collectors.",
+    "locations": [
+      "Nuves Forest",
+      "Route 12"
+    ],
+    "namePlural": "Tiny Mushrooms",
+    "pocket": "1",
+    "price": "500",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Titanimaamite",
+    "id": "TITANIMAAMITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Titanimaam hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Lake Umbriel"
+    ],
+    "namePlural": "Titanimaamites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Tooth Fossil",
+    "id": "TOOTHFOSSIL",
+    "description": "A fossil of an ancient Pokémon. It appears to be a massive tooth of some sort.",
+    "locations": [
+      "Rock Smash Rocks"
+    ],
+    "namePlural": "Spine Fossils",
+    "pocket": "1",
+    "price": "7000",
+    "flags": "Fossil,Fling_100"
+  },
+  {
+    "name": "Torkoalite",
+    "id": "TORKOALITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Torkoal hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Route 8"
+    ],
+    "namePlural": "Torkoalites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Torterrite",
+    "id": null,
+    "description": null,
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ]
+  },
+  {
+    "name": "Town Map",
+    "id": "TOWNMAP",
+    "description": "A very convenient map that can be viewed anytime. It even shows your present location.",
+    "locations": [
+      "Mom (Terah Town)"
+    ],
+    "namePlural": "Town Maps",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "Direct",
+    "flags": "KeyItem"
+  },
+  {
+    "name": "Toxic Orb",
+    "id": "TOXICORB",
+    "description": "An item to be held by a Pokémon. It is a bizarre orb that badly poisons the holder in battle.",
+    "locations": [
+      "Seri Town",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Toxic Orbs",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Toxic Plate",
+    "id": "TOXICPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Poison-type moves.",
+    "locations": [],
+    "namePlural": "Toxic Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Twisted Spoon",
+    "id": "TWISTEDSPOON",
+    "description": "An item to be held by a Pokémon. It is a spoon imbued with telekinetic power that boosts Psychic-type moves.",
+    "locations": [
+      "Jepitur House 1",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Twisted Spoons",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Tyranitarite",
+    "id": "TYRANITARITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Tyranitar hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Victory Road"
+    ],
+    "namePlural": "Tyranitarites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Ultra Ball",
+    "id": "ULTRABALL",
+    "description": "An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball.",
+    "locations": [
+      "Pokemarts",
+      "Route 13",
+      "Kamemeka Town"
+    ],
+    "namePlural": "Ultra Balls",
+    "pocket": "3",
+    "price": "800",
+    "flags": "PokeBall"
+  },
+  {
+    "name": "Unremarkable Teacup",
+    "id": "UNREMARKABLETEACUP",
+    "description": "A peculiar cracked teacup that can make a certain species of Pokémon evolve. It makes delicious tea.",
+    "locations": [
+      "Mountain Zone"
+    ],
+    "namePlural": "Unremarkable Teacups",
+    "pocket": "1",
+    "price": "1500",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_80"
+  },
+  {
+    "name": "Upgrade",
+    "id": "UPGRADE",
+    "description": "A transparent device filled with all sorts of data. It was produced by Silph Co.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Upgrades",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Utility Umbrella",
+    "id": "UTILITYUMBRELLA",
+    "description": "An item to be held by a Pokémon. This sturdy umbrella protects the holder from the effects of rain and sun.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Utility Umbrellas",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Venusaurite",
+    "id": "VENUSAURITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Venusaur hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Venusaurites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Wacan Berry",
+    "id": "WACANBERRY",
+    "description": "Weakens a supereffective Electric-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Wacan Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_ELECTRIC_80"
+  },
+  {
+    "name": "Water Memory",
+    "id": "WATERMEMORY",
+    "description": "A memory disc containing Water-type data. It changes the holder's type if held by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Water Memories",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_50"
+  },
+  {
+    "name": "Water Stone",
+    "id": "WATERSTONE",
+    "description": "A peculiar stone that makes certain species of Pokémon evolve. It is a clear, light blue.",
+    "locations": [
+      "Lake Triton",
+      "Jepitur Dept. Store Floor 4"
+    ],
+    "namePlural": "Water Stones",
+    "pocket": "1",
+    "price": "3000",
+    "fieldUse": "OnPokemon",
+    "flags": "EvolutionStone,Fling_30"
+  },
+  {
+    "name": "Watmel Berry",
+    "id": "WATMELBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Watmel Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_FIRE_100"
+  },
+  {
+    "name": "Wave Incense",
+    "id": "WAVEINCENSE",
+    "description": "An item to be held by a Pokémon. It has a curious aroma that boosts the power of Water-type moves.",
+    "locations": [
+      "Lake Triton",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Wave Incenses",
+    "portionName": "jar of Wave Incense",
+    "portionNamePlural": "jars of Wave Incense",
+    "pocket": "1",
+    "price": "2000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Weakness Policy",
+    "id": "WEAKNESSPOLICY",
+    "description": "An item to be held by a Pokémon. The holder's Attack and Sp. Atk sharply increase if hit by a move it's weak to.",
+    "locations": [
+      "Penetun City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Weakness Policies",
+    "pocket": "1",
+    "price": "1000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "Wellspring Mask",
+    "id": "WELLSPRINGMASK",
+    "description": "A carved wooden mask to be held by Ogerpon. It allows Ogerpon to wield the Water type during battle.",
+    "locations": [],
+    "namePlural": "Wellspring Masks",
+    "pocket": "1",
+    "price": "0",
+    "flags": "Fling_60"
+  },
+  {
+    "name": "Wepear Berry",
+    "id": "WEPEARBERRY",
+    "description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry.",
+    "locations": [
+      "Penetun  City"
+    ],
+    "namePlural": "Wepear Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_ELECTRIC_90"
+  },
+  {
+    "name": "Whipped Dream",
+    "id": "WHIPPEDDREAM",
+    "description": "A soft and sweet treat made of fluffy, puffy and whirled cream. It's loved by a certain Pokémon.",
+    "locations": [
+      "Azori Terrarium"
+    ],
+    "namePlural": "Whipped Dreams",
+    "portionName": "dollop of Whipped Dream",
+    "portionNamePlural": "dollops of Whipped Dream",
+    "pocket": "1",
+    "price": "3000",
+    "flags": "Fling_80"
+  },
+  {
+    "name": "White Herb",
+    "id": "WHITEHERB",
+    "description": "An item to be held by a Pokémon. It restores any lowered stat in battle. It can be used only once.",
+    "locations": [
+      "Route 15",
+      "Azori Terrarium"
+    ],
+    "namePlural": "White Herbs",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Wide Lens",
+    "id": "WIDELENS",
+    "description": "An item to be held by a Pokémon. It is a magnifying lens that slightly boosts the accuracy of moves.",
+    "locations": [
+      "Route 22",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Wide Lenses",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Wiki Berry",
+    "id": "WIKIBERRY",
+    "description": "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Wiki Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_ROCK_80"
+  },
+  {
+    "name": "Wise Glasses",
+    "id": "WISEGLASSES",
+    "description": "An item to be held by a Pokémon. It is a thick pair of glasses that slightly boosts the power of special moves.",
+    "locations": [
+      "Nuves City",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Wise Glasses",
+    "portionName": "pair of Wise Glasses",
+    "portionNamePlural": "pairs of Wise Glasses",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "X Accuracy",
+    "id": "XACCURACY",
+    "description": "An item that sharply boosts the accuracy of a Pokémon while it remains in battle.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "X Accuracies",
+    "pocket": "7",
+    "price": "1000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "X Attack",
+    "id": "XATTACK",
+    "description": "An item that sharply boosts the Attack stat of a Pokémon while it remains in battle.",
+    "locations": [
+      "Nuves Hs 3"
+    ],
+    "namePlural": "X Attacks",
+    "pocket": "7",
+    "price": "1000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "X Defense",
+    "id": "XDEFENSE",
+    "description": "An item that sharply boosts the Defense of a Pokémon while it remains in battle.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "X Defenses",
+    "pocket": "7",
+    "price": "2000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "X Sp. Atk",
+    "id": "XSPATK",
+    "description": "An item that sharply boosts the Sp. Atk stat of a Pokémon while it remains in battle.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "X Sp. Atks",
+    "pocket": "7",
+    "price": "1000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "X Sp. Def",
+    "id": "XSPDEF",
+    "description": "An item that sharply boosts the Sp. Def stat of a Pokémon while it remains in battle.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "X Sp. Defs",
+    "pocket": "7",
+    "price": "2000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "X Speed",
+    "id": "XSPEED",
+    "description": "An item that sharply boosts the Speed stat of a Pokémon while it remains in battle.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "X Speeds",
+    "pocket": "7",
+    "price": "1000",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Yache Berry",
+    "id": "YACHEBERRY",
+    "description": "Weakens a supereffective Ice-type attack against the holding Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Yache Berries",
+    "pocket": "5",
+    "price": "20",
+    "flags": "Berry,Fling_10,NaturalGift_ICE_80"
+  },
+  {
+    "name": "Yellow Nectar",
+    "id": "YELLOWNECTAR",
+    "description": "A flower nectar obtained at Melemele Meadow. It changes the form of certain species of Pokémon.",
+    "locations": [
+      "Penetun City"
+    ],
+    "namePlural": "Yellow Nectars",
+    "portionName": "jar of Yellow Nectar",
+    "portionNamePlural": "jars of Yellow Nectar",
+    "pocket": "1",
+    "price": "300",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Zap Plate",
+    "id": "ZAPPLATE",
+    "description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Electric-type moves.",
+    "locations": [],
+    "namePlural": "Zap Plates",
+    "pocket": "1",
+    "price": "10000",
+    "flags": "Fling_90"
+  },
+  {
+    "name": "Zinc",
+    "id": "ZINC",
+    "description": "A nutritious drink for Pokémon. It raises the base Sp. Def (Special Defense) stat of a single Pokémon.",
+    "locations": [
+      "Jepitur Dept. Store Floor 5"
+    ],
+    "namePlural": "Zincs",
+    "portionName": "bottle of Zinc",
+    "portionNamePlural": "bottles of Zinc",
+    "pocket": "2",
+    "price": "10000",
+    "fieldUse": "OnPokemon",
+    "flags": "Fling_30"
+  },
+  {
+    "name": "Zoom Lens",
+    "id": "ZOOMLENS",
+    "description": "An item to be held by a Pokémon. If the holder moves after its target, its accuracy will be boosted.",
+    "locations": [
+      "Statera Canyon 1",
+      "Azori Terrarium"
+    ],
+    "namePlural": "Zoom Lenses",
+    "pocket": "1",
+    "price": "4000",
+    "flags": "Fling_10"
+  },
+  {
+    "name": "Zygarde Cube",
+    "id": "ZYGARDECUBE",
+    "description": "An item in which Zygarde Cores and Cells are gathered. You can also use it to change Zygarde's forms.",
+    "locations": [],
+    "namePlural": "Zygarde Cubes",
+    "pocket": "8",
+    "price": "0",
+    "fieldUse": "OnPokemon",
+    "flags": "KeyItem"
+  }
+]

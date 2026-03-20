@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokémon Copper - Items</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px 80px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .subtitle {
+      color: #aaa;
+      margin-bottom: 40px;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .nav {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .nav a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      margin: 0 8px 10px;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      background: white;
+      color: black;
+    }
+
+    .controls {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+    }
+
+    .controls input,
+    .controls select {
+      background: #181818;
+      color: white;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 1rem;
+      min-width: 220px;
+    }
+
+    .results-count {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+
+    .item-card {
+      background: #181818;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 22px;
+      transition: 0.25s;
+    }
+
+    .item-card:hover {
+      transform: translateY(-4px);
+      background: #202020;
+      border-color: #555;
+    }
+
+    .item-name {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .item-id {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 14px;
+    }
+
+    .item-description {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .locations-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .locations-list li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 8px;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    .locations-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: white;
+    }
+
+    .no-locations {
+      color: #888;
+      font-style: italic;
+    }
+
+    .status-message {
+      text-align: center;
+      color: #aaa;
+      padding: 40px 20px;
+      font-size: 1rem;
+    }
+
+    .footer {
+      background: #0a0a0a;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-top: 60px;
+    }
+
+    .footer p {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .page {
+        padding: 40px 16px 60px;
+      }
+
+      .controls {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .controls input,
+      .controls select {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <h1>Items</h1>
+    <p class="subtitle">Browse item descriptions and locations in Pokémon Copper.</p>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="info.html">Game Info</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="https://discord.gg/pavpnHGPYh" target="_blank" rel="noopener noreferrer">Discord</a>
+    </div>
+
+    <div class="controls">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by item name, description, or location..."
+      />
+
+      <select id="sortSelect">
+        <option value="az">Sort: A–Z</option>
+        <option value="za">Sort: Z–A</option>
+      </select>
+    </div>
+
+    <div class="results-count" id="resultsCount">Loading items...</div>
+    <div class="items-grid" id="itemsGrid"></div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      Pokémon Copper is a fan-made project and is not affiliated with, endorsed, sponsored, or specifically approved by Nintendo, Game Freak, or The Pokémon Company.
+    </p>
+    <p>
+      Pokémon and all related trademarks, names, and characters are © Nintendo, Game Freak, and The Pokémon Company.
+    </p>
+    <p>
+      This game is distributed for free and no copyright infringement is intended.
+    </p>
+  </footer>
+
+  <script>
+    let allItems = [];
+
+    async function loadItems() {
+      const itemsGrid = document.getElementById("itemsGrid");
+      const resultsCount = document.getElementById("resultsCount");
+
+      try {
+        const response = await fetch("data/items.json");
+
+        if (!response.ok) {
+          throw new Error(`HTTP error ${response.status}`);
+        }
+
+        allItems = await response.json();
+        renderItems();
+      } catch (error) {
+        console.error("Failed to load items:", error);
+        resultsCount.textContent = "Could not load item data.";
+        itemsGrid.innerHTML = `
+          <div class="status-message">
+            Failed to load <strong>data/items.json</strong>.<br>
+            Make sure the file exists and the path is correct.
+          </div>
+        `;
+      }
+    }
+
+    function renderItems() {
+      const itemsGrid = document.getElementById("itemsGrid");
+      const resultsCount = document.getElementById("resultsCount");
+      const searchValue = document.getElementById("searchInput").value.trim().toLowerCase();
+      const sortValue = document.getElementById("sortSelect").value;
+
+      let filteredItems = allItems.filter(item => {
+        const name = (item.name || "").toLowerCase();
+        const description = (item.description || "").toLowerCase();
+        const locations = Array.isArray(item.locations)
+          ? item.locations.join(" ").toLowerCase()
+          : "";
+
+        return (
+          name.includes(searchValue) ||
+          description.includes(searchValue) ||
+          locations.includes(searchValue)
+        );
+      });
+
+      filteredItems.sort((a, b) => {
+        const nameA = (a.name || "").toLowerCase();
+        const nameB = (b.name || "").toLowerCase();
+
+        if (sortValue === "za") {
+          return nameB.localeCompare(nameA);
+        }
+
+        return nameA.localeCompare(nameB);
+      });
+
+      resultsCount.textContent = "";
+
+      if (filteredItems.length === 0) {
+        itemsGrid.innerHTML = `
+          <div class="status-message">
+            No items matched your search.
+          </div>
+        `;
+        return;
+      }
+
+      itemsGrid.innerHTML = filteredItems.map(item => {
+        const locationsHtml = Array.isArray(item.locations) && item.locations.length > 0
+          ? `
+            <ul class="locations-list">
+              ${item.locations.map(location => `<li>${escapeHtml(location)}</li>`).join("")}
+            </ul>
+          `
+          : `<p class="no-locations">No listed location.</p>`;
+
+        return `
+          <div class="item-card">
+            <h2 class="item-name">${escapeHtml(item.name || "Unknown Item")}</h2>
+            <p class="item-description">
+              ${escapeHtml(item.description || "No description available.")}
+            </p>
+            <h3 class="section-title">Locations</h3>
+            ${locationsHtml}
+          </div>
+        `;
+      }).join("");
+    }
+
+    function escapeHtml(text) {
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    document.getElementById("searchInput").addEventListener("input", renderItems);
+    document.getElementById("sortSelect").addEventListener("change", renderItems);
+
+    loadItems();
+  </script>
+</body>
+</html>

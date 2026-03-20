@@ -160,16 +160,6 @@
       color: black;
     }
 
-    .results-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 18px;
-      color: var(--muted);
-      flex-wrap: wrap;
-    }
-
     .pokemon-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -733,11 +723,6 @@
       </div>
     </section>
 
-    <div class="results-bar">
-      <div id="resultsCount">Loading Pokémon...</div>
-      <div id="currentViewLabel">Viewing: Azori Pokédex</div>
-    </div>
-
     <div id="loadingState" class="loading-state">Loading Pokémon data...</div>
     <div id="errorState" class="error-state" style="display:none;"></div>
     <div id="emptyState" class="empty-state" style="display:none;">No Pokémon match the current filters.</div>
@@ -800,8 +785,6 @@
     const loadingState = document.getElementById("loadingState");
     const errorState = document.getElementById("errorState");
     const emptyState = document.getElementById("emptyState");
-    const resultsCount = document.getElementById("resultsCount");
-    const currentViewLabel = document.getElementById("currentViewLabel");
 
     const searchInput = document.getElementById("searchInput");
     const typeFilter = document.getElementById("typeFilter");
@@ -1059,12 +1042,6 @@
       `;
     }
 
-    function getViewLabel() {
-      const dexLabel = currentView === "azori" ? "Azori Pokédex" : "National Dex";
-      const filterText = filterSelect.options[filterSelect.selectedIndex].text;
-      return `Viewing: ${dexLabel} | Filter: ${filterText}`;
-    }
-
     function renderPokemon() {
       const filtered = filterPokemon();
 
@@ -1079,9 +1056,6 @@
         pokemonGrid.style.display = "grid";
         pokemonGrid.innerHTML = filtered.map(createCard).join("");
       }
-
-      resultsCount.textContent = `${filtered.length} Pokémon shown`;
-      currentViewLabel.textContent = getViewLabel();
     }
 
     function populateTypeFilter() {
