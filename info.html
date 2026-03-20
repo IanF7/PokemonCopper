@@ -57,20 +57,13 @@
       color: black;
     }
 
-    /* Top row (3 buttons) */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin-top: 20px;
-    }
-
-    /* Bottom row (2 centered buttons) */
-    .grid-bottom {
+    /* Shared row layout */
+    .row {
       display: flex;
       justify-content: center;
       gap: 25px;
-      margin-top: 25px;
+      margin-top: 20px;
+      flex-wrap: wrap;
     }
 
     /* Card styling */
@@ -83,18 +76,13 @@
       transition: 0.25s;
 
       height: 120px;
-      width: 100%;
+      width: calc((100% - 50px) / 3);
+      max-width: 350px;
 
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-    }
-
-    /* Ensure bottom cards match width of top grid */
-    .grid-bottom .card {
-      width: calc((100% - 50px) / 3);
-      max-width: 350px;
     }
 
     .card:hover {
@@ -128,21 +116,14 @@
         font-size: 2rem;
       }
 
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .grid-bottom {
+      .row {
         flex-direction: column;
         align-items: center;
       }
 
-      .grid-bottom .card {
+      .card {
         width: 100%;
         max-width: 300px;
-      }
-
-      .card {
         height: 100px;
       }
     }
@@ -161,23 +142,19 @@
       <a href="https://discord.gg/pavpnHGPYh" target="_blank" rel="noopener noreferrer">Discord</a>
     </div>
 
-    <!-- Top row -->
-    <div class="grid">
+    <!-- Row 1 -->
+    <div class="row">
       <a href="new-pokemon.html" class="card">
         <h2>New Pokémon</h2>
       </a>
 
-      <a href="azori-pokedex.html" class="card">
-        <h2>Azori Pokédex</h2>
-      </a>
-
-      <a href="national-pokedex.html" class="card">
-        <h2>National Pokédex</h2>
+      <a href="pokedex.html" class="card">
+        <h2>Pokédex</h2>
       </a>
     </div>
 
-    <!-- Bottom row -->
-    <div class="grid-bottom">
+    <!-- Row 2 -->
+    <div class="row">
       <a href="tm-move-tutors.html" class="card">
         <h2>TM & Move Tutors</h2>
       </a>
