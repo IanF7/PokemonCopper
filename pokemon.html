@@ -1058,19 +1058,27 @@
       }
     }
 
+    function formatTypeName(type) {
+      if (!type) return "";
+      return type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
+    }
+
     function populateTypeFilter() {
       const types = new Set();
 
       allPokemon.forEach(pokemon => {
         safeArray(pokemon.types).forEach(type => {
-          if (type) types.add(type.toUpperCase());
+          if (type) types.add(type.toUpperCase()); // keep internal uppercase
         });
       });
 
       const sortedTypes = [...types].sort((a, b) => a.localeCompare(b));
+
       typeFilter.innerHTML = `
         <option value="ALL">All Types</option>
-        ${sortedTypes.map(type => `<option value="${type}">${type}</option>`).join("")}
+        ${sortedTypes.map(type => `
+          <option value="${type}">${formatTypeName(type)}</option>
+        `).join("")}
       `;
     }
 
