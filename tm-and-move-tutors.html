@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokémon Copper - Moves</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    :root {
+      --bg: #111;
+      --panel: #181818;
+      --panel-2: #202020;
+      --border: #333;
+      --border-light: #555;
+      --text: #fff;
+      --muted: #aaa;
+      --muted-2: #ccc;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1450px;
+      margin: 0 auto;
+      padding: 50px 20px 80px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      background: white;
+      color: black;
+    }
+
+    .controls {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 14px;
+      align-items: end;
+    }
+
+    .controls-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 170px;
+      flex: 1;
+    }
+
+    .control-group.small {
+      min-width: 140px;
+      flex: 0 0 auto;
+    }
+
+    .control-group label {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    input[type="text"],
+    select {
+      background: #101010;
+      color: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding-right: 28px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5 7l5 6 5-6H5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+      border-color: var(--border-light);
+    }
+
+    .view-toggle {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .view-btn {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.25s;
+      font-size: 0.95rem;
+    }
+
+    .view-btn:hover,
+    .view-btn.active {
+      background: white;
+      color: black;
+    }
+
+    .results-count {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .moves-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px;
+    }
+
+    .move-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      transition: 0.25s;
+    }
+
+    .move-card:hover {
+      transform: translateY(-5px);
+      background: var(--panel-2);
+      border-color: var(--border-light);
+    }
+
+    .move-name {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      line-height: 1.2;
+      color: white;
+    }
+
+    .move-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .move-header .type-pill {
+        flex-shrink: 0;
+    }
+
+    .type-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 72px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .move-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7px 12px;
+      margin-top: 8px;
+      margin-bottom: 14px;
+    }
+
+    .meta-line {
+      font-size: 0.9rem;
+      color: var(--muted-2);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 3px;
+    }
+
+    .meta-line strong {
+      color: white;
+      font-weight: 600;
+    }
+
+    .move-description {
+      color: var(--muted-2);
+      line-height: 1.55;
+      margin-top: 8px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: white;
+    }
+
+    .location-text {
+      color: var(--muted-2);
+      line-height: 1.55;
+    }
+
+    .loading-state,
+    .error-state,
+    .empty-state {
+      text-align: center;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px 20px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .footer {
+      background: #0a0a0a;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-top: 60px;
+    }
+
+    .footer p {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .page {
+        padding-top: 40px;
+      }
+
+      .move-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .moves-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <h1>Moves</h1>
+    <p class="subtitle">
+      Browse TM and Move Tutor move locations in Pokémon Copper.
+    </p>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="info.html">Game Info</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="https://discord.gg/pavpnHGPYh" target="_blank" rel="noopener noreferrer">Discord</a>
+    </div>
+
+    <section class="controls">
+      <div class="controls-row">
+        <div class="control-group" style="flex: 1.3;">
+          <label>Move View</label>
+          <div class="view-toggle">
+            <button class="view-btn active" data-source="TM" type="button">TM Moves</button>
+            <button class="view-btn" data-source="Move Tutor" type="button">Move Tutor Moves</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label for="searchInput">Search by Name</label>
+          <input type="text" id="searchInput" placeholder="Search moves..." />
+        </div>
+
+        <div class="control-group small">
+          <label for="typeFilter">Type</label>
+          <select id="typeFilter">
+            <option value="all">All Types</option>
+          </select>
+        </div>
+
+        <div class="control-group small">
+          <label for="sortSelect">Sort By</label>
+          <select id="sortSelect"></select>
+        </div>
+      </div>
+    </section>
+
+    <div id="loadingState" class="loading-state">Loading move data...</div>
+    <div id="errorState" class="error-state" style="display:none;"></div>
+    <div id="emptyState" class="empty-state" style="display:none;">No moves match the current filters.</div>
+    <div id="resultsCount" class="results-count" style="display:none;"></div>
+    <div id="movesGrid" class="moves-grid" style="display:none;"></div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      Pokémon Copper is a fan-made project and is not affiliated with, endorsed, sponsored, or specifically approved by Nintendo, Game Freak, or The Pokémon Company.
+    </p>
+    <p>
+      Pokémon and all related trademarks, names, and characters are © Nintendo, Game Freak, and The Pokémon Company.
+    </p>
+    <p>
+      This game is distributed for free and no copyright infringement is intended.
+    </p>
+  </footer>
+
+  <script>
+    const DATA_URL = "data/tm-and-move-tutors.json";
+
+    const TYPE_COLORS = {
+      NORMAL: "#A8A77A",
+      FIRE: "#EE8130",
+      WATER: "#6390F0",
+      ELECTRIC: "#F7D02C",
+      GRASS: "#7AC74C",
+      ICE: "#96D9D6",
+      FIGHTING: "#C22E28",
+      POISON: "#A33EA1",
+      GROUND: "#E2BF65",
+      FLYING: "#A98FF3",
+      PSYCHIC: "#F95587",
+      BUG: "#A6B91A",
+      ROCK: "#B6A136",
+      GHOST: "#735797",
+      DRAGON: "#6F35FC",
+      DARK: "#705746",
+      STEEL: "#B7B7CE",
+      FAIRY: "#D685AD"
+    };
+
+    let allMoves = [];
+    let currentSource = "TM";
+
+    const loadingState = document.getElementById("loadingState");
+    const errorState = document.getElementById("errorState");
+    const emptyState = document.getElementById("emptyState");
+    const resultsCount = document.getElementById("resultsCount");
+    const movesGrid = document.getElementById("movesGrid");
+
+    const searchInput = document.getElementById("searchInput");
+    const typeFilter = document.getElementById("typeFilter");
+    const sortSelect = document.getElementById("sortSelect");
+
+    function getTypeColor(type) {
+      return TYPE_COLORS[(type || "").toUpperCase()] || "#666";
+    }
+
+    function escapeHtml(text) {
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function formatTypeName(type) {
+      if (!type) return "";
+      return type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
+    }
+
+    function formatStat(value) {
+      if (value === null || value === undefined || value === "") return "—";
+      return String(value);
+    }
+
+    function getCurrentSourceMoves() {
+      return allMoves.filter(move => (move.sourceType || "") === currentSource);
+    }
+
+    function updateTypeFilter() {
+      const sourceMoves = getCurrentSourceMoves();
+      const currentValue = typeFilter.value;
+
+      const types = [...new Set(
+        sourceMoves
+          .map(move => (move.type || "").toUpperCase().trim())
+          .filter(Boolean)
+      )].sort((a, b) => a.localeCompare(b));
+
+      typeFilter.innerHTML = `
+        <option value="all">All Types</option>
+        ${types.map(type => `<option value="${escapeHtml(type)}">${escapeHtml(formatTypeName(type))}</option>`).join("")}
+      `;
+
+      if (types.includes(currentValue)) {
+        typeFilter.value = currentValue;
+      } else {
+        typeFilter.value = "all";
+      }
+    }
+
+    function updateSortOptions() {
+      if (currentSource === "TM") {
+        sortSelect.innerHTML = `
+          <option value="az">Name (A-Z)</option>
+          <option value="za">Name (Z–A)</option>
+          <option value="type">Type</option>
+          <option value="tm">TM Number</option>
+        `;
+      } else {
+        sortSelect.innerHTML = `
+          <option value="az">Name (A-Z)</option>
+          <option value="za">Name (Z–A)</option>
+          <option value="type">Type</option>
+        `;
+      }
+    }
+
+    function renderTypePill(type) {
+      if (!type) return "";
+      return `<span class="type-pill" style="background:${getTypeColor(type)};">${escapeHtml(type)}</span>`;
+    }
+
+    function filterAndSortMoves() {
+      const searchValue = searchInput.value.trim().toLowerCase();
+      const selectedType = typeFilter.value;
+
+      let filtered = getCurrentSourceMoves();
+
+      if (searchValue) {
+        filtered = filtered.filter(move =>
+          (move.name || "").toLowerCase().includes(searchValue)
+        );
+      }
+
+      if (selectedType !== "all") {
+        filtered = filtered.filter(move =>
+          (move.type || "").toUpperCase() === selectedType
+        );
+      }
+
+      const mode = sortSelect.value;
+
+      filtered.sort((a, b) => {
+        const nameA = (a.name || "").toLowerCase();
+        const nameB = (b.name || "").toLowerCase();
+        const typeA = (a.type || "").toLowerCase();
+        const typeB = (b.type || "").toLowerCase();
+
+        if (mode === "za") {
+          return nameB.localeCompare(nameA);
+        }
+
+        if (mode === "type") {
+          const typeCompare = typeA.localeCompare(typeB);
+          if (typeCompare !== 0) return typeCompare;
+          return nameA.localeCompare(nameB);
+        }
+
+        if (mode === "tm" && currentSource === "TM") {
+          const aTm = Number.isFinite(Number(a.tmNumber)) ? Number(a.tmNumber) : 999999;
+          const bTm = Number.isFinite(Number(b.tmNumber)) ? Number(b.tmNumber) : 999999;
+          if (aTm !== bTm) return aTm - bTm;
+          return nameA.localeCompare(nameB);
+        }
+
+        return nameA.localeCompare(nameB);
+      });
+
+      return filtered;
+    }
+
+    function createMoveCard(move) {
+      const description = move.description || "No description available.";
+      const location = move.location || "No listed location.";
+      const displayType = move.type ? move.type.toUpperCase() : "";
+      const category = move.category || "Unknown";
+      const power = formatStat(move.power);
+      const accuracy = formatStat(move.accuracy);
+      const pp = formatStat(move.pp);
+
+      return `
+        <article class="move-card">
+            <div class="move-header">
+              <h2 class="move-name">${escapeHtml(move.name || "Unknown Move")}</h2>
+                ${renderTypePill(displayType)}
+            </div>
+          <div class="move-meta">
+            <div class="meta-line"><span>Category</span><strong>${escapeHtml(category)}</strong></div>
+            <div class="meta-line"><span>Power</span><strong>${escapeHtml(power)}</strong></div>
+            <div class="meta-line"><span>Accuracy</span><strong>${escapeHtml(accuracy)}</strong></div>
+            <div class="meta-line"><span>PP</span><strong>${escapeHtml(pp)}</strong></div>
+            ${
+              currentSource === "TM" && move.tmNumber != null
+                ? `<div class="meta-line"><span>TM Number</span><strong>${escapeHtml(String(move.tmNumber))}</strong></div>`
+                : ""
+            }
+          </div>
+
+          <p class="move-description">${escapeHtml(description)}</p>
+
+          <h3 class="section-title">Location</h3>
+          <p class="location-text">${escapeHtml(location)}</p>
+        </article>
+      `;
+    }
+
+    function renderMoves() {
+      const filtered = filterAndSortMoves();
+
+      loadingState.style.display = "none";
+      errorState.style.display = "none";
+
+      if (!filtered.length) {
+        movesGrid.style.display = "none";
+        resultsCount.style.display = "none";
+        emptyState.style.display = "block";
+        return;
+      }
+
+      emptyState.style.display = "none";
+      resultsCount.style.display = "block";
+      movesGrid.style.display = "grid";
+
+      resultsCount.textContent = `${filtered.length} move${filtered.length === 1 ? "" : "s"} found`;
+      movesGrid.innerHTML = filtered.map(createMoveCard).join("");
+    }
+
+    async function loadMoves() {
+      try {
+        const response = await fetch(DATA_URL);
+        if (!response.ok) {
+          throw new Error(`Failed to load ${DATA_URL} (${response.status})`);
+        }
+
+        const data = await response.json();
+        allMoves = Array.isArray(data) ? data : (Array.isArray(data.moves) ? data.moves : []);
+
+        updateTypeFilter();
+        updateSortOptions();
+        renderMoves();
+      } catch (error) {
+        loadingState.style.display = "none";
+        errorState.style.display = "block";
+        errorState.textContent = `Could not load move data. ${error.message}`;
+      }
+    }
+
+    document.querySelectorAll(".view-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".view-btn").forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+        currentSource = button.dataset.source;
+        updateTypeFilter();
+        updateSortOptions();
+        renderMoves();
+      });
+    });
+
+    [searchInput, typeFilter, sortSelect].forEach(control => {
+      control.addEventListener("input", renderMoves);
+      control.addEventListener("change", renderMoves);
+    });
+
+    loadMoves();
+  </script>
+</body>
+</html>

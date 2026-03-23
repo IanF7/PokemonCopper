@@ -124,11 +124,10 @@
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
-
-      padding-right: 28px; /* controls arrow spacing */
+      padding-right: 28px;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5 7l5 6 5-6H5z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
-      background-position: right 10px center; /* move arrow LEFT by increasing this value */
+      background-position: right 10px center;
       background-size: 12px;
     }
 
@@ -684,8 +683,8 @@
         <div class="control-group" style="flex: 1.5;">
           <label>Dex View</label>
           <div class="view-toggle">
-            <button class="view-btn active" data-view="azori">Azori Pokédex</button>
-            <button class="view-btn" data-view="national">National Dex</button>
+            <button class="view-btn active" data-view="azori" type="button">Azori Pokédex</button>
+            <button class="view-btn" data-view="national" type="button">National Dex</button>
           </div>
         </div>
 
@@ -718,6 +717,12 @@
             <option value="name">Name</option>
             <option value="type">Primary Type</option>
             <option value="bst">Base Stat Total</option>
+            <option value="hp">HP</option>
+            <option value="atk">Attack</option>
+            <option value="def">Defense</option>
+            <option value="spa">Sp. Attack</option>
+            <option value="spd">Sp. Defense</option>
+            <option value="spe">Speed</option>
           </select>
         </div>
       </div>
@@ -775,7 +780,7 @@
       FAIRY: "#D685AD"
     };
 
-    const STAT_LABELS = ["HP", "ATK", "DEF", "SPA", "SPD", "SPE"];
+    const DISPLAY_STAT_LABELS = ["HP", "ATK", "DEF", "SPA", "SPD", "SPE"];
 
     let allPokemon = [];
     let currentView = "azori";
@@ -799,16 +804,76 @@
       return Array.isArray(value) ? value : [];
     }
 
-    function getBST(pokemon) {
-      if (typeof pokemon.base_stat_total === "number") return pokemon.base_stat_total;
-      return safeArray(pokemon.base_stats).reduce((sum, val) => sum + (Number(val) || 0), 0);
+    function getTypeColor(type) {
+      return TYPE_COLORS[(type || "").toUpperCase()] || "#666";
+    }
+
+    function renderTypes(types = []) {
+      return safeArray(types)
+        .map(type => `<span class="type-pill" style="background:${getTypeColor(type)};">${type}</span>`)
+        .join("");
+    }
+
+    function getDisplayStats(entity) {
+      if (entity && entity.base_stats_dict && typeof entity.base_stats_dict === "object") {
+        return {
+          HP: Number(entity.base_stats_dict.HP) || 0,
+          ATK: Number(entity.base_stats_dict.ATK) || 0,
+          DEF: Number(entity.base_stats_dict.DEF) || 0,
+          SPA: Number(entity.base_stats_dict.SPA) || 0,
+          SPD: Number(entity.base_stats_dict.SPD) || 0,
+          SPE: Number(entity.base_stats_dict.SPE) || 0
+        };
+      }
+
+      const raw = safeArray(entity?.base_stats);
+      return {
+        HP: Number(raw[0]) || 0,
+        ATK: Number(raw[1]) || 0,
+        DEF: Number(raw[2]) || 0,
+        SPA: Number(raw[4]) || 0,
+        SPD: Number(raw[5]) || 0,
+        SPE: Number(raw[3]) || 0
+      };
+    }
+
+    function getDisplayStat(entity, statKey) {
+      const stats = getDisplayStats(entity);
+      return Number(stats[statKey]) || 0;
+    }
+
+    function getBST(entity) {
+      const stats = getDisplayStats(entity);
+      return DISPLAY_STAT_LABELS.reduce((sum, label) => sum + (Number(stats[label]) || 0), 0);
+    }
+
+    function renderStats(entity) {
+      const stats = getDisplayStats(entity);
+
+      return DISPLAY_STAT_LABELS.map(label => `
+        <div class="stat-line">
+          <span>${label}</span>
+          <strong>${stats[label] ?? "-"}</strong>
+        </div>
+      `).join("");
+    }
+
+    function renderDetailStats(entity) {
+      const stats = getDisplayStats(entity);
+
+      return DISPLAY_STAT_LABELS.map(label => `
+        <div class="detail-stat">
+          <span>${label}</span>
+          <strong>${stats[label] ?? "-"}</strong>
+        </div>
+      `).join("");
     }
 
     function hasMegaEvolution(pokemon) {
-      return safeArray(pokemon.forms).some(form =>
-        (form.form_name || "").toLowerCase().includes("mega") ||
-        (form.name || "").toLowerCase().includes("mega")
-      );
+      return safeArray(pokemon.forms).some(form => {
+        const text = `${form.form_name || ""} ${form.name || ""}`.toLowerCase();
+        return text.includes("mega");
+      });
     }
 
     function isMegaFormEntry(pokemon) {
@@ -821,7 +886,9 @@
     }
 
     function isRegionalFormEntry(pokemon) {
-      return Number(pokemon.form_number) > 0 && pokemon.regional_dex_number !== "" && pokemon.regional_dex_number != null;
+      return Number(pokemon.form_number) > 0 &&
+        pokemon.regional_dex_number !== "" &&
+        pokemon.regional_dex_number != null;
     }
 
     function isAzorianForm(pokemon) {
@@ -855,12 +922,10 @@
       const isForm = Number(pokemon.form_number) > 0;
       const azorian = isAzorianForm(pokemon);
 
-      // Non-Azorian regional forms should never appear in the Azori dex.
       if (isForm && !azorian) {
         return false;
       }
 
-      // If an Azorian replacement exists, hide the base form.
       if (!isForm && hasAzorianReplacement(pokemon)) {
         return false;
       }
@@ -879,40 +944,6 @@
       if (pokemon.sprites && pokemon.sprites.regular) return pokemon.sprites.regular;
       if (pokemon.sprites && pokemon.sprites.shiny) return pokemon.sprites.shiny;
       return "";
-    }
-
-    function getTypeColor(type) {
-      return TYPE_COLORS[(type || "").toUpperCase()] || "#666";
-    }
-
-    function renderTypes(types = []) {
-      return safeArray(types)
-        .map(type => `<span class="type-pill" style="background:${getTypeColor(type)};">${type}</span>`)
-        .join("");
-    }
-
-    function renderStats(stats = []) {
-      return STAT_LABELS.map((label, index) => {
-        const value = stats[index] ?? "-";
-        return `
-          <div class="stat-line">
-            <span>${label}</span>
-            <strong>${value}</strong>
-          </div>
-        `;
-      }).join("");
-    }
-
-    function renderDetailStats(stats = []) {
-      return STAT_LABELS.map((label, index) => {
-        const value = stats[index] ?? "-";
-        return `
-          <div class="detail-stat">
-            <span>${label}</span>
-            <strong>${value}</strong>
-          </div>
-        `;
-      }).join("");
     }
 
     function getDexText(pokemon) {
@@ -935,6 +966,24 @@
         case "bst":
           return -getBST(pokemon);
 
+        case "hp":
+          return -getDisplayStat(pokemon, "HP");
+
+        case "atk":
+          return -getDisplayStat(pokemon, "ATK");
+
+        case "def":
+          return -getDisplayStat(pokemon, "DEF");
+
+        case "spa":
+          return -getDisplayStat(pokemon, "SPA");
+
+        case "spd":
+          return -getDisplayStat(pokemon, "SPD");
+
+        case "spe":
+          return -getDisplayStat(pokemon, "SPE");
+
         case "dex":
         default:
           if (currentView === "azori") {
@@ -946,6 +995,7 @@
 
     function sortPokemon(list) {
       const mode = sortSelect.value;
+
       return [...list].sort((a, b) => {
         const av = getSortValue(a, mode);
         const bv = getSortValue(b, mode);
@@ -956,6 +1006,10 @@
 
         if (av < bv) return -1;
         if (av > bv) return 1;
+
+        const bstA = getBST(a);
+        const bstB = getBST(b);
+        if (bstA !== bstB) return bstB - bstA;
 
         return (a.name || "").localeCompare(b.name || "");
       });
@@ -971,13 +1025,10 @@
       switch (filterMode) {
         case "new":
           return isNewPokemon(pokemon);
-
         case "regional":
           return isRegionalFormEntry(pokemon);
-
         case "mega":
           return hasMegaEvolution(pokemon) || isMegaFormEntry(pokemon);
-
         case "all":
         default:
           return true;
@@ -1010,13 +1061,13 @@
 
     function createCard(pokemon) {
       const sprite = getCardSprite(pokemon);
-      const megaBadge = hasMegaEvolution(pokemon) || isMegaFormEntry(pokemon)
-        ? `<img class="mega-badge" src="${MEGA_SYMBOL_URL}" alt="Has Mega Evolution">`
-        : "";
+      const typeHtml = renderTypes(pokemon.types);
+      const statsHtml = renderStats(pokemon);
+      const bst = getBST(pokemon);
 
       return `
         <article class="pokemon-card" data-id="${pokemon.id}">
-          ${megaBadge}
+          ${hasMegaEvolution(pokemon) ? `<img class="mega-badge" src="${MEGA_SYMBOL_URL}" alt="Mega Evolution">` : ""}
           <div class="dex-line">${getDexText(pokemon)}</div>
 
           <div class="card-top">
@@ -1026,17 +1077,17 @@
 
             <div class="card-main">
               <h2 class="pokemon-name">${pokemon.name}</h2>
-              <div class="type-row">${renderTypes(pokemon.types)}</div>
+              <div class="type-row">${typeHtml}</div>
             </div>
           </div>
 
           <div class="stats-grid">
-            ${renderStats(pokemon.base_stats)}
+            ${statsHtml}
           </div>
 
           <div class="bst-line">
             <span>Base Stat Total</span>
-            <strong>${getBST(pokemon)}</strong>
+            <strong>${bst}</strong>
           </div>
         </article>
       `;
@@ -1068,7 +1119,7 @@
 
       allPokemon.forEach(pokemon => {
         safeArray(pokemon.types).forEach(type => {
-          if (type) types.add(type.toUpperCase()); // keep internal uppercase
+          if (type) types.add(type.toUpperCase());
         });
       });
 
@@ -1214,7 +1265,7 @@
           </div>
 
           <div class="detail-stats-grid">
-            ${renderDetailStats(form.base_stats)}
+            ${renderDetailStats(form)}
           </div>
 
           <div class="bst-line">
@@ -1228,7 +1279,7 @@
     }
 
     function openPokemonModal(pokemonId) {
-      const pokemon = allPokemon.find(p => p.id === pokemonId);
+      const pokemon = allPokemon.find(p => String(p.id) === String(pokemonId));
       if (!pokemon) return;
 
       modalShinyState = false;
@@ -1264,7 +1315,7 @@
           <div class="detail-card">
             <h3>Stats</h3>
             <div class="detail-stats-grid">
-              ${renderDetailStats(pokemon.base_stats)}
+              ${renderDetailStats(pokemon)}
             </div>
             <div class="bst-line">
               <span>Base Stat Total</span>

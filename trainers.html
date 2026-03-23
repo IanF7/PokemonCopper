@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokémon Copper - Trainers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    :root {
+      --bg: #111;
+      --panel: #181818;
+      --panel-2: #202020;
+      --border: #333;
+      --border-light: #555;
+      --text: #fff;
+      --muted: #aaa;
+      --muted-2: #ccc;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1450px;
+      margin: 0 auto;
+      padding: 50px 20px 80px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      background: white;
+      color: black;
+    }
+
+    .controls {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: end;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 170px;
+      flex: 1;
+    }
+
+    .control-group label {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    input[type="text"],
+    select {
+      background: #101010;
+      color: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding-right: 28px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5 7l5 6 5-6H5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+      border-color: var(--border-light);
+    }
+
+    .section {
+      margin-top: 26px;
+    }
+
+    .section-toggle {
+      width: 100%;
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 1.35rem;
+      font-weight: bold;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: 0.2s;
+      margin-bottom: 12px;
+    }
+
+    .section-toggle:hover {
+      background: var(--panel-2);
+      border-color: var(--border-light);
+    }
+
+    .section-toggle .arrow {
+      font-size: 1rem;
+      color: var(--muted);
+      transition: transform 0.2s ease;
+    }
+
+    .section-toggle.expanded .arrow {
+      transform: rotate(90deg);
+    }
+
+    .section-content {
+      display: none;
+    }
+
+    .section-content.expanded {
+      display: block;
+    }
+
+    .trainer-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .trainer-row {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      transition: 0.25s;
+    }
+
+    .trainer-row:hover {
+      background: var(--panel-2);
+      border-color: var(--border-light);
+    }
+
+    .trainer-row-inner {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .trainer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .trainer-image-wrap {
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      background: #101010;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .trainer-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .trainer-meta {
+      width: 100%;
+      display: grid;
+      gap: 8px;
+    }
+
+    .meta-box {
+      background: #101010;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .meta-value {
+      color: white;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+
+    .trainer-right {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .team-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trainer-header-name {
+      font-size: 1.8rem;
+      color: white;
+      line-height: 1.2;
+    }
+
+    .team-select-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 220px;
+    }
+
+    .team-select-wrap label {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .items-line {
+      background: #101010;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: white;
+      line-height: 1.5;
+    }
+
+    .items-line strong {
+      color: white;
+    }
+
+    .pokemon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 18px;
+    }
+
+    .pokemon-card {
+      position: relative;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      transition: 0.25s;
+      overflow: hidden;
+    }
+
+    .pokemon-card:hover {
+      background: var(--panel-2);
+      border-color: var(--border-light);
+    }
+
+    .card-top {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .sprite-box {
+      width: 96px;
+      height: 96px;
+      border-radius: 12px;
+      background: #101010;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .sprite-box img {
+      width: 86px;
+      height: 86px;
+      object-fit: contain;
+      image-rendering: pixelated;
+    }
+
+    .card-main {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .pokemon-name {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+      line-height: 1.2;
+      color: white;
+    }
+
+    .pokemon-sub {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .type-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .type-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 72px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7px 12px;
+      margin-top: 8px;
+    }
+
+    .info-line {
+      font-size: 0.9rem;
+      color: var(--muted-2);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 3px;
+    }
+
+    .info-line strong {
+      color: white;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .moves-block {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .moves-title {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .move-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .move-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #1d1d1d;
+      border: 1px solid var(--border);
+      color: white;
+      font-size: 0.83rem;
+      line-height: 1;
+    }
+
+    .empty-message {
+      text-align: center;
+      background: var(--panel);
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      padding: 30px 20px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .footer {
+      background: #0a0a0a;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-top: 60px;
+    }
+
+    .footer p {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 980px) {
+      .trainer-row-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .trainer-left {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .trainer-image-wrap {
+        width: 150px;
+        height: 150px;
+      }
+
+      .trainer-meta {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .page {
+        padding-top: 40px;
+      }
+
+      .pokemon-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-select-wrap {
+        min-width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .controls,
+      .trainer-row {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Major Trainers</h1>
+    <p class="subtitle">
+      Browse the major trainers in Pokémon Copper and switch between each trainer's available teams.
+    </p>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="info.html">Game Info</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="https://discord.gg/pavpnHGPYh" target="_blank" rel="noopener noreferrer">Discord</a>
+    </div>
+
+    <div class="controls">
+      <div class="controls-row">
+        <div class="control-group">
+          <label for="searchInput">Search Trainers</label>
+          <input id="searchInput" type="text" placeholder="Search by trainer name..." />
+        </div>
+      </div>
+    </div>
+
+    <div id="sectionsContainer"></div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      Pokémon Copper is a fan-made project and is not affiliated with, endorsed, sponsored, or specifically approved by Nintendo, Game Freak, or The Pokémon Company.
+    </p>
+    <p>
+      Pokémon and all related trademarks, names, and characters are © Nintendo, Game Freak, and The Pokémon Company.
+    </p>
+    <p>
+      This game is distributed for free and no copyright infringement is intended.
+    </p>
+  </footer>
+
+  <script>
+    const SECTION_DEFS = [
+      { key: "rivals", title: "Rivals" },
+      { key: "gym_leaders", title: "Gym Leaders" },
+      { key: "elite_four", title: "Elite Four" },
+      { key: "champion", title: "Champion" },
+      { key: "team_eclipse", title: "Team Eclipse" },
+      { key: "misc_special", title: "Special Trainers" }
+    ];
+
+    const TYPE_COLORS = {
+      NORMAL: "#A8A77A",
+      FIRE: "#EE8130",
+      WATER: "#6390F0",
+      ELECTRIC: "#F7D02C",
+      GRASS: "#7AC74C",
+      ICE: "#96D9D6",
+      FIGHTING: "#C22E28",
+      POISON: "#A33EA1",
+      GROUND: "#E2BF65",
+      FLYING: "#A98FF3",
+      PSYCHIC: "#F95587",
+      BUG: "#A6B91A",
+      ROCK: "#B6A136",
+      GHOST: "#735797",
+      DRAGON: "#6F35FC",
+      DARK: "#705746",
+      STEEL: "#B7B7CE",
+      FAIRY: "#D685AD"
+    };
+
+    let allTrainers = [];
+    let itemNameMap = {};
+
+    function normalize(value) {
+      return (value || "").toString().trim().toLowerCase();
+    }
+
+    function safeArray(value) {
+      return Array.isArray(value) ? value : [];
+    }
+
+    function escapeHtml(str) {
+      return (str ?? "").toString()
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function prettifyConstantName(value) {
+      const text = (value || "").toString().trim();
+      if (!text) return "";
+
+      if (text.includes("_")) {
+        return text
+          .toLowerCase()
+          .split("_")
+          .filter(Boolean)
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+      }
+
+      return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+    }
+
+    function buildItemNameMap(itemsData) {
+      const map = {};
+      if (!Array.isArray(itemsData)) return map;
+
+      for (const item of itemsData) {
+        if (!item || typeof item !== "object") continue;
+
+        const keys = [
+          item.id,
+          item.item_id,
+          item.internal_name,
+          item.identifier
+        ].filter(Boolean);
+
+        const displayName =
+          item.name ||
+          item.real_name ||
+          item.display_name ||
+          item.label ||
+          null;
+
+        if (!displayName) continue;
+
+        for (const key of keys) {
+          map[String(key).toUpperCase()] = displayName;
+        }
+      }
+
+      return map;
+    }
+
+    function formatItemName(itemId) {
+      if (!itemId) return "None";
+      const key = String(itemId).toUpperCase();
+      return itemNameMap[key] || prettifyConstantName(key);
+    }
+
+    function formatItemList(items) {
+      const arr = safeArray(items);
+      if (!arr.length) return "None";
+      return arr.map(formatItemName).join(", ");
+    }
+
+    function classifyTrainer(trainer) {
+      const trainerClass = normalize(trainer.trainer_class || trainer.trainer_type);
+      const name = normalize(trainer.name);
+      const id = normalize(trainer.id);
+      const image = normalize(trainer.image);
+
+      if (trainerClass.includes("leader")) return "gym_leaders";
+      if (trainerClass.includes("elitefour") || trainerClass.includes("elite_four")) return "elite_four";
+      if (trainerClass.includes("champion")) return "champion";
+      if (trainerClass.includes("rival") || name.includes("rival") || id.includes("rival")) return "rivals";
+      if (trainerClass.includes("eclipse") || name.includes("eclipse") || id.includes("eclipse") || image.includes("eclipse")) {
+        return "team_eclipse";
+      }
+      return "misc_special";
+    }
+
+    function getTrainerImagePath(trainer) {
+      if (trainer.image) return `images/trainers/${trainer.image}`;
+      if (trainer.id) return `images/trainers/${trainer.id}.png`;
+      return "";
+    }
+
+    function getPokemonImagePath(pokemon) {
+      const baseId = (pokemon.id || pokemon.species_id || pokemon.name || "").toString().trim().toUpperCase();
+      const formNumber = Number(pokemon.form_number || 0);
+
+      if (!baseId) return "";
+      if (formNumber > 0) return `images/pokemon/${baseId}_${formNumber}.png`;
+      return `images/pokemon/${baseId}.png`;
+    }
+
+    function getTypeColor(type) {
+      return TYPE_COLORS[(type || "").toUpperCase()] || "#666";
+    }
+
+    function renderTypes(types = []) {
+      return safeArray(types)
+        .map(type => `<span class="type-pill" style="background:${getTypeColor(type)};">${escapeHtml(type)}</span>`)
+        .join("");
+    }
+
+    function buildTeamOptions(teams) {
+      return safeArray(teams).map((team, idx) => {
+        const label =
+          team.version != null && String(team.version).trim() !== ""
+            ? String(team.version).trim()
+            : `Team ${idx + 1}`;
+        return `<option value="${idx}">${escapeHtml(label)}</option>`;
+      }).join("");
+    }
+
+    function renderPokemonCard(pokemon) {
+      const types = safeArray(pokemon.types);
+      const moves = safeArray(pokemon.moves);
+      const ability = pokemon.ability || "Unknown";
+      const item = pokemon.item || "";
+      const gender = pokemon.gender || "";
+      const level = pokemon.level ?? "";
+      const spritePath = getPokemonImagePath(pokemon);
+
+      return `
+        <article class="pokemon-card">
+          <div class="card-top">
+            <div class="sprite-box">
+              ${spritePath
+                ? `<img src="${escapeHtml(spritePath)}" alt="${escapeHtml(pokemon.name || pokemon.id || "Pokemon")}">`
+                : `<span style="color:#777;font-size:.85rem;">No Image</span>`}
+            </div>
+
+            <div class="card-main">
+              <h3 class="pokemon-name">${escapeHtml(pokemon.name || pokemon.id || "Unknown")}</h3>
+                <div class="pokemon-sub">
+                Level ${escapeHtml(level)}${gender ? ` • ${escapeHtml(gender)}` : ""}
+                </div>
+              <div class="type-row">${types.length ? renderTypes(types) : `<span class="type-pill" style="background:#666;">Unknown</span>`}</div>
+            </div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-line">
+              <span>Ability</span>
+              <strong>${escapeHtml(ability)}</strong>
+            </div>
+            <div class="info-line">
+              <span>Held Item</span>
+              <strong>${escapeHtml(item ? formatItemName(item) : "None")}</strong>
+            </div>
+          </div>
+
+          <div class="moves-block">
+            <div class="moves-title">Moves</div>
+            <div class="move-list">
+              ${moves.length
+                ? moves.map(move => `<span class="move-chip">${escapeHtml(move.name || move.id || move)}</span>`).join("")
+                : `<span class="move-chip">No moves listed</span>`}
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderTrainerMeta(trainer) {
+      const specialty = (trainer.type_specialty || "").toString().trim();
+      const badge = (trainer.gym_badge || "").toString().trim();
+      const town = (trainer.town || "").toString().trim();
+      const tmRewarded = (trainer.tm_rewarded || "").toString().trim();
+
+      const metaEntries = [
+        specialty ? `
+          <div class="meta-box">
+            <span class="meta-label">Type Specialty</span>
+            <span class="meta-value">${escapeHtml(specialty)}</span>
+          </div>
+        ` : "",
+        badge ? `
+          <div class="meta-box">
+            <span class="meta-label">Gym Badge</span>
+            <span class="meta-value">${escapeHtml(badge)}</span>
+          </div>
+        ` : "",
+        town ? `
+          <div class="meta-box">
+            <span class="meta-label">Town</span>
+            <span class="meta-value">${escapeHtml(town)}</span>
+          </div>
+        ` : "",
+        tmRewarded ? `
+          <div class="meta-box">
+            <span class="meta-label">TM Rewarded</span>
+            <span class="meta-value">${escapeHtml(tmRewarded)}</span>
+          </div>
+        ` : ""
+      ].filter(Boolean);
+
+      if (!metaEntries.length) {
+        return "";
+      }
+
+      return `<div class="trainer-meta">${metaEntries.join("")}</div>`;
+    }
+
+    function renderTrainerRow(trainer, index) {
+      const teams = safeArray(trainer.teams);
+      const firstTeam = teams[0] || {};
+      const imagePath = getTrainerImagePath(trainer);
+      const items = safeArray(firstTeam.items);
+
+      return `
+        <article
+          class="trainer-row"
+          data-trainer-index="${index}"
+          data-search="${escapeHtml(`${trainer.name || ""} ${trainer.trainer_class || trainer.trainer_type || ""}`.toLowerCase())}"
+        >
+          <div class="trainer-row-inner">
+            <div class="trainer-left">
+              <div class="trainer-image-wrap">
+                <img
+                  class="trainer-image"
+                  src="${escapeHtml(imagePath)}"
+                  alt="${escapeHtml(trainer.name || "Trainer")}"
+                  onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=&quot;color:#aaa;&quot;>No Image</span>';"
+                />
+              </div>
+
+              ${renderTrainerMeta(trainer)}
+            </div>
+
+            <div class="trainer-right">
+              <div class="team-header">
+                <div class="trainer-header-name">${escapeHtml(trainer.name || "Unknown Trainer")}</div>
+                <div class="team-select-wrap">
+                  <label for="team-select-${index}">Choose Team</label>
+                  <select id="team-select-${index}" onchange="updateTrainerTeam(${index}, this.value)">
+                    ${buildTeamOptions(teams)}
+                  </select>
+                </div>
+              </div>
+
+              <div class="items-line" id="items-${index}">
+                <strong>Battle Items:</strong> ${escapeHtml(formatItemList(items))}
+              </div>
+
+              <div class="pokemon-grid" id="pokemon-grid-${index}">
+                ${safeArray(firstTeam.pokemon).length
+                  ? firstTeam.pokemon.map(renderPokemonCard).join("")
+                  : `<div class="empty-message">No Pokémon listed for this team.</div>`}
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderSections(trainers) {
+      const container = document.getElementById("sectionsContainer");
+      const grouped = Object.fromEntries(SECTION_DEFS.map(section => [section.key, []]));
+
+      trainers.forEach((trainer, index) => {
+        const groupKey = classifyTrainer(trainer);
+        grouped[groupKey].push({ trainer, index });
+      });
+
+      container.innerHTML = SECTION_DEFS.map(section => {
+        const rows = grouped[section.key];
+
+        return `
+          <section class="section" id="${section.key}">
+            <button
+              class="section-toggle"
+              type="button"
+              onclick="toggleSection('${section.key}')"
+              id="toggle-${section.key}"
+            >
+              <span>${section.title}</span>
+              <span class="arrow">▶</span>
+            </button>
+
+            <div class="section-content" id="content-${section.key}">
+              <div class="trainer-list">
+                ${rows.length
+                  ? rows.map(({ trainer, index }) => renderTrainerRow(trainer, index)).join("")
+                  : `<div class="empty-message">No trainers found in this section.</div>`}
+              </div>
+            </div>
+          </section>
+        `;
+      }).join("");
+    }
+
+    function toggleSection(sectionKey) {
+      const button = document.getElementById(`toggle-${sectionKey}`);
+      const content = document.getElementById(`content-${sectionKey}`);
+
+      if (!button || !content) return;
+
+      const isExpanded = content.classList.contains("expanded");
+      content.classList.toggle("expanded", !isExpanded);
+      button.classList.toggle("expanded", !isExpanded);
+    }
+
+    function updateTrainerTeam(trainerIndex, teamIndex) {
+      const trainer = allTrainers[trainerIndex];
+      if (!trainer) return;
+
+      const teams = safeArray(trainer.teams);
+      const team = teams[Number(teamIndex)] || teams[0] || {};
+      const items = safeArray(team.items);
+      const pokemon = safeArray(team.pokemon);
+
+      const itemsEl = document.getElementById(`items-${trainerIndex}`);
+      const gridEl = document.getElementById(`pokemon-grid-${trainerIndex}`);
+
+      if (itemsEl) {
+        itemsEl.innerHTML = `<strong>Battle Items:</strong> ${escapeHtml(formatItemList(items))}`;
+      }
+
+      if (gridEl) {
+        gridEl.innerHTML = pokemon.length
+          ? pokemon.map(renderPokemonCard).join("")
+          : `<div class="empty-message">No Pokémon listed for this team.</div>`;
+      }
+    }
+
+    function filterDisplayedRows() {
+      const query = normalize(document.getElementById("searchInput").value);
+      const rows = Array.from(document.querySelectorAll(".trainer-row"));
+
+      rows.forEach(row => {
+        const haystack = row.dataset.search || "";
+        const matches = !query || haystack.includes(query);
+        row.classList.toggle("hidden", !matches);
+      });
+
+      SECTION_DEFS.forEach(section => {
+        const sectionEl = document.getElementById(section.key);
+        if (!sectionEl) return;
+
+        const allRows = sectionEl.querySelectorAll(".trainer-row");
+        const visibleRows = sectionEl.querySelectorAll(".trainer-row:not(.hidden)");
+
+        if (allRows.length > 0) {
+          sectionEl.style.display = visibleRows.length ? "" : "none";
+        } else {
+          sectionEl.style.display = "";
+        }
+      });
+    }
+
+    async function loadItems() {
+      try {
+        const response = await fetch("data/items.json");
+        if (!response.ok) throw new Error("items.json not found");
+        const data = await response.json();
+
+        if (Array.isArray(data)) {
+          itemNameMap = buildItemNameMap(data);
+        } else if (Array.isArray(data.items)) {
+          itemNameMap = buildItemNameMap(data.items);
+        } else {
+          itemNameMap = {};
+        }
+      } catch (error) {
+        itemNameMap = {};
+      }
+    }
+
+    async function loadTrainers() {
+      try {
+        const response = await fetch("data/trainers.json");
+        if (!response.ok) {
+          throw new Error(`Failed to load data/trainers.json (${response.status})`);
+        }
+
+        const data = await response.json();
+        allTrainers = Array.isArray(data) ? data : (data.trainers || []);
+
+        renderSections(allTrainers);
+        document.getElementById("searchInput").addEventListener("input", filterDisplayedRows);
+      } catch (error) {
+        document.getElementById("sectionsContainer").innerHTML = `
+          <div class="empty-message">
+            Could not load trainer data. Make sure <strong>data/trainers.json</strong> exists and is valid JSON.
+            <br><br>
+            Error: ${escapeHtml(error.message)}
+          </div>
+        `;
+        console.error(error);
+      }
+    }
+
+    async function initPage() {
+      await loadItems();
+      await loadTrainers();
+    }
+
+    initPage();
+  </script>
+</body>
+</html>

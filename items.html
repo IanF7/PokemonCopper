@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Pokémon Copper - Items</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     * {
@@ -13,44 +13,56 @@
       font-family: Arial, sans-serif;
     }
 
+    :root {
+      --bg: #111;
+      --panel: #181818;
+      --panel-2: #202020;
+      --border: #333;
+      --border-light: #555;
+      --text: #fff;
+      --muted: #aaa;
+      --muted-2: #ccc;
+    }
+
     body {
-      background: #111;
-      color: white;
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
     }
 
     .page {
-      max-width: 1200px;
+      max-width: 1450px;
       margin: 0 auto;
-      padding: 60px 20px 80px;
+      padding: 50px 20px 80px;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
       text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 12px;
     }
 
     .subtitle {
-      color: #aaa;
-      margin-bottom: 40px;
-      font-size: 1rem;
       text-align: center;
+      color: var(--muted);
+      margin-bottom: 35px;
+      line-height: 1.6;
     }
 
     .nav {
-      text-align: center;
-      margin-bottom: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
 
     .nav a {
-      display: inline-block;
       text-decoration: none;
       color: white;
       border: 2px solid white;
       padding: 10px 18px;
       border-radius: 8px;
-      margin: 0 8px 10px;
       transition: 0.3s;
     }
 
@@ -60,67 +72,111 @@
     }
 
     .controls {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 35px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 28px;
     }
 
-    .controls input,
-    .controls select {
-      background: #181818;
+    .controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: end;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 170px;
+      flex: 1;
+    }
+
+    .control-group.small {
+      min-width: 170px;
+      flex: 0 0 auto;
+    }
+
+    .control-group label {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    input[type="text"],
+    select {
+      background: #101010;
       color: white;
-      border: 1px solid #333;
+      border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 12px 14px;
-      font-size: 1rem;
-      min-width: 220px;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding-right: 28px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5 7l5 6 5-6H5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+      border-color: var(--border-light);
     }
 
     .results-count {
       text-align: center;
-      color: #aaa;
+      color: var(--muted);
       margin-bottom: 25px;
       font-size: 0.95rem;
     }
 
     .items-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px;
     }
 
     .item-card {
-      background: #181818;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
       transition: 0.25s;
     }
 
     .item-card:hover {
-      transform: translateY(-4px);
-      background: #202020;
-      border-color: #555;
+      transform: translateY(-5px);
+      background: var(--panel-2);
+      border-color: var(--border-light);
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
     }
 
     .item-name {
-      font-size: 1.35rem;
-      margin-bottom: 10px;
+      font-size: 1.3rem;
+      line-height: 1.2;
       color: white;
     }
 
-    .item-id {
-      font-size: 0.9rem;
-      color: #888;
-      margin-bottom: 14px;
-    }
-
     .item-description {
-      color: #ccc;
-      line-height: 1.6;
-      margin-bottom: 18px;
+      color: var(--muted-2);
+      line-height: 1.55;
+      margin-top: 8px;
+      margin-bottom: 16px;
     }
 
     .section-title {
@@ -132,13 +188,14 @@
     .locations-list {
       list-style: none;
       padding-left: 0;
+      margin: 0;
     }
 
     .locations-list li {
       position: relative;
       padding-left: 18px;
       margin-bottom: 8px;
-      color: #ccc;
+      color: var(--muted-2);
       line-height: 1.5;
     }
 
@@ -154,11 +211,16 @@
       font-style: italic;
     }
 
-    .status-message {
+    .loading-state,
+    .error-state,
+    .empty-state {
       text-align: center;
-      color: #aaa;
-      padding: 40px 20px;
-      font-size: 1rem;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px 20px;
+      color: var(--muted);
+      margin-top: 10px;
     }
 
     .footer {
@@ -181,18 +243,11 @@
       }
 
       .page {
-        padding: 40px 16px 60px;
+        padding-top: 40px;
       }
 
-      .controls {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .controls input,
-      .controls select {
-        width: 100%;
-        min-width: 0;
+      .items-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -210,21 +265,32 @@
       <a href="https://discord.gg/pavpnHGPYh" target="_blank" rel="noopener noreferrer">Discord</a>
     </div>
 
-    <div class="controls">
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Search by item name, description, or location..."
-      />
+    <section class="controls">
+      <div class="controls-row">
+        <div class="control-group">
+          <label for="searchInput">Search</label>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by item name..."
+          />
+        </div>
 
-      <select id="sortSelect">
-        <option value="az">Sort: A–Z</option>
-        <option value="za">Sort: Z–A</option>
-      </select>
-    </div>
+        <div class="control-group small">
+          <label for="sortSelect">Sort By</label>
+          <select id="sortSelect">
+            <option value="az">Name (A-Z)</option>
+            <option value="za">Name (Z–A)</option>
+          </select>
+        </div>
+      </div>
+    </section>
 
-    <div class="results-count" id="resultsCount">Loading items...</div>
-    <div class="items-grid" id="itemsGrid"></div>
+    <div id="loadingState" class="loading-state">Loading item data...</div>
+    <div id="errorState" class="error-state" style="display:none;"></div>
+    <div id="emptyState" class="empty-state" style="display:none;">No items match the current filters.</div>
+    <div id="resultsCount" class="results-count" style="display:none;"></div>
+    <div id="itemsGrid" class="items-grid" style="display:none;"></div>
   </div>
 
   <footer class="footer">
@@ -240,96 +306,18 @@
   </footer>
 
   <script>
+    const DATA_URL = "data/items.json";
+
     let allItems = [];
 
-    async function loadItems() {
-      const itemsGrid = document.getElementById("itemsGrid");
-      const resultsCount = document.getElementById("resultsCount");
+    const loadingState = document.getElementById("loadingState");
+    const errorState = document.getElementById("errorState");
+    const emptyState = document.getElementById("emptyState");
+    const resultsCount = document.getElementById("resultsCount");
+    const itemsGrid = document.getElementById("itemsGrid");
 
-      try {
-        const response = await fetch("data/items.json");
-
-        if (!response.ok) {
-          throw new Error(`HTTP error ${response.status}`);
-        }
-
-        allItems = await response.json();
-        renderItems();
-      } catch (error) {
-        console.error("Failed to load items:", error);
-        resultsCount.textContent = "Could not load item data.";
-        itemsGrid.innerHTML = `
-          <div class="status-message">
-            Failed to load <strong>data/items.json</strong>.<br>
-            Make sure the file exists and the path is correct.
-          </div>
-        `;
-      }
-    }
-
-    function renderItems() {
-      const itemsGrid = document.getElementById("itemsGrid");
-      const resultsCount = document.getElementById("resultsCount");
-      const searchValue = document.getElementById("searchInput").value.trim().toLowerCase();
-      const sortValue = document.getElementById("sortSelect").value;
-
-      let filteredItems = allItems.filter(item => {
-        const name = (item.name || "").toLowerCase();
-        const description = (item.description || "").toLowerCase();
-        const locations = Array.isArray(item.locations)
-          ? item.locations.join(" ").toLowerCase()
-          : "";
-
-        return (
-          name.includes(searchValue) ||
-          description.includes(searchValue) ||
-          locations.includes(searchValue)
-        );
-      });
-
-      filteredItems.sort((a, b) => {
-        const nameA = (a.name || "").toLowerCase();
-        const nameB = (b.name || "").toLowerCase();
-
-        if (sortValue === "za") {
-          return nameB.localeCompare(nameA);
-        }
-
-        return nameA.localeCompare(nameB);
-      });
-
-      resultsCount.textContent = "";
-
-      if (filteredItems.length === 0) {
-        itemsGrid.innerHTML = `
-          <div class="status-message">
-            No items matched your search.
-          </div>
-        `;
-        return;
-      }
-
-      itemsGrid.innerHTML = filteredItems.map(item => {
-        const locationsHtml = Array.isArray(item.locations) && item.locations.length > 0
-          ? `
-            <ul class="locations-list">
-              ${item.locations.map(location => `<li>${escapeHtml(location)}</li>`).join("")}
-            </ul>
-          `
-          : `<p class="no-locations">No listed location.</p>`;
-
-        return `
-          <div class="item-card">
-            <h2 class="item-name">${escapeHtml(item.name || "Unknown Item")}</h2>
-            <p class="item-description">
-              ${escapeHtml(item.description || "No description available.")}
-            </p>
-            <h3 class="section-title">Locations</h3>
-            ${locationsHtml}
-          </div>
-        `;
-      }).join("");
-    }
+    const searchInput = document.getElementById("searchInput");
+    const sortSelect = document.getElementById("sortSelect");
 
     function escapeHtml(text) {
       return String(text)
@@ -340,8 +328,95 @@
         .replace(/'/g, "&#039;");
     }
 
-    document.getElementById("searchInput").addEventListener("input", renderItems);
-    document.getElementById("sortSelect").addEventListener("change", renderItems);
+    function filterAndSortItems() {
+      const searchValue = searchInput.value.trim().toLowerCase();
+      const sortValue = sortSelect.value;
+
+      let filtered = allItems.filter(item => {
+        const name = (item.name || "").toLowerCase();
+        return name.includes(searchValue);
+      });
+
+      filtered.sort((a, b) => {
+        const nameA = (a.name || "").toLowerCase();
+        const nameB = (b.name || "").toLowerCase();
+
+        if (sortValue === "za") {
+          return nameB.localeCompare(nameA);
+        }
+
+        return nameA.localeCompare(nameB);
+      });
+
+      return filtered;
+    }
+
+    function createItemCard(item) {
+      const locationsHtml = Array.isArray(item.locations) && item.locations.length > 0
+        ? `
+          <ul class="locations-list">
+            ${item.locations.map(location => `<li>${escapeHtml(location)}</li>`).join("")}
+          </ul>
+        `
+        : `<p class="no-locations">No listed location.</p>`;
+
+      return `
+        <article class="item-card">
+          <div class="item-header">
+            <h2 class="item-name">${escapeHtml(item.name || "Unknown Item")}</h2>
+          </div>
+
+          <p class="item-description">
+            ${escapeHtml(item.description || "No description available.")}
+          </p>
+
+          <h3 class="section-title">Locations</h3>
+          ${locationsHtml}
+        </article>
+      `;
+    }
+
+    function renderItems() {
+      const filtered = filterAndSortItems();
+
+      loadingState.style.display = "none";
+      errorState.style.display = "none";
+
+      if (!filtered.length) {
+        itemsGrid.style.display = "none";
+        resultsCount.style.display = "none";
+        emptyState.style.display = "block";
+        return;
+      }
+
+      emptyState.style.display = "none";
+      resultsCount.style.display = "block";
+      itemsGrid.style.display = "grid";
+
+      resultsCount.textContent = `${filtered.length} item${filtered.length === 1 ? "" : "s"} found`;
+      itemsGrid.innerHTML = filtered.map(createItemCard).join("");
+    }
+
+    async function loadItems() {
+      try {
+        const response = await fetch(DATA_URL);
+        if (!response.ok) {
+          throw new Error(`Failed to load ${DATA_URL} (${response.status})`);
+        }
+
+        allItems = await response.json();
+        renderItems();
+      } catch (error) {
+        loadingState.style.display = "none";
+        errorState.style.display = "block";
+        errorState.textContent = `Could not load item data. ${error.message}`;
+      }
+    }
+
+    [searchInput, sortSelect].forEach(control => {
+      control.addEventListener("input", renderItems);
+      control.addEventListener("change", renderItems);
+    });
 
     loadItems();
   </script>
