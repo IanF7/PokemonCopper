@@ -349,7 +349,8 @@
             "ability_index": 1,
             "name": "Tanukiroot",
             "types": [
-              "GRASS"
+              "GRASS",
+              "PSYCHIC"
             ],
             "ability": "Prankster"
           },
@@ -7555,7 +7556,8 @@
             "ability_index": 1,
             "name": "Tanukiroot",
             "types": [
-              "GRASS"
+              "GRASS",
+              "PSYCHIC"
             ],
             "ability": "Prankster"
           },
@@ -7646,7 +7648,8 @@
             "ability_index": 1,
             "name": "Tanukiroot",
             "types": [
-              "GRASS"
+              "GRASS",
+              "PSYCHIC"
             ],
             "ability": "Prankster"
           },
@@ -8744,7 +8747,8 @@
             "ability_index": 1,
             "name": "Tanukiroot",
             "types": [
-              "GRASS"
+              "GRASS",
+              "PSYCHIC"
             ],
             "ability": "Prankster"
           },
