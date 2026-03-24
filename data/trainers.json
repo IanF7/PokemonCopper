@@ -6678,7 +6678,7 @@
     "section": "elite_four",
     "teams": [
       {
-        "version": "",
+        "version": "First Battle",
         "battle_type": "",
         "items": [
           "FULLRESTORE",
@@ -6841,8 +6841,8 @@
         ]
       },
       {
-        "version": "1",
-        "battle_type": "",
+        "version": "Rematch",
+        "battle_type": "DoubleBattle",
         "items": [
           "FULLRESTORE",
           "FULLRESTORE",
