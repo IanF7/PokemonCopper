@@ -14640,8 +14640,8 @@
         ]
       },
       {
-        "version": "DoubleBattle",
-        "battle_type": "10",
+        "version": "Third Battle",
+        "battle_type": "DoubleBattle",
         "items": [
           "MEGARING"
         ],
