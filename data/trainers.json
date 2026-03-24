@@ -5205,7 +5205,7 @@
     "teams": [
       {
         "version": "1-7 Badges",
-        "battle_type": "",
+        "battle_type": "DoubleBattle",
         "items": [
           "FULLRESTORE",
           "FULLRESTORE",
@@ -12786,7 +12786,7 @@
       },
       {
         "version": "Fifth Battle, Chose Lagavo",
-        "battle_type": "",
+        "battle_type": "DoubleBattle",
         "items": [
           "MEGARING"
         ],
@@ -12980,7 +12980,7 @@
       },
       {
         "version": "Fifth Battle, Chose Sparcyx",
-        "battle_type": "",
+        "battle_type": "DoubleBattle",
         "items": [
           "MEGARING"
         ],
@@ -13175,7 +13175,7 @@
       },
       {
         "version": "Fifth Battle, Chose Platyke",
-        "battle_type": "",
+        "battle_type": "DoubleBattle",
         "items": [
           "MEGARING"
         ],
@@ -14640,7 +14640,7 @@
         ]
       },
       {
-        "version": "Third Battle",
+        "version": "DoubleBattle",
         "battle_type": "10",
         "items": [
           "MEGARING"
@@ -18117,7 +18117,7 @@
       },
       {
         "version": "Third Battle",
-        "battle_type": "",
+        "battle_type": "DoubleBattle",
         "items": [
           "MEGARING"
         ],

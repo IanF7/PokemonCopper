@@ -223,6 +223,36 @@
       object-fit: contain;
     }
 
+    .trainer-name-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .double-battle-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 6px 10px;
+      border-radius: 999px;
+
+      background: #2a1b3d;
+      border: 1px solid #6d4aa3;
+
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1;
+
+      white-space: nowrap;
+    }
+
+    .double-battle-icon[title] {
+      cursor: default;
+    }
+
     .trainer-meta {
       width: 100%;
       display: grid;
@@ -691,6 +721,23 @@
       return "";
     }
 
+    function isDoubleBattle(team) {
+      return normalize(team?.battle_type) === "doublebattle";
+    }
+
+    function renderTrainerName(name, team) {
+      return `
+        <div class="trainer-name-row">
+          <div class="trainer-header-name">${escapeHtml(name || "Unknown Trainer")}</div>
+          ${
+            isDoubleBattle(team)
+              ? `<span class="double-battle-icon" title="Double Battle">Double Battle</span>`
+              : ""
+          }
+        </div>
+      `;
+    }
+
     function getPokemonImagePath(pokemon) {
       const baseId = (pokemon.id || pokemon.species_id || pokemon.name || "").toString().trim().toUpperCase();
       const formNumber = Number(pokemon.form_number || 0);
@@ -838,7 +885,9 @@
 
             <div class="trainer-right">
               <div class="team-header">
-                <div class="trainer-header-name">${escapeHtml(trainer.name || "Unknown Trainer")}</div>
+                <div id="trainer-name-${index}">
+                  ${renderTrainerName(trainer.name, firstTeam)}
+                </div>
                 <div class="team-select-wrap">
                   <label for="team-select-${index}">Choose Team</label>
                   <select id="team-select-${index}" onchange="updateTrainerTeam(${index}, this.value)">
@@ -919,10 +968,15 @@
       const pokemon = safeArray(team.pokemon);
 
       const itemsEl = document.getElementById(`items-${trainerIndex}`);
+      const nameEl = document.getElementById(`trainer-name-${trainerIndex}`);
       const gridEl = document.getElementById(`pokemon-grid-${trainerIndex}`);
 
       if (itemsEl) {
         itemsEl.innerHTML = `<strong>Battle Items:</strong> ${escapeHtml(formatItemList(items))}`;
+      }
+
+      if (nameEl) {
+        nameEl.innerHTML = renderTrainerName(trainer.name, team);
       }
 
       if (gridEl) {
