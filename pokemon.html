@@ -296,6 +296,12 @@
       color: white;
     }
 
+    .move-type-pill {
+      min-width: 64px;
+      padding: 4px 8px;
+      font-size: 0.72rem;
+    }
+
     .empty-state,
     .loading-state,
     .error-state {
@@ -1233,9 +1239,9 @@
             <tbody>
               ${list.map(move => `
                 <tr>
-                  ${includeLevel ? `<td>${move.level ?? "—"}</td>` : ""}
+                  ${includeLevel ? `<td>${formatMoveLevel(move.level)}</td>` : ""}
                   <td>${move.name || move.id || "Unknown Move"}</td>
-                  <td>${move.type || "—"}</td>
+                  <td>${renderMoveType(move.type)}</td>
                   <td>${move.power ?? "—"}</td>
                   <td>${move.pp ?? "—"}</td>
                   <td>${move.description || "—"}</td>
@@ -1244,6 +1250,24 @@
             </tbody>
           </table>
         </div>
+      `;
+    }
+
+    function formatMoveLevel(level) {
+      if (level === 0) return "On Evolution";
+      if (level === null || level === undefined) return "—";
+      return level;
+    }
+
+    function renderMoveType(type) {
+      if (!type) return "—";
+
+      const normalizedType = String(type).toUpperCase();
+
+      return `
+        <span class="type-pill move-type-pill" style="background:${getTypeColor(normalizedType)};">
+          ${normalizedType}
+        </span>
       `;
     }
 

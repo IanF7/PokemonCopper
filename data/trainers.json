@@ -6836,7 +6836,7 @@
               "DRAGON",
               "ROCK"
             ],
-            "ability": "Levitate"
+            "ability": "Golden Body"
           }
         ]
       },
@@ -7017,8 +7017,8 @@
                 "name": "Draco Meteor"
               },
               {
-                "id": "FLASHCANNON",
-                "name": "Flash Cannon"
+                "id": "MINERALBURST",
+                "name": "Mineral Burst"
               },
               {
                 "id": "EARTHQUAKE",
@@ -7032,7 +7032,7 @@
               "DRAGON",
               "ROCK"
             ],
-            "ability": "Levitate"
+            "ability": "Golden Body"
           }
         ]
       }
@@ -18698,8 +18698,8 @@
             "level": 78,
             "moves": [
               {
-                "id": "DRAGONDANCE",
-                "name": "Dragon Dance"
+                "id": "IRONDEFENSE",
+                "name": "Iron Defense"
               },
               {
                 "id": "EARTHQUAKE",
@@ -18903,8 +18903,8 @@
             "level": 78,
             "moves": [
               {
-                "id": "NASTYPLOT",
-                "name": "Nasty Plot"
+                "id": "EXTREMESPEED",
+                "name": "Extreme Speed"
               },
               {
                 "id": "HEATWAVE",
