@@ -5030,38 +5030,36 @@
             "ability": "Sturdy"
           },
           {
-            "id": "FEAROW",
-            "species_id": "FEAROW",
+            "id": "LUMINOTH",
+            "species_id": "LUMINOTH",
             "level": 68,
             "moves": [
               {
-                "id": "TOXIC",
-                "name": "Toxic"
+                "id": "BUGBUZZ",
+                "name": "Bug Buzz"
               },
               {
-                "id": "POISONJAB",
-                "name": "Poison Jab"
+                "id": "QUIVERDANCE",
+                "name": "Quiver Dance"
               },
               {
-                "id": "DRILLRUN",
-                "name": "Drill Run"
+                "id": "HEATWAVE",
+                "name": "Heat Wave"
               },
               {
-                "id": "DRILLPECK",
-                "name": "Drill Peck"
+                "id": "AIRSLASH",
+                "name": "Air Slash"
               }
             ],
-            "form_number": 1,
             "gender": "Female",
             "ability_index": 1,
-            "item": "BLACKSLUDGE",
-            "name": "Fearow (Azorian)",
+            "item": "HEAVYDUTYBOOTS",
+            "name": "Luminoth",
             "types": [
-              "POISON",
+              "BUG",
               "FLYING"
             ],
-            "ability": "Poison Touch",
-            "form_name": "Azorian"
+            "ability": "Unaware"
           },
           {
             "id": "PARAPOSSUM",
