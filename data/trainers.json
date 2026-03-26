@@ -177,35 +177,35 @@
             "ability": "Dry Skin"
           },
           {
-            "id": "ROARACLE",
-            "species_id": "ROARACLE",
+            "id": "STALPACA",
+            "species_id": "STALPACA",
             "level": 68,
             "moves": [
               {
-                "id": "AURASPHERE",
-                "name": "Aura Sphere"
+                "id": "WIDEGUARD",
+                "name": "Wide Guard"
               },
               {
-                "id": "PSYCHIC",
-                "name": "Psychic"
+                "id": "COTTONGUARD",
+                "name": "Cotton Guard"
               },
               {
-                "id": "SHADOWBALL",
-                "name": "Shadow Ball"
+                "id": "BODYPRESS",
+                "name": "Body Press"
               },
               {
-                "id": "SUCKERPUNCH",
-                "name": "Sucker Punch"
+                "id": "HEAVYSLAM",
+                "name": "Heavy Slam"
               }
             ],
             "gender": "Female",
-            "item": "TWISTEDSPOON",
-            "name": "Roaracle",
+            "item": "ROCKYHELMET",
+            "name": "Stalpaca",
             "types": [
-              "NORMAL",
-              "PSYCHIC"
+              "STEEL",
+              "NORMAL"
             ],
-            "ability": "Magic Guard"
+            "ability": "Steel Wool"
           },
           {
             "id": "SNORLAX",
