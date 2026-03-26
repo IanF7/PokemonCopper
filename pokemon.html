@@ -1217,7 +1217,7 @@
       `;
     }
 
-    function renderMoveTable(moves, includeLevel = false) {
+        function renderMoveTable(moves, includeLevel = false) {
       const list = safeArray(moves);
       if (!list.length) {
         return `<div class="section-note">None</div>`;
@@ -1232,6 +1232,7 @@
                 <th>Name</th>
                 <th>Type</th>
                 <th>Power</th>
+                <th>Accuracy</th>
                 <th>PP</th>
                 <th>Description</th>
               </tr>
@@ -1243,6 +1244,7 @@
                   <td>${move.name || move.id || "Unknown Move"}</td>
                   <td>${renderMoveType(move.type)}</td>
                   <td>${move.power ?? "—"}</td>
+                  <td>${formatMoveAccuracy(move.accuracy)}</td>
                   <td>${move.pp ?? "—"}</td>
                   <td>${move.description || "—"}</td>
                 </tr>
@@ -1269,6 +1271,12 @@
           ${normalizedType}
         </span>
       `;
+    }
+
+    function formatMoveAccuracy(accuracy) {
+      if (accuracy === null || accuracy === undefined || accuracy === "") return "—";
+      if (Number(accuracy) === 0) return "—";
+      return `${accuracy}`;
     }
 
     function buildFormCard(form) {
