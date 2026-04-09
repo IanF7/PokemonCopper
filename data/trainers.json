@@ -202,8 +202,7 @@
             "item": "ROCKYHELMET",
             "name": "Stalpaca",
             "types": [
-              "STEEL",
-              "NORMAL"
+              "STEEL"
             ],
             "ability": "Steel Wool"
           },
@@ -6462,8 +6461,7 @@
             "item": "MAGNETAURITE",
             "name": "Magnetaur",
             "types": [
-              "ELECTRIC",
-              "FIGHTING"
+              "ELECTRIC"
             ],
             "ability": "Magnet Pull"
           }
@@ -6659,8 +6657,7 @@
             "item": "MAGNETAURITE",
             "name": "Magnetaur",
             "types": [
-              "ELECTRIC",
-              "FIGHTING"
+              "ELECTRIC"
             ],
             "ability": "Magnet Pull"
           }
@@ -6836,7 +6833,7 @@
               "DRAGON",
               "ROCK"
             ],
-            "ability": "Golden Body"
+            "ability": "Levitate"
           }
         ]
       },
@@ -7032,7 +7029,7 @@
               "DRAGON",
               "ROCK"
             ],
-            "ability": "Golden Body"
+            "ability": "Levitate"
           }
         ]
       }
@@ -13366,6 +13363,601 @@
             "ability": "Overgrow"
           }
         ]
+      },
+      {
+        "version": "Rematch, Chose Lagavo",
+        "battle_type": "",
+        "items": [
+          "MEGARING"
+        ],
+        "pokemon": [
+          {
+            "id": "DRAGONITE",
+            "species_id": "DRAGONITE",
+            "level": 74,
+            "moves": [
+              {
+                "id": "DRACOMETEOR",
+                "name": "Draco Meteor"
+              },
+              {
+                "id": "HURRICANE",
+                "name": "Hurricane"
+              },
+              {
+                "id": "PSYCHIC",
+                "name": "Psychic"
+              },
+              {
+                "id": "HEATWAVE",
+                "name": "Heat Wave"
+              }
+            ],
+            "gender": "Female",
+            "form_number": 1,
+            "item": "CHOICESPECS",
+            "name": "Dragonite (Azorian)",
+            "types": [
+              "DRAGON",
+              "PSYCHIC"
+            ],
+            "ability": "Levitate",
+            "form_name": "Azorian"
+          },
+          {
+            "id": "CELUMINA",
+            "species_id": "CELUMINA",
+            "level": 71,
+            "moves": [
+              {
+                "id": "SCALD",
+                "name": "Scald"
+              },
+              {
+                "id": "LIGHTSCREEN",
+                "name": "Light Screen"
+              },
+              {
+                "id": "SUBSTITUTE",
+                "name": "Substitute"
+              },
+              {
+                "id": "EXTRASENSORY",
+                "name": "Extrasensory"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 0,
+            "item": "LEFTOVERS",
+            "name": "Celumina",
+            "types": [
+              "WATER"
+            ],
+            "ability": "Damp"
+          },
+          {
+            "id": "AGGRON",
+            "species_id": "AGGRON",
+            "level": 72,
+            "moves": [
+              {
+                "id": "HEAVYSLAM",
+                "name": "Heavy Slam"
+              },
+              {
+                "id": "ROCKSLIDE",
+                "name": "Rock Slide"
+              },
+              {
+                "id": "EARTHQUAKE",
+                "name": "Earthquake"
+              },
+              {
+                "id": "BODYPRESS",
+                "name": "Body Press"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 1,
+            "item": "SCOPELENS",
+            "name": "Aggron",
+            "types": [
+              "STEEL",
+              "ROCK"
+            ],
+            "ability": "Rock Head"
+          },
+          {
+            "id": "TREENUKI",
+            "species_id": "TREENUKI",
+            "level": 72,
+            "moves": [
+              {
+                "id": "ENERGYBALL",
+                "name": "Energy Ball"
+              },
+              {
+                "id": "PSYCHIC",
+                "name": "Psychic"
+              },
+              {
+                "id": "STUNSPORE",
+                "name": "Stun Spore"
+              },
+              {
+                "id": "REFLECT",
+                "name": "Reflect"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Treenuki",
+            "types": [
+              "GRASS",
+              "PSYCHIC"
+            ],
+            "ability": "Prankster"
+          },
+          {
+            "id": "KAMASEI",
+            "species_id": "KAMASEI",
+            "level": 73,
+            "moves": [
+              {
+                "id": "XSCISSOR",
+                "name": "X-Scissor"
+              },
+              {
+                "id": "ROCKSLIDE",
+                "name": "Rock Slide"
+              },
+              {
+                "id": "SWORDSDANCE",
+                "name": "Swords Dance"
+              },
+              {
+                "id": "CROSSCHOP",
+                "name": "Cross Chop"
+              }
+            ],
+            "gender": "Male",
+            "item": "COBABERRY",
+            "name": "Kamasei",
+            "types": [
+              "BUG",
+              "FIGHTING"
+            ],
+            "ability": "Limber"
+          },
+          {
+            "id": "AUROCYX",
+            "species_id": "AUROCYX",
+            "level": 74,
+            "moves": [
+              {
+                "id": "BLAZINGSPRINT",
+                "name": "Blazing Sprint"
+              },
+              {
+                "id": "DRILLPECK",
+                "name": "Drill Peck"
+              },
+              {
+                "id": "DAZZLINGGLEAM",
+                "name": "Dazzling Gleam"
+              },
+              {
+                "id": "EXTREMESPEED",
+                "name": "Extreme Speed"
+              }
+            ],
+            "gender": "Male",
+            "item": "AUROCITE",
+            "name": "Aurocyx",
+            "types": [
+              "FIRE",
+              "FAIRY"
+            ],
+            "ability": "Blaze"
+          }
+        ]
+      },
+      {
+        "version": "Rematch, Chose Sparcyx",
+        "battle_type": "",
+        "items": [
+          "MEGARING"
+        ],
+        "pokemon": [
+          {
+            "id": "DRAGONITE",
+            "species_id": "DRAGONITE",
+            "level": 74,
+            "moves": [
+              {
+                "id": "DRACOMETEOR",
+                "name": "Draco Meteor"
+              },
+              {
+                "id": "HURRICANE",
+                "name": "Hurricane"
+              },
+              {
+                "id": "PSYCHIC",
+                "name": "Psychic"
+              },
+              {
+                "id": "HEATWAVE",
+                "name": "Heat Wave"
+              }
+            ],
+            "gender": "Female",
+            "form_number": 1,
+            "item": "CHOICESPECS",
+            "name": "Dragonite (Azorian)",
+            "types": [
+              "DRAGON",
+              "PSYCHIC"
+            ],
+            "ability": "Levitate",
+            "form_name": "Azorian"
+          },
+          {
+            "id": "TREENUKI",
+            "species_id": "TREENUKI",
+            "level": 71,
+            "moves": [
+              {
+                "id": "ENERGYBALL",
+                "name": "Energy Ball"
+              },
+              {
+                "id": "PSYCHIC",
+                "name": "Psychic"
+              },
+              {
+                "id": "STUNSPORE",
+                "name": "Stun Spore"
+              },
+              {
+                "id": "REFLECT",
+                "name": "Reflect"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Treenuki",
+            "types": [
+              "GRASS",
+              "PSYCHIC"
+            ],
+            "ability": "Prankster"
+          },
+          {
+            "id": "AGGRON",
+            "species_id": "AGGRON",
+            "level": 72,
+            "moves": [
+              {
+                "id": "IRONHEAD",
+                "name": "Iron Head"
+              },
+              {
+                "id": "ROCKSLIDE",
+                "name": "Rock Slide"
+              },
+              {
+                "id": "EARTHQUAKE",
+                "name": "Earthquake"
+              },
+              {
+                "id": "ICEPUNCH",
+                "name": "Ice Punch"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Aggron",
+            "types": [
+              "STEEL",
+              "ROCK"
+            ],
+            "ability": "Rock Head"
+          },
+          {
+            "id": "DIABLAZE",
+            "species_id": "DIABLAZE",
+            "level": 72,
+            "moves": [
+              {
+                "id": "FLAREBLITZ",
+                "name": "Flare Blitz"
+              },
+              {
+                "id": "FOULPLAY",
+                "name": "Foul Play"
+              },
+              {
+                "id": "HONECLAWS",
+                "name": "Hone Claws"
+              },
+              {
+                "id": "FAKEOUT",
+                "name": "Fake Out"
+              }
+            ],
+            "gender": "Male",
+            "ability_index": 0,
+            "item": "SITRUSBERRY",
+            "name": "Diablaze",
+            "types": [
+              "FIRE",
+              "DARK"
+            ],
+            "ability": "Flash Fire"
+          },
+          {
+            "id": "KAMASEI",
+            "species_id": "KAMASEI",
+            "level": 73,
+            "moves": [
+              {
+                "id": "XSCISSOR",
+                "name": "X-Scissor"
+              },
+              {
+                "id": "ROCKSLIDE",
+                "name": "Rock Slide"
+              },
+              {
+                "id": "SWORDSDANCE",
+                "name": "Swords Dance"
+              },
+              {
+                "id": "CROSSCHOP",
+                "name": "Cross Chop"
+              }
+            ],
+            "gender": "Male",
+            "item": "COBABERRY",
+            "name": "Kamasei",
+            "types": [
+              "BUG",
+              "FIGHTING"
+            ],
+            "ability": "Limber"
+          },
+          {
+            "id": "PLATYPUNCH",
+            "species_id": "PLATYPUNCH",
+            "level": 74,
+            "moves": [
+              {
+                "id": "AQUAJET",
+                "name": "Aqua Jet"
+              },
+              {
+                "id": "HYDROSMASH",
+                "name": "Hydro Smash"
+              },
+              {
+                "id": "ICEPUNCH",
+                "name": "Ice Punch"
+              },
+              {
+                "id": "CLOSECOMBAT",
+                "name": "Close Combat"
+              }
+            ],
+            "gender": "Male",
+            "item": "PLATYPUNCHITE",
+            "name": "Platypunch",
+            "types": [
+              "WATER",
+              "FIGHTING"
+            ],
+            "ability": "Torrent"
+          }
+        ]
+      },
+      {
+        "version": "Rematch, Chose Platyke",
+        "battle_type": "",
+        "items": [
+          "MEGARING"
+        ],
+        "pokemon": [
+          {
+            "id": "DRAGONITE",
+            "species_id": "DRAGONITE",
+            "level": 74,
+            "moves": [
+              {
+                "id": "DRACOMETEOR",
+                "name": "Draco Meteor"
+              },
+              {
+                "id": "HURRICANE",
+                "name": "Hurricane"
+              },
+              {
+                "id": "PSYCHIC",
+                "name": "Psychic"
+              },
+              {
+                "id": "HEATWAVE",
+                "name": "Heat Wave"
+              }
+            ],
+            "gender": "Female",
+            "form_number": 1,
+            "item": "CHOICESPECS",
+            "name": "Dragonite (Azorian)",
+            "types": [
+              "DRAGON",
+              "PSYCHIC"
+            ],
+            "ability": "Levitate",
+            "form_name": "Azorian"
+          },
+          {
+            "id": "DIABLAZE",
+            "species_id": "DIABLAZE",
+            "level": 71,
+            "moves": [
+              {
+                "id": "FLAREBLITZ",
+                "name": "Flare Blitz"
+              },
+              {
+                "id": "FOULPLAY",
+                "name": "Foul Play"
+              },
+              {
+                "id": "HONECLAWS",
+                "name": "Hone Claws"
+              },
+              {
+                "id": "FAKEOUT",
+                "name": "Fake Out"
+              }
+            ],
+            "gender": "Male",
+            "ability_index": 0,
+            "item": "SITRUSBERRY",
+            "name": "Diablaze",
+            "types": [
+              "FIRE",
+              "DARK"
+            ],
+            "ability": "Flash Fire"
+          },
+          {
+            "id": "AGGRON",
+            "species_id": "AGGRON",
+            "level": 72,
+            "moves": [
+              {
+                "id": "HEAVYSLAM",
+                "name": "Heavy Slam"
+              },
+              {
+                "id": "ROCKSLIDE",
+                "name": "Rock Slide"
+              },
+              {
+                "id": "EARTHQUAKE",
+                "name": "Earthquake"
+              },
+              {
+                "id": "BODYPRESS",
+                "name": "Body Press"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 1,
+            "item": "SCOPELENS",
+            "name": "Aggron",
+            "types": [
+              "STEEL",
+              "ROCK"
+            ],
+            "ability": "Rock Head"
+          },
+          {
+            "id": "CELUMINA",
+            "species_id": "CELUMINA",
+            "level": 72,
+            "moves": [
+              {
+                "id": "SCALD",
+                "name": "Scald"
+              },
+              {
+                "id": "LIGHTSCREEN",
+                "name": "Light Screen"
+              },
+              {
+                "id": "SUBSTITUTE",
+                "name": "Substitute"
+              },
+              {
+                "id": "EXTRASENSORY",
+                "name": "Extrasensory"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 0,
+            "item": "LEFTOVERS",
+            "name": "Celumina",
+            "types": [
+              "WATER"
+            ],
+            "ability": "Damp"
+          },
+          {
+            "id": "KAMASEI",
+            "species_id": "KAMASEI",
+            "level": 73,
+            "moves": [
+              {
+                "id": "XSCISSOR",
+                "name": "X-Scissor"
+              },
+              {
+                "id": "ROCKSLIDE",
+                "name": "Rock Slide"
+              },
+              {
+                "id": "SWORDSDANCE",
+                "name": "Swords Dance"
+              },
+              {
+                "id": "CROSSCHOP",
+                "name": "Cross Chop"
+              }
+            ],
+            "gender": "Male",
+            "item": "COBABERRY",
+            "name": "Kamasei",
+            "types": [
+              "BUG",
+              "FIGHTING"
+            ],
+            "ability": "Limber"
+          },
+          {
+            "id": "LATREMOR",
+            "species_id": "LATREMOR",
+            "level": 74,
+            "moves": [
+              {
+                "id": "LEAFBLADE",
+                "name": "Leaf Blade"
+              },
+              {
+                "id": "COUNTERSPINE",
+                "name": "Counter Spine"
+              },
+              {
+                "id": "EARTHQUAKE",
+                "name": "Earthquake"
+              },
+              {
+                "id": "SCREECH",
+                "name": "Screech"
+              }
+            ],
+            "gender": "Male",
+            "item": "LATREMORITE",
+            "name": "Latremor",
+            "types": [
+              "GRASS",
+              "GROUND"
+            ],
+            "ability": "Overgrow"
+          }
+        ]
       }
     ]
   },
@@ -14800,6 +15392,201 @@
             "id": "PHANTOHM",
             "species_id": "PHANTOHM",
             "level": 55,
+            "moves": [
+              {
+                "id": "BLITZ",
+                "name": "Blitz"
+              },
+              {
+                "id": "KNOCKOFF",
+                "name": "Knock Off"
+              },
+              {
+                "id": "HONECLAWS",
+                "name": "Hone Claws"
+              },
+              {
+                "id": "WILDCHARGE",
+                "name": "Wild Charge"
+              }
+            ],
+            "gender": "Male",
+            "item": "PHANTOHMITE",
+            "name": "Phantohm",
+            "types": [
+              "ELECTRIC",
+              "DARK"
+            ],
+            "ability": "Full Charge"
+          }
+        ]
+      },
+      {
+        "version": "Rematch",
+        "battle_type": "",
+        "items": [
+          "MEGARING"
+        ],
+        "pokemon": [
+          {
+            "id": "PIDGEOT",
+            "species_id": "PIDGEOT",
+            "level": 73,
+            "moves": [
+              {
+                "id": "HEATWAVE",
+                "name": "Heat Wave"
+              },
+              {
+                "id": "HURRICANE",
+                "name": "Hurricane"
+              },
+              {
+                "id": "UTURN",
+                "name": "U-turn"
+              },
+              {
+                "id": "FEATHERDANCE",
+                "name": "Feather Dance"
+              }
+            ],
+            "gender": "Male",
+            "item": "HEAVYDUTYBOOTS",
+            "name": "Pidgeot",
+            "types": [
+              "NORMAL",
+              "FLYING"
+            ],
+            "ability": "Keen Eye"
+          },
+          {
+            "id": "GYARADOS",
+            "species_id": "GYARADOS",
+            "level": 73,
+            "moves": [
+              {
+                "id": "WATERFALL",
+                "name": "Waterfall"
+              },
+              {
+                "id": "DRAGONDANCE",
+                "name": "Dragon Dance"
+              },
+              {
+                "id": "ICEFANG",
+                "name": "Ice Fang"
+              },
+              {
+                "id": "IRONTAIL",
+                "name": "Iron Tail"
+              }
+            ],
+            "gender": "Female",
+            "item": "LEFTOVERS",
+            "name": "Gyarados",
+            "types": [
+              "WATER",
+              "FLYING"
+            ],
+            "ability": "Intimidate"
+          },
+          {
+            "id": "METAGROSS",
+            "species_id": "METAGROSS",
+            "level": 71,
+            "moves": [
+              {
+                "id": "HEAVYSLAM",
+                "name": "Heavy Slam"
+              },
+              {
+                "id": "EARTHQUAKE",
+                "name": "Earthquake"
+              },
+              {
+                "id": "KNOCKOFF",
+                "name": "Knock Off"
+              },
+              {
+                "id": "BULLETPUNCH",
+                "name": "Bullet Punch"
+              }
+            ],
+            "gender": "Male",
+            "item": "CHOICEBAND",
+            "name": "Metagross",
+            "types": [
+              "STEEL",
+              "PSYCHIC"
+            ],
+            "ability": "Clear Body"
+          },
+          {
+            "id": "GARCHOMP",
+            "species_id": "GARCHOMP",
+            "level": 71,
+            "moves": [
+              {
+                "id": "DRAGONRUSH",
+                "name": "Dragon Rush"
+              },
+              {
+                "id": "EARTHQUAKE",
+                "name": "Earthquake"
+              },
+              {
+                "id": "FIREBLAST",
+                "name": "Fire Blast"
+              },
+              {
+                "id": "CRUNCH",
+                "name": "Crunch"
+              }
+            ],
+            "gender": "Male",
+            "item": "ROCKYHELMET",
+            "name": "Garchomp",
+            "types": [
+              "DRAGON",
+              "GROUND"
+            ],
+            "ability": "Sand Veil"
+          },
+          {
+            "id": "GARDEVOIR",
+            "species_id": "GARDEVOIR",
+            "level": 72,
+            "moves": [
+              {
+                "id": "PSYCHIC",
+                "name": "Psychic"
+              },
+              {
+                "id": "MOONBLAST",
+                "name": "Moonblast"
+              },
+              {
+                "id": "SHADOWBALL",
+                "name": "Shadow Ball"
+              },
+              {
+                "id": "DRAININGKISS",
+                "name": "Draining Kiss"
+              }
+            ],
+            "gender": "Female",
+            "item": "CHOICESCARF",
+            "name": "Gardevoir",
+            "types": [
+              "PSYCHIC",
+              "FAIRY"
+            ],
+            "ability": "Synchronize"
+          },
+          {
+            "id": "PHANTOHM",
+            "species_id": "PHANTOHM",
+            "level": 74,
             "moves": [
               {
                 "id": "BLITZ",
