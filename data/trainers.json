@@ -6462,7 +6462,8 @@
             "item": "MAGNETAURITE",
             "name": "Magnetaur",
             "types": [
-              "ELECTRIC"
+              "ELECTRIC",
+              "FIGHTING"
             ],
             "ability": "Magnet Pull"
           }
@@ -6658,7 +6659,8 @@
             "item": "MAGNETAURITE",
             "name": "Magnetaur",
             "types": [
-              "ELECTRIC"
+              "ELECTRIC",
+              "FIGHTING"
             ],
             "ability": "Magnet Pull"
           }
