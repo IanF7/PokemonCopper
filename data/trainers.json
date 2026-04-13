@@ -202,7 +202,8 @@
             "item": "ROCKYHELMET",
             "name": "Stalpaca",
             "types": [
-              "STEEL"
+              "STEEL",
+              "NORMAL"
             ],
             "ability": "Steel Wool"
           },
@@ -1997,7 +1998,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Anger Point"
+            "ability": "Sheer Force"
           },
           {
             "id": "CHARCUPINE",
@@ -2099,7 +2100,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Anger Point"
+            "ability": "Sheer Force"
           },
           {
             "id": "CHARCUPINE",
@@ -2201,7 +2202,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Anger Point"
+            "ability": "Sheer Force"
           },
           {
             "id": "SCORCUPINE",
@@ -2303,7 +2304,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Anger Point"
+            "ability": "Sheer Force"
           },
           {
             "id": "SCORCUPINE",
@@ -2405,7 +2406,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Anger Point"
+            "ability": "Sheer Force"
           },
           {
             "id": "SCORCUPINE",
@@ -2507,7 +2508,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Anger Point"
+            "ability": "Sheer Force"
           },
           {
             "id": "SCORCUPINE",
@@ -2642,7 +2643,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Anger Point"
+            "ability": "Sheer Force"
           },
           {
             "id": "TALONFLAME",
@@ -2849,7 +2850,7 @@
             "types": [
               "GHOST"
             ],
-            "ability": "Defiant"
+            "ability": "Cursed Body"
           }
         ]
       },
@@ -2950,7 +2951,7 @@
             "types": [
               "GHOST"
             ],
-            "ability": "Defiant"
+            "ability": "Cursed Body"
           }
         ]
       },
@@ -3051,7 +3052,7 @@
             "types": [
               "GHOST"
             ],
-            "ability": "Defiant"
+            "ability": "Cursed Body"
           }
         ]
       },
@@ -3152,7 +3153,7 @@
             "types": [
               "GHOST"
             ],
-            "ability": "Defiant"
+            "ability": "Cursed Body"
           }
         ]
       },
@@ -3253,7 +3254,7 @@
             "types": [
               "GHOST"
             ],
-            "ability": "Defiant"
+            "ability": "Cursed Body"
           }
         ]
       },
@@ -3354,7 +3355,7 @@
             "types": [
               "GHOST"
             ],
-            "ability": "Defiant"
+            "ability": "Cursed Body"
           }
         ]
       },
@@ -3524,7 +3525,7 @@
             "types": [
               "GHOST"
             ],
-            "ability": "Defiant"
+            "ability": "Cursed Body"
           },
           {
             "id": "AEGISLASH",
@@ -7933,7 +7934,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMAKID",
@@ -8025,7 +8026,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMAKID",
@@ -8121,7 +8122,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMAKID",
@@ -8217,7 +8218,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMASEI",
@@ -9374,7 +9375,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMAKID",
@@ -9530,7 +9531,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMAKID",
@@ -9686,7 +9687,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMASEI",
@@ -9843,7 +9844,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMASEI",
@@ -11404,7 +11405,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMAKID",
@@ -11591,7 +11592,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMASEI",
@@ -11779,7 +11780,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMASEI",
@@ -11968,7 +11969,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMASEI",
@@ -12095,7 +12096,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "ARON",
@@ -12281,7 +12282,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "ARON",
@@ -12468,7 +12469,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "LAIRON",
@@ -12656,7 +12657,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "LAIRON",
@@ -13105,7 +13106,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMASEI",
@@ -13238,7 +13239,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "AGGRON",
@@ -13694,7 +13695,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "KAMASEI",
@@ -13830,7 +13831,7 @@
               "FIRE",
               "DARK"
             ],
-            "ability": "Flash Fire"
+            "ability": "Anger Point"
           },
           {
             "id": "AGGRON",
