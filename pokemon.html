@@ -1298,30 +1298,24 @@
     }
 
     function getFamilyForms(pokemon) {
-      const familyKey = getBaseFamilyKey(pokemon);
+      const isRegionalVariant = Number(pokemon.form_number || 0) > 0;
+      if (isRegionalVariant) {
+        return [pokemon];
+      }
 
+      const familyKey = getBaseFamilyKey(pokemon);
       const fromDataset = allPokemon.filter(entry => {
         if (getBaseFamilyKey(entry) !== familyKey) return false;
 
         const isSamePokemon = String(entry.id) === String(pokemon.id);
         if (isSamePokemon) return true;
 
-        const isRegionalVariant =
-          Number(entry.form_number || 0) > 0 &&
-          entry.regional_dex_number !== "" &&
-          entry.regional_dex_number !== null &&
-          entry.regional_dex_number !== undefined;
-
+        const isRegionalVariant = Number(entry.form_number || 0) > 0;
         return !isRegionalVariant;
       });
 
       const fromFormsArray = safeArray(pokemon.forms).filter(form => {
-        const isRegionalVariant =
-          Number(form.form_number || 0) > 0 &&
-          form.regional_dex_number !== "" &&
-          form.regional_dex_number !== null &&
-          form.regional_dex_number !== undefined;
-
+        const isRegionalVariant = Number(form.form_number || 0) > 0;
         return !isRegionalVariant;
       });
 
