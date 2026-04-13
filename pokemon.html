@@ -876,9 +876,7 @@
     }
 
     function isRegionalFormEntry(pokemon) {
-      return Number(pokemon.form_number) > 0 &&
-        pokemon.regional_dex_number !== "" &&
-        pokemon.regional_dex_number != null;
+      return Number(pokemon.form_number) > 0
     }
 
     function isAzorianForm(pokemon) {
