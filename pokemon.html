@@ -874,23 +874,37 @@
       return Number(pokemon.generation) === 10;
     }
 
-    function isRegionalFormEntry(pokemon) {
-      return Number(pokemon.form_number) > 0
-    }
-
     function isAzorianForm(pokemon) {
       const text = `${pokemon.form_name || ""} ${pokemon.name || ""}`.toLowerCase();
-      return text.includes("azorian");
+      return Number(pokemon.form_number || 0) > 0 && text.includes("azorian");
+    }
+
+    function isRegionalVariantPokemon(pokemon) {
+      const text = `${pokemon.form_name || ""} ${pokemon.name || ""}`.toLowerCase();
+
+      return (
+        Number(pokemon.form_number || 0) > 0 &&
+        (
+          text.includes("azorian") ||
+          text.includes("alolan") ||
+          text.includes("galarian") ||
+          text.includes("hisuian") ||
+          text.includes("paldean")
+        )
+      );
+    }
+
+    function isRegionalFormEntry(pokemon) {
+      return isRegionalVariantPokemon(pokemon);
     }
 
     function hasAzorianReplacement(pokemon) {
       return allPokemon.some(other =>
         other.species_id === pokemon.species_id &&
         other.id !== pokemon.id &&
-        Number(other.form_number) > 0 &&
+        isAzorianForm(other) &&
         other.regional_dex_number !== "" &&
-        other.regional_dex_number != null &&
-        isAzorianForm(other)
+        other.regional_dex_number != null
       );
     }
 
@@ -906,14 +920,19 @@
 
       if (!inRegionalDex) return false;
 
-      const isForm = Number(pokemon.form_number) > 0;
-      const azorian = isAzorianForm(pokemon);
+      const isRegionalVariant = isRegionalVariantPokemon(pokemon);
+      const isAzorian = isAzorianForm(pokemon);
 
-      if (isForm && !azorian) {
+      if (Number(pokemon.form_number || 0) > 0 && !isRegionalVariant) {
         return false;
       }
 
-      if (!isForm && hasAzorianReplacement(pokemon)) {
+      // Only Azorian forms should appear in place of the base form in the Azori dex
+      if (Number(pokemon.form_number || 0) > 0 && !isAzorian) {
+        return false;
+      }
+
+      if (Number(pokemon.form_number || 0) === 0 && hasAzorianReplacement(pokemon)) {
         return false;
       }
 
@@ -1297,25 +1316,23 @@
     }
 
     function getFamilyForms(pokemon) {
-      const isRegionalVariant = Number(pokemon.form_number || 0) > 0;
-      if (isRegionalVariant) {
+      if (isRegionalVariantPokemon(pokemon)) {
         return [pokemon];
       }
 
       const familyKey = getBaseFamilyKey(pokemon);
+
       const fromDataset = allPokemon.filter(entry => {
         if (getBaseFamilyKey(entry) !== familyKey) return false;
 
         const isSamePokemon = String(entry.id) === String(pokemon.id);
         if (isSamePokemon) return true;
 
-        const isRegionalVariant = Number(entry.form_number || 0) > 0;
-        return !isRegionalVariant;
+        return !isRegionalVariantPokemon(entry);
       });
 
       const fromFormsArray = safeArray(pokemon.forms).filter(form => {
-        const isRegionalVariant = Number(form.form_number || 0) > 0;
-        return !isRegionalVariant;
+        return !isRegionalVariantPokemon(form);
       });
 
       const merged = dedupePokemonList([pokemon, ...fromDataset, ...fromFormsArray]);
