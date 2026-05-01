@@ -11,8 +11,8 @@
         "version": "0 Badges",
         "battle_type": "",
         "items": [
-          "POTION",
-          "POTION"
+          "Potion",
+          "Potion"
         ],
         "pokemon": [
           {
@@ -77,9 +77,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -106,7 +106,7 @@
             ],
             "gender": "Male",
             "ability_index": 2,
-            "item": "EXPERTBELT",
+            "item": "Expert Belt",
             "name": "Braviary",
             "types": [
               "NORMAL",
@@ -137,7 +137,7 @@
               }
             ],
             "gender": "Male",
-            "item": "CHOPLEBERRY",
+            "item": "Chople Berry",
             "name": "Burthrow",
             "types": [
               "NORMAL",
@@ -168,7 +168,7 @@
               }
             ],
             "gender": "Female",
-            "item": "FOCUSSASH",
+            "item": "Focus Sash",
             "name": "Heliolisk",
             "types": [
               "ELECTRIC",
@@ -199,7 +199,7 @@
               }
             ],
             "gender": "Female",
-            "item": "ROCKYHELMET",
+            "item": "Rocky Helmet",
             "name": "Stalpaca",
             "types": [
               "STEEL",
@@ -231,7 +231,7 @@
             ],
             "gender": "Male",
             "ability_index": 2,
-            "item": "SITRUSBERRY",
+            "item": "Sitrus Berry",
             "name": "Snorlax",
             "types": [
               "NORMAL"
@@ -262,7 +262,7 @@
             ],
             "gender": "Male",
             "ability_index": 1,
-            "item": "SNUFFLUFFITE",
+            "item": "Snuffluffite",
             "name": "Snuffluff",
             "types": [
               "NORMAL"
@@ -289,8 +289,8 @@
         "version": "1 Badge",
         "battle_type": "",
         "items": [
-          "POTION",
-          "POTION"
+          "Potion",
+          "Potion"
         ],
         "pokemon": [
           {
@@ -390,8 +390,8 @@
         "version": "2 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -491,8 +491,8 @@
         "version": "3 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -593,8 +593,8 @@
         "version": "4 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -695,8 +695,8 @@
         "version": "5 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -797,8 +797,8 @@
         "version": "6 Badges",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE"
+          "Full Restore",
+          "Full Restore"
         ],
         "pokemon": [
           {
@@ -899,9 +899,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -928,7 +928,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "TOXICORB",
+            "item": "Toxic Orb",
             "name": "Breloom",
             "types": [
               "GRASS",
@@ -960,7 +960,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "MIRACLESEED",
+            "item": "Miracle Seed",
             "name": "Bikkunise",
             "types": [
               "ELECTRIC",
@@ -992,7 +992,7 @@
             ],
             "gender": "Male",
             "ability_index": 2,
-            "item": "PSYCHICSEED",
+            "item": "Psychic Seed",
             "name": "Treenuki",
             "types": [
               "GRASS",
@@ -1024,7 +1024,7 @@
             ],
             "gender": "Male",
             "ability_index": 0,
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Leafeon",
             "types": [
               "GRASS"
@@ -1055,7 +1055,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "CHOICEBAND",
+            "item": "Choice Band",
             "name": "Cyprowl",
             "types": [
               "GRASS"
@@ -1086,7 +1086,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "ROSERADITE",
+            "item": "Roseradite",
             "name": "Roserade",
             "types": [
               "GRASS",
@@ -1114,8 +1114,8 @@
         "version": "1 Badge",
         "battle_type": "",
         "items": [
-          "POTION",
-          "POTION"
+          "Potion",
+          "Potion"
         ],
         "pokemon": [
           {
@@ -1215,8 +1215,8 @@
         "version": "2 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -1316,8 +1316,8 @@
         "version": "3 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -1417,8 +1417,8 @@
         "version": "4 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -1518,8 +1518,8 @@
         "version": "5 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -1619,8 +1619,8 @@
         "version": "6 Badges",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE"
+          "Full Restore",
+          "Full Restore"
         ],
         "pokemon": [
           {
@@ -1720,9 +1720,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -1749,7 +1749,7 @@
             ],
             "gender": "Male",
             "ability_index": 1,
-            "item": "RINDOBERRY",
+            "item": "Rindo Berry",
             "name": "Gastrodon",
             "types": [
               "WATER",
@@ -1780,7 +1780,7 @@
               }
             ],
             "gender": "Male",
-            "item": "DAMPROCK",
+            "item": "Damp Rock",
             "name": "Torreloch",
             "types": [
               "WATER",
@@ -1812,7 +1812,7 @@
             ],
             "gender": "Female",
             "ability_index": 2,
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Celumina",
             "types": [
               "WATER"
@@ -1842,7 +1842,7 @@
               }
             ],
             "gender": "Female",
-            "item": "MYSTICWATER",
+            "item": "Mystic Water",
             "name": "Gyarados",
             "types": [
               "WATER",
@@ -1874,7 +1874,7 @@
             ],
             "gender": "Male",
             "ability_index": 1,
-            "item": "CHOICESCARF",
+            "item": "Choice Scarf",
             "name": "Martana",
             "types": [
               "WATER",
@@ -1906,7 +1906,7 @@
             ],
             "gender": "Male",
             "ability_index": 1,
-            "item": "POLIWRATHITE",
+            "item": "Poliwrathite",
             "name": "Poliwrath",
             "types": [
               "WATER",
@@ -1934,8 +1934,8 @@
         "version": "1 Badge",
         "battle_type": "",
         "items": [
-          "POTION",
-          "POTION"
+          "Potion",
+          "Potion"
         ],
         "pokemon": [
           {
@@ -2036,8 +2036,8 @@
         "version": "2 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -2138,8 +2138,8 @@
         "version": "3 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -2240,8 +2240,8 @@
         "version": "4 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -2342,8 +2342,8 @@
         "version": "5 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -2444,8 +2444,8 @@
         "version": "6 Badges",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE"
+          "Full Restore",
+          "Full Restore"
         ],
         "pokemon": [
           {
@@ -2545,9 +2545,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -2574,7 +2574,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "CHARTIBERRY",
+            "item": "Charti Berry",
             "name": "Centiskorch",
             "types": [
               "FIRE",
@@ -2605,7 +2605,7 @@
               }
             ],
             "gender": "Male",
-            "item": "ROCKYHELMET",
+            "item": "Rocky Helmet",
             "name": "Fueghorn",
             "types": [
               "NORMAL",
@@ -2637,7 +2637,7 @@
             ],
             "gender": "Male",
             "ability_index": 1,
-            "item": "CHOICEBAND",
+            "item": "Choice Band",
             "name": "Diablaze",
             "types": [
               "FIRE",
@@ -2668,7 +2668,7 @@
               }
             ],
             "gender": "Female",
-            "item": "HEAVYDUTYBOOTS",
+            "item": "Heavy-Duty Boots",
             "name": "Talonflame",
             "types": [
               "FIRE",
@@ -2699,7 +2699,7 @@
               }
             ],
             "gender": "Female",
-            "item": "IRONBALL",
+            "item": "Iron Ball",
             "name": "Scorcupine",
             "types": [
               "FIRE"
@@ -2730,7 +2730,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "TORKOALITE",
+            "item": "Torkoalite",
             "name": "Torkoal",
             "types": [
               "FIRE"
@@ -2757,8 +2757,8 @@
         "version": "1 Badge",
         "battle_type": "",
         "items": [
-          "POTION",
-          "POTION"
+          "Potion",
+          "Potion"
         ],
         "pokemon": [
           {
@@ -2858,8 +2858,8 @@
         "version": "2 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -2959,8 +2959,8 @@
         "version": "3 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -3060,8 +3060,8 @@
         "version": "4 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -3161,8 +3161,8 @@
         "version": "5 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -3262,8 +3262,8 @@
         "version": "6 Badges",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE"
+          "Full Restore",
+          "Full Restore"
         ],
         "pokemon": [
           {
@@ -3363,9 +3363,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -3392,7 +3392,7 @@
             ],
             "gender": "Male",
             "ability_index": 2,
-            "item": "LIGHTCLAY",
+            "item": "Light Clay",
             "name": "Sableye",
             "types": [
               "DARK",
@@ -3425,7 +3425,7 @@
             "form_number": 1,
             "gender": "Male",
             "ability_index": 1,
-            "item": "CHOICEBAND",
+            "item": "Choice Band",
             "name": "Bouffalant (Azorian)",
             "types": [
               "NORMAL",
@@ -3458,7 +3458,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "BLACKSLUDGE",
+            "item": "Black Sludge",
             "name": "Spectrattle",
             "types": [
               "POISON",
@@ -3489,7 +3489,7 @@
               }
             ],
             "gender": "Female",
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Trevenant",
             "types": [
               "GHOST",
@@ -3520,7 +3520,7 @@
               }
             ],
             "gender": "Male",
-            "item": "SPELLTAG",
+            "item": "Spell Tag",
             "name": "Deceptjinn",
             "types": [
               "GHOST"
@@ -3550,7 +3550,7 @@
               }
             ],
             "gender": "Male",
-            "item": "AEGISLASHITE",
+            "item": "Aegislashite",
             "name": "Aegislash",
             "types": [
               "STEEL",
@@ -3578,8 +3578,8 @@
         "version": "1 Badge",
         "battle_type": "",
         "items": [
-          "POTION",
-          "POTION"
+          "Potion",
+          "Potion"
         ],
         "pokemon": [
           {
@@ -3678,8 +3678,8 @@
         "version": "2 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -3778,8 +3778,8 @@
         "version": "3 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -3878,8 +3878,8 @@
         "version": "4 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -3978,8 +3978,8 @@
         "version": "5 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -4078,8 +4078,8 @@
         "version": "6 Badges",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE"
+          "Full Restore",
+          "Full Restore"
         ],
         "pokemon": [
           {
@@ -4178,9 +4178,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -4205,7 +4205,7 @@
                 "name": "Psychic"
               }
             ],
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Claydol",
             "types": [
               "GROUND",
@@ -4238,7 +4238,7 @@
             "form_number": 1,
             "gender": "Female",
             "ability_index": 1,
-            "item": "SITRUSBERRY",
+            "item": "Sitrus Berry",
             "name": "Jumpluff (Azorian)",
             "types": [
               "GRASS",
@@ -4271,7 +4271,7 @@
             ],
             "gender": "Male",
             "ability_index": 0,
-            "item": "BLACKSLUDGE",
+            "item": "Black Sludge",
             "name": "Toxcoon",
             "types": [
               "GROUND",
@@ -4302,7 +4302,7 @@
               }
             ],
             "ability_index": 2,
-            "item": "ASSAULTVEST",
+            "item": "Assault Vest",
             "name": "Golurk",
             "types": [
               "GROUND",
@@ -4333,7 +4333,7 @@
               }
             ],
             "gender": "Female",
-            "item": "SCOPELENS",
+            "item": "Scope Lens",
             "name": "Cheimgar",
             "types": [
               "GROUND",
@@ -4364,7 +4364,7 @@
               }
             ],
             "gender": "Female",
-            "item": "KROOKODILITE",
+            "item": "Krookodilite",
             "name": "Krookodile",
             "types": [
               "GROUND",
@@ -4392,8 +4392,8 @@
         "version": "1 Badge",
         "battle_type": "",
         "items": [
-          "POTION",
-          "POTION"
+          "Potion",
+          "Potion"
         ],
         "pokemon": [
           {
@@ -4492,8 +4492,8 @@
         "version": "2 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -4592,8 +4592,8 @@
         "version": "3 Badges",
         "battle_type": "",
         "items": [
-          "SUPERPOTION",
-          "SUPERPOTION"
+          "Super Potion",
+          "Super Potion"
         ],
         "pokemon": [
           {
@@ -4692,8 +4692,8 @@
         "version": "4 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -4792,8 +4792,8 @@
         "version": "5 Badges",
         "battle_type": "",
         "items": [
-          "HYPERPOTION",
-          "HYPERPOTION"
+          "Hyper Potion",
+          "Hyper Potion"
         ],
         "pokemon": [
           {
@@ -4892,8 +4892,8 @@
         "version": "6 Badges",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE"
+          "Full Restore",
+          "Full Restore"
         ],
         "pokemon": [
           {
@@ -4992,9 +4992,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -5021,7 +5021,7 @@
             ],
             "gender": "Male",
             "ability_index": 1,
-            "item": "ROCKYHELMET",
+            "item": "Rocky Helmet",
             "name": "Skarmory",
             "types": [
               "STEEL",
@@ -5053,7 +5053,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "HEAVYDUTYBOOTS",
+            "item": "Heavy-Duty Boots",
             "name": "Luminoth",
             "types": [
               "BUG",
@@ -5084,7 +5084,7 @@
               }
             ],
             "gender": "Female",
-            "item": "FOCUSSASH",
+            "item": "Focus Sash",
             "name": "Parapossum",
             "types": [
               "FLYING"
@@ -5115,7 +5115,7 @@
             ],
             "gender": "Male",
             "ability_index": 2,
-            "item": "TOXICORB",
+            "item": "Toxic Orb",
             "name": "Gliscor",
             "types": [
               "GROUND",
@@ -5146,7 +5146,7 @@
               }
             ],
             "gender": "Male",
-            "item": "SHELLBELL",
+            "item": "Shell Bell",
             "name": "Apozoom",
             "types": [
               "ELECTRIC",
@@ -5177,7 +5177,7 @@
               }
             ],
             "gender": "Male",
-            "item": "CROBATITE",
+            "item": "Crobatite",
             "name": "Crobat",
             "types": [
               "POISON",
@@ -5205,9 +5205,9 @@
         "version": "1-7 Badges",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -5324,7 +5324,7 @@
               }
             ],
             "gender": "Female",
-            "item": "DVARMITE",
+            "item": "Dvarmite",
             "name": "Dvarmith",
             "types": [
               "STEEL",
@@ -5338,9 +5338,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -5367,7 +5367,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "EXPERTBELT",
+            "item": "Expert Belt",
             "name": "Steelix",
             "types": [
               "STEEL",
@@ -5399,7 +5399,7 @@
             ],
             "gender": "Male",
             "ability_index": 1,
-            "item": "OCCABERRY",
+            "item": "Occa Berry",
             "name": "Rolidozer",
             "types": [
               "BUG",
@@ -5431,7 +5431,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "LIFEORB",
+            "item": "Life Orb",
             "name": "Lucario",
             "types": [
               "FIGHTING",
@@ -5462,7 +5462,7 @@
               }
             ],
             "gender": "Female",
-            "item": "POWERHERB",
+            "item": "Power Herb",
             "name": "Stegeodon",
             "types": [
               "ROCK",
@@ -5493,7 +5493,7 @@
               }
             ],
             "gender": "Male",
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Aegislash",
             "types": [
               "STEEL",
@@ -5524,7 +5524,7 @@
               }
             ],
             "gender": "Female",
-            "item": "DVARMITE",
+            "item": "Dvarmite",
             "name": "Dvarmith",
             "types": [
               "STEEL",
@@ -5552,9 +5552,9 @@
         "version": "First Battle",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -5580,7 +5580,7 @@
               }
             ],
             "gender": "Male",
-            "item": "FOCUSSASH",
+            "item": "Focus Sash",
             "name": "Whimsicott",
             "types": [
               "GRASS",
@@ -5706,7 +5706,7 @@
               }
             ],
             "gender": "Female",
-            "item": "TITANIMAAMITE",
+            "item": "Titanimaamite",
             "name": "Titanimaam",
             "types": [
               "FAIRY",
@@ -5720,9 +5720,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -5748,7 +5748,7 @@
               }
             ],
             "gender": "Male",
-            "item": "FOCUSSASH",
+            "item": "Focus Sash",
             "name": "Whimsicott",
             "types": [
               "GRASS",
@@ -5780,7 +5780,7 @@
             ],
             "gender": "Male",
             "form_number": 1,
-            "item": "SITRUSBERRY",
+            "item": "Sitrus Berry",
             "name": "Weezing (Galarian)",
             "types": [
               "POISON",
@@ -5812,7 +5812,7 @@
               }
             ],
             "gender": "Female",
-            "item": "CHOICESCARF",
+            "item": "Choice Scarf",
             "name": "Gardevoir",
             "types": [
               "PSYCHIC",
@@ -5843,7 +5843,7 @@
               }
             ],
             "gender": "Female",
-            "item": "ASSAULTVEST",
+            "item": "Assault Vest",
             "name": "Naiphoria",
             "types": [
               "WATER",
@@ -5875,7 +5875,7 @@
             ],
             "gender": "Female",
             "form_number": 1,
-            "item": "BLACKSLUDGE",
+            "item": "Black Sludge",
             "ability_index": 1,
             "name": "Blissey (Azorian)",
             "types": [
@@ -5908,7 +5908,7 @@
               }
             ],
             "gender": "Female",
-            "item": "TITANIMAAMITE",
+            "item": "Titanimaamite",
             "name": "Titanimaam",
             "types": [
               "FAIRY",
@@ -5933,9 +5933,9 @@
         "version": "First Battle",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -5961,7 +5961,7 @@
               }
             ],
             "gender": "Female",
-            "item": "ICYROCK",
+            "item": "Icy Rock",
             "name": "Mamoswine",
             "types": [
               "ICE",
@@ -6084,7 +6084,7 @@
               }
             ],
             "gender": "Female",
-            "item": "FRIGIDITE",
+            "item": "Frigidite",
             "name": "Frigidae",
             "types": [
               "ICE",
@@ -6098,9 +6098,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -6126,7 +6126,7 @@
               }
             ],
             "gender": "Female",
-            "item": "ICYROCK",
+            "item": "Icy Rock",
             "name": "Mamoswine",
             "types": [
               "ICE",
@@ -6158,7 +6158,7 @@
             ],
             "gender": "Male",
             "form_number": 1,
-            "item": "OCCABERRY",
+            "item": "Occa Berry",
             "name": "Araquanid (Azorian)",
             "types": [
               "ICE",
@@ -6191,7 +6191,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "CELLBATTERY",
+            "item": "Cell Battery",
             "name": "Cloyster",
             "types": [
               "WATER",
@@ -6222,7 +6222,7 @@
               }
             ],
             "gender": "Female",
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Froslass",
             "types": [
               "ICE",
@@ -6253,7 +6253,7 @@
               }
             ],
             "gender": "Male",
-            "item": "SCOPELENS",
+            "item": "Scope Lens",
             "name": "Saburn",
             "types": [
               "ICE",
@@ -6284,7 +6284,7 @@
               }
             ],
             "gender": "Female",
-            "item": "FRIGIDITE",
+            "item": "Frigidite",
             "name": "Frigidae",
             "types": [
               "ICE",
@@ -6309,9 +6309,9 @@
         "version": "First Battle",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -6337,7 +6337,7 @@
               }
             ],
             "gender": "Female",
-            "item": "LIFEORB",
+            "item": "Life Orb",
             "name": "Galvantula",
             "types": [
               "BUG",
@@ -6459,7 +6459,7 @@
               }
             ],
             "gender": "Male",
-            "item": "MAGNETAURITE",
+            "item": "Magnetaurite",
             "name": "Magnetaur",
             "types": [
               "ELECTRIC",
@@ -6473,9 +6473,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -6501,7 +6501,7 @@
               }
             ],
             "gender": "Female",
-            "item": "LIFEORB",
+            "item": "Life Orb",
             "name": "Galvantula",
             "types": [
               "BUG",
@@ -6533,7 +6533,7 @@
             ],
             "gender": "Male",
             "ability_index": 1,
-            "item": "MAGNET",
+            "item": "Magnet",
             "name": "Volstrika",
             "types": [
               "ELECTRIC",
@@ -6564,7 +6564,7 @@
               }
             ],
             "gender": "Male",
-            "item": "DAMPROCK",
+            "item": "Damp Rock",
             "name": "Eelektross",
             "types": [
               "ELECTRIC"
@@ -6594,7 +6594,7 @@
               }
             ],
             "ability_index": 1,
-            "item": "AIRBALLOON",
+            "item": "Air Balloon",
             "name": "Magnezone",
             "types": [
               "ELECTRIC",
@@ -6625,7 +6625,7 @@
               }
             ],
             "gender": "Female",
-            "item": "CHOICEBAND",
+            "item": "Choice Band",
             "name": "Phantohm",
             "types": [
               "ELECTRIC",
@@ -6656,7 +6656,7 @@
               }
             ],
             "gender": "Male",
-            "item": "MAGNETAURITE",
+            "item": "Magnetaurite",
             "name": "Magnetaur",
             "types": [
               "ELECTRIC",
@@ -6681,9 +6681,9 @@
         "version": "First Battle",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -6709,7 +6709,7 @@
               }
             ],
             "gender": "Female",
-            "item": "YACHEBERRY",
+            "item": "Yache Berry",
             "name": "Flygon",
             "types": [
               "GROUND",
@@ -6830,7 +6830,7 @@
               }
             ],
             "gender": "Female",
-            "item": "JINLONGITE",
+            "item": "Jinglongite",
             "name": "Jinlong",
             "types": [
               "DRAGON",
@@ -6844,9 +6844,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -6872,7 +6872,7 @@
               }
             ],
             "gender": "Female",
-            "item": "YACHEBERRY",
+            "item": "Yache Berry",
             "name": "Flygon",
             "types": [
               "GROUND",
@@ -6903,7 +6903,7 @@
               }
             ],
             "gender": "Male",
-            "item": "BLACKSLUDGE",
+            "item": "Black Sludge",
             "name": "Gilagon",
             "types": [
               "DRAGON",
@@ -6934,7 +6934,7 @@
               }
             ],
             "gender": "Female",
-            "item": "ASSAULTVEST",
+            "item": "Assault Vest",
             "name": "Goodra",
             "types": [
               "DRAGON"
@@ -6964,7 +6964,7 @@
               }
             ],
             "gender": "Female",
-            "item": "CHOICESPECS",
+            "item": "Choice Specs",
             "name": "Dragapult",
             "types": [
               "DRAGON",
@@ -6995,7 +6995,7 @@
               }
             ],
             "gender": "Male",
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Torreloch",
             "types": [
               "WATER",
@@ -7026,7 +7026,7 @@
               }
             ],
             "gender": "Female",
-            "item": "JINLONGITE",
+            "item": "Jinglongite",
             "name": "Jinlong",
             "types": [
               "DRAGON",
@@ -7051,9 +7051,9 @@
         "version": "First Battle",
         "battle_type": "",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -7079,7 +7079,7 @@
               }
             ],
             "gender": "Male",
-            "item": "ROCKYHELMET",
+            "item": "Rocky Helmet",
             "ability_index": 1,
             "name": "Adobalith",
             "types": [
@@ -7229,7 +7229,7 @@
               }
             ],
             "gender": "Male",
-            "item": "INFERNOIXITE",
+            "item": "Infernoixite",
             "name": "Infernoix",
             "types": [
               "FIRE",
@@ -7243,9 +7243,9 @@
         "version": "Rematch",
         "battle_type": "DoubleBattle",
         "items": [
-          "FULLRESTORE",
-          "FULLRESTORE",
-          "MEGARING"
+          "Full Restore",
+          "Full Restore",
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -7271,7 +7271,7 @@
               }
             ],
             "gender": "Male",
-            "item": "ROCKYHELMET",
+            "item": "Rocky Helmet",
             "ability_index": 1,
             "name": "Adobalith",
             "types": [
@@ -7302,7 +7302,7 @@
               }
             ],
             "gender": "Female",
-            "item": "CHOICESCARF",
+            "item": "Choice Scarf",
             "name": "Staraptor",
             "types": [
               "NORMAL",
@@ -7333,7 +7333,7 @@
               }
             ],
             "gender": "Male",
-            "item": "ASSAULTVEST",
+            "item": "Assault Vest",
             "name": "Lediboss",
             "types": [
               "BUG",
@@ -7363,7 +7363,7 @@
                 "name": "Thunder Punch"
               }
             ],
-            "item": "EXPERTBELT",
+            "item": "Expert Belt",
             "name": "Golurk",
             "types": [
               "GROUND",
@@ -7394,7 +7394,7 @@
               }
             ],
             "gender": "Female",
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Linturna",
             "types": [
               "WATER",
@@ -7425,7 +7425,7 @@
               }
             ],
             "gender": "Male",
-            "item": "INFERNOIXITE",
+            "item": "Infernoixite",
             "name": "Infernoix",
             "types": [
               "FIRE",
@@ -12788,7 +12788,7 @@
         "version": "Fifth Battle, Chose Lagavo",
         "battle_type": "DoubleBattle",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -12968,7 +12968,7 @@
               }
             ],
             "gender": "Male",
-            "item": "AUROCITE",
+            "item": "Aurocite",
             "name": "Aurocyx",
             "types": [
               "FIRE",
@@ -12982,7 +12982,7 @@
         "version": "Fifth Battle, Chose Sparcyx",
         "battle_type": "DoubleBattle",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -13163,7 +13163,7 @@
               }
             ],
             "gender": "Male",
-            "item": "PLATYPUNCHITE",
+            "item": "Platypunchite",
             "name": "Platypunch",
             "types": [
               "WATER",
@@ -13177,7 +13177,7 @@
         "version": "Fifth Battle, Chose Platyke",
         "battle_type": "DoubleBattle",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -13357,7 +13357,7 @@
               }
             ],
             "gender": "Male",
-            "item": "LATREMORITE",
+            "item": "Latremorite",
             "name": "Latremor",
             "types": [
               "GRASS",
@@ -13371,7 +13371,7 @@
         "version": "Rematch, Chose Lagavo",
         "battle_type": "",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -13398,7 +13398,7 @@
             ],
             "gender": "Female",
             "form_number": 1,
-            "item": "CHOICESPECS",
+            "item": "Choice Specs",
             "name": "Dragonite (Azorian)",
             "types": [
               "DRAGON",
@@ -13431,7 +13431,7 @@
             ],
             "gender": "Female",
             "ability_index": 0,
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Celumina",
             "types": [
               "WATER"
@@ -13462,7 +13462,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "SCOPELENS",
+            "item": "Scope Lens",
             "name": "Aggron",
             "types": [
               "STEEL",
@@ -13524,7 +13524,7 @@
               }
             ],
             "gender": "Male",
-            "item": "COBABERRY",
+            "item": "Coba Berry",
             "name": "Kamasei",
             "types": [
               "BUG",
@@ -13555,7 +13555,7 @@
               }
             ],
             "gender": "Male",
-            "item": "AUROCITE",
+            "item": "Aurocite",
             "name": "Aurocyx",
             "types": [
               "FIRE",
@@ -13569,7 +13569,7 @@
         "version": "Rematch, Chose Sparcyx",
         "battle_type": "",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -13596,7 +13596,7 @@
             ],
             "gender": "Female",
             "form_number": 1,
-            "item": "CHOICESPECS",
+            "item": "Choice Specs",
             "name": "Dragonite (Azorian)",
             "types": [
               "DRAGON",
@@ -13691,7 +13691,7 @@
             ],
             "gender": "Male",
             "ability_index": 0,
-            "item": "SITRUSBERRY",
+            "item": "Sitrus Berry",
             "name": "Diablaze",
             "types": [
               "FIRE",
@@ -13722,7 +13722,7 @@
               }
             ],
             "gender": "Male",
-            "item": "COBABERRY",
+            "item": "Coba Berry",
             "name": "Kamasei",
             "types": [
               "BUG",
@@ -13753,7 +13753,7 @@
               }
             ],
             "gender": "Male",
-            "item": "PLATYPUNCHITE",
+            "item": "Platypunchite",
             "name": "Platypunch",
             "types": [
               "WATER",
@@ -13767,7 +13767,7 @@
         "version": "Rematch, Chose Platyke",
         "battle_type": "",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -13794,7 +13794,7 @@
             ],
             "gender": "Female",
             "form_number": 1,
-            "item": "CHOICESPECS",
+            "item": "Choice Specs",
             "name": "Dragonite (Azorian)",
             "types": [
               "DRAGON",
@@ -13827,7 +13827,7 @@
             ],
             "gender": "Male",
             "ability_index": 0,
-            "item": "SITRUSBERRY",
+            "item": "Sitrus Berry",
             "name": "Diablaze",
             "types": [
               "FIRE",
@@ -13859,7 +13859,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "SCOPELENS",
+            "item": "Scope Lens",
             "name": "Aggron",
             "types": [
               "STEEL",
@@ -13891,7 +13891,7 @@
             ],
             "gender": "Female",
             "ability_index": 0,
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Celumina",
             "types": [
               "WATER"
@@ -13921,7 +13921,7 @@
               }
             ],
             "gender": "Male",
-            "item": "COBABERRY",
+            "item": "Coba Berry",
             "name": "Kamasei",
             "types": [
               "BUG",
@@ -13952,7 +13952,7 @@
               }
             ],
             "gender": "Male",
-            "item": "LATREMORITE",
+            "item": "Latremorite",
             "name": "Latremor",
             "types": [
               "GRASS",
@@ -15238,7 +15238,7 @@
         "version": "Third Battle",
         "battle_type": "DoubleBattle",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -15414,7 +15414,7 @@
               }
             ],
             "gender": "Male",
-            "item": "PHANTOHMITE",
+            "item": "Phantohmite",
             "name": "Phantohm",
             "types": [
               "ELECTRIC",
@@ -15428,7 +15428,7 @@
         "version": "Rematch",
         "battle_type": "",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -15454,7 +15454,7 @@
               }
             ],
             "gender": "Male",
-            "item": "HEAVYDUTYBOOTS",
+            "item": "Heavy-Duty Boots",
             "name": "Pidgeot",
             "types": [
               "NORMAL",
@@ -15485,7 +15485,7 @@
               }
             ],
             "gender": "Female",
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Gyarados",
             "types": [
               "WATER",
@@ -15516,7 +15516,7 @@
               }
             ],
             "gender": "Male",
-            "item": "CHOICEBAND",
+            "item": "Choice Band",
             "name": "Metagross",
             "types": [
               "STEEL",
@@ -15547,7 +15547,7 @@
               }
             ],
             "gender": "Male",
-            "item": "ROCKYHELMET",
+            "item": "Rocky Helmet",
             "name": "Garchomp",
             "types": [
               "DRAGON",
@@ -15578,7 +15578,7 @@
               }
             ],
             "gender": "Female",
-            "item": "CHOICESCARF",
+            "item": "Choice Scarf",
             "name": "Gardevoir",
             "types": [
               "PSYCHIC",
@@ -15609,7 +15609,7 @@
               }
             ],
             "gender": "Male",
-            "item": "PHANTOHMITE",
+            "item": "Phantohmite",
             "name": "Phantohm",
             "types": [
               "ELECTRIC",
@@ -18715,7 +18715,7 @@
         "version": "Second Battle",
         "battle_type": "",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -18895,7 +18895,7 @@
             ],
             "gender": "Male",
             "ability_index": 0,
-            "item": "ROARACLITE",
+            "item": "Roaraclite",
             "name": "Roaracle",
             "types": [
               "NORMAL",
@@ -18909,7 +18909,7 @@
         "version": "Third Battle",
         "battle_type": "DoubleBattle",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -19085,7 +19085,7 @@
             ],
             "gender": "Male",
             "ability_index": 0,
-            "item": "ROARACLITE",
+            "item": "Roaraclite",
             "name": "Roaracle",
             "types": [
               "NORMAL",
@@ -19109,7 +19109,7 @@
         "version": "Chose Lagavo",
         "battle_type": "",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -19135,7 +19135,7 @@
               }
             ],
             "gender": "Female",
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Runerigus",
             "types": [
               "GROUND",
@@ -19167,7 +19167,7 @@
             ],
             "form_number": 1,
             "gender": "Male",
-            "item": "OCCABERRY",
+            "item": "Occa Berry",
             "name": "Araquanid (Azorian)",
             "types": [
               "ICE",
@@ -19200,7 +19200,7 @@
             ],
             "form_number": 1,
             "gender": "Male",
-            "item": "LIFEORB",
+            "item": "Life Orb",
             "name": "Raichu (Alolan)",
             "types": [
               "ELECTRIC",
@@ -19234,7 +19234,7 @@
             "form_number": 1,
             "gender": "Male",
             "ability_index": 1,
-            "item": "MUSCLEBAND",
+            "item": "Muscle Band",
             "name": "Bouffalant (Azorian)",
             "types": [
               "NORMAL",
@@ -19268,7 +19268,7 @@
             "form_number": 1,
             "gender": "Female",
             "ability_index": 1,
-            "item": "SITRUSBERRY",
+            "item": "Sitrus Berry",
             "name": "Goodra (Hisuian)",
             "types": [
               "STEEL",
@@ -19300,7 +19300,7 @@
               }
             ],
             "gender": "Male",
-            "item": "PLATYPUNCHITE",
+            "item": "Platypunchite",
             "name": "Platypunch",
             "types": [
               "WATER",
@@ -19314,7 +19314,7 @@
         "version": "Chose Sparcyx",
         "battle_type": "",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -19340,7 +19340,7 @@
               }
             ],
             "gender": "Female",
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Runerigus",
             "types": [
               "GROUND",
@@ -19372,7 +19372,7 @@
             ],
             "form_number": 1,
             "gender": "Male",
-            "item": "OCCABERRY",
+            "item": "Occa Berry",
             "name": "Araquanid (Azorian)",
             "types": [
               "ICE",
@@ -19405,7 +19405,7 @@
             ],
             "form_number": 1,
             "gender": "Male",
-            "item": "LIFEORB",
+            "item": "Life Orb",
             "name": "Raichu (Alolan)",
             "types": [
               "ELECTRIC",
@@ -19439,7 +19439,7 @@
             "form_number": 1,
             "gender": "Male",
             "ability_index": 1,
-            "item": "MUSCLEBAND",
+            "item": "Muscle Band",
             "name": "Bouffalant (Azorian)",
             "types": [
               "NORMAL",
@@ -19473,7 +19473,7 @@
             "form_number": 1,
             "gender": "Female",
             "ability_index": 1,
-            "item": "SITRUSBERRY",
+            "item": "Sitrus Berry",
             "name": "Goodra (Hisuian)",
             "types": [
               "STEEL",
@@ -19505,7 +19505,7 @@
               }
             ],
             "gender": "Male",
-            "item": "LATREMORITE",
+            "item": "Latremorite",
             "name": "Latremor",
             "types": [
               "GRASS",
@@ -19519,7 +19519,7 @@
         "version": "Chose Platyke",
         "battle_type": "",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -19545,7 +19545,7 @@
               }
             ],
             "gender": "Female",
-            "item": "LEFTOVERS",
+            "item": "Leftovers",
             "name": "Runerigus",
             "types": [
               "GROUND",
@@ -19577,7 +19577,7 @@
             ],
             "form_number": 1,
             "gender": "Male",
-            "item": "OCCABERRY",
+            "item": "Occa Berry",
             "name": "Araquanid (Azorian)",
             "types": [
               "ICE",
@@ -19610,7 +19610,7 @@
             ],
             "form_number": 1,
             "gender": "Male",
-            "item": "LIFEORB",
+            "item": "Life Orb",
             "name": "Raichu (Alolan)",
             "types": [
               "ELECTRIC",
@@ -19644,7 +19644,7 @@
             "form_number": 1,
             "gender": "Male",
             "ability_index": 1,
-            "item": "MUSCLEBAND",
+            "item": "Muscle Band",
             "name": "Bouffalant (Azorian)",
             "types": [
               "NORMAL",
@@ -19678,7 +19678,7 @@
             "form_number": 1,
             "gender": "Female",
             "ability_index": 1,
-            "item": "SITRUSBERRY",
+            "item": "Sitrus Berry",
             "name": "Goodra (Hisuian)",
             "types": [
               "STEEL",
@@ -19710,7 +19710,7 @@
               }
             ],
             "gender": "Male",
-            "item": "AUROCITE",
+            "item": "Aurocite",
             "name": "Aurocyx",
             "types": [
               "FIRE",
@@ -19734,7 +19734,7 @@
         "version": "",
         "battle_type": "",
         "items": [
-          "MEGARING"
+          "Mega Ring"
         ],
         "pokemon": [
           {
@@ -19760,7 +19760,7 @@
               }
             ],
             "gender": "Male",
-            "item": "ROCKYHELMET",
+            "item": "Rocky Helmet",
             "name": "Lucario",
             "types": [
               "FIGHTING",
@@ -19791,7 +19791,7 @@
               }
             ],
             "gender": "Male",
-            "item": "SITRUSBERRY",
+            "item": "Sitrus Berry",
             "name": "Jolteon",
             "types": [
               "ELECTRIC"
@@ -19822,14 +19822,13 @@
             ],
             "form_number": 1,
             "gender": "Male",
-            "item": "CHOICESPECS",
+            "item": "Choice Specs",
             "name": "Greninja",
             "types": [
               "WATER",
               "DARK"
             ],
-            "ability": "Torrent",
-            "form_name": "Form 1"
+            "ability": "Battle Bond"
           },
           {
             "id": "DECIDUEYE",
@@ -19854,7 +19853,7 @@
               }
             ],
             "gender": "Male",
-            "item": "ASSAULTVEST",
+            "item": "Assault Vest",
             "name": "Decidueye",
             "types": [
               "GRASS",
@@ -19885,7 +19884,7 @@
               }
             ],
             "gender": "Male",
-            "item": "CHARIZARDITEX",
+            "item": "Charizardite X",
             "name": "Charizard",
             "types": [
               "FIRE",
@@ -19917,14 +19916,14 @@
             ],
             "form_number": 1,
             "gender": "Male",
-            "item": "SHELLBELL",
+            "item": "Shell Bell",
             "name": "Rayquaza (Mega)",
             "types": [
               "DRAGON",
               "FLYING"
             ],
             "ability": "Air Lock",
-            "form_name": "Form 1"
+            "form_name": "Mega"
           }
         ]
       }
