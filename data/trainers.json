@@ -19823,7 +19823,7 @@
             "form_number": 1,
             "gender": "Male",
             "item": "CHOICESPECS",
-            "name": "Greninja (Form 1)",
+            "name": "Greninja",
             "types": [
               "WATER",
               "DARK"
@@ -19918,7 +19918,7 @@
             "form_number": 1,
             "gender": "Male",
             "item": "SHELLBELL",
-            "name": "Rayquaza (Form 1)",
+            "name": "Rayquaza (Mega)",
             "types": [
               "DRAGON",
               "FLYING"
