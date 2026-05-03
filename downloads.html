@@ -131,6 +131,34 @@
       line-height: 1.6;
     }
 
+    /* Added styles for instructions */
+    .instructions {
+      margin-top: 40px;
+    }
+
+    .instructions h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .instruction-block {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #181818;
+      border: 1px solid #333;
+      border-radius: 10px;
+    }
+
+    .instruction-block h3 {
+      margin-bottom: 8px;
+    }
+
+    .instruction-block p {
+      color: #aaa;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
     .footer {
       background: #0a0a0a;
       color: #aaa;
@@ -178,6 +206,7 @@
             <th>Windows</th>
             <th>Mac</th>
             <th>Linux</th>
+            <th>Android</th>
           </tr>
         </thead>
         <tbody>
@@ -186,10 +215,47 @@
             <td><span class="unavailable">Coming Soon</span></td>
             <td><span class="unavailable">Coming Soon</span></td>
             <td><span class="unavailable">Coming Soon</span></td>
+            <td><span class="unavailable">Coming Soon</span></td>
           </tr>
         </tbody>
       </table>
     </div>
+
+    <!-- Added instructions section -->
+    <div class="instructions">
+      <h2>Installation Instructions</h2>
+      <div class="instruction-block">
+        <h3>Windows</h3>
+        <p>1. Download the latest version of Pokémon Copper.</p>
+        <p>2. Extract the Pokémon Copper files.</p>
+        <p>3. Run the Game.exe file.</p>
+      </div>
+
+      <div class="instruction-block">
+        <h3>Mac</h3>
+        <p>Download the .dmg file, open it, and drag the game into your Applications folder.</p>
+      </div>
+
+      <div class="instruction-block">
+        <h3>Linux</h3>
+        <p>Download the archive, extract it, and run the executable from the terminal if needed.</p>
+      </div>
+
+      <div class="instruction-block">
+        <h3>Android</h3>
+        <p>
+          1. On your Android device go to the
+          <a href="https://www.patreon.com/posts/joiplay-1-21-000-150752797" target="_blank" rel="noopener noreferrer">JoiPlay patreon page</a>
+          and download JoiPlay 1.21.000 and RPG Maker Plugin 1.22.00.
+        </p>
+        <p>2. Download the latest version of Pokémon Copper.</p>
+        <p>3. Go to your Downloads folder and run the JoiPlay download and then the RPG Maker Plugin. Make sure to allow all permissions.</p>
+        <p>4. Extract the Pokémon Copper file.</p>
+        <p>5. Open JoiPlay and click the + button and then Add Game. Navigate to the path of Pokémon Copper and add it.</p>
+        <p>6. Run the game from JoiPlay.</p>
+      </div>
+    </div>
+
   </div>
 
   <footer class="footer">
