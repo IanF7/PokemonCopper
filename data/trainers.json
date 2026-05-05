@@ -19823,12 +19823,12 @@
             "form_number": 1,
             "gender": "Male",
             "item": "Choice Specs",
-            "name": "Greninja (Form 1)",
+            "name": "Greninja",
             "types": [
               "WATER",
               "DARK"
             ],
-            "ability": "Torrent",
+            "ability": "Battle Bond",
             "form_name": "Form 1"
           },
           {
@@ -19918,7 +19918,7 @@
             "form_number": 1,
             "gender": "Male",
             "item": "Shell Bell",
-            "name": "Rayquaza (Form 1)",
+            "name": "Mega Rayquaza",
             "types": [
               "DRAGON",
               "FLYING"
