@@ -11,6 +11,7 @@
         "version": "0 Badges",
         "battle_type": "",
         "items": [
+          "Potion",
           "Potion"
         ],
         "pokemon": [
@@ -19822,12 +19823,13 @@
             "form_number": 1,
             "gender": "Male",
             "item": "Choice Specs",
-            "name": "Greninja",
+            "name": "Greninja (Form 1)",
             "types": [
               "WATER",
               "DARK"
             ],
-            "ability": "Battle Bond"
+            "ability": "Torrent",
+            "form_name": "Form 1"
           },
           {
             "id": "DECIDUEYE",
@@ -19916,13 +19918,13 @@
             "form_number": 1,
             "gender": "Male",
             "item": "Shell Bell",
-            "name": "Rayquaza (Mega)",
+            "name": "Rayquaza (Form 1)",
             "types": [
               "DRAGON",
               "FLYING"
             ],
             "ability": "Air Lock",
-            "form_name": "Mega"
+            "form_name": "Form 1"
           }
         ]
       }

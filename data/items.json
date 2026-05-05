@@ -195,7 +195,7 @@
     "id": "ALAKAZITE",
     "description": "One of a variety of mysterious Mega Stones. Have Alakazam hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Route 12"
+      "Wooded Ruins"
     ],
     "namePlural": "Alakazites",
     "pocket": "1",
@@ -219,7 +219,7 @@
     "id": "AMPHAROSITE",
     "description": "One of a variety of mysterious Mega Stones. Have Ampharos hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Route 11"
+      "Route 12"
     ],
     "namePlural": "Ampharosites",
     "pocket": "1",
@@ -764,7 +764,7 @@
     ],
     "namePlural": "Burn Drives",
     "pocket": "1",
-    "price": "0",
+    "price": "10000",
     "flags": "Fling_70"
   },
   {
@@ -815,7 +815,7 @@
     "id": "CAMERUPTITE",
     "description": "One of a variety of mysterious Mega Stones. Have Camerupt hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Route 6"
+      "Route 16"
     ],
     "namePlural": "Cameruptites",
     "pocket": "1",
@@ -989,7 +989,7 @@
     ],
     "namePlural": "Chill Drives",
     "pocket": "1",
-    "price": "0",
+    "price": "10000",
     "flags": "Fling_70"
   },
   {
@@ -1165,7 +1165,7 @@
     ],
     "namePlural": "Cornerstone Masks",
     "pocket": "1",
-    "price": "0",
+    "price": "10000",
     "flags": "Fling_60"
   },
   {
@@ -1235,7 +1235,7 @@
     "id": "CRUSTLITE",
     "description": "One of a variety of mysterious Mega Stones. Have Crustle hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Route 14"
+      "Route 6"
     ],
     "namePlural": "Crustlites",
     "pocket": "1",
@@ -1388,7 +1388,7 @@
     ],
     "namePlural": "Douse Drives",
     "pocket": "1",
-    "price": "0",
+    "price": "10000",
     "flags": "Fling_70"
   },
   {
@@ -2008,7 +2008,7 @@
     "id": "FLYGONITE",
     "description": "One of a variety of mysterious Mega Stones. Have Flygon hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Tethys Desert"
+      "Route 18"
     ],
     "namePlural": "Flygonites",
     "pocket": "1",
@@ -2167,7 +2167,7 @@
     "id": "GALLADITE",
     "description": "One of a variety of mysterious Mega Stones. Have Gallade hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Route 12"
+      "Route 22"
     ],
     "namePlural": "Galladites",
     "pocket": "1",
@@ -2203,7 +2203,7 @@
     "id": "GARDEVOIRITE",
     "description": "One of a variety of mysterious Mega Stones. Have Gardevoir hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Route 12"
+      "Route 22"
     ],
     "namePlural": "Gardevoirites",
     "pocket": "1",
@@ -2526,7 +2526,7 @@
     ],
     "namePlural": "Hearthflame Masks",
     "pocket": "1",
-    "price": "0",
+    "price": "10000",
     "flags": "Fling_60"
   },
   {
@@ -2575,7 +2575,7 @@
     "id": "HELIOLISKITE",
     "description": "One of a variety of mysterious Mega Stones. Have Heliolisk hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Route 18"
+      "Route 20"
     ],
     "namePlural": "Helioliskites",
     "pocket": "1",
@@ -2787,7 +2787,7 @@
     ],
     "namePlural": "Indigo Disks",
     "pocket": "8",
-    "price": "0",
+    "price": "10000",
     "flags": "KeyItem"
   },
   {
@@ -2985,7 +2985,7 @@
     "id": "KROOKODILITE",
     "description": "One of a variety of mysterious Mega Stones. Have Krookodile hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Tethys Desert"
+      "Route 15"
     ],
     "namePlural": "Krookodilites",
     "pocket": "1",
@@ -3838,7 +3838,7 @@
     ],
     "namePlural": "Meteorites",
     "pocket": "8",
-    "price": "0",
+    "price": "10000",
     "fieldUse": "OnPokemon",
     "flags": "KeyItem"
   },
@@ -4060,7 +4060,7 @@
     ],
     "namePlural": "Mythical Pecha Berries",
     "pocket": "8",
-    "price": "0",
+    "price": "10000",
     "flags": "KeyItem"
   },
   {
@@ -4777,7 +4777,7 @@
     ],
     "namePlural": "Prison Bottles",
     "pocket": "8",
-    "price": "0",
+    "price": "10000",
     "fieldUse": "OnPokemon",
     "flags": "KeyItem"
   },
@@ -4839,7 +4839,6 @@
     "id": "PSYCHICSEED",
     "description": "An item to be held by a Pokémon. It boosts Sp. Def on Psychic Terrain. It can only be used once.",
     "locations": [
-      "Route 12",
       "Azori Terrarium"
     ],
     "namePlural": "Psychic Seeds",
@@ -5212,7 +5211,7 @@
     ],
     "namePlural": "Reveal Glasses",
     "pocket": "8",
-    "price": "0",
+    "price": "10000",
     "fieldUse": "OnPokemon",
     "flags": "KeyItem"
   },
@@ -5235,6 +5234,7 @@
     "id": "REVIVE",
     "description": "A medicine that revives a fainted Pokémon. It restores half the Pokémon's maximum HP.",
     "locations": [
+      "Wooded Ruins",
       "Pokemarts"
     ],
     "namePlural": "Revives",
@@ -5284,7 +5284,7 @@
     "id": "ROARACLITE",
     "description": "One of a variety of mysterious Mega Stones. Have Roaracle hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Route 13"
+      "Wooded Ruins"
     ],
     "namePlural": "Roaraclites",
     "pocket": "1",
@@ -5376,7 +5376,7 @@
     "id": "ROSERADITE",
     "description": "One of a variety of mysterious Mega Stones. Have Roserade hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Lake Triton"
+      "Route 12"
     ],
     "namePlural": "Roseradites",
     "pocket": "1",
@@ -5417,7 +5417,7 @@
     ],
     "namePlural": "Rusted Shields",
     "pocket": "1",
-    "price": "0"
+    "price": "10000"
   },
   {
     "name": "Rusted Sword",
@@ -5428,7 +5428,7 @@
     ],
     "namePlural": "Rusted Swords",
     "pocket": "1",
-    "price": "0"
+    "price": "10000"
   },
   {
     "name": "Sablenite",
@@ -5554,7 +5554,7 @@
     ],
     "namePlural": "Scroll of Darkness",
     "pocket": "1",
-    "price": "0",
+    "price": "5000",
     "fieldUse": "OnPokemon",
     "flags": "EvolutionStone,Fling_30"
   },
@@ -5567,7 +5567,7 @@
     ],
     "namePlural": "Scroll of Waters",
     "pocket": "1",
-    "price": "0",
+    "price": "5000",
     "fieldUse": "OnPokemon",
     "flags": "EvolutionStone,Fling_30"
   },
@@ -5700,7 +5700,7 @@
     ],
     "namePlural": "Shock Drives",
     "pocket": "1",
-    "price": "0",
+    "price": "10000",
     "flags": "Fling_70"
   },
   {
@@ -5896,7 +5896,7 @@
     ],
     "namePlural": "Soul Dews",
     "pocket": "1",
-    "price": "0",
+    "price": "5000",
     "flags": "Fling_30"
   },
   {
@@ -6053,7 +6053,7 @@
     "id": "STEELIXITE",
     "description": "One of a variety of mysterious Mega Stones. Have Steelix hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Callisto Cave"
+      "Hilo Mountain"
     ],
     "namePlural": "Steelixites",
     "pocket": "1",
@@ -6262,7 +6262,7 @@
     ],
     "namePlural": "Teal Masks",
     "pocket": "8",
-    "price": "0",
+    "price": "10000",
     "flags": "KeyItem,Fling_60"
   },
   {
@@ -6619,7 +6619,7 @@
     ],
     "namePlural": "Wellspring Masks",
     "pocket": "1",
-    "price": "0",
+    "price": "10000",
     "flags": "Fling_60"
   },
   {
@@ -6653,7 +6653,7 @@
     "id": "WHITEHERB",
     "description": "An item to be held by a Pokémon. It restores any lowered stat in battle. It can be used only once.",
     "locations": [
-      "Route 15",
+      "Wooded Ruins",
       "Azori Terrarium"
     ],
     "namePlural": "White Herbs",
@@ -6849,7 +6849,7 @@
     ],
     "namePlural": "Zygarde Cubes",
     "pocket": "8",
-    "price": "0",
+    "price": "20000",
     "fieldUse": "OnPokemon",
     "flags": "KeyItem"
   }
