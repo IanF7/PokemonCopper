@@ -690,6 +690,13 @@
         </div>
 
         <div class="control-group small">
+          <label for="locationFilter">Location</label>
+          <select id="locationFilter">
+            <option value="ALL">All Locations</option>
+          </select>
+        </div>
+
+        <div class="control-group small">
           <label for="sortSelect">Sort By</label>
           <select id="sortSelect">
             <option value="dex">Dex #</option>
@@ -733,840 +740,872 @@
       This game is distributed for free and no copyright infringement is intended. Please support the official releases.
     </p>
 
-  <script>
-    const DATA_URL = "data/pokemon.json";
-    const MEGA_SYMBOL_URL = "images/mega-symbol.png";
+<script>
+  const DATA_URL = "data/pokemon.json";
+  const MEGA_SYMBOL_URL = "images/mega-symbol.png";
 
-    const TYPE_COLORS = {
-      NORMAL: "#A8A77A",
-      FIRE: "#EE8130",
-      WATER: "#6390F0",
-      ELECTRIC: "#F7D02C",
-      GRASS: "#7AC74C",
-      ICE: "#96D9D6",
-      FIGHTING: "#C22E28",
-      POISON: "#A33EA1",
-      GROUND: "#E2BF65",
-      FLYING: "#A98FF3",
-      PSYCHIC: "#F95587",
-      BUG: "#A6B91A",
-      ROCK: "#B6A136",
-      GHOST: "#735797",
-      DRAGON: "#6F35FC",
-      DARK: "#705746",
-      STEEL: "#B7B7CE",
-      FAIRY: "#D685AD"
-    };
+  const TYPE_COLORS = {
+    NORMAL: "#A8A77A",
+    FIRE: "#EE8130",
+    WATER: "#6390F0",
+    ELECTRIC: "#F7D02C",
+    GRASS: "#7AC74C",
+    ICE: "#96D9D6",
+    FIGHTING: "#C22E28",
+    POISON: "#A33EA1",
+    GROUND: "#E2BF65",
+    FLYING: "#A98FF3",
+    PSYCHIC: "#F95587",
+    BUG: "#A6B91A",
+    ROCK: "#B6A136",
+    GHOST: "#735797",
+    DRAGON: "#6F35FC",
+    DARK: "#705746",
+    STEEL: "#B7B7CE",
+    FAIRY: "#D685AD"
+  };
 
-    const DISPLAY_STAT_LABELS = ["HP", "ATK", "DEF", "SPA", "SPD", "SPE"];
+  const DISPLAY_STAT_LABELS = ["HP", "ATK", "DEF", "SPA", "SPD", "SPE"];
 
-    let allPokemon = [];
-    let currentView = "azori";
-    let modalShinyState = false;
-    let modalFamily = [];
-    let modalSelectedPokemonId = null;
+  let allPokemon = [];
+  let currentView = "azori";
+  let modalShinyState = false;
+  let modalFamily = [];
+  let modalSelectedPokemonId = null;
 
-    const pokemonGrid = document.getElementById("pokemonGrid");
-    const loadingState = document.getElementById("loadingState");
-    const errorState = document.getElementById("errorState");
-    const emptyState = document.getElementById("emptyState");
+  const pokemonGrid = document.getElementById("pokemonGrid");
+  const loadingState = document.getElementById("loadingState");
+  const errorState = document.getElementById("errorState");
+  const emptyState = document.getElementById("emptyState");
 
-    const searchInput = document.getElementById("searchInput");
-    const typeFilter = document.getElementById("typeFilter");
-    const sortSelect = document.getElementById("sortSelect");
-    const filterSelect = document.getElementById("filterSelect");
+  const searchInput = document.getElementById("searchInput");
+  const typeFilter = document.getElementById("typeFilter");
+  const locationFilter = document.getElementById("locationFilter");
+  const sortSelect = document.getElementById("sortSelect");
+  const filterSelect = document.getElementById("filterSelect");
 
-    const modal = document.getElementById("pokemonModal");
-    const modalBody = document.getElementById("modalBody");
-    const closeModalBtn = document.getElementById("closeModalBtn");
+  const modal = document.getElementById("pokemonModal");
+  const modalBody = document.getElementById("modalBody");
+  const closeModalBtn = document.getElementById("closeModalBtn");
 
-    function safeArray(value) {
-      return Array.isArray(value) ? value : [];
-    }
+  function safeArray(value) {
+    return Array.isArray(value) ? value : [];
+  }
 
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
-    }
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
 
-    function getTypeColor(type) {
-      return TYPE_COLORS[(type || "").toUpperCase()] || "#666";
-    }
+  function getTypeColor(type) {
+    return TYPE_COLORS[(type || "").toUpperCase()] || "#666";
+  }
 
-    function renderTypes(types = []) {
-      return safeArray(types)
-        .map(type => `<span class="type-pill" style="background:${getTypeColor(type)};">${escapeHtml(type)}</span>`)
-        .join("");
-    }
+  function renderTypes(types = []) {
+    return safeArray(types)
+      .map(type => `<span class="type-pill" style="background:${getTypeColor(type)};">${escapeHtml(type)}</span>`)
+      .join("");
+  }
 
-    function getDisplayStats(entity) {
-      if (entity && entity.base_stats_dict && typeof entity.base_stats_dict === "object") {
-        return {
-          HP: Number(entity.base_stats_dict.HP) || 0,
-          ATK: Number(entity.base_stats_dict.ATK) || 0,
-          DEF: Number(entity.base_stats_dict.DEF) || 0,
-          SPA: Number(entity.base_stats_dict.SPA) || 0,
-          SPD: Number(entity.base_stats_dict.SPD) || 0,
-          SPE: Number(entity.base_stats_dict.SPE) || 0
-        };
-      }
-
-      const raw = safeArray(entity?.base_stats);
+  function getDisplayStats(entity) {
+    if (entity && entity.base_stats_dict && typeof entity.base_stats_dict === "object") {
       return {
-        HP: Number(raw[0]) || 0,
-        ATK: Number(raw[1]) || 0,
-        DEF: Number(raw[2]) || 0,
-        SPA: Number(raw[4]) || 0,
-        SPD: Number(raw[5]) || 0,
-        SPE: Number(raw[3]) || 0
+        HP: Number(entity.base_stats_dict.HP) || 0,
+        ATK: Number(entity.base_stats_dict.ATK) || 0,
+        DEF: Number(entity.base_stats_dict.DEF) || 0,
+        SPA: Number(entity.base_stats_dict.SPA) || 0,
+        SPD: Number(entity.base_stats_dict.SPD) || 0,
+        SPE: Number(entity.base_stats_dict.SPE) || 0
       };
     }
 
-    function getDisplayStat(entity, statKey) {
-      const stats = getDisplayStats(entity);
-      return Number(stats[statKey]) || 0;
-    }
+    const raw = safeArray(entity?.base_stats);
+    return {
+      HP: Number(raw[0]) || 0,
+      ATK: Number(raw[1]) || 0,
+      DEF: Number(raw[2]) || 0,
+      SPA: Number(raw[4]) || 0,
+      SPD: Number(raw[5]) || 0,
+      SPE: Number(raw[3]) || 0
+    };
+  }
 
-    function getBST(entity) {
-      const stats = getDisplayStats(entity);
-      return DISPLAY_STAT_LABELS.reduce((sum, label) => sum + (Number(stats[label]) || 0), 0);
-    }
+  function getDisplayStat(entity, statKey) {
+    const stats = getDisplayStats(entity);
+    return Number(stats[statKey]) || 0;
+  }
 
-    function renderStats(entity) {
-      const stats = getDisplayStats(entity);
+  function getBST(entity) {
+    const stats = getDisplayStats(entity);
+    return DISPLAY_STAT_LABELS.reduce((sum, label) => sum + (Number(stats[label]) || 0), 0);
+  }
 
-      return DISPLAY_STAT_LABELS.map(label => `
-        <div class="stat-line">
-          <span>${label}</span>
-          <strong>${stats[label] ?? "-"}</strong>
-        </div>
-      `).join("");
-    }
+  function renderStats(entity) {
+    const stats = getDisplayStats(entity);
 
-    function renderDetailStats(entity) {
-      const stats = getDisplayStats(entity);
+    return DISPLAY_STAT_LABELS.map(label => `
+      <div class="stat-line">
+        <span>${label}</span>
+        <strong>${stats[label] ?? "-"}</strong>
+      </div>
+    `).join("");
+  }
 
-      return DISPLAY_STAT_LABELS.map(label => `
-        <div class="detail-stat">
-          <span>${label}</span>
-          <strong>${stats[label] ?? "-"}</strong>
-        </div>
-      `).join("");
-    }
+  function renderDetailStats(entity) {
+    const stats = getDisplayStats(entity);
 
-    function hasMegaEvolution(pokemon) {
-      return safeArray(pokemon.forms).some(form => {
-        const text = `${form.form_name || ""} ${form.name || ""}`.toLowerCase();
-        return text.includes("mega");
-      });
-    }
+    return DISPLAY_STAT_LABELS.map(label => `
+      <div class="detail-stat">
+        <span>${label}</span>
+        <strong>${stats[label] ?? "-"}</strong>
+      </div>
+    `).join("");
+  }
 
-    function isMegaFormEntry(pokemon) {
-      const text = `${pokemon.form_name || ""} ${pokemon.name || ""}`.toLowerCase();
+  function hasMegaEvolution(pokemon) {
+    return safeArray(pokemon.forms).some(form => {
+      const text = `${form.form_name || ""} ${form.name || ""}`.toLowerCase();
       return text.includes("mega");
+    });
+  }
+
+  function isMegaFormEntry(pokemon) {
+    const text = `${pokemon.form_name || ""} ${pokemon.name || ""}`.toLowerCase();
+    return text.includes("mega");
+  }
+
+  function isNewPokemon(pokemon) {
+    return Number(pokemon.generation) === 10;
+  }
+
+  function isAzorianForm(pokemon) {
+    const text = `${pokemon.form_name || ""} ${pokemon.name || ""}`.toLowerCase();
+    return Number(pokemon.form_number || 0) > 0 && text.includes("azorian");
+  }
+
+  function isRegionalVariantPokemon(pokemon) {
+    const text = `${pokemon.form_name || ""} ${pokemon.name || ""}`.toLowerCase();
+
+    return (
+      Number(pokemon.form_number || 0) > 0 &&
+      (
+        text.includes("azorian") ||
+        text.includes("alolan") ||
+        text.includes("galarian") ||
+        text.includes("hisuian") ||
+        text.includes("paldean")
+      )
+    );
+  }
+
+  function isRegionalFormEntry(pokemon) {
+    return isRegionalVariantPokemon(pokemon);
+  }
+
+  function hasAzorianReplacement(pokemon) {
+    return allPokemon.some(other =>
+      other.species_id === pokemon.species_id &&
+      other.id !== pokemon.id &&
+      isAzorianForm(other) &&
+      other.regional_dex_number !== "" &&
+      other.regional_dex_number != null
+    );
+  }
+
+  function isInNationalDex(pokemon) {
+    return pokemon.national_dex_number !== "" && pokemon.national_dex_number != null;
+  }
+
+  function isInAzoriDex(pokemon) {
+    const inRegionalDex =
+      pokemon.regional_dex_number !== "" &&
+      pokemon.regional_dex_number !== null &&
+      pokemon.regional_dex_number !== undefined;
+
+    if (!inRegionalDex) return false;
+
+    const isRegionalVariant = isRegionalVariantPokemon(pokemon);
+    const isAzorian = isAzorianForm(pokemon);
+
+    if (Number(pokemon.form_number || 0) > 0 && !isRegionalVariant) {
+      return false;
     }
 
-    function isNewPokemon(pokemon) {
-      return Number(pokemon.generation) === 10;
+    if (Number(pokemon.form_number || 0) > 0 && !isAzorian) {
+      return false;
     }
 
-    function isAzorianForm(pokemon) {
-      const text = `${pokemon.form_name || ""} ${pokemon.name || ""}`.toLowerCase();
-      return Number(pokemon.form_number || 0) > 0 && text.includes("azorian");
+    if (Number(pokemon.form_number || 0) === 0 && hasAzorianReplacement(pokemon)) {
+      return false;
     }
 
-    function isRegionalVariantPokemon(pokemon) {
-      const text = `${pokemon.form_name || ""} ${pokemon.name || ""}`.toLowerCase();
+    return true;
+  }
 
-      return (
-        Number(pokemon.form_number || 0) > 0 &&
-        (
-          text.includes("azorian") ||
-          text.includes("alolan") ||
-          text.includes("galarian") ||
-          text.includes("hisuian") ||
-          text.includes("paldean")
-        )
-      );
-    }
+  function getCardSprite(pokemon) {
+    if (pokemon.sprites && pokemon.sprites.regular) return pokemon.sprites.regular;
+    if (pokemon.sprites && pokemon.sprites.shiny) return pokemon.sprites.shiny;
+    return "";
+  }
 
-    function isRegionalFormEntry(pokemon) {
-      return isRegionalVariantPokemon(pokemon);
-    }
+  function getModalSprite(pokemon) {
+    if (modalShinyState && pokemon.sprites && pokemon.sprites.shiny) return pokemon.sprites.shiny;
+    if (pokemon.sprites && pokemon.sprites.regular) return pokemon.sprites.regular;
+    if (pokemon.sprites && pokemon.sprites.shiny) return pokemon.sprites.shiny;
+    return "";
+  }
 
-    function hasAzorianReplacement(pokemon) {
-      return allPokemon.some(other =>
-        other.species_id === pokemon.species_id &&
-        other.id !== pokemon.id &&
-        isAzorianForm(other) &&
-        other.regional_dex_number !== "" &&
-        other.regional_dex_number != null
-      );
-    }
+  function getDexText(pokemon) {
+    const regional = pokemon.regional_dex_number !== "" ? `Azori Dex: ${pokemon.regional_dex_number}` : "Azori Dex: —";
+    const national = pokemon.national_dex_number !== "" ? `National Dex: ${pokemon.national_dex_number}` : "National Dex: —";
+    return `${regional} | ${national}`;
+  }
 
-    function isInNationalDex(pokemon) {
-      return pokemon.national_dex_number !== "" && pokemon.national_dex_number != null;
-    }
+  function getSortValue(pokemon, sortMode) {
+    const primaryType = safeArray(pokemon.types)[0] || "ZZZ";
+    const name = (pokemon.name || "").toLowerCase();
 
-    function isInAzoriDex(pokemon) {
-      const inRegionalDex =
-        pokemon.regional_dex_number !== "" &&
-        pokemon.regional_dex_number !== null &&
-        pokemon.regional_dex_number !== undefined;
-
-      if (!inRegionalDex) return false;
-
-      const isRegionalVariant = isRegionalVariantPokemon(pokemon);
-      const isAzorian = isAzorianForm(pokemon);
-
-      if (Number(pokemon.form_number || 0) > 0 && !isRegionalVariant) {
-        return false;
-      }
-
-      // Only Azorian forms should appear in place of the base form in the Azori dex
-      if (Number(pokemon.form_number || 0) > 0 && !isAzorian) {
-        return false;
-      }
-
-      if (Number(pokemon.form_number || 0) === 0 && hasAzorianReplacement(pokemon)) {
-        return false;
-      }
-
-      return true;
-    }
-
-    function getCardSprite(pokemon) {
-      if (pokemon.sprites && pokemon.sprites.regular) return pokemon.sprites.regular;
-      if (pokemon.sprites && pokemon.sprites.shiny) return pokemon.sprites.shiny;
-      return "";
-    }
-
-    function getModalSprite(pokemon) {
-      if (modalShinyState && pokemon.sprites && pokemon.sprites.shiny) return pokemon.sprites.shiny;
-      if (pokemon.sprites && pokemon.sprites.regular) return pokemon.sprites.regular;
-      if (pokemon.sprites && pokemon.sprites.shiny) return pokemon.sprites.shiny;
-      return "";
-    }
-
-    function getDexText(pokemon) {
-      const regional = pokemon.regional_dex_number !== "" ? `Azori Dex: ${pokemon.regional_dex_number}` : "Azori Dex: —";
-      const national = pokemon.national_dex_number !== "" ? `National Dex: ${pokemon.national_dex_number}` : "National Dex: —";
-      return `${regional} | ${national}`;
-    }
-
-    function getSortValue(pokemon, sortMode) {
-      const primaryType = safeArray(pokemon.types)[0] || "ZZZ";
-      const name = (pokemon.name || "").toLowerCase();
-
-      switch (sortMode) {
-        case "name":
-          return name;
-
-        case "type":
-          return `${primaryType}-${name}`;
-
-        case "bst":
-          return -getBST(pokemon);
-
-        case "hp":
-          return -getDisplayStat(pokemon, "HP");
-
-        case "atk":
-          return -getDisplayStat(pokemon, "ATK");
-
-        case "def":
-          return -getDisplayStat(pokemon, "DEF");
-
-        case "spa":
-          return -getDisplayStat(pokemon, "SPA");
-
-        case "spd":
-          return -getDisplayStat(pokemon, "SPD");
-
-        case "spe":
-          return -getDisplayStat(pokemon, "SPE");
-
-        case "dex":
-        default:
-          if (currentView === "azori") {
-            return pokemon.regional_dex_number === "" ? 999999 : Number(pokemon.regional_dex_number);
-          }
-          return pokemon.national_dex_number === "" ? 999999 : Number(pokemon.national_dex_number);
-      }
-    }
-
-    function sortPokemon(list) {
-      const mode = sortSelect.value;
-
-      return [...list].sort((a, b) => {
-        const av = getSortValue(a, mode);
-        const bv = getSortValue(b, mode);
-
-        if (typeof av === "string" && typeof bv === "string") {
-          return av.localeCompare(bv);
+    switch (sortMode) {
+      case "name":
+        return name;
+      case "type":
+        return `${primaryType}-${name}`;
+      case "bst":
+        return -getBST(pokemon);
+      case "hp":
+        return -getDisplayStat(pokemon, "HP");
+      case "atk":
+        return -getDisplayStat(pokemon, "ATK");
+      case "def":
+        return -getDisplayStat(pokemon, "DEF");
+      case "spa":
+        return -getDisplayStat(pokemon, "SPA");
+      case "spd":
+        return -getDisplayStat(pokemon, "SPD");
+      case "spe":
+        return -getDisplayStat(pokemon, "SPE");
+      case "dex":
+      default:
+        if (currentView === "azori") {
+          return pokemon.regional_dex_number === "" ? 999999 : Number(pokemon.regional_dex_number);
         }
+        return pokemon.national_dex_number === "" ? 999999 : Number(pokemon.national_dex_number);
+    }
+  }
 
-        if (av < bv) return -1;
-        if (av > bv) return 1;
+  function sortPokemon(list) {
+    const mode = sortSelect.value;
 
-        const bstA = getBST(a);
-        const bstB = getBST(b);
-        if (bstA !== bstB) return bstB - bstA;
+    return [...list].sort((a, b) => {
+      const av = getSortValue(a, mode);
+      const bv = getSortValue(b, mode);
 
-        return (a.name || "").localeCompare(b.name || "");
+      if (typeof av === "string" && typeof bv === "string") {
+        return av.localeCompare(bv);
+      }
+
+      if (av < bv) return -1;
+      if (av > bv) return 1;
+
+      const bstA = getBST(a);
+      const bstB = getBST(b);
+      if (bstA !== bstB) return bstB - bstA;
+
+      return (a.name || "").localeCompare(b.name || "");
+    });
+  }
+
+  function inCurrentDex(pokemon) {
+    return currentView === "azori" ? isInAzoriDex(pokemon) : isInNationalDex(pokemon);
+  }
+
+  function matchesCurrentFilter(pokemon) {
+    const filterMode = filterSelect.value;
+
+    switch (filterMode) {
+      case "new":
+        return isNewPokemon(pokemon);
+      case "regional":
+        return isRegionalFormEntry(pokemon);
+      case "mega":
+        return hasMegaEvolution(pokemon) || isMegaFormEntry(pokemon);
+      case "all":
+      default:
+        return true;
+    }
+  }
+
+  function isExcludedLocation(loc) {
+    const text = `${loc.location || ""} ${loc.method || ""}`.toLowerCase();
+    return text.includes("trade") || text.includes("gift") || text.includes("static");
+  }
+
+  function getLocationFilterValue(loc) {
+    return String(loc.location || "").trim();
+  }
+
+  function pokemonHasLocation(pokemon, locationName) {
+    return safeArray(pokemon.locations).some(loc => {
+      return !isExcludedLocation(loc) && getLocationFilterValue(loc) === locationName;
+    });
+  }
+
+  function filterPokemon() {
+    const searchValue = searchInput.value.trim().toLowerCase();
+    const selectedType = typeFilter.value;
+    const selectedLocation = locationFilter.value;
+
+    let filtered = [...allPokemon];
+
+    filtered = filtered.filter(inCurrentDex);
+    filtered = filtered.filter(matchesCurrentFilter);
+
+    if (searchValue) {
+      filtered = filtered.filter(pokemon =>
+        (pokemon.name || "").toLowerCase().includes(searchValue)
+      );
+    }
+
+    if (selectedType !== "ALL") {
+      filtered = filtered.filter(pokemon =>
+        safeArray(pokemon.types).map(t => t.toUpperCase()).includes(selectedType)
+      );
+    }
+
+    if (selectedLocation !== "ALL") {
+      filtered = filtered.filter(pokemon => pokemonHasLocation(pokemon, selectedLocation));
+    }
+
+    return sortPokemon(filtered);
+  }
+
+  function createCard(pokemon) {
+    const sprite = getCardSprite(pokemon);
+    const typeHtml = renderTypes(pokemon.types);
+    const statsHtml = renderStats(pokemon);
+    const bst = getBST(pokemon);
+
+    return `
+      <article class="pokemon-card" data-id="${escapeHtml(pokemon.id)}">
+        ${hasMegaEvolution(pokemon) ? `<img class="mega-badge" src="${MEGA_SYMBOL_URL}" alt="Mega Evolution">` : ""}
+        <div class="dex-line">${escapeHtml(getDexText(pokemon))}</div>
+
+        <div class="card-top">
+          <div class="sprite-box">
+            ${sprite ? `<img src="${escapeHtml(sprite)}" alt="${escapeHtml(pokemon.name)} sprite">` : `<span style="color:#777;font-size:.85rem;">No Image</span>`}
+          </div>
+
+          <div class="card-main">
+            <h2 class="pokemon-name">${escapeHtml(pokemon.name)}</h2>
+            <div class="type-row">${typeHtml}</div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          ${statsHtml}
+        </div>
+
+        <div class="bst-line">
+          <span>Base Stat Total</span>
+          <strong>${bst}</strong>
+        </div>
+      </article>
+    `;
+  }
+
+  function renderPokemon() {
+    const filtered = filterPokemon();
+
+    loadingState.style.display = "none";
+    errorState.style.display = "none";
+
+    if (!filtered.length) {
+      pokemonGrid.style.display = "none";
+      emptyState.style.display = "block";
+    } else {
+      emptyState.style.display = "none";
+      pokemonGrid.style.display = "grid";
+      pokemonGrid.innerHTML = filtered.map(createCard).join("");
+    }
+  }
+
+  function formatTypeName(type) {
+    if (!type) return "";
+    return type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
+  }
+
+  function populateTypeFilter() {
+    const types = new Set();
+
+    allPokemon.forEach(pokemon => {
+      safeArray(pokemon.types).forEach(type => {
+        if (type) types.add(type.toUpperCase());
       });
-    }
+    });
 
-    function inCurrentDex(pokemon) {
-      return currentView === "azori" ? isInAzoriDex(pokemon) : isInNationalDex(pokemon);
-    }
+    const sortedTypes = [...types].sort((a, b) => a.localeCompare(b));
 
-    function matchesCurrentFilter(pokemon) {
-      const filterMode = filterSelect.value;
+    typeFilter.innerHTML = `
+      <option value="ALL">All Types</option>
+      ${sortedTypes.map(type => `
+        <option value="${escapeHtml(type)}">${escapeHtml(formatTypeName(type))}</option>
+      `).join("")}
+    `;
+  }
 
-      switch (filterMode) {
-        case "new":
-          return isNewPokemon(pokemon);
-        case "regional":
-          return isRegionalFormEntry(pokemon);
-        case "mega":
-          return hasMegaEvolution(pokemon) || isMegaFormEntry(pokemon);
-        case "all":
-        default:
-          return true;
-      }
-    }
+  function populateLocationFilter() {
+    const locations = new Set();
 
-    function filterPokemon() {
-      const searchValue = searchInput.value.trim().toLowerCase();
-      const selectedType = typeFilter.value;
-
-      let filtered = [...allPokemon];
-
-      filtered = filtered.filter(inCurrentDex);
-      filtered = filtered.filter(matchesCurrentFilter);
-
-      if (searchValue) {
-        filtered = filtered.filter(pokemon =>
-          (pokemon.name || "").toLowerCase().includes(searchValue)
-        );
-      }
-
-      if (selectedType !== "ALL") {
-        filtered = filtered.filter(pokemon =>
-          safeArray(pokemon.types).map(t => t.toUpperCase()).includes(selectedType)
-        );
-      }
-
-      return sortPokemon(filtered);
-    }
-
-    function createCard(pokemon) {
-      const sprite = getCardSprite(pokemon);
-      const typeHtml = renderTypes(pokemon.types);
-      const statsHtml = renderStats(pokemon);
-      const bst = getBST(pokemon);
-
-      return `
-        <article class="pokemon-card" data-id="${escapeHtml(pokemon.id)}">
-          ${hasMegaEvolution(pokemon) ? `<img class="mega-badge" src="${MEGA_SYMBOL_URL}" alt="Mega Evolution">` : ""}
-          <div class="dex-line">${escapeHtml(getDexText(pokemon))}</div>
-
-          <div class="card-top">
-            <div class="sprite-box">
-              ${sprite ? `<img src="${escapeHtml(sprite)}" alt="${escapeHtml(pokemon.name)} sprite">` : `<span style="color:#777;font-size:.85rem;">No Image</span>`}
-            </div>
-
-            <div class="card-main">
-              <h2 class="pokemon-name">${escapeHtml(pokemon.name)}</h2>
-              <div class="type-row">${typeHtml}</div>
-            </div>
-          </div>
-
-          <div class="stats-grid">
-            ${statsHtml}
-          </div>
-
-          <div class="bst-line">
-            <span>Base Stat Total</span>
-            <strong>${bst}</strong>
-          </div>
-        </article>
-      `;
-    }
-
-    function renderPokemon() {
-      const filtered = filterPokemon();
-
-      loadingState.style.display = "none";
-      errorState.style.display = "none";
-
-      if (!filtered.length) {
-        pokemonGrid.style.display = "none";
-        emptyState.style.display = "block";
-      } else {
-        emptyState.style.display = "none";
-        pokemonGrid.style.display = "grid";
-        pokemonGrid.innerHTML = filtered.map(createCard).join("");
-      }
-    }
-
-    function formatTypeName(type) {
-      if (!type) return "";
-      return type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
-    }
-
-    function populateTypeFilter() {
-      const types = new Set();
-
-      allPokemon.forEach(pokemon => {
-        safeArray(pokemon.types).forEach(type => {
-          if (type) types.add(type.toUpperCase());
-        });
+    allPokemon.forEach(pokemon => {
+      safeArray(pokemon.locations).forEach(loc => {
+        const locationName = getLocationFilterValue(loc);
+        if (locationName && !isExcludedLocation(loc)) {
+          locations.add(locationName);
+        }
       });
+    });
 
-      const sortedTypes = [...types].sort((a, b) => a.localeCompare(b));
+    const sortedLocations = [...locations].sort((a, b) => a.localeCompare(b));
 
-      typeFilter.innerHTML = `
-        <option value="ALL">All Types</option>
-        ${sortedTypes.map(type => `
-          <option value="${escapeHtml(type)}">${escapeHtml(formatTypeName(type))}</option>
+    locationFilter.innerHTML = `
+      <option value="ALL">All Locations</option>
+      ${sortedLocations.map(location => `
+        <option value="${escapeHtml(location)}">${escapeHtml(location)}</option>
+      `).join("")}
+    `;
+  }
+
+  function renderAbilityList(list) {
+    const abilities = safeArray(list);
+    if (!abilities.length) return `<div class="section-note">None</div>`;
+
+    return `
+      <div class="ability-list">
+        ${abilities.map(ability => `
+          <div class="ability-item">
+            <strong>${escapeHtml(ability.name || ability.id || "Unknown Ability")}</strong>
+            <div class="desc">${escapeHtml(ability.description || "No description available.")}</div>
+          </div>
         `).join("")}
-      `;
-    }
+      </div>
+    `;
+  }
 
-    function renderAbilityList(list) {
-      const abilities = safeArray(list);
-      if (!abilities.length) return `<div class="section-note">None</div>`;
+  function getFormattedLocationLabel(loc) {
+    const locationName = loc.location || "Unknown Area";
+    const methodName = loc.method || "Unknown Method";
+    return `${locationName} (${methodName})`;
+  }
 
-      return `
-        <div class="ability-list">
-          ${abilities.map(ability => `
-            <div class="ability-item">
-              <strong>${escapeHtml(ability.name || ability.id || "Unknown Ability")}</strong>
-              <div class="desc">${escapeHtml(ability.description || "No description available.")}</div>
-            </div>
-          `).join("")}
-        </div>
-      `;
-    }
+  function renderLocations(locations) {
+    const list = safeArray(locations);
+    if (!list.length) return `<div class="section-note">No encounter data available.</div>`;
 
-    function getFormattedLocationLabel(loc) {
-      const locationName = loc.location || "Unknown Area";
-      const methodName = loc.method || "Unknown Method";
-      return `${locationName} (${methodName})`;
-    }
+    const deduped = [];
+    const seen = new Set();
 
-    function renderLocations(locations) {
-      const list = safeArray(locations);
-      if (!list.length) return `<div class="section-note">No encounter data available.</div>`;
-
-      const deduped = [];
-      const seen = new Set();
-
-      list.forEach(loc => {
-        const label = getFormattedLocationLabel(loc);
-        if (!seen.has(label)) {
-          seen.add(label);
-          deduped.push(label);
-        }
-      });
-
-      return `
-        <div class="location-list">
-          ${deduped.map(label => `
-            <div class="location-item">
-              <strong>${escapeHtml(label)}</strong>
-            </div>
-          `).join("")}
-        </div>
-      `;
-    }
-
-    function renderNextStageBox(nextEvos) {
-      const list = safeArray(nextEvos);
-
-      if (!list.length) {
-        return `
-          <div class="detail-next-stage-box">
-            <h3>Next Stage</h3>
-            <div class="section-note">Does not evolve</div>
-          </div>
-        `;
+    list.forEach(loc => {
+      const label = getFormattedLocationLabel(loc);
+      if (!seen.has(label)) {
+        seen.add(label);
+        deduped.push(label);
       }
+    });
 
+    return `
+      <div class="location-list">
+        ${deduped.map(label => `
+          <div class="location-item">
+            <strong>${escapeHtml(label)}</strong>
+          </div>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  function renderNextStageBox(nextEvos) {
+    const list = safeArray(nextEvos);
+
+    if (!list.length) {
       return `
         <div class="detail-next-stage-box">
           <h3>Next Stage</h3>
-          <div class="next-stage-row">
-            ${list.map(evo => `
-              <div class="next-stage-pill">
-                <strong>${escapeHtml(evo.name || evo.species_id || "Unknown")}</strong>
-                <div class="desc">
-                  ${escapeHtml(evo.method ? `Method: ${evo.method}` : "Method: —")}
-                  ${evo.parameter ? ` (${escapeHtml(evo.parameter)})` : ""}
-                </div>
-              </div>
-            `).join("")}
-          </div>
+          <div class="section-note">Does not evolve</div>
         </div>
       `;
     }
 
-    function renderMoveTable(moves, includeLevel = false) {
-      const list = safeArray(moves);
-      if (!list.length) {
-        return `<div class="section-note">None</div>`;
-      }
+    return `
+      <div class="detail-next-stage-box">
+        <h3>Next Stage</h3>
+        <div class="next-stage-row">
+          ${list.map(evo => `
+            <div class="next-stage-pill">
+              <strong>${escapeHtml(evo.name || evo.species_id || "Unknown")}</strong>
+              <div class="desc">
+                ${escapeHtml(evo.method ? `Method: ${evo.method}` : "Method: —")}
+                ${evo.parameter ? ` (${escapeHtml(evo.parameter)})` : ""}
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
 
-      return `
-        <div class="move-table-wrap">
-          <table>
-            <thead>
+  function renderMoveTable(moves, includeLevel = false) {
+    const list = safeArray(moves);
+    if (!list.length) {
+      return `<div class="section-note">None</div>`;
+    }
+
+    return `
+      <div class="move-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              ${includeLevel ? "<th>Level</th>" : ""}
+              <th>Name</th>
+              <th>Type</th>
+              <th>Power</th>
+              <th>Accuracy</th>
+              <th>PP</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${list.map(move => `
               <tr>
-                ${includeLevel ? "<th>Level</th>" : ""}
-                <th>Name</th>
-                <th>Type</th>
-                <th>Power</th>
-                <th>Accuracy</th>
-                <th>PP</th>
-                <th>Description</th>
+                ${includeLevel ? `<td>${formatMoveLevel(move.level)}</td>` : ""}
+                <td>${escapeHtml(move.name || move.id || "Unknown Move")}</td>
+                <td>${renderMoveType(move.type)}</td>
+                <td>${move.power ?? "—"}</td>
+                <td>${formatMoveAccuracy(move.accuracy)}</td>
+                <td>${move.pp ?? "—"}</td>
+                <td>${escapeHtml(move.description || "—")}</td>
               </tr>
-            </thead>
-            <tbody>
-              ${list.map(move => `
-                <tr>
-                  ${includeLevel ? `<td>${formatMoveLevel(move.level)}</td>` : ""}
-                  <td>${escapeHtml(move.name || move.id || "Unknown Move")}</td>
-                  <td>${renderMoveType(move.type)}</td>
-                  <td>${move.power ?? "—"}</td>
-                  <td>${formatMoveAccuracy(move.accuracy)}</td>
-                  <td>${move.pp ?? "—"}</td>
-                  <td>${escapeHtml(move.description || "—")}</td>
-                </tr>
-              `).join("")}
-            </tbody>
-          </table>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function formatMoveLevel(level) {
+    if (level === 0) return "On Evolution";
+    if (level === null || level === undefined) return "—";
+    return level;
+  }
+
+  function renderMoveType(type) {
+    if (!type) return "—";
+
+    const normalizedType = String(type).toUpperCase();
+
+    return `
+      <span class="type-pill move-type-pill" style="background:${getTypeColor(normalizedType)};">
+        ${escapeHtml(normalizedType)}
+      </span>
+    `;
+  }
+
+  function formatMoveAccuracy(accuracy) {
+    if (accuracy === null || accuracy === undefined || accuracy === "") return "—";
+    if (Number(accuracy) === 0) return "—";
+    return `${accuracy}`;
+  }
+
+  function getBaseFamilyKey(pokemon) {
+    return pokemon.species_id || pokemon.base_species_id || pokemon.id;
+  }
+
+  function dedupePokemonList(list) {
+    const seen = new Set();
+    const deduped = [];
+
+    list.forEach(pokemon => {
+      const id = String(pokemon?.id || "");
+      if (!id || seen.has(id)) return;
+      seen.add(id);
+      deduped.push(pokemon);
+    });
+
+    return deduped;
+  }
+
+  function sortFamilyForms(list, openedPokemonId) {
+    return [...list].sort((a, b) => {
+      const aId = String(a.id || "");
+      const bId = String(b.id || "");
+      const openedId = String(openedPokemonId || "");
+
+      if (aId === openedId) return -1;
+      if (bId === openedId) return 1;
+
+      const aForm = Number(a.form_number || 0);
+      const bForm = Number(b.form_number || 0);
+
+      if (aForm !== bForm) return aForm - bForm;
+
+      return String(a.name || "").localeCompare(String(b.name || ""));
+    });
+  }
+
+  function getFamilyForms(pokemon) {
+    if (isRegionalVariantPokemon(pokemon)) {
+      return [pokemon];
+    }
+
+    const familyKey = getBaseFamilyKey(pokemon);
+
+    const fromDataset = allPokemon.filter(entry => {
+      if (getBaseFamilyKey(entry) !== familyKey) return false;
+
+      const isSamePokemon = String(entry.id) === String(pokemon.id);
+      if (isSamePokemon) return true;
+
+      return !isRegionalVariantPokemon(entry);
+    });
+
+    const fromFormsArray = safeArray(pokemon.forms).filter(form => {
+      return !isRegionalVariantPokemon(form);
+    });
+
+    const merged = dedupePokemonList([pokemon, ...fromDataset, ...fromFormsArray]);
+    return sortFamilyForms(merged, pokemon.id);
+  }
+
+  function getFormOptionLabel(pokemon, basePokemon) {
+    const formNumber = Number(pokemon.form_number || 0);
+    const formName = String(pokemon.form_name || "").trim();
+
+    if (formNumber === 0 && !formName) {
+      return pokemon.name || "Base Form";
+    }
+
+    if (formName) {
+      return formName;
+    }
+
+    if (basePokemon && pokemon.name && basePokemon.name && pokemon.name !== basePokemon.name) {
+      const prefix = `${basePokemon.name} (`;
+      if (pokemon.name.startsWith(prefix) && pokemon.name.endsWith(")")) {
+        return pokemon.name.slice(prefix.length, -1).trim();
+      }
+    }
+
+    if (formNumber > 0) {
+      return `Form ${formNumber}`;
+    }
+
+    return pokemon.name || "Alternate Form";
+  }
+
+  function openPokemonModal(pokemonId) {
+    const pokemon = allPokemon.find(p => String(p.id) === String(pokemonId));
+    if (!pokemon) return;
+
+    modalShinyState = false;
+    modalFamily = getFamilyForms(pokemon);
+    modalSelectedPokemonId = String(pokemon.id);
+    renderPokemonModal();
+  }
+
+  function renderPokemonModal() {
+    const selectedPokemon = modalFamily.find(p => String(p.id) === String(modalSelectedPokemonId)) || modalFamily[0];
+    if (!selectedPokemon) return;
+
+    const basePokemon = modalFamily[0] || selectedPokemon;
+    const sprite = getModalSprite(selectedPokemon);
+    const nextEvos = selectedPokemon.evolution?.next || [];
+
+    modalBody.innerHTML = `
+      <div class="detail-header">
+        <div class="detail-header-left">
+          <div class="detail-sprite-wrap">
+            <div class="detail-sprite">
+              ${sprite ? `<img src="${escapeHtml(sprite)}" alt="${escapeHtml(selectedPokemon.name)} sprite">` : `<span style="color:#777;">No Image</span>`}
+            </div>
+            <button id="modalShinyToggle" class="detail-shiny-toggle ${modalShinyState ? "active" : ""}" type="button">
+              ${modalShinyState ? "Showing Shiny" : "Show Shiny"}
+            </button>
+          </div>
+
+          <div class="detail-head-copy">
+            <div class="detail-name-row">
+              <h2>${escapeHtml(selectedPokemon.name)}</h2>
+              ${
+                modalFamily.length > 1
+                  ? `
+                    <div class="detail-form-select-wrap">
+                      <label for="modalFormSelect">Form</label>
+                      <select id="modalFormSelect" class="detail-form-select">
+                        ${modalFamily.map(form => `
+                          <option value="${escapeHtml(form.id)}" ${String(form.id) === String(modalSelectedPokemonId) ? "selected" : ""}>
+                            ${escapeHtml(getFormOptionLabel(form, basePokemon))}
+                          </option>
+                        `).join("")}
+                      </select>
+                    </div>
+                  `
+                  : ""
+              }
+            </div>
+            <div class="dex-line">${escapeHtml(getDexText(selectedPokemon))}</div>
+            <div class="type-row">${renderTypes(selectedPokemon.types)}</div>
+          </div>
         </div>
-      `;
-    }
+      </div>
 
-    function formatMoveLevel(level) {
-      if (level === 0) return "On Evolution";
-      if (level === null || level === undefined) return "—";
-      return level;
-    }
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h3>Stats</h3>
+          <div class="detail-stats-grid">
+            ${renderDetailStats(selectedPokemon)}
+          </div>
+          <div class="bst-line">
+            <span>Base Stat Total</span>
+            <strong>${getBST(selectedPokemon)}</strong>
+          </div>
+        </div>
 
-    function renderMoveType(type) {
-      if (!type) return "—";
+        ${renderNextStageBox(nextEvos)}
 
-      const normalizedType = String(type).toUpperCase();
+        <div class="detail-card">
+          <h3>Pokédex Entry</h3>
+          <div class="desc">${escapeHtml(selectedPokemon.pokedex || "No Pokédex entry available.")}</div>
+        </div>
 
-      return `
-        <span class="type-pill move-type-pill" style="background:${getTypeColor(normalizedType)};">
-          ${escapeHtml(normalizedType)}
-        </span>
-      `;
-    }
+        <div class="detail-card">
+          <h3>Abilities</h3>
+          ${renderAbilityList(selectedPokemon.abilities)}
+        </div>
 
-    function formatMoveAccuracy(accuracy) {
-      if (accuracy === null || accuracy === undefined || accuracy === "") return "—";
-      if (Number(accuracy) === 0) return "—";
-      return `${accuracy}`;
-    }
+        <div class="detail-card">
+          <h3>Hidden Abilities</h3>
+          ${renderAbilityList(selectedPokemon.hidden_abilities)}
+        </div>
 
-    function getBaseFamilyKey(pokemon) {
-      return pokemon.species_id || pokemon.base_species_id || pokemon.id;
-    }
+        <div class="detail-card full">
+          <h3>Locations Found</h3>
+          ${renderLocations(selectedPokemon.locations)}
+        </div>
 
-    function dedupePokemonList(list) {
-      const seen = new Set();
-      const deduped = [];
+        <div class="detail-card full">
+          <h3>Level-Up Moves</h3>
+          ${renderMoveTable(selectedPokemon.moves?.level_up || [], true)}
+        </div>
 
-      list.forEach(pokemon => {
-        const id = String(pokemon?.id || "");
-        if (!id || seen.has(id)) return;
-        seen.add(id);
-        deduped.push(pokemon);
-      });
-
-      return deduped;
-    }
-
-    function sortFamilyForms(list, openedPokemonId) {
-      return [...list].sort((a, b) => {
-        const aId = String(a.id || "");
-        const bId = String(b.id || "");
-        const openedId = String(openedPokemonId || "");
-
-        if (aId === openedId) return -1;
-        if (bId === openedId) return 1;
-
-        const aForm = Number(a.form_number || 0);
-        const bForm = Number(b.form_number || 0);
-
-        if (aForm !== bForm) return aForm - bForm;
-
-        return String(a.name || "").localeCompare(String(b.name || ""));
-      });
-    }
-
-    function getFamilyForms(pokemon) {
-      if (isRegionalVariantPokemon(pokemon)) {
-        return [pokemon];
-      }
-
-      const familyKey = getBaseFamilyKey(pokemon);
-
-      const fromDataset = allPokemon.filter(entry => {
-        if (getBaseFamilyKey(entry) !== familyKey) return false;
-
-        const isSamePokemon = String(entry.id) === String(pokemon.id);
-        if (isSamePokemon) return true;
-
-        return !isRegionalVariantPokemon(entry);
-      });
-
-      const fromFormsArray = safeArray(pokemon.forms).filter(form => {
-        return !isRegionalVariantPokemon(form);
-      });
-
-      const merged = dedupePokemonList([pokemon, ...fromDataset, ...fromFormsArray]);
-      return sortFamilyForms(merged, pokemon.id);
-    }
-
-    function getFormOptionLabel(pokemon, basePokemon) {
-      const formNumber = Number(pokemon.form_number || 0);
-      const formName = String(pokemon.form_name || "").trim();
-
-      if (formNumber === 0 && !formName) {
-        return pokemon.name || "Base Form";
-      }
-
-      if (formName) {
-        return formName;
-      }
-
-      if (basePokemon && pokemon.name && basePokemon.name && pokemon.name !== basePokemon.name) {
-        const prefix = `${basePokemon.name} (`;
-        if (pokemon.name.startsWith(prefix) && pokemon.name.endsWith(")")) {
-          return pokemon.name.slice(prefix.length, -1).trim();
-        }
-      }
-
-      if (formNumber > 0) {
-        return `Form ${formNumber}`;
-      }
-
-      return pokemon.name || "Alternate Form";
-    }
-
-    function openPokemonModal(pokemonId) {
-      const pokemon = allPokemon.find(p => String(p.id) === String(pokemonId));
-      if (!pokemon) return;
-
-      modalShinyState = false;
-      modalFamily = getFamilyForms(pokemon);
-      modalSelectedPokemonId = String(pokemon.id);
-      renderPokemonModal();
-    }
-
-    function renderPokemonModal() {
-      const selectedPokemon = modalFamily.find(p => String(p.id) === String(modalSelectedPokemonId)) || modalFamily[0];
-      if (!selectedPokemon) return;
-
-      const basePokemon = modalFamily[0] || selectedPokemon;
-      const sprite = getModalSprite(selectedPokemon);
-      const nextEvos = selectedPokemon.evolution?.next || [];
-
-      modalBody.innerHTML = `
-        <div class="detail-header">
-          <div class="detail-header-left">
-            <div class="detail-sprite-wrap">
-              <div class="detail-sprite">
-                ${sprite ? `<img src="${escapeHtml(sprite)}" alt="${escapeHtml(selectedPokemon.name)} sprite">` : `<span style="color:#777;">No Image</span>`}
+        ${
+          safeArray(selectedPokemon.moves?.tutor).length
+            ? `
+              <div class="detail-card full">
+                <h3>Tutorable Moves</h3>
+                ${renderMoveTable(selectedPokemon.moves.tutor, false)}
               </div>
-              <button id="modalShinyToggle" class="detail-shiny-toggle ${modalShinyState ? "active" : ""}" type="button">
-                ${modalShinyState ? "Showing Shiny" : "Show Shiny"}
-              </button>
-            </div>
-
-            <div class="detail-head-copy">
-              <div class="detail-name-row">
-                <h2>${escapeHtml(selectedPokemon.name)}</h2>
-                ${
-                  modalFamily.length > 1
-                    ? `
-                      <div class="detail-form-select-wrap">
-                        <label for="modalFormSelect">Form</label>
-                        <select id="modalFormSelect" class="detail-form-select">
-                          ${modalFamily.map(form => `
-                            <option value="${escapeHtml(form.id)}" ${String(form.id) === String(modalSelectedPokemonId) ? "selected" : ""}>
-                              ${escapeHtml(getFormOptionLabel(form, basePokemon))}
-                            </option>
-                          `).join("")}
-                        </select>
-                      </div>
-                    `
-                    : ""
-                }
-              </div>
-              <div class="dex-line">${escapeHtml(getDexText(selectedPokemon))}</div>
-              <div class="type-row">${renderTypes(selectedPokemon.types)}</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-grid">
-          <div class="detail-card">
-            <h3>Stats</h3>
-            <div class="detail-stats-grid">
-              ${renderDetailStats(selectedPokemon)}
-            </div>
-            <div class="bst-line">
-              <span>Base Stat Total</span>
-              <strong>${getBST(selectedPokemon)}</strong>
-            </div>
-          </div>
-
-          ${renderNextStageBox(nextEvos)}
-
-          <div class="detail-card">
-            <h3>Pokédex Entry</h3>
-            <div class="desc">${escapeHtml(selectedPokemon.pokedex || "No Pokédex entry available.")}</div>
-          </div>
-
-          <div class="detail-card">
-            <h3>Abilities</h3>
-            ${renderAbilityList(selectedPokemon.abilities)}
-          </div>
-
-          <div class="detail-card">
-            <h3>Hidden Abilities</h3>
-            ${renderAbilityList(selectedPokemon.hidden_abilities)}
-          </div>
-
-          <div class="detail-card full">
-            <h3>Locations Found</h3>
-            ${renderLocations(selectedPokemon.locations)}
-          </div>
-
-          <div class="detail-card full">
-            <h3>Level-Up Moves</h3>
-            ${renderMoveTable(selectedPokemon.moves?.level_up || [], true)}
-          </div>
-
-          ${
-            safeArray(selectedPokemon.moves?.tutor).length
-              ? `
-                <div class="detail-card full">
-                  <h3>Tutorable Moves</h3>
-                  ${renderMoveTable(selectedPokemon.moves.tutor, false)}
-                </div>
-              `
-              : ""
-          }
-
-          ${
-            safeArray(selectedPokemon.moves?.egg).length
-              ? `
-                <div class="detail-card full">
-                  <h3>Egg Moves</h3>
-                  ${renderMoveTable(selectedPokemon.moves.egg, false)}
-                </div>
-              `
-              : ""
-          }
-        </div>
-      `;
-
-      const modalShinyToggle = document.getElementById("modalShinyToggle");
-      if (modalShinyToggle) {
-        modalShinyToggle.addEventListener("click", () => {
-          modalShinyState = !modalShinyState;
-          renderPokemonModal();
-        });
-      }
-
-      const modalFormSelect = document.getElementById("modalFormSelect");
-      if (modalFormSelect) {
-        modalFormSelect.addEventListener("change", event => {
-          modalSelectedPokemonId = event.target.value;
-          renderPokemonModal();
-        });
-      }
-
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closePokemonModal() {
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-      modalShinyState = false;
-      modalFamily = [];
-      modalSelectedPokemonId = null;
-    }
-
-    async function loadPokemon() {
-      try {
-        const response = await fetch(DATA_URL);
-        if (!response.ok) {
-          throw new Error(`Failed to load ${DATA_URL} (${response.status})`);
+            `
+            : ""
         }
 
-        const data = await response.json();
-        allPokemon = Array.isArray(data) ? data : [];
-        populateTypeFilter();
-        renderPokemon();
-      } catch (error) {
-        loadingState.style.display = "none";
-        errorState.style.display = "block";
-        errorState.textContent = `Could not load Pokémon data. ${error.message}`;
-      }
+        ${
+          safeArray(selectedPokemon.moves?.egg).length
+            ? `
+              <div class="detail-card full">
+                <h3>Egg Moves</h3>
+                ${renderMoveTable(selectedPokemon.moves.egg, false)}
+              </div>
+            `
+            : ""
+        }
+      </div>
+    `;
+
+    const modalShinyToggle = document.getElementById("modalShinyToggle");
+    if (modalShinyToggle) {
+      modalShinyToggle.addEventListener("click", () => {
+        modalShinyState = !modalShinyState;
+        renderPokemonModal();
+      });
     }
 
-    document.querySelectorAll(".view-btn").forEach(button => {
-      button.addEventListener("click", () => {
-        document.querySelectorAll(".view-btn").forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
-        currentView = button.dataset.view;
-        renderPokemon();
+    const modalFormSelect = document.getElementById("modalFormSelect");
+    if (modalFormSelect) {
+      modalFormSelect.addEventListener("change", event => {
+        modalSelectedPokemonId = event.target.value;
+        renderPokemonModal();
       });
-    });
+    }
 
-    [searchInput, typeFilter, sortSelect, filterSelect].forEach(control => {
-      control.addEventListener("input", renderPokemon);
-      control.addEventListener("change", renderPokemon);
-    });
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
 
-    pokemonGrid.addEventListener("click", event => {
-      const card = event.target.closest(".pokemon-card");
-      if (!card) return;
-      openPokemonModal(card.dataset.id);
-    });
+  function closePokemonModal() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    modalShinyState = false;
+    modalFamily = [];
+    modalSelectedPokemonId = null;
+  }
 
-    closeModalBtn.addEventListener("click", closePokemonModal);
-
-    modal.addEventListener("click", event => {
-      if (event.target === modal) {
-        closePokemonModal();
+  async function loadPokemon() {
+    try {
+      const response = await fetch(DATA_URL);
+      if (!response.ok) {
+        throw new Error(`Failed to load ${DATA_URL} (${response.status})`);
       }
-    });
 
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape" && modal.classList.contains("open")) {
-        closePokemonModal();
-      }
-    });
+      const data = await response.json();
+      allPokemon = Array.isArray(data) ? data : [];
+      populateTypeFilter();
+      populateLocationFilter();
+      renderPokemon();
+    } catch (error) {
+      loadingState.style.display = "none";
+      errorState.style.display = "block";
+      errorState.textContent = `Could not load Pokémon data. ${error.message}`;
+    }
+  }
 
-    loadPokemon();
-  </script>
-</body>
-</html>
+  document.querySelectorAll(".view-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll(".view-btn").forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+      currentView = button.dataset.view;
+      renderPokemon();
+    });
+  });
+
+  [searchInput, typeFilter, locationFilter, sortSelect, filterSelect].forEach(control => {
+    control.addEventListener("input", renderPokemon);
+    control.addEventListener("change", renderPokemon);
+  });
+
+  pokemonGrid.addEventListener("click", event => {
+    const card = event.target.closest(".pokemon-card");
+    if (!card) return;
+    openPokemonModal(card.dataset.id);
+  });
+
+  closeModalBtn.addEventListener("click", closePokemonModal);
+
+  modal.addEventListener("click", event => {
+    if (event.target === modal) {
+      closePokemonModal();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && modal.classList.contains("open")) {
+      closePokemonModal();
+    }
+  });
+
+  loadPokemon();
+</script>
