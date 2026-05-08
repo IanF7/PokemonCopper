@@ -7,7 +7,7 @@
       "Verde (Omno Town",
       "Pokedex Reward)",
       "Azori Terrarium",
-      "Trash Cans (20)"
+      "Trash Can"
     ],
     "namePlural": "Ability Capsule",
     "pocket": "2",
@@ -1785,7 +1785,7 @@
     ],
     "namePlural": "Exp. Candy XLs",
     "pocket": "2",
-    "price": "3000",
+    "price": "5000",
     "fieldUse": "OnPokemon",
     "flags": "Fling_30"
   },
@@ -3622,8 +3622,7 @@
     "description": "The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.",
     "locations": [
       "Verde (Omno Town",
-      "Champion Beaten Reward)",
-      "Trash Cans (30)"
+      "Champion Beaten Reward)"
     ],
     "namePlural": "Master Balls",
     "pocket": "3",
@@ -5006,7 +5005,7 @@
     ],
     "namePlural": "Rare Candies",
     "pocket": "2",
-    "price": "5000",
+    "price": "3000",
     "fieldUse": "OnPokemon",
     "flags": "Fling_30"
   },
@@ -6203,7 +6202,7 @@
     "flags": "EvolutionStone,Fling_30"
   },
   {
-    "name": "Talonfalme Summon",
+    "name": "Talonflame Summon",
     "id": "FLYITEM",
     "description": "This can be used to summon a Talonflame that can fly you to places you have already been.",
     "locations": [
