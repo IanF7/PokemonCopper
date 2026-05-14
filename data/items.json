@@ -94,7 +94,8 @@
     "id": "ADAMANTMINT",
     "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Sp. Atk will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Adamant Mints",
     "portionName": "sprig of Adamant Mint",
@@ -689,7 +690,8 @@
     "id": "BOLDMINT",
     "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Attack will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Bold Mints",
     "portionName": "sprig of Bold Mint",
@@ -718,7 +720,8 @@
     "id": "BRAVEMINT",
     "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Speed will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Brave Mints",
     "portionName": "sprig of Brave Mint",
@@ -800,7 +803,8 @@
     "id": "CALMMINT",
     "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Attack will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Calm Mints",
     "portionName": "sprig of Calm Mint",
@@ -842,7 +846,8 @@
     "id": "CAREFULMINT",
     "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Sp. Atk will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Careful Mints",
     "portionName": "sprig of Careful Mint",
@@ -2227,7 +2232,8 @@
     "id": "GENTLEMINT",
     "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Defense will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Gentle Mints",
     "portionName": "sprig of Gentle Mint",
@@ -2466,7 +2472,8 @@
     "id": "HASTYMINT",
     "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Defense will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Hasty Mints",
     "portionName": "sprig of Hasty Mint",
@@ -2768,7 +2775,8 @@
     "id": "IMPISHMINT",
     "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Sp. Atk will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Impish Mints",
     "portionName": "sprig of Impish Mint",
@@ -2896,7 +2904,8 @@
     "id": "JOLLYMINT",
     "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Jolly Mints",
     "portionName": "sprig of Jolly Mint",
@@ -3101,7 +3110,8 @@
     "id": "LAXMINT",
     "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Sp. Def will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Lax Mints",
     "portionName": "sprig of Lax Mint",
@@ -3301,7 +3311,8 @@
     "id": "LONELYMINT",
     "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Defense will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Lonely Mints",
     "portionName": "sprig of Lonely Mint",
@@ -3895,7 +3906,8 @@
     "id": "MILDMINT",
     "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Defense will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Mild Mints",
     "portionName": "sprig of Mild Mint",
@@ -3961,7 +3973,8 @@
     "id": "MODESTMINT",
     "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Attack will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Modest Mints",
     "portionName": "sprig of Modest Mint",
@@ -4093,7 +4106,8 @@
     "id": "NAIVEMINT",
     "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Sp. Def will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Naive Mints",
     "portionName": "sprig of Naive Mint",
@@ -4120,7 +4134,8 @@
     "id": "NAUGHTYMINT",
     "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Sp. Def will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Naughty Mints",
     "portionName": "sprig of Naughty Mint",
@@ -4947,7 +4962,8 @@
     "id": "QUIETMINT",
     "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Quiet Mints",
     "portionName": "sprig of Quiet Mint",
@@ -5014,7 +5030,8 @@
     "id": "RASHMINT",
     "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Sp. Def will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Rash Mints",
     "portionName": "sprig of Rash Mint",
@@ -5150,7 +5167,8 @@
     "id": "RELAXEDMINT",
     "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Speed will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Relaxed Mints",
     "portionName": "sprig of Relaxed Mint",
@@ -5497,7 +5515,8 @@
     "id": "SASSYMINT",
     "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Speed will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Sassy Mints",
     "portionName": "sprig of Sassy Mint",
@@ -5603,7 +5622,8 @@
     "id": "SERIOUSMINT",
     "description": "When a Pokémon smells this mint, all of its stats will grow at an equal rate.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Serious Mints",
     "portionName": "sprig of Serious Mint",
@@ -6334,7 +6354,8 @@
     "id": "TIMIDMINT",
     "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Attack will grow more slowly.",
     "locations": [
-      "Azori Terrarium"
+      "Azori Terrarium",
+      "Jepitur City (with 8 badges)"
     ],
     "namePlural": "Timid Mints",
     "portionName": "sprig of Timid Mint",
