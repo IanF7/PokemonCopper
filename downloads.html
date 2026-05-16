@@ -182,6 +182,29 @@
         padding: 14px 12px;
       }
     }
+
+    .instruction-block h4 {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .instruction-block ul {
+      color: #aaa;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-left: 22px;
+      margin-bottom: 12px;
+    }
+
+    .instruction-block li {
+      margin-bottom: 6px;
+    }
+
+    .instruction-block ul ul {
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
   </style>
 </head>
 <body>
@@ -212,7 +235,25 @@
         </thead>
         <tbody>
           <tr>
-            <td>v1.1.0 (newest)</td>
+            <td>v1.2 (newest)</td>
+            <td>
+              <a href="https://mega.nz/file/uhAy2T6A#A6Hmr1AJYu7iiNxFn-2lhwSC2gu41oHpna0gbPx8WfE" target="_blank" rel="noopener noreferrer"> Download </a>
+            </td>
+            <td>
+              <a href="https://mega.nz/file/uhAy2T6A#A6Hmr1AJYu7iiNxFn-2lhwSC2gu41oHpna0gbPx8WfE" target="_blank" rel="noopener noreferrer"> Download </a>
+            </td>
+            <td>
+              <a href="https://mega.nz/file/uhAy2T6A#A6Hmr1AJYu7iiNxFn-2lhwSC2gu41oHpna0gbPx8WfE" target="_blank" rel="noopener noreferrer"> Download </a>
+            </td>
+            <td>
+              <a href="https://mega.nz/file/K1hGDJZK#fBHK_rEpv1vNdrAael7Xj-pUG5ML3de2PgFwBR-lZaY" target="_blank" rel="noopener noreferrer"> Download </a>
+            </td>
+            <td>
+              <a href="https://mega.nz/file/uhAy2T6A#A6Hmr1AJYu7iiNxFn-2lhwSC2gu41oHpna0gbPx8WfE" target="_blank" rel="noopener noreferrer"> Download </a>
+            </td>
+          </tr>
+          <tr>
+            <td>v1.1</td>
             <td>
               <a href="https://mega.nz/file/LsYHjYAY#GNSegojb640GTha4hRMbQTLB0yHhwWy6FnXIKlF3ttQ" target="_blank" rel="noopener noreferrer"> Download </a>
             </td>
@@ -230,7 +271,7 @@
             </td>
           </tr>
           <tr>
-            <td>v1.0.0</td>
+            <td>v1.0</td>
             <td>
               <a href="https://mega.nz/file/igJEjDaT#-a6Xu66KU2Cs01kvD9q5OVmaRPJAzKdbdDLP4FvJifQ" target="_blank" rel="noopener noreferrer"> Download </a>
             </td>
@@ -263,8 +304,9 @@
 
       <div class="instruction-block">
         <h3>Mac</h3>
-        <p>1. Download Porting Kit from </p>
+        <p>1. Download Porting Kit from
           <a href="https://www.portingkit.com/" target="_blank" rel="noopener noreferrer">the Porting Kit download page.</a>
+        </p>
         <p>2. Download the latest version of Pokémon Copper.</p>
         <p>3. Extract the Pokémon Copper files.</p>
         <p>4. Open Porting Kit and choose "Install".</p>
@@ -274,8 +316,9 @@
 
       <div class="instruction-block">
         <h3>Linux</h3>
-        <p>1. Download and install the latest version of Wine for your Linux build from </p>
+        <p>1. Download and install the latest version of Wine for your Linux build from
           <a href="https://gitlab.winehq.org/wine/wine/-/wikis/Download" target="_blank" rel="noopener noreferrer">the Wine download page.</a>
+        </p>
         <p>2. Download the latest version of Pokémon Copper.</p>
         <p>3. Extract the Pokémon Copper files.</p>
         <p>4. Open the terminal in the file path that the Pokémon Copper "Game.exe" file is located.</p>
@@ -318,6 +361,45 @@
         <p>2. Extract the Pokémon Copper files.</p>
         <p>3. Drag and drop the new files into the location of the old ones and replace them.</p>
       </div>
+  </div>
+
+  <div class="instructions">
+    <h2>Patch Notes</h2>
+
+      <div class="instruction-block">
+        <h3>Version 1.2</h3>
+        <h4>Bug Fixes</h4>
+        <ul>
+          <li>Fixed entrance to Majestic Chamber sending the player to the Legendary Chamber in the Elite 4.</li>
+          <li>Fixed crash when getting a Bikkunise from the Rasm Game Corner.</li>
+          <li>Fixed game crashing when interacting with specific trainers of the Picnicker trainer class.</li>
+        </ul>
+        <h4>Balancing</h4>
+        <ul>
+          <li>Made a few more trainers in Spiral Cave optional.</li>
+        </ul>
+        <h4>Other</h4>
+        <ul>
+          <li>Fixed a few typos.</li>
+          <li>Adjusted Pokedex rewards so now Professor Verde won't give players rewards for catching 150 Pokemon or more until after they have acquired 6 or more badges.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="instruction-block">
+      <h3>Version 1.1</h3>
+      <h4>Bug Fixes</h4>
+      <ul>
+        <li>Fixed not being able to change button layout on controller by adding a new plugin.</li>
+        <li>Fixed Cut, Surf, Strength, Waterfall, and Dive not being able to be deleted.</li>
+        <li>Fixed Oswald fight triggering more than once and causing a softlock.</li>
+        <li>Fixed bug where meeting Alphonse in Jepitur City would trigger multiple times.</li>
+      </ul>
+      <h4>Balancing</h4>
+      <ul>
+        <li>Raised level fossils are revived at from 1 to 20.</li>
+      </ul>
+    </div>
   </div>
 
   <footer class="footer">
