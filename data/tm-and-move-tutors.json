@@ -2285,21 +2285,21 @@
       "description": "The target is raked with steel claws. It may also raise the user's Attack stat."
     },
     {
-      "name": "Poison Jab",
+      "name": "Body Slam",
       "sourceType": "TM",
       "tmNumber": 135,
       "location": "Route 19",
-      "type": "POISON",
-      "internalName": "POISONJAB",
+      "type": "NORMAL",
+      "internalName": "BODYSLAM",
       "id": null,
       "category": "Physical",
-      "power": 80,
+      "power": 85,
       "accuracy": 100,
-      "pp": 20,
+      "pp": 15,
       "priority": null,
       "target": "NearOther",
-      "functionCode": "PoisonTarget",
-      "description": "The target is stabbed with a tentacle or arm seeped with poison. It may also poison the target."
+      "functionCode": "ParalyzeTarget",
+      "description": "The user drops onto the target with its full body weight. It may leave the target with paralysis."
     },
     {
       "name": "Liquidation",
@@ -3031,23 +3031,6 @@
       "target": "NearOther",
       "functionCode": "TrapTargetInBattle",
       "description": "The user blocks the target's way with arms spread wide to prevent escape."
-    },
-    {
-      "name": "Body Slam",
-      "sourceType": "Move Tutor",
-      "tmNumber": null,
-      "location": "Resec Pokecenter",
-      "type": "NORMAL",
-      "internalName": "BODYSLAM",
-      "id": null,
-      "category": "Physical",
-      "power": 85,
-      "accuracy": 100,
-      "pp": 15,
-      "priority": null,
-      "target": "NearOther",
-      "functionCode": "ParalyzeTarget",
-      "description": "The user drops onto the target with its full body weight. It may leave the target with paralysis."
     },
     {
       "name": "Bounce",
