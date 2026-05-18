@@ -527,6 +527,37 @@
             "ability": "Effect Spore"
           },
           {
+            "id": "BIKKUNISE",
+            "species_id": "BIKKUNISE",
+            "level": 27,
+            "moves": [
+              {
+                "id": "GRASSKNOT",
+                "name": "Grass Knot"
+              },
+              {
+                "id": "NUZZLE",
+                "name": "Nuzzle"
+              },
+              {
+                "id": "SPARK",
+                "name": "Spark"
+              },
+              {
+                "id": "MAGICALLEAF",
+                "name": "Magical Leaf"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Bikkunise",
+            "types": [
+              "ELECTRIC",
+              "GRASS"
+            ],
+            "ability": "Static"
+          },
+          {
             "id": "BRANUKI",
             "species_id": "BRANUKI",
             "level": 29,
@@ -627,6 +658,37 @@
               "FIGHTING"
             ],
             "ability": "Effect Spore"
+          },
+          {
+            "id": "BIKKUNISE",
+            "species_id": "BIKKUNISE",
+            "level": 32,
+            "moves": [
+              {
+                "id": "GRASSKNOT",
+                "name": "Grass Knot"
+              },
+              {
+                "id": "NUZZLE",
+                "name": "Nuzzle"
+              },
+              {
+                "id": "SPARK",
+                "name": "Spark"
+              },
+              {
+                "id": "MAGICALLEAF",
+                "name": "Magical Leaf"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Bikkunise",
+            "types": [
+              "ELECTRIC",
+              "GRASS"
+            ],
+            "ability": "Static"
           },
           {
             "id": "TREENUKI",
@@ -731,6 +793,67 @@
             "ability": "Effect Spore"
           },
           {
+            "id": "BIKKUNISE",
+            "species_id": "BIKKUNISE",
+            "level": 37,
+            "moves": [
+              {
+                "id": "GRASSKNOT",
+                "name": "Grass Knot"
+              },
+              {
+                "id": "NUZZLE",
+                "name": "Nuzzle"
+              },
+              {
+                "id": "STATICSURPRISE",
+                "name": "Static Surprise"
+              },
+              {
+                "id": "MAGICALLEAF",
+                "name": "Magical Leaf"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Bikkunise",
+            "types": [
+              "ELECTRIC",
+              "GRASS"
+            ],
+            "ability": "Static"
+          },
+          {
+            "id": "LEAFEON",
+            "species_id": "LEAFEON",
+            "level": 37,
+            "moves": [
+              {
+                "id": "GRASSKNOT",
+                "name": "Grass Knot"
+              },
+              {
+                "id": "LEECHSEED",
+                "name": "Leech Seed"
+              },
+              {
+                "id": "LEAFBLADE",
+                "name": "Leaf Blade"
+              },
+              {
+                "id": "DIG",
+                "name": "Dig"
+              }
+            ],
+            "gender": "Male",
+            "ability_index": 0,
+            "name": "Leafeon",
+            "types": [
+              "GRASS"
+            ],
+            "ability": "Leaf Guard"
+          },
+          {
             "id": "TREENUKI",
             "species_id": "TREENUKI",
             "level": 39,
@@ -831,6 +954,67 @@
               "FIGHTING"
             ],
             "ability": "Effect Spore"
+          },
+          {
+            "id": "BIKKUNISE",
+            "species_id": "BIKKUNISE",
+            "level": 42,
+            "moves": [
+              {
+                "id": "GRASSKNOT",
+                "name": "Grass Knot"
+              },
+              {
+                "id": "NUZZLE",
+                "name": "Nuzzle"
+              },
+              {
+                "id": "STATICSURPRISE",
+                "name": "Static Surprise"
+              },
+              {
+                "id": "ENERGYBALL",
+                "name": "Energy Ball"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Bikkunise",
+            "types": [
+              "ELECTRIC",
+              "GRASS"
+            ],
+            "ability": "Static"
+          },
+          {
+            "id": "LEAFEON",
+            "species_id": "LEAFEON",
+            "level": 42,
+            "moves": [
+              {
+                "id": "GRASSKNOT",
+                "name": "Grass Knot"
+              },
+              {
+                "id": "LEECHSEED",
+                "name": "Leech Seed"
+              },
+              {
+                "id": "LEAFBLADE",
+                "name": "Leaf Blade"
+              },
+              {
+                "id": "DIG",
+                "name": "Dig"
+              }
+            ],
+            "gender": "Male",
+            "ability_index": 0,
+            "name": "Leafeon",
+            "types": [
+              "GRASS"
+            ],
+            "ability": "Leaf Guard"
           },
           {
             "id": "TREENUKI",
@@ -1351,6 +1535,36 @@
             "ability": "Storm Drain"
           },
           {
+            "id": "SALAPHYT",
+            "species_id": "SALAPHYT",
+            "level": 27,
+            "moves": [
+              {
+                "id": "BRINE",
+                "name": "Brine"
+              },
+              {
+                "id": "RAINDANCE",
+                "name": "Rain Dance"
+              },
+              {
+                "id": "RAZORLEAF",
+                "name": "Razor Leaf"
+              },
+              {
+                "id": "ICYWIND",
+                "name": "Icy Wind"
+              }
+            ],
+            "gender": "Male",
+            "name": "Salaphyt",
+            "types": [
+              "WATER",
+              "GRASS"
+            ],
+            "ability": "Swift Swim"
+          },
+          {
             "id": "CEPHASTAR",
             "species_id": "CEPHASTAR",
             "level": 29,
@@ -1451,6 +1665,36 @@
               "GROUND"
             ],
             "ability": "Storm Drain"
+          },
+          {
+            "id": "PHYLOCH",
+            "species_id": "PHYLOCH",
+            "level": 32,
+            "moves": [
+              {
+                "id": "BRINE",
+                "name": "Brine"
+              },
+              {
+                "id": "RAINDANCE",
+                "name": "Rain Dance"
+              },
+              {
+                "id": "RAZORLEAF",
+                "name": "Razor Leaf"
+              },
+              {
+                "id": "ICYWIND",
+                "name": "Icy Wind"
+              }
+            ],
+            "gender": "Male",
+            "name": "Phyloch",
+            "types": [
+              "WATER",
+              "GRASS"
+            ],
+            "ability": "Swift Swim"
           },
           {
             "id": "CEPHASTAR",
@@ -1554,6 +1798,66 @@
             "ability": "Storm Drain"
           },
           {
+            "id": "PHYLOCH",
+            "species_id": "PHYLOCH",
+            "level": 37,
+            "moves": [
+              {
+                "id": "BRINE",
+                "name": "Brine"
+              },
+              {
+                "id": "RAINDANCE",
+                "name": "Rain Dance"
+              },
+              {
+                "id": "RAZORLEAF",
+                "name": "Razor Leaf"
+              },
+              {
+                "id": "ICYWIND",
+                "name": "Icy Wind"
+              }
+            ],
+            "gender": "Male",
+            "name": "Phyloch",
+            "types": [
+              "WATER",
+              "GRASS"
+            ],
+            "ability": "Swift Swim"
+          },
+          {
+            "id": "GYARADOS",
+            "species_id": "GYARADOS",
+            "level": 37,
+            "moves": [
+              {
+                "id": "BRINE",
+                "name": "Brine"
+              },
+              {
+                "id": "WATERFALL",
+                "name": "Waterfall"
+              },
+              {
+                "id": "ICEFANG",
+                "name": "Ice Fang"
+              },
+              {
+                "id": "DRAGONTAIL",
+                "name": "Dragon Tail"
+              }
+            ],
+            "gender": "Female",
+            "name": "Gyarados",
+            "types": [
+              "WATER",
+              "FLYING"
+            ],
+            "ability": "Intimidate"
+          },
+          {
             "id": "CEPHASTAR",
             "species_id": "CEPHASTAR",
             "level": 39,
@@ -1653,6 +1957,66 @@
               "GROUND"
             ],
             "ability": "Storm Drain"
+          },
+          {
+            "id": "PHYLOCH",
+            "species_id": "PHYLOCH",
+            "level": 42,
+            "moves": [
+              {
+                "id": "BRINE",
+                "name": "Brine"
+              },
+              {
+                "id": "RAINDANCE",
+                "name": "Rain Dance"
+              },
+              {
+                "id": "ENERGYBALL",
+                "name": "Energy Ball"
+              },
+              {
+                "id": "ICYWIND",
+                "name": "Icy Wind"
+              }
+            ],
+            "gender": "Male",
+            "name": "Phyloch",
+            "types": [
+              "WATER",
+              "GRASS"
+            ],
+            "ability": "Swift Swim"
+          },
+          {
+            "id": "GYARADOS",
+            "species_id": "GYARADOS",
+            "level": 42,
+            "moves": [
+              {
+                "id": "BRINE",
+                "name": "Brine"
+              },
+              {
+                "id": "WATERFALL",
+                "name": "Waterfall"
+              },
+              {
+                "id": "ICEFANG",
+                "name": "Ice Fang"
+              },
+              {
+                "id": "DRAGONDANCE",
+                "name": "Dragon Dance"
+              }
+            ],
+            "gender": "Female",
+            "name": "Gyarados",
+            "types": [
+              "WATER",
+              "FLYING"
+            ],
+            "ability": "Intimidate"
           },
           {
             "id": "CELUMINA",
@@ -2174,6 +2538,36 @@
             "ability": "Flash Fire"
           },
           {
+            "id": "FLETCHINDER",
+            "species_id": "FLETCHINDER",
+            "level": 27,
+            "moves": [
+              {
+                "id": "FIRESPIN",
+                "name": "Fire Spin"
+              },
+              {
+                "id": "ACROBATICS",
+                "name": "Acrobatics"
+              },
+              {
+                "id": "FLAMECHARGE",
+                "name": "Flame Charge"
+              },
+              {
+                "id": "STEELWING",
+                "name": "Steel Wing"
+              }
+            ],
+            "gender": "Female",
+            "name": "Fletchinder",
+            "types": [
+              "FIRE",
+              "FLYING"
+            ],
+            "ability": "Flame Body"
+          },
+          {
             "id": "DIABLAZE",
             "species_id": "DIABLAZE",
             "level": 29,
@@ -2196,13 +2590,13 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 0,
             "name": "Diablaze",
             "types": [
               "FIRE",
               "DARK"
             ],
-            "ability": "Sheer Force"
+            "ability": "Anger Point"
           },
           {
             "id": "SCORCUPINE",
@@ -2276,6 +2670,36 @@
             "ability": "Flash Fire"
           },
           {
+            "id": "FLETCHINDER",
+            "species_id": "FLETCHINDER",
+            "level": 32,
+            "moves": [
+              {
+                "id": "FIRESPIN",
+                "name": "Fire Spin"
+              },
+              {
+                "id": "ACROBATICS",
+                "name": "Acrobatics"
+              },
+              {
+                "id": "FLAMECHARGE",
+                "name": "Flame Charge"
+              },
+              {
+                "id": "STEELWING",
+                "name": "Steel Wing"
+              }
+            ],
+            "gender": "Female",
+            "name": "Fletchinder",
+            "types": [
+              "FIRE",
+              "FLYING"
+            ],
+            "ability": "Flame Body"
+          },
+          {
             "id": "DIABLAZE",
             "species_id": "DIABLAZE",
             "level": 34,
@@ -2298,13 +2722,13 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 0,
             "name": "Diablaze",
             "types": [
               "FIRE",
               "DARK"
             ],
-            "ability": "Sheer Force"
+            "ability": "Anger Point"
           },
           {
             "id": "SCORCUPINE",
@@ -2378,6 +2802,66 @@
             "ability": "Flash Fire"
           },
           {
+            "id": "FUEGHORN",
+            "species_id": "FUEGHORN",
+            "level": 37,
+            "moves": [
+              {
+                "id": "FIRESPIN",
+                "name": "Fire Spin"
+              },
+              {
+                "id": "SCALDINGHORN",
+                "name": "Scalding Horn"
+              },
+              {
+                "id": "REVERSAL",
+                "name": "Reversal"
+              },
+              {
+                "id": "HEADBUTT",
+                "name": "Headbutt"
+              }
+            ],
+            "gender": "Male",
+            "name": "Fueghorn",
+            "types": [
+              "NORMAL",
+              "FIRE"
+            ],
+            "ability": "Fluffy"
+          },
+          {
+            "id": "TALONFLAME",
+            "species_id": "TALONFLAME",
+            "level": 37,
+            "moves": [
+              {
+                "id": "FIRESPIN",
+                "name": "Fire Spin"
+              },
+              {
+                "id": "ACROBATICS",
+                "name": "Acrobatics"
+              },
+              {
+                "id": "FLAMECHARGE",
+                "name": "Flame Charge"
+              },
+              {
+                "id": "STEELWING",
+                "name": "Steel Wing"
+              }
+            ],
+            "gender": "Female",
+            "name": "Talonflame",
+            "types": [
+              "FIRE",
+              "FLYING"
+            ],
+            "ability": "Flame Body"
+          },
+          {
             "id": "DIABLAZE",
             "species_id": "DIABLAZE",
             "level": 39,
@@ -2400,13 +2884,13 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 0,
             "name": "Diablaze",
             "types": [
               "FIRE",
               "DARK"
             ],
-            "ability": "Sheer Force"
+            "ability": "Anger Point"
           },
           {
             "id": "SCORCUPINE",
@@ -2480,6 +2964,66 @@
             "ability": "Flash Fire"
           },
           {
+            "id": "FUEGHORN",
+            "species_id": "FUEGHORN",
+            "level": 42,
+            "moves": [
+              {
+                "id": "FIRESPIN",
+                "name": "Fire Spin"
+              },
+              {
+                "id": "SCALDINGHORN",
+                "name": "Scalding Horn"
+              },
+              {
+                "id": "REVERSAL",
+                "name": "Reversal"
+              },
+              {
+                "id": "HEADBUTT",
+                "name": "Headbutt"
+              }
+            ],
+            "gender": "Male",
+            "name": "Fueghorn",
+            "types": [
+              "NORMAL",
+              "FIRE"
+            ],
+            "ability": "Fluffy"
+          },
+          {
+            "id": "TALONFLAME",
+            "species_id": "TALONFLAME",
+            "level": 42,
+            "moves": [
+              {
+                "id": "FIRESPIN",
+                "name": "Fire Spin"
+              },
+              {
+                "id": "ACROBATICS",
+                "name": "Acrobatics"
+              },
+              {
+                "id": "FLAREBLITZ",
+                "name": "Flare Blitz"
+              },
+              {
+                "id": "STEELWING",
+                "name": "Steel Wing"
+              }
+            ],
+            "gender": "Female",
+            "name": "Talonflame",
+            "types": [
+              "FIRE",
+              "FLYING"
+            ],
+            "ability": "Flame Body"
+          },
+          {
             "id": "DIABLAZE",
             "species_id": "DIABLAZE",
             "level": 44,
@@ -2502,13 +3046,13 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 0,
             "name": "Diablaze",
             "types": [
               "FIRE",
               "DARK"
             ],
-            "ability": "Sheer Force"
+            "ability": "Anger Point"
           },
           {
             "id": "SCORCUPINE",
@@ -2995,6 +3539,39 @@
             "ability": "Keen Eye"
           },
           {
+            "id": "BOUFFALANT",
+            "species_id": "BOUFFALANT",
+            "level": 27,
+            "moves": [
+              {
+                "id": "HEX",
+                "name": "Hex"
+              },
+              {
+                "id": "TOXIC",
+                "name": "Toxic"
+              },
+              {
+                "id": "SPECTRALSTRIKE",
+                "name": "Spectral Strike"
+              },
+              {
+                "id": "REVENGE",
+                "name": "Revenge"
+              }
+            ],
+            "form_number": 1,
+            "gender": "Male",
+            "ability_index": 1,
+            "name": "Bouffalant (Azorian)",
+            "types": [
+              "NORMAL",
+              "GHOST"
+            ],
+            "ability": "Cursed Body",
+            "form_name": "Azorian"
+          },
+          {
             "id": "RATTLEGHAST",
             "species_id": "RATTLEGHAST",
             "level": 29,
@@ -3094,6 +3671,39 @@
               "GHOST"
             ],
             "ability": "Keen Eye"
+          },
+          {
+            "id": "BOUFFALANT",
+            "species_id": "BOUFFALANT",
+            "level": 32,
+            "moves": [
+              {
+                "id": "HEX",
+                "name": "Hex"
+              },
+              {
+                "id": "TOXIC",
+                "name": "Toxic"
+              },
+              {
+                "id": "SPECTRALSTRIKE",
+                "name": "Spectral Strike"
+              },
+              {
+                "id": "REVENGE",
+                "name": "Revenge"
+              }
+            ],
+            "form_number": 1,
+            "gender": "Male",
+            "ability_index": 1,
+            "name": "Bouffalant (Azorian)",
+            "types": [
+              "NORMAL",
+              "GHOST"
+            ],
+            "ability": "Cursed Body",
+            "form_name": "Azorian"
           },
           {
             "id": "SPECTRATTLE",
@@ -3197,6 +3807,69 @@
             "ability": "Keen Eye"
           },
           {
+            "id": "BOUFFALANT",
+            "species_id": "BOUFFALANT",
+            "level": 37,
+            "moves": [
+              {
+                "id": "HEX",
+                "name": "Hex"
+              },
+              {
+                "id": "TOXIC",
+                "name": "Toxic"
+              },
+              {
+                "id": "SPECTRALSTRIKE",
+                "name": "Spectral Strike"
+              },
+              {
+                "id": "REVENGE",
+                "name": "Revenge"
+              }
+            ],
+            "form_number": 1,
+            "gender": "Male",
+            "ability_index": 1,
+            "name": "Bouffalant (Azorian)",
+            "types": [
+              "NORMAL",
+              "GHOST"
+            ],
+            "ability": "Cursed Body",
+            "form_name": "Azorian"
+          },
+          {
+            "id": "TREVENANT",
+            "species_id": "TREVENANT",
+            "level": 37,
+            "moves": [
+              {
+                "id": "HEX",
+                "name": "Hex"
+              },
+              {
+                "id": "WILLOWISP",
+                "name": "Will-O-Wisp"
+              },
+              {
+                "id": "HORNLEECH",
+                "name": "Horn Leech"
+              },
+              {
+                "id": "BULLDOZE",
+                "name": "Bulldoze"
+              }
+            ],
+            "gender": "Female",
+            "name": "Trevenant",
+            "types": [
+              "GHOST",
+              "GRASS"
+            ],
+            "ability": "Natural Cure"
+          },
+          {
             "id": "SPECTRATTLE",
             "species_id": "SPECTRATTLE",
             "level": 39,
@@ -3296,6 +3969,69 @@
               "GHOST"
             ],
             "ability": "Keen Eye"
+          },
+          {
+            "id": "BOUFFALANT",
+            "species_id": "BOUFFALANT",
+            "level": 42,
+            "moves": [
+              {
+                "id": "HEX",
+                "name": "Hex"
+              },
+              {
+                "id": "TOXIC",
+                "name": "Toxic"
+              },
+              {
+                "id": "SPECTRALSTRIKE",
+                "name": "Spectral Strike"
+              },
+              {
+                "id": "HEADCHARGE",
+                "name": "Head Charge"
+              }
+            ],
+            "form_number": 1,
+            "gender": "Male",
+            "ability_index": 1,
+            "name": "Bouffalant (Azorian)",
+            "types": [
+              "NORMAL",
+              "GHOST"
+            ],
+            "ability": "Cursed Body",
+            "form_name": "Azorian"
+          },
+          {
+            "id": "TREVENANT",
+            "species_id": "TREVENANT",
+            "level": 42,
+            "moves": [
+              {
+                "id": "HEX",
+                "name": "Hex"
+              },
+              {
+                "id": "WILLOWISP",
+                "name": "Will-O-Wisp"
+              },
+              {
+                "id": "HORNLEECH",
+                "name": "Horn Leech"
+              },
+              {
+                "id": "BULLDOZE",
+                "name": "Bulldoze"
+              }
+            ],
+            "gender": "Female",
+            "name": "Trevenant",
+            "types": [
+              "GHOST",
+              "GRASS"
+            ],
+            "ability": "Natural Cure"
           },
           {
             "id": "SPECTRATTLE",
@@ -3812,6 +4548,39 @@
             "ability": "Levitate"
           },
           {
+            "id": "SKIPLOOM",
+            "species_id": "SKIPLOOM",
+            "level": 27,
+            "moves": [
+              {
+                "id": "BULLDOZE",
+                "name": "Bulldoze"
+              },
+              {
+                "id": "NEEDLEARM",
+                "name": "Needle Arm"
+              },
+              {
+                "id": "UTURN",
+                "name": "U-turn"
+              },
+              {
+                "id": "ACROBATICS",
+                "name": "Acrobatics"
+              }
+            ],
+            "form_number": 1,
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Skiploom (Azorian)",
+            "types": [
+              "GRASS",
+              "GROUND"
+            ],
+            "ability": "Thorny Body",
+            "form_name": "Azorian"
+          },
+          {
             "id": "DUSTCOON",
             "species_id": "DUSTCOON",
             "level": 29,
@@ -3910,6 +4679,39 @@
               "PSYCHIC"
             ],
             "ability": "Levitate"
+          },
+          {
+            "id": "JUMPLUFF",
+            "species_id": "JUMPLUFF",
+            "level": 32,
+            "moves": [
+              {
+                "id": "BULLDOZE",
+                "name": "Bulldoze"
+              },
+              {
+                "id": "NEEDLEARM",
+                "name": "Needle Arm"
+              },
+              {
+                "id": "UTURN",
+                "name": "U-turn"
+              },
+              {
+                "id": "ACROBATICS",
+                "name": "Acrobatics"
+              }
+            ],
+            "form_number": 1,
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Jumpluff (Azorian)",
+            "types": [
+              "GRASS",
+              "GROUND"
+            ],
+            "ability": "Thorny Body",
+            "form_name": "Azorian"
           },
           {
             "id": "TOXCOON",
@@ -4012,6 +4814,69 @@
             "ability": "Levitate"
           },
           {
+            "id": "JUMPLUFF",
+            "species_id": "JUMPLUFF",
+            "level": 37,
+            "moves": [
+              {
+                "id": "BULLDOZE",
+                "name": "Bulldoze"
+              },
+              {
+                "id": "THORNTRAP",
+                "name": "Thorn Trap"
+              },
+              {
+                "id": "UTURN",
+                "name": "U-turn"
+              },
+              {
+                "id": "ACROBATICS",
+                "name": "Acrobatics"
+              }
+            ],
+            "form_number": 1,
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Jumpluff (Azorian)",
+            "types": [
+              "GRASS",
+              "GROUND"
+            ],
+            "ability": "Thorny Body",
+            "form_name": "Azorian"
+          },
+          {
+            "id": "GOLETT",
+            "species_id": "GOLETT",
+            "level": 37,
+            "moves": [
+              {
+                "id": "BULLDOZE",
+                "name": "Bulldoze"
+              },
+              {
+                "id": "SHADOWPUNCH",
+                "name": "Shadow Punch"
+              },
+              {
+                "id": "FIREPUNCH",
+                "name": "Fire Punch"
+              },
+              {
+                "id": "HEAVYSLAM",
+                "name": "Heavy Slam"
+              }
+            ],
+            "ability_index": 0,
+            "name": "Golett",
+            "types": [
+              "GROUND",
+              "GHOST"
+            ],
+            "ability": "Iron Fist"
+          },
+          {
             "id": "TOXCOON",
             "species_id": "TOXCOON",
             "level": 39,
@@ -4110,6 +4975,69 @@
               "PSYCHIC"
             ],
             "ability": "Levitate"
+          },
+          {
+            "id": "JUMPLUFF",
+            "species_id": "JUMPLUFF",
+            "level": 42,
+            "moves": [
+              {
+                "id": "BULLDOZE",
+                "name": "Bulldoze"
+              },
+              {
+                "id": "THORNTRAP",
+                "name": "Thorn Trap"
+              },
+              {
+                "id": "UTURN",
+                "name": "U-turn"
+              },
+              {
+                "id": "ACROBATICS",
+                "name": "Acrobatics"
+              }
+            ],
+            "form_number": 1,
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Jumpluff (Azorian)",
+            "types": [
+              "GRASS",
+              "GROUND"
+            ],
+            "ability": "Thorny Body",
+            "form_name": "Azorian"
+          },
+          {
+            "id": "GOLETT",
+            "species_id": "GOLETT",
+            "level": 42,
+            "moves": [
+              {
+                "id": "BULLDOZE",
+                "name": "Bulldoze"
+              },
+              {
+                "id": "SHADOWPUNCH",
+                "name": "Shadow Punch"
+              },
+              {
+                "id": "FIREPUNCH",
+                "name": "Fire Punch"
+              },
+              {
+                "id": "HEAVYSLAM",
+                "name": "Heavy Slam"
+              }
+            ],
+            "ability_index": 0,
+            "name": "Golett",
+            "types": [
+              "GROUND",
+              "GHOST"
+            ],
+            "ability": "Iron Fist"
           },
           {
             "id": "TOXCOON",
@@ -4628,6 +5556,37 @@
             "ability": "Sturdy"
           },
           {
+            "id": "LUMINOTH",
+            "species_id": "LUMINOTH",
+            "level": 27,
+            "moves": [
+              {
+                "id": "AERIALACE",
+                "name": "Aerial Ace"
+              },
+              {
+                "id": "MAGICALLEAF",
+                "name": "Magical Leaf"
+              },
+              {
+                "id": "SILVERWIND",
+                "name": "Silver Wind"
+              },
+              {
+                "id": "AIRSLASH",
+                "name": "Air Slash"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 0,
+            "name": "Luminoth",
+            "types": [
+              "BUG",
+              "FLYING"
+            ],
+            "ability": "Oblivious"
+          },
+          {
             "id": "PARAPOSSUM",
             "species_id": "PARAPOSSUM",
             "level": 29,
@@ -4726,6 +5685,37 @@
               "FLYING"
             ],
             "ability": "Sturdy"
+          },
+          {
+            "id": "LUMINOTH",
+            "species_id": "LUMINOTH",
+            "level": 32,
+            "moves": [
+              {
+                "id": "AERIALACE",
+                "name": "Aerial Ace"
+              },
+              {
+                "id": "HEATWAVE",
+                "name": "Heat Wave"
+              },
+              {
+                "id": "BUGBUZZ",
+                "name": "Bug Buzz"
+              },
+              {
+                "id": "AIRSLASH",
+                "name": "Air Slash"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 0,
+            "name": "Luminoth",
+            "types": [
+              "BUG",
+              "FLYING"
+            ],
+            "ability": "Oblivious"
           },
           {
             "id": "PARAPOSSUM",
@@ -4828,6 +5818,68 @@
             "ability": "Sturdy"
           },
           {
+            "id": "LUMINOTH",
+            "species_id": "LUMINOTH",
+            "level": 37,
+            "moves": [
+              {
+                "id": "AERIALACE",
+                "name": "Aerial Ace"
+              },
+              {
+                "id": "HEATWAVE",
+                "name": "Heat Wave"
+              },
+              {
+                "id": "BUGBUZZ",
+                "name": "Bug Buzz"
+              },
+              {
+                "id": "AIRSLASH",
+                "name": "Air Slash"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 0,
+            "name": "Luminoth",
+            "types": [
+              "BUG",
+              "FLYING"
+            ],
+            "ability": "Oblivious"
+          },
+          {
+            "id": "GLISCOR",
+            "species_id": "GLISCOR",
+            "level": 37,
+            "moves": [
+              {
+                "id": "AERIALACE",
+                "name": "Aerial Ace"
+              },
+              {
+                "id": "FIREFANG",
+                "name": "Fire Fang"
+              },
+              {
+                "id": "KNOCKOFF",
+                "name": "Knock Off"
+              },
+              {
+                "id": "BULLDOZE",
+                "name": "Bulldoze"
+              }
+            ],
+            "gender": "Male",
+            "ability_index": 0,
+            "name": "Gliscor",
+            "types": [
+              "GROUND",
+              "FLYING"
+            ],
+            "ability": "Hyper Cutter"
+          },
+          {
             "id": "PARAPOSSUM",
             "species_id": "PARAPOSSUM",
             "level": 39,
@@ -4926,6 +5978,68 @@
               "FLYING"
             ],
             "ability": "Sturdy"
+          },
+          {
+            "id": "LUMINOTH",
+            "species_id": "LUMINOTH",
+            "level": 42,
+            "moves": [
+              {
+                "id": "AERIALACE",
+                "name": "Aerial Ace"
+              },
+              {
+                "id": "HEATWAVE",
+                "name": "Heat Wave"
+              },
+              {
+                "id": "BUGBUZZ",
+                "name": "Bug Buzz"
+              },
+              {
+                "id": "AIRSLASH",
+                "name": "Air Slash"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 0,
+            "name": "Luminoth",
+            "types": [
+              "BUG",
+              "FLYING"
+            ],
+            "ability": "Oblivious"
+          },
+          {
+            "id": "GLISCOR",
+            "species_id": "GLISCOR",
+            "level": 42,
+            "moves": [
+              {
+                "id": "AERIALACE",
+                "name": "Aerial Ace"
+              },
+              {
+                "id": "FIREFANG",
+                "name": "Fire Fang"
+              },
+              {
+                "id": "KNOCKOFF",
+                "name": "Knock Off"
+              },
+              {
+                "id": "EARTHQUAKE",
+                "name": "Earthquake"
+              }
+            ],
+            "gender": "Male",
+            "ability_index": 0,
+            "name": "Gliscor",
+            "types": [
+              "GROUND",
+              "FLYING"
+            ],
+            "ability": "Hyper Cutter"
           },
           {
             "id": "PARAPOSSUM",
@@ -5211,34 +6325,96 @@
         ],
         "pokemon": [
           {
-            "id": "AEGISLASH",
-            "species_id": "AEGISLASH",
-            "level": 48,
+            "id": "STEELIX",
+            "species_id": "STEELIX",
+            "level": 47,
+            "moves": [
+              {
+                "id": "STEALTHROCK",
+                "name": "Stealth Rock"
+              },
+              {
+                "id": "ROCKSLIDE",
+                "name": "Rock Slide"
+              },
+              {
+                "id": "EARTHQUAKE",
+                "name": "Earthquake"
+              },
+              {
+                "id": "HEAVYSLAM",
+                "name": "Heavy Slam"
+              }
+            ],
+            "gender": "Female",
+            "ability_index": 1,
+            "name": "Steelix",
+            "types": [
+              "STEEL",
+              "GROUND"
+            ],
+            "ability": "Sturdy"
+          },
+          {
+            "id": "ROLIDOZER",
+            "species_id": "ROLIDOZER",
+            "level": 49,
             "moves": [
               {
                 "id": "GYROBALL",
                 "name": "Gyro Ball"
               },
               {
-                "id": "KINGSSHIELD",
-                "name": "King's Shield"
+                "id": "RECKLESSROLL",
+                "name": "Reckless Roll"
               },
               {
-                "id": "SHADOWCLAW",
-                "name": "Shadow Claw"
+                "id": "PROTECT",
+                "name": "Protect"
               },
               {
-                "id": "SACREDSWORD",
-                "name": "Sacred Sword"
+                "id": "ROCKSLIDE",
+                "name": "Rock Slide"
               }
             ],
             "gender": "Male",
-            "name": "Aegislash",
+            "ability_index": 1,
+            "name": "Rolidozer",
+            "types": [
+              "BUG",
+              "STEEL"
+            ],
+            "ability": "Reckless"
+          },
+          {
+            "id": "BRONZONG",
+            "species_id": "BRONZONG",
+            "level": 47,
+            "moves": [
+              {
+                "id": "GYROBALL",
+                "name": "Gyro Ball"
+              },
+              {
+                "id": "IRONDEFENSE",
+                "name": "Iron Defense"
+              },
+              {
+                "id": "BODYPRESS",
+                "name": "Body Press"
+              },
+              {
+                "id": "EXTRASENSORY",
+                "name": "Extrasensory"
+              }
+            ],
+            "ability_index": 0,
+            "name": "Bronzong",
             "types": [
               "STEEL",
-              "GHOST"
+              "PSYCHIC"
             ],
-            "ability": "Stance Change"
+            "ability": "Levitate"
           },
           {
             "id": "STEGEODON",
@@ -5271,35 +6447,34 @@
             "ability": "Solid Rock"
           },
           {
-            "id": "ROLIDOZER",
-            "species_id": "ROLIDOZER",
-            "level": 49,
+            "id": "AEGISLASH",
+            "species_id": "AEGISLASH",
+            "level": 48,
             "moves": [
               {
                 "id": "GYROBALL",
                 "name": "Gyro Ball"
               },
               {
-                "id": "RECKLESSROLL",
-                "name": "Reckless Roll"
+                "id": "KINGSSHIELD",
+                "name": "King's Shield"
               },
               {
-                "id": "PROTECT",
-                "name": "Protect"
+                "id": "SHADOWCLAW",
+                "name": "Shadow Claw"
               },
               {
-                "id": "ROCKSLIDE",
-                "name": "Rock Slide"
+                "id": "SACREDSWORD",
+                "name": "Sacred Sword"
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
-            "name": "Rolidozer",
+            "name": "Aegislash",
             "types": [
-              "BUG",
-              "STEEL"
+              "STEEL",
+              "GHOST"
             ],
-            "ability": "Reckless"
+            "ability": "Stance Change"
           },
           {
             "id": "DVARMITH",
@@ -5408,36 +6583,35 @@
             "ability": "Reckless"
           },
           {
-            "id": "LUCARIO",
-            "species_id": "LUCARIO",
+            "id": "BRONZONG",
+            "species_id": "BRONZONG",
             "level": 68,
             "moves": [
               {
-                "id": "SWORDSDANCE",
-                "name": "Swords Dance"
+                "id": "HEAVYSLAM",
+                "name": "Heavy Slam"
               },
               {
-                "id": "METEORMASH",
-                "name": "Meteor Mash"
+                "id": "IRONDEFENSE",
+                "name": "Iron Defense"
               },
               {
-                "id": "CLOSECOMBAT",
-                "name": "Close Combat"
+                "id": "BODYPRESS",
+                "name": "Body Press"
               },
               {
-                "id": "EXTREMESPEED",
-                "name": "Extreme Speed"
+                "id": "PSYCHIC",
+                "name": "Psychic"
               }
             ],
-            "gender": "Female",
-            "ability_index": 1,
-            "item": "Life Orb",
-            "name": "Lucario",
+            "ability_index": 0,
+            "item": "Metal Coat",
+            "name": "Bronzong",
             "types": [
-              "FIGHTING",
-              "STEEL"
+              "STEEL",
+              "PSYCHIC"
             ],
-            "ability": "Inner Focus"
+            "ability": "Levitate"
           },
           {
             "id": "STEGEODON",
@@ -19828,7 +21002,8 @@
               "WATER",
               "DARK"
             ],
-            "ability": "Battle Bond"
+            "ability": "Battle Bond",
+            "form_name": "Form 1"
           },
           {
             "id": "DECIDUEYE",
