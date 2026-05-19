@@ -15362,34 +15362,34 @@
             "ability": "Sand Veil"
           },
           {
-            "id": "GARDEVOIR",
-            "species_id": "GARDEVOIR",
-            "level": 53,
+            "id": "VOLCARONA",
+            "species_id": "VOLCARONA",
+            "level": 55,
             "moves": [
               {
-                "id": "PSYCHIC",
-                "name": "Psychic"
+                "id": "OVERHEAT",
+                "name": "Overheat"
               },
               {
-                "id": "MOONBLAST",
-                "name": "Moonblast"
+                "id": "HYPERBEAM",
+                "name": "Hyper Beam"
               },
               {
-                "id": "SHADOWBALL",
-                "name": "Shadow Ball"
+                "id": "BUGBUZZ",
+                "name": "Bug Buzz"
               },
               {
-                "id": "DRAININGKISS",
-                "name": "Draining Kiss"
+                "id": "QUIVERDANCE",
+                "name": "Quiver Dance"
               }
             ],
-            "gender": "Female",
-            "name": "Gardevoir",
+            "gender": "Male",
+            "name": "Volcarona",
             "types": [
-              "PSYCHIC",
-              "FAIRY"
+              "FIRE",
+              "BUG"
             ],
-            "ability": "Synchronize"
+            "ability": "Flame Body"
           },
           {
             "id": "PHANTOHM",
@@ -15556,35 +15556,35 @@
             "ability": "Sand Veil"
           },
           {
-            "id": "GARDEVOIR",
-            "species_id": "GARDEVOIR",
+            "id": "VOLCARONA",
+            "species_id": "VOLCARONA",
             "level": 72,
             "moves": [
               {
-                "id": "PSYCHIC",
-                "name": "Psychic"
+                "id": "FIREBLAST",
+                "name": "Fire Blast"
               },
               {
-                "id": "MOONBLAST",
-                "name": "Moonblast"
+                "id": "GIGADRAIN",
+                "name": "Giga Drain"
               },
               {
-                "id": "SHADOWBALL",
-                "name": "Shadow Ball"
+                "id": "BUGBUZZ",
+                "name": "Bug Buzz"
               },
               {
-                "id": "DRAININGKISS",
-                "name": "Draining Kiss"
+                "id": "QUIVERDANCE",
+                "name": "Quiver Dance"
               }
             ],
-            "gender": "Female",
-            "item": "Choice Scarf",
-            "name": "Gardevoir",
+            "gender": "Male",
+            "item": "Charti Berry",
+            "name": "Volcarona",
             "types": [
-              "PSYCHIC",
-              "FAIRY"
+              "FIRE",
+              "BUG"
             ],
-            "ability": "Synchronize"
+            "ability": "Flame Body"
           },
           {
             "id": "PHANTOHM",
