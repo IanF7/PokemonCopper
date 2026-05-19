@@ -205,6 +205,39 @@
       margin-top: 6px;
       margin-bottom: 0;
     }
+
+    .patch-notes-list {
+      background: #181818;
+      border: 1px solid #333;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .patch-notes-list summary {
+      cursor: pointer;
+      padding: 18px 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    .patch-notes-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .patch-notes-list summary::after {
+      content: "+";
+      float: right;
+      color: #aaa;
+    }
+
+    .patch-notes-list[open] summary::after {
+      content: "−";
+    }
+
+    .patch-notes-list .instruction-block {
+      margin: 0 15px 20px;
+    }
   </style>
 </head>
 <body>
@@ -328,6 +361,102 @@
       </table>
     </div>
 
+  <div class="instructions">
+    <details class="patch-notes-list">
+      <summary>Patch Notes</summary>
+          <div class="instruction-block">
+            <h3>Version 1.4</h3>
+            <h4>Bug Fixes</h4>
+            <ul>
+              <li>Fixed gym leaders making the player select one less pokemon than they should.</li>
+              <li>Fixed puzzle in the Crimson Temple.</li>
+              <li>Fixed Rock Climb not working in caves again because it didn't save last time despite me checking it repeatedly.</li>
+              <li>Fixed the Thunderwave TM being in both Route 20 and Hilo Mountain (the Avalanche TM is what should have been in Hilo Mountain).</li>
+              <li>Fixed double battle against Team Eclipse grunts in Nuves Forest not scaling.</li>
+              <li>Made it so Forgotten Temple won't appear on the map until the player has been there.</li>
+              <li>Fixed trainer errors on Route 14.</li>
+            </ul>
+          </div>
+
+          <div class="instruction-block">
+            <h3>Version 1.3</h3>
+            <h4>Bug Fixes</h4>
+            <ul>
+              <li>Fixed TM 83 and TM 135 both being Poison Jab. TM 135 is now Body Slam.</li>
+              <li>Fixed trash can in Jepitur City giving infinite Ability Capsules.</li>
+              <li>Fixed NPC giving out infinite Good Rods.</li>
+              <li>Fixed being able to walk through some of the slot machines in the Rasm Game Corner.</li>
+              <li>Fixed being able to walk onto walls by walking on the railings of stairs.</li>
+              <li>Fixed being able to walk onto walls from gym leader platforms.</li>
+              <li>Fixed being able to walk on water in Nuves Forest.</li>
+              <li>Fixed picking up the Mega Stone on Route 21 causing a game crash.</li>
+              <li>Fixed Embush and Stalcria being unable to evolve.</li>
+              <li>Fixed trainer in Lake Triton having the wrong team.</li>
+              <li>Fixed in-game trades not working.</li>
+              <li>Fixed potentially getting softlocked in Forgotten Temple if the player runs out of Poké Balls.</li>
+              <li>Fixed a few trainers on Route 14 treating the player like they had already fought them.</li>
+              <li>Fixed Pokémon won from the Rasm City Game Corner not appearing in the Pokédex.</li>
+              <li>Fixed Repels Bot being in the Poké Mart in Omno Town.</li>
+              <li>Fixed bug where selecting the male trainer, entering a name, backing out, then entering the name again would display the wrong sprite.</li>
+              <li>Removed Iron Shell from Jepitur Department Store since it was a scrapped evolution item.</li>
+            </ul>
+
+            <h4>Balancing</h4>
+            <ul>
+              <li>Reworked the gym system so the 2nd and 3rd gym leaders now have 3 Pokémon, the 4th and 5th have 4, the 6th and 7th have 5, and Stella has a full team of 6.</li>
+              <li>Both of Stella's teams now use Bronzong instead of Lucario.</li>
+              <li>Changed Mega Aurocyx's ability from Quick Feet to Flame Body.</li>
+              <li>Changed Mega Latremor's ability from Leaf Guard to Battle Armor.</li>
+              <li>NPC in Jepitur City that sells Nature Mints will now appear after the player has 6 badges instead of 8.</li>
+              <li>Increased prices of Exp. Candies.</li>
+            </ul>
+
+            <h4>Other</h4>
+            <ul>
+              <li>Added alternate routes to Spiral Cave.</li>
+              <li>Added option to do a x5 pull in the Rasm City Game Corner at a slightly discounted price.</li>
+              <li>Adjusted audio balancing for most locations.</li>
+              <li>Removed scrapped Mega Evolutions from the list of new Mega Evolutions in the Jepitur Office Building.</li>
+              <li>Fixed various typos.</li>
+            </ul>
+        </div>
+
+        <div class="instruction-block">
+          <h3>Version 1.2</h3>
+          <h4>Bug Fixes</h4>
+          <ul>
+            <li>Fixed entrance to Majestic Chamber sending the player to the Legendary Chamber in the Elite 4.</li>
+            <li>Fixed crash when getting a Bikkunise from the Rasm Game Corner.</li>
+            <li>Fixed game crashing when interacting with specific trainers of the Picnicker trainer class.</li>
+          </ul>
+          <h4>Balancing</h4>
+          <ul>
+            <li>Made a few more trainers in Spiral Cave optional.</li>
+          </ul>
+          <h4>Other</h4>
+          <ul>
+            <li>Fixed a few typos.</li>
+            <li>Adjusted Pokedex rewards so now Professor Verde won't give players rewards for catching 150 Pokemon or more until after they have acquired 6 or more badges.</li>
+          </ul>
+        </div>
+
+        <div class="instruction-block">
+          <h3>Version 1.1</h3>
+          <h4>Bug Fixes</h4>
+          <ul>
+            <li>Fixed not being able to change button layout on controller by adding a new plugin.</li>
+            <li>Fixed Cut, Surf, Strength, Waterfall, and Dive not being able to be deleted.</li>
+            <li>Fixed Oswald fight triggering more than once and causing a softlock.</li>
+            <li>Fixed bug where meeting Alphonse in Jepitur City would trigger multiple times.</li>
+          </ul>
+          <h4>Balancing</h4>
+          <ul>
+            <li>Raised level fossils are revived at from 1 to 20.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
     <!-- Added instructions section -->
     <div class="instructions">
       <h2>Installation Instructions</h2>
@@ -390,108 +519,13 @@
         <p>7. Switch back to game mode and run.</p>
       </div>
     </div>
-        <div class="instructions">
+    <div class="instructions">
       <h2>Update Instructions</h2>
       <div class="instruction-block">
         <p>1. Download the latest version of Pokémon Copper.</p>
         <p>2. Extract the Pokémon Copper files.</p>
         <p>3. Drag and drop the new files into the location of the old ones and replace them.</p>
       </div>
-  </div>
-
-  <div class="instructions">
-    <h2>Patch Notes</h2>
-
-        <div class="instruction-block">
-          <h3>Version 1.4</h3>
-          <h4>Bug Fixes</h4>
-          <ul>
-            <li>Fixed gym leaders making the player select one less pokemon than they should.</li>
-            <li>Fixed puzzle in the Crimson Temple.</li>
-            <li>Fixed Rock Climb not working in caves again because it didn't save last time despite me checking it repeatedly.</li>
-            <li>Fixed the Thunderwave TM being in both Route 20 and Hilo Mountain (the Avalanche TM is what should have been in Hilo Mountain).</li>
-            <li>Fixed double battle against Team Eclipse grunts in Nuves Forest not scaling.</li>
-            <li>Made it so Forgotten Temple won't appear on the map until the player has been there.</li>
-            <li>Fixed trainer errors on Route 14.</li>
-          </ul>
-        </div>
-
-        <div class="instruction-block">
-          <h3>Version 1.3</h3>
-          <h4>Bug Fixes</h4>
-          <ul>
-            <li>Fixed TM 83 and TM 135 both being Poison Jab. TM 135 is now Body Slam.</li>
-            <li>Fixed trash can in Jepitur City giving infinite Ability Capsules.</li>
-            <li>Fixed NPC giving out infinite Good Rods.</li>
-            <li>Fixed being able to walk through some of the slot machines in the Rasm Game Corner.</li>
-            <li>Fixed being able to walk onto walls by walking on the railings of stairs.</li>
-            <li>Fixed being able to walk onto walls from gym leader platforms.</li>
-            <li>Fixed being able to walk on water in Nuves Forest.</li>
-            <li>Fixed picking up the Mega Stone on Route 21 causing a game crash.</li>
-            <li>Fixed Embush and Stalcria being unable to evolve.</li>
-            <li>Fixed trainer in Lake Triton having the wrong team.</li>
-            <li>Fixed in-game trades not working.</li>
-            <li>Fixed potentially getting softlocked in Forgotten Temple if the player runs out of Poké Balls.</li>
-            <li>Fixed a few trainers on Route 14 treating the player like they had already fought them.</li>
-            <li>Fixed Pokémon won from the Rasm City Game Corner not appearing in the Pokédex.</li>
-            <li>Fixed Repels Bot being in the Poké Mart in Omno Town.</li>
-            <li>Fixed bug where selecting the male trainer, entering a name, backing out, then entering the name again would display the wrong sprite.</li>
-            <li>Removed Iron Shell from Jepitur Department Store since it was a scrapped evolution item.</li>
-          </ul>
-
-          <h4>Balancing</h4>
-          <ul>
-            <li>Reworked the gym system so the 2nd and 3rd gym leaders now have 3 Pokémon, the 4th and 5th have 4, the 6th and 7th have 5, and Stella has a full team of 6.</li>
-            <li>Both of Stella's teams now use Bronzong instead of Lucario.</li>
-            <li>Changed Mega Aurocyx's ability from Quick Feet to Flame Body.</li>
-            <li>Changed Mega Latremor's ability from Leaf Guard to Battle Armor.</li>
-            <li>NPC in Jepitur City that sells Nature Mints will now appear after the player has 6 badges instead of 8.</li>
-            <li>Increased prices of Exp. Candies.</li>
-          </ul>
-
-          <h4>Other</h4>
-          <ul>
-            <li>Added alternate routes to Spiral Cave.</li>
-            <li>Added option to do a x5 pull in the Rasm City Game Corner at a slightly discounted price.</li>
-            <li>Adjusted audio balancing for most locations.</li>
-            <li>Removed scrapped Mega Evolutions from the list of new Mega Evolutions in the Jepitur Office Building.</li>
-            <li>Fixed various typos.</li>
-          </ul>
-      </div>
-
-      <div class="instruction-block">
-        <h3>Version 1.2</h3>
-        <h4>Bug Fixes</h4>
-        <ul>
-          <li>Fixed entrance to Majestic Chamber sending the player to the Legendary Chamber in the Elite 4.</li>
-          <li>Fixed crash when getting a Bikkunise from the Rasm Game Corner.</li>
-          <li>Fixed game crashing when interacting with specific trainers of the Picnicker trainer class.</li>
-        </ul>
-        <h4>Balancing</h4>
-        <ul>
-          <li>Made a few more trainers in Spiral Cave optional.</li>
-        </ul>
-        <h4>Other</h4>
-        <ul>
-          <li>Fixed a few typos.</li>
-          <li>Adjusted Pokedex rewards so now Professor Verde won't give players rewards for catching 150 Pokemon or more until after they have acquired 6 or more badges.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="instruction-block">
-      <h3>Version 1.1</h3>
-      <h4>Bug Fixes</h4>
-      <ul>
-        <li>Fixed not being able to change button layout on controller by adding a new plugin.</li>
-        <li>Fixed Cut, Surf, Strength, Waterfall, and Dive not being able to be deleted.</li>
-        <li>Fixed Oswald fight triggering more than once and causing a softlock.</li>
-        <li>Fixed bug where meeting Alphonse in Jepitur City would trigger multiple times.</li>
-      </ul>
-      <h4>Balancing</h4>
-      <ul>
-        <li>Raised level fossils are revived at from 1 to 20.</li>
-      </ul>
     </div>
   </div>
 

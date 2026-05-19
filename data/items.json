@@ -4,8 +4,7 @@
     "id": "ABILITYCAPSULE",
     "description": "A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.",
     "locations": [
-      "Verde (Omno Town",
-      "Pokedex Reward)",
+      "Verde (Omno Town, Pokedex Reward)",
       "Azori Terrarium",
       "Trash Can"
     ],
@@ -19,8 +18,7 @@
     "id": "ABILITYPATCH",
     "description": "A patch that allows a Pokémon with a regular Ability to have a rare Ability.",
     "locations": [
-      "Verde (Omno Town",
-      "Pokedex Reward)",
+      "Verde (Omno Town, Pokedex Reward)",
       "Azori Terrarium"
     ],
     "namePlural": "Ability Patches",
@@ -94,8 +92,7 @@
     "id": "ADAMANTMINT",
     "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Sp. Atk will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Adamant Mints",
     "portionName": "sprig of Adamant Mint",
@@ -232,8 +229,7 @@
     "id": "AMULETCOIN",
     "description": "An item to be held by a Pokémon. It doubles a battle's prize money if the holding Pokémon joins in.",
     "locations": [
-      "Verde (Omno Town",
-      "Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward)"
     ],
     "namePlural": "Amulet Coins",
     "pocket": "1",
@@ -245,8 +241,7 @@
     "id": "ANCIENTBELL",
     "description": "An old copper bell that has carvings of an desert oasis on it.",
     "locations": [
-      "Verde (Omno Town",
-      "Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward)"
     ],
     "namePlural": "Ancient Bell",
     "pocket": "8",
@@ -322,8 +317,7 @@
     "id": "AUROCITE",
     "description": "One of a variety of mysterious Mega Stones. Have Aurocyx hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Verde (Omno Town or Verde (Omno Town",
-      "Pokedex Reward))"
+      "Verde (Omno Town or Verde (Omno Town, Pokedex Reward))"
     ],
     "namePlural": "Aurocites",
     "pocket": "1",
@@ -690,8 +684,7 @@
     "id": "BOLDMINT",
     "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Attack will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Bold Mints",
     "portionName": "sprig of Bold Mint",
@@ -720,8 +713,7 @@
     "id": "BRAVEMINT",
     "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Speed will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Brave Mints",
     "portionName": "sprig of Brave Mint",
@@ -803,8 +795,7 @@
     "id": "CALMMINT",
     "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Attack will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Calm Mints",
     "portionName": "sprig of Calm Mint",
@@ -846,8 +837,7 @@
     "id": "CAREFULMINT",
     "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Sp. Atk will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Careful Mints",
     "portionName": "sprig of Careful Mint",
@@ -862,8 +852,7 @@
     "id": "CATCHINGCHARM",
     "description": "A charm said to increase the chance of getting a critical catch. The charm doesn't shake much.",
     "locations": [
-      "Verde (Omno Town",
-      "Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward)"
     ],
     "namePlural": "Catching Charms",
     "pocket": "8",
@@ -1751,7 +1740,7 @@
     ],
     "namePlural": "Exp. Candy Ls",
     "pocket": "2",
-    "price": "1400",
+    "price": "2500",
     "fieldUse": "OnPokemon",
     "flags": "Fling_30"
   },
@@ -1764,7 +1753,7 @@
     ],
     "namePlural": "Exp. Candy Ms",
     "pocket": "2",
-    "price": "600",
+    "price": "800",
     "fieldUse": "OnPokemon",
     "flags": "Fling_30"
   },
@@ -1777,7 +1766,7 @@
     ],
     "namePlural": "Exp. Candy Ss",
     "pocket": "2",
-    "price": "200",
+    "price": "250",
     "fieldUse": "OnPokemon",
     "flags": "Fling_30"
   },
@@ -1790,7 +1779,7 @@
     ],
     "namePlural": "Exp. Candy XLs",
     "pocket": "2",
-    "price": "5000",
+    "price": "6000",
     "fieldUse": "OnPokemon",
     "flags": "Fling_30"
   },
@@ -1803,7 +1792,7 @@
     ],
     "namePlural": "Exp. Candy XSs",
     "pocket": "2",
-    "price": "20",
+    "price": "40",
     "fieldUse": "OnPokemon",
     "flags": "Fling_30"
   },
@@ -1812,8 +1801,7 @@
     "id": "EXPCHARM",
     "description": "A charm that increases the Exp. Points that Pokémon can get. A machine-like object is inside it.",
     "locations": [
-      "Verde (Omno Town",
-      "Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward)"
     ],
     "namePlural": "Exp. Charms",
     "pocket": "8",
@@ -2232,8 +2220,7 @@
     "id": "GENTLEMINT",
     "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Defense will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Gentle Mints",
     "portionName": "sprig of Gentle Mint",
@@ -2472,8 +2459,7 @@
     "id": "HASTYMINT",
     "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Defense will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Hasty Mints",
     "portionName": "sprig of Hasty Mint",
@@ -2775,8 +2761,7 @@
     "id": "IMPISHMINT",
     "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Sp. Atk will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Impish Mints",
     "portionName": "sprig of Impish Mint",
@@ -2904,8 +2889,7 @@
     "id": "JOLLYMINT",
     "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Jolly Mints",
     "portionName": "sprig of Jolly Mint",
@@ -3068,8 +3052,7 @@
     "id": "LATREMORITE",
     "description": "One of a variety of mysterious Mega Stones. Have Latremor hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Verde (Omno Town or Verde (Omno Town",
-      "Pokedex Reward))"
+      "Verde (Omno Town or Verde (Omno Town, Pokedex Reward))"
     ],
     "namePlural": "Latremorites",
     "pocket": "1",
@@ -3110,8 +3093,7 @@
     "id": "LAXMINT",
     "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Sp. Def will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Lax Mints",
     "portionName": "sprig of Lax Mint",
@@ -3311,8 +3293,7 @@
     "id": "LONELYMINT",
     "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Defense will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Lonely Mints",
     "portionName": "sprig of Lonely Mint",
@@ -3632,8 +3613,7 @@
     "id": "MASTERBALL",
     "description": "The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.",
     "locations": [
-      "Verde (Omno Town",
-      "Champion Beaten Reward)"
+      "Verde (Omno Town, Champion Beaten Reward)"
     ],
     "namePlural": "Master Balls",
     "pocket": "3",
@@ -3906,8 +3886,7 @@
     "id": "MILDMINT",
     "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Defense will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Mild Mints",
     "portionName": "sprig of Mild Mint",
@@ -3973,8 +3952,7 @@
     "id": "MODESTMINT",
     "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Attack will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Modest Mints",
     "portionName": "sprig of Modest Mint",
@@ -4106,8 +4084,7 @@
     "id": "NAIVEMINT",
     "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Sp. Def will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Naive Mints",
     "portionName": "sprig of Naive Mint",
@@ -4134,8 +4111,7 @@
     "id": "NAUGHTYMINT",
     "description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Sp. Def will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Naughty Mints",
     "portionName": "sprig of Naughty Mint",
@@ -4295,8 +4271,7 @@
     "id": "OVALCHARM",
     "description": "An oval charm said to increase the chance of Eggs being found at the Day Care.",
     "locations": [
-      "Verde (Omno Town",
-      "Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward)"
     ],
     "namePlural": "Oval Charms",
     "pocket": "8",
@@ -4519,8 +4494,7 @@
     "id": "PLATYPUNCHITE",
     "description": "One of a variety of mysterious Mega Stones. Have Platypunch hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Verde (Omno Town or Verde (Omno Town",
-      "Pokedex Reward))"
+      "Verde (Omno Town or Verde (Omno Town, Pokedex Reward))"
     ],
     "namePlural": "Platypunchites",
     "pocket": "1",
@@ -4962,8 +4936,7 @@
     "id": "QUIETMINT",
     "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Quiet Mints",
     "portionName": "sprig of Quiet Mint",
@@ -5030,8 +5003,7 @@
     "id": "RASHMINT",
     "description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Sp. Def will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Rash Mints",
     "portionName": "sprig of Rash Mint",
@@ -5167,8 +5139,7 @@
     "id": "RELAXEDMINT",
     "description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Speed will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Relaxed Mints",
     "portionName": "sprig of Relaxed Mint",
@@ -5515,8 +5486,7 @@
     "id": "SASSYMINT",
     "description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Speed will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Sassy Mints",
     "portionName": "sprig of Sassy Mint",
@@ -5622,8 +5592,7 @@
     "id": "SERIOUSMINT",
     "description": "When a Pokémon smells this mint, all of its stats will grow at an equal rate.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Serious Mints",
     "portionName": "sprig of Serious Mint",
@@ -5689,8 +5658,7 @@
     "id": "SHINYCHARM",
     "description": "A shiny charm said to increase the chance of finding a Shiny Pokémon.",
     "locations": [
-      "Verde (Omno Town",
-      "Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward)"
     ],
     "namePlural": "Shiny Charms",
     "pocket": "8",
@@ -6354,8 +6322,7 @@
     "id": "TIMIDMINT",
     "description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Attack will grow more slowly.",
     "locations": [
-      "Azori Terrarium",
-      "Jepitur City (with 8 badges)"
+      "Azori Terrarium"
     ],
     "namePlural": "Timid Mints",
     "portionName": "sprig of Timid Mint",
