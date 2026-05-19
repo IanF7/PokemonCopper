@@ -917,7 +917,7 @@
         ]
       },
       {
-        "version": "6 Badges",
+        "version": "6 or 7 Badges",
         "battle_type": "",
         "items": [
           "Full Restore",
@@ -1920,7 +1920,7 @@
         ]
       },
       {
-        "version": "6 Badges",
+        "version": "6 or 7 Badges",
         "battle_type": "",
         "items": [
           "Full Restore",
@@ -2925,7 +2925,7 @@
         ]
       },
       {
-        "version": "6 Badges",
+        "version": "6 or 7 Badges",
         "battle_type": "",
         "items": [
           "Full Restore",
@@ -3932,7 +3932,7 @@
         ]
       },
       {
-        "version": "6 Badges",
+        "version": "6 or 7 Badges",
         "battle_type": "",
         "items": [
           "Full Restore",
@@ -4940,7 +4940,7 @@
         ]
       },
       {
-        "version": "6 Badges",
+        "version": "6 or 7 Badges",
         "battle_type": "",
         "items": [
           "Full Restore",
@@ -5941,7 +5941,7 @@
         ]
       },
       {
-        "version": "6 Badges",
+        "version": "6 or 7 Badges",
         "battle_type": "",
         "items": [
           "Full Restore",
@@ -16536,34 +16536,34 @@
             "ability": "Sand Veil"
           },
           {
-            "id": "VOLCARONA",
-            "species_id": "VOLCARONA",
-            "level": 55,
+            "id": "GARDEVOIR",
+            "species_id": "GARDEVOIR",
+            "level": 53,
             "moves": [
               {
-                "id": "OVERHEAT",
-                "name": "Overheat"
+                "id": "PSYCHIC",
+                "name": "Psychic"
               },
               {
-                "id": "HYPERBEAM",
-                "name": "Hyper Beam"
+                "id": "MOONBLAST",
+                "name": "Moonblast"
               },
               {
-                "id": "BUGBUZZ",
-                "name": "Bug Buzz"
+                "id": "SHADOWBALL",
+                "name": "Shadow Ball"
               },
               {
-                "id": "QUIVERDANCE",
-                "name": "Quiver Dance"
+                "id": "DRAININGKISS",
+                "name": "Draining Kiss"
               }
             ],
-            "gender": "Male",
-            "name": "Volcarona",
+            "gender": "Female",
+            "name": "Gardevoir",
             "types": [
-              "FIRE",
-              "BUG"
+              "PSYCHIC",
+              "FAIRY"
             ],
-            "ability": "Flame Body"
+            "ability": "Synchronize"
           },
           {
             "id": "PHANTOHM",
@@ -16730,35 +16730,35 @@
             "ability": "Sand Veil"
           },
           {
-            "id": "VOLCARONA",
-            "species_id": "VOLCARONA",
+            "id": "GARDEVOIR",
+            "species_id": "GARDEVOIR",
             "level": 72,
             "moves": [
               {
-                "id": "FIREBLAST",
-                "name": "Fire Blast"
+                "id": "PSYCHIC",
+                "name": "Psychic"
               },
               {
-                "id": "GIGADRAIN",
-                "name": "Giga Drain"
+                "id": "MOONBLAST",
+                "name": "Moonblast"
               },
               {
-                "id": "BUGBUZZ",
-                "name": "Bug Buzz"
+                "id": "SHADOWBALL",
+                "name": "Shadow Ball"
               },
               {
-                "id": "QUIVERDANCE",
-                "name": "Quiver Dance"
+                "id": "DRAININGKISS",
+                "name": "Draining Kiss"
               }
             ],
-            "gender": "Male",
-            "item": "Charti Berry",
-            "name": "Volcarona",
+            "gender": "Female",
+            "item": "Choice Scarf",
+            "name": "Gardevoir",
             "types": [
-              "FIRE",
-              "BUG"
+              "PSYCHIC",
+              "FAIRY"
             ],
-            "ability": "Flame Body"
+            "ability": "Synchronize"
           },
           {
             "id": "PHANTOHM",
@@ -20997,13 +20997,12 @@
             "form_number": 1,
             "gender": "Male",
             "item": "Choice Specs",
-            "name": "Greninja",
+            "name": "Greninja (Form 1)",
             "types": [
               "WATER",
               "DARK"
             ],
-            "ability": "Battle Bond",
-            "form_name": "Form 1"
+            "ability": "Battle Bond"
           },
           {
             "id": "DECIDUEYE",
