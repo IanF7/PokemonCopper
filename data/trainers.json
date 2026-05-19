@@ -6330,20 +6330,20 @@
             "level": 47,
             "moves": [
               {
-                "id": "STEALTHROCK",
-                "name": "Stealth Rock"
+                "id": "GYROBALL",
+                "name": "Gyro Ball"
               },
               {
-                "id": "ROCKSLIDE",
-                "name": "Rock Slide"
+                "id": "STEALTHROCK",
+                "name": "Stealth Rock"
               },
               {
                 "id": "EARTHQUAKE",
                 "name": "Earthquake"
               },
               {
-                "id": "HEAVYSLAM",
-                "name": "Heavy Slam"
+                "id": "ROCKSLIDE",
+                "name": "Rock Slide"
               }
             ],
             "gender": "Female",
