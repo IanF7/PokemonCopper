@@ -2356,13 +2356,13 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 0,
             "name": "Diablare",
             "types": [
               "FIRE",
               "DARK"
             ],
-            "ability": "Sheer Force"
+            "ability": "Anger Point"
           },
           {
             "id": "CHARCUPINE",
@@ -2458,13 +2458,13 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 0,
             "name": "Diablare",
             "types": [
               "FIRE",
               "DARK"
             ],
-            "ability": "Sheer Force"
+            "ability": "Anger Point"
           },
           {
             "id": "CHARCUPINE",
@@ -20997,7 +20997,7 @@
             "form_number": 1,
             "gender": "Male",
             "item": "Choice Specs",
-            "name": "Greninja (Form 1)",
+            "name": "Greninja",
             "types": [
               "WATER",
               "DARK"
