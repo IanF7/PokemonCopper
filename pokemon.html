@@ -640,6 +640,29 @@
         font-size: 1.7rem;
       }
     }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .info-item {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 12px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .info-item strong {
+      color: white;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .info-item span {
+      color: var(--muted-2);
+    }
   </style>
 </head>
 
@@ -1198,6 +1221,12 @@
   function getFormattedLocationLabel(loc) {
     const locationName = loc.location || "Unknown Area";
     const methodName = loc.method || "Unknown Method";
+    const encounterRate = loc.encounter_rate_text || "";
+
+    if (encounterRate) {
+      return `${locationName} (${methodName}): ${encounterRate}`;
+    }
+
     return `${locationName} (${methodName})`;
   }
 
@@ -1223,6 +1252,42 @@
             <strong>${escapeHtml(label)}</strong>
           </div>
         `).join("")}
+      </div>
+    `;
+  }
+
+  function getGenderRatioText(pokemon) {
+    return pokemon.gender_ratio_display || pokemon.gender_ratio || "Unknown";
+  }
+
+  function getEvYieldText(pokemon) {
+    if (pokemon.ev_yield_text) {
+      return pokemon.ev_yield_text;
+    }
+
+    const evs = safeArray(pokemon.ev_yield || pokemon.evs);
+    if (!evs.length) {
+      return "None";
+    }
+
+    return evs
+      .map(ev => `${ev.amount ?? 0} ${ev.name || ev.stat || ""}`.trim())
+      .filter(Boolean)
+      .join(", ");
+  }
+
+  function renderTrainingInfo(pokemon) {
+    return `
+      <div class="info-list">
+        <div class="info-item">
+          <strong>Gender Ratio</strong>
+          <span>${escapeHtml(getGenderRatioText(pokemon))}</span>
+        </div>
+
+        <div class="info-item">
+          <strong>EV Yield</strong>
+          <span>${escapeHtml(getEvYieldText(pokemon))}</span>
+        </div>
       </div>
     `;
   }
@@ -1488,6 +1553,11 @@
         <div class="detail-card">
           <h3>Hidden Abilities</h3>
           ${renderAbilityList(selectedPokemon.hidden_abilities)}
+        </div>
+
+        <div class="detail-card">
+          <h3>Training Info</h3>
+          ${renderTrainingInfo(selectedPokemon)}
         </div>
 
         <div class="detail-card full">
