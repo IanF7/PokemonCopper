@@ -4,7 +4,7 @@
     "id": "ABILITYCAPSULE",
     "description": "A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.",
     "locations": [
-      "Verde (Omno Town, Pokedex Reward)",
+      "Verde (Omno Town, Pokedex Reward 350)",
       "Azori Terrarium",
       "Trash Can"
     ],
@@ -18,7 +18,7 @@
     "id": "ABILITYPATCH",
     "description": "A patch that allows a Pokémon with a regular Ability to have a rare Ability.",
     "locations": [
-      "Verde (Omno Town, Pokedex Reward)",
+      "Verde (Omno Town, Pokedex Reward 450)",
       "Azori Terrarium"
     ],
     "namePlural": "Ability Patches",
@@ -29,7 +29,7 @@
   {
     "name": "Ability Shield",
     "id": "ABILITYSHIELD",
-    "description": "An item to be held by a Pokémon. This  shield protects the holder from having its Ability changed by others.",
+    "description": "An item to be held by a Pokémon. This shield protects the holder from having its Ability changed by others.",
     "locations": [
       "Azori Terrarium"
     ],
@@ -58,6 +58,18 @@
       "Route 15"
     ],
     "namePlural": "Absolites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Absolite Z",
+    "id": "ABSOLITEZ",
+    "description": "One of a variety of mysterious Mega Stones. Have Absol hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Absolite Zs",
     "pocket": "1",
     "price": "0",
     "flags": "MegaStone,Fling_80"
@@ -229,7 +241,7 @@
     "id": "AMULETCOIN",
     "description": "An item to be held by a Pokémon. It doubles a battle's prize money if the holding Pokémon joins in.",
     "locations": [
-      "Verde (Omno Town, Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward 50)"
     ],
     "namePlural": "Amulet Coins",
     "pocket": "1",
@@ -241,7 +253,7 @@
     "id": "ANCIENTBELL",
     "description": "An old copper bell that has carvings of an desert oasis on it.",
     "locations": [
-      "Verde (Omno Town, Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward 200)"
     ],
     "namePlural": "Ancient Bell",
     "pocket": "8",
@@ -317,7 +329,7 @@
     "id": "AUROCITE",
     "description": "One of a variety of mysterious Mega Stones. Have Aurocyx hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Verde (Omno Town or Verde (Omno Town, Pokedex Reward))"
+      "Verde (Omno Town or Verde (Omno Town, Pokedex Reward 150 or 250))"
     ],
     "namePlural": "Aurocites",
     "pocket": "1",
@@ -410,6 +422,30 @@
       "Kuiper Hs 3"
     ],
     "namePlural": "Banettites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Barbaracite",
+    "id": "BARBARACITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Barbaracle hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Barbaracites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Baxcalibrite",
+    "id": "BAXCALIBRITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Baxcalibur hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Baxcalibrites",
     "pocket": "1",
     "price": "0",
     "flags": "MegaStone,Fling_80"
@@ -852,7 +888,7 @@
     "id": "CATCHINGCHARM",
     "description": "A charm said to increase the chance of getting a critical catch. The charm doesn't shake much.",
     "locations": [
-      "Verde (Omno Town, Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward 100)"
     ],
     "namePlural": "Catching Charms",
     "pocket": "8",
@@ -871,6 +907,18 @@
     "pocket": "1",
     "price": "4000",
     "flags": "Fling_30"
+  },
+  {
+    "name": "Chandelurite",
+    "id": "CHANDELURITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Chandelure hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Chandelurites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Charcoal",
@@ -950,6 +998,18 @@
     "flags": "PokeBall"
   },
   {
+    "name": "Chesnaughtite",
+    "id": "CHESNAUGHTITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Chesnaught hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Chesnaughtites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Chesto Berry",
     "id": "CHESTOBERRY",
     "description": "It may be used or held by a Pokémon to recover from sleep.",
@@ -985,6 +1045,18 @@
     "pocket": "1",
     "price": "10000",
     "flags": "Fling_70"
+  },
+  {
+    "name": "Chimechite",
+    "id": "CHIMECHITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Chimecho hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Chimechites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Chipped Pot",
@@ -1078,6 +1150,18 @@
     "flags": "Fling_30"
   },
   {
+    "name": "Clefablite",
+    "id": "CLEFABLITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Clefable hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Clefablites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Clover Sweet",
     "id": "CLOVERSWEET",
     "description": "A clover-shaped sweet. When a Milcery holds this, it spins around happily.",
@@ -1159,7 +1243,7 @@
     ],
     "namePlural": "Cornerstone Masks",
     "pocket": "1",
-    "price": "10000",
+    "price": "0",
     "flags": "Fling_60"
   },
   {
@@ -1186,6 +1270,18 @@
     "pocket": "1",
     "price": "20000",
     "flags": "Fling_30"
+  },
+  {
+    "name": "Crabominite",
+    "id": "CRABOMINITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Crabominable hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Crabominites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Cracked Pot",
@@ -1274,6 +1370,18 @@
     "flags": "Fling_50"
   },
   {
+    "name": "Darkranite",
+    "id": "DARKRANITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Darkrai hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Darkranites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Dawn Stone",
     "id": "DAWNSTONE",
     "description": "A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes.",
@@ -1309,6 +1417,18 @@
     "pocket": "1",
     "price": "2000",
     "flags": "Fling_90"
+  },
+  {
+    "name": "Delphoxite",
+    "id": "DELPHOXITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Delphox hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Delphoxites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Destiny Knot",
@@ -1398,6 +1518,18 @@
     "flags": "Fling_90"
   },
   {
+    "name": "Dragalgite",
+    "id": "DRAGALGITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Dragalge hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Dragalgites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Dragon Fang",
     "id": "DRAGONFANG",
     "description": "An item to be held by a Pokémon. It is a hard and sharp fang that ups the power of Dragon-type moves.",
@@ -1433,6 +1565,30 @@
     "pocket": "1",
     "price": "3000",
     "flags": "Fling_30"
+  },
+  {
+    "name": "Dragoninite",
+    "id": "DRAGONINITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Dragonite hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Dragoninites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Drampanite",
+    "id": "DRAMPANITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Drampa hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Drampanites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Dread Plate",
@@ -1547,6 +1703,18 @@
     "flags": "Fling_90"
   },
   {
+    "name": "Eelektrossite",
+    "id": "EELEKTROSSITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Eelektross hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Eelektrossites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Eject Button",
     "id": "EJECTBUTTON",
     "description": "If the holder is hit by an attack, it will switch with another Pokémon in your party.",
@@ -1621,6 +1789,18 @@
     "price": "3000",
     "fieldUse": "OnPokemon",
     "flags": "Fling_30"
+  },
+  {
+    "name": "Emboarite",
+    "id": "EMBOARITE",
+    "description": "One of a variety of mysterious Mega Stones. Haven Emboar hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Emboarites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Energy Powder",
@@ -1719,6 +1899,18 @@
     "flags": "Fling_40"
   },
   {
+    "name": "Excadrite",
+    "id": "EXCADRITE",
+    "description": "One of a variety of mysterious Mega Stones. Haven Excadrill hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Excadrites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "EXP. All",
     "id": "EXPALLOFF",
     "description": "\"TURNED OFF. An item that allows for all Pokémon in the party to gain experience. simultaniously.\"",
@@ -1801,7 +1993,7 @@
     "id": "EXPCHARM",
     "description": "A charm that increases the Exp. Points that Pokémon can get. A machine-like object is inside it.",
     "locations": [
-      "Verde (Omno Town, Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward 300)"
     ],
     "namePlural": "Exp. Charms",
     "pocket": "8",
@@ -1859,6 +2051,18 @@
     "flags": "Fling_50"
   },
   {
+    "name": "Falinksite",
+    "id": "FALINKSITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Falinks hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Falinksites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Fast Ball",
     "id": "FASTBALL",
     "description": "A Poké Ball that makes it easier to catch fast Pokémon.",
@@ -1870,6 +2074,18 @@
     "pocket": "3",
     "price": "300",
     "flags": "PokeBall"
+  },
+  {
+    "name": "Feraligite",
+    "id": "FERALIGITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Feraligatr hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Feraligites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Fighting Memory",
@@ -1970,6 +2186,18 @@
     "pocket": "1",
     "price": "3000",
     "flags": "Fling_30"
+  },
+  {
+    "name": "Floettite",
+    "id": "FLOETTITE",
+    "description": "One of a variety of mysterious Mega Stones. Have special Floette hold it to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Floettites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Flower Sweet",
@@ -2089,6 +2317,18 @@
     "flags": "MegaStone,Fling_80"
   },
   {
+    "name": "Froslassite",
+    "id": "FROSLASSITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Froslass hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Froslassites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Full Heal",
     "id": "FULLHEAL",
     "description": "A spray-type medicine. It heals all the status problems of a single Pokémon.",
@@ -2192,6 +2432,18 @@
     "flags": "MegaStone,Fling_80"
   },
   {
+    "name": "Garchompite Z",
+    "id": "GARCHOMPITEZ",
+    "description": "One of a variety of mysterious Mega Stones. Have Garchomp hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Garchompite Zs",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Gardevoirite",
     "id": "GARDEVOIRITE",
     "description": "One of a variety of mysterious Mega Stones. Have Gardevoir hold it, and it will be able to Mega Evolve.",
@@ -2251,7 +2503,7 @@
     ],
     "namePlural": "Gimmighoul Coins",
     "pocket": "1",
-    "price": "1",
+    "price": "0",
     "flags": "Fling_10"
   },
   {
@@ -2262,6 +2514,42 @@
       "Hilo Mountain"
     ],
     "namePlural": "Glalitites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Glimmoranite",
+    "id": "GLIMMORANITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Glimmora hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Glimmoranites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Golisopite",
+    "id": "GOLISOPITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Golisopod hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Golisopites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Golurkite",
+    "id": "GOLURKITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Golurk hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Golurkites",
     "pocket": "1",
     "price": "0",
     "flags": "MegaStone,Fling_80"
@@ -2329,6 +2617,18 @@
     "pocket": "3",
     "price": "600",
     "flags": "PokeBall"
+  },
+  {
+    "name": "Greninjite",
+    "id": "GRENINJITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Greninja hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Greninjites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Grepa Berry",
@@ -2470,6 +2770,18 @@
     "flags": "Fling_10"
   },
   {
+    "name": "Hawluchanite",
+    "id": "HAWLUCHANITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Hawlucha hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Hawluchanites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Heal Ball",
     "id": "HEALBALL",
     "description": "A remedial Poké Ball that restores the caught Pokémon's HP and eliminates any status problem.",
@@ -2519,7 +2831,7 @@
     ],
     "namePlural": "Hearthflame Masks",
     "pocket": "1",
-    "price": "10000",
+    "price": "0",
     "flags": "Fling_60"
   },
   {
@@ -2534,6 +2846,18 @@
     "pocket": "1",
     "price": "4000",
     "flags": "Fling_60"
+  },
+  {
+    "name": "Heatranite",
+    "id": "HEATRANITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Heatran hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Heatranites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Heavy Ball",
@@ -2780,7 +3104,7 @@
     ],
     "namePlural": "Indigo Disks",
     "pocket": "8",
-    "price": "10000",
+    "price": "0",
     "flags": "KeyItem"
   },
   {
@@ -3353,6 +3677,18 @@
     "flags": "MegaStone,Fling_80"
   },
   {
+    "name": "Lucarionite Z",
+    "id": "LUCARIONITEZ",
+    "description": "One of a variety of mysterious Mega Stones. Have Lucario hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Lucarionite Zs",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Luck Incense",
     "id": "LUCKINCENSE",
     "description": "An item to be held by a Pokémon. It doubles a battle's prize money if the holding Pokémon joins in.",
@@ -3509,6 +3845,18 @@
     "flags": "KeyItem"
   },
   {
+    "name": "Magearnite",
+    "id": "MAGEARNITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Magearna hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Magearnites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Magmarizer",
     "id": "MAGMARIZER",
     "description": "A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon.",
@@ -3568,6 +3916,18 @@
     "pocket": "5",
     "price": "20",
     "flags": "Berry,Fling_10,NaturalGift_ROCK_90"
+  },
+  {
+    "name": "Malamarite",
+    "id": "MALAMARITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Malamar hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Malamarites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Malicious Armor",
@@ -3752,6 +4112,18 @@
     "flags": "KeyItem,MegaRing"
   },
   {
+    "name": "Meganiumite",
+    "id": "MEGANIUMITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Meganium hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Meganiumites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Mental Herb",
     "id": "MENTALHERB",
     "description": "An item to be held by a Pokémon. It snaps the holder out of infatuation. It can be used only once.",
@@ -3763,6 +4135,18 @@
     "pocket": "1",
     "price": "4000",
     "flags": "Fling_10"
+  },
+  {
+    "name": "Meowsticite",
+    "id": "MEOWSTICITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Meowstic hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Meowsticites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Metagrossite",
@@ -3828,7 +4212,7 @@
     ],
     "namePlural": "Meteorites",
     "pocket": "8",
-    "price": "10000",
+    "price": "0",
     "fieldUse": "OnPokemon",
     "flags": "KeyItem"
   },
@@ -3939,7 +4323,7 @@
     "id": "MISTYSEED",
     "description": "An item to be held by a Pokémon. It boosts Sp. Def on Misty Terrain. It can only be used once.",
     "locations": [
-      "Tethys Desert",
+      "Tehtys Desert",
       "Azori Terrarium"
     ],
     "namePlural": "Misty Seeds",
@@ -4050,7 +4434,7 @@
     ],
     "namePlural": "Mythical Pecha Berries",
     "pocket": "8",
-    "price": "10000",
+    "price": "0",
     "flags": "KeyItem"
   },
   {
@@ -4220,7 +4604,7 @@
     "id": "ODDKEYSTONE",
     "description": "A vital item that is needed to keep a stone tower from collapsing. Voices can be heard from it occasionally.",
     "locations": [
-      "Tethys Dig Site"
+      "Tehtys Dig Site"
     ],
     "namePlural": "Odd Keystones",
     "pocket": "1",
@@ -4242,18 +4626,6 @@
     "flags": "KeyItem"
   },
   {
-    "name": "Old Sea Map",
-    "id": "OLDSEAMAP",
-    "description": "A faded sea chart that shows the way to a certain island.",
-    "locations": [
-      "Ancient Cave Vendor (Azori Terrarium)"
-    ],
-    "namePlural": "Old Sea Maps",
-    "pocket": "8",
-    "price": "0",
-    "flags": "KeyItem"
-  },
-  {
     "name": "Oran Berry",
     "id": "ORANBERRY",
     "description": "It may be used or held by a Pokémon to heal the user by just 10 HP.",
@@ -4271,7 +4643,7 @@
     "id": "OVALCHARM",
     "description": "An oval charm said to increase the chance of Eggs being found at the Day Care.",
     "locations": [
-      "Verde (Omno Town, Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward 450)"
     ],
     "namePlural": "Oval Charms",
     "pocket": "8",
@@ -4494,7 +4866,7 @@
     "id": "PLATYPUNCHITE",
     "description": "One of a variety of mysterious Mega Stones. Have Platypunch hold it, and it will be able to Mega Evolve.",
     "locations": [
-      "Verde (Omno Town or Verde (Omno Town, Pokedex Reward))"
+      "Verde (Omno Town or Verde (Omno Town, Pokedex Reward 150 or 250))"
     ],
     "namePlural": "Platypunchites",
     "pocket": "1",
@@ -4878,6 +5250,18 @@
     "flags": "Fling_10"
   },
   {
+    "name": "Pyroarite",
+    "id": "PYROARITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Pyroar hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Pyroarites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Qualot Berry",
     "id": "QUALOTBERRY",
     "description": "Using it on a Pokémon makes it more friendly, but it also lowers its base Defense stat.",
@@ -4970,6 +5354,30 @@
     "price": "350",
     "fieldUse": "OnPokemon",
     "flags": "Fling_30"
+  },
+  {
+    "name": "Raichunite X",
+    "id": "RAICHUNITEX",
+    "description": "One of a variety of mysterious Mega Stones. Have Raichu hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Raichunite Xs",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Raichunite Y",
+    "id": "RAICHUNITEY",
+    "description": "One of a variety of mysterious Mega Stones. Have Raichu hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Raichunite Ys",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Rare Bone",
@@ -5521,6 +5929,18 @@
     "flags": "MegaStone,Fling_80"
   },
   {
+    "name": "Scolipite",
+    "id": "SCOLIPITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Scolipede hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Scolipites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Scope Lens",
     "id": "SCOPELENS",
     "description": "An item to be held by a Pokémon. It is a lens that boosts the holder's critical-hit ratio.",
@@ -5534,6 +5954,30 @@
     "flags": "Fling_30"
   },
   {
+    "name": "Scovillainite",
+    "id": "SCOVILLAINITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Scovillain hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Scovillainites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
+    "name": "Scraftinite",
+    "id": "SCRAFTINITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Scrafty hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Scraftinites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Scroll of Darkness",
     "id": "SCROLLOFDARKNESS",
     "description": "A scroll that evolves certain Pokémon. Written on it are the true secrets of the path of darkness.",
@@ -5542,7 +5986,7 @@
     ],
     "namePlural": "Scroll of Darkness",
     "pocket": "1",
-    "price": "5000",
+    "price": "0",
     "fieldUse": "OnPokemon",
     "flags": "EvolutionStone,Fling_30"
   },
@@ -5555,7 +5999,7 @@
     ],
     "namePlural": "Scroll of Waters",
     "pocket": "1",
-    "price": "5000",
+    "price": "0",
     "fieldUse": "OnPokemon",
     "flags": "EvolutionStone,Fling_30"
   },
@@ -5658,7 +6102,7 @@
     "id": "SHINYCHARM",
     "description": "A shiny charm said to increase the chance of finding a Shiny Pokémon.",
     "locations": [
-      "Verde (Omno Town, Pokedex Reward)"
+      "Verde (Omno Town, Pokedex Reward 500)"
     ],
     "namePlural": "Shiny Charms",
     "pocket": "8",
@@ -5742,6 +6186,18 @@
     "price": "20",
     "fieldUse": "OnPokemon",
     "flags": "Berry,Fling_10,NaturalGift_PSYCHIC_80"
+  },
+  {
+    "name": "Skarmorite",
+    "id": "SKARMORITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Skarmory hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Skarmorites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Sky Plate",
@@ -5997,6 +6453,18 @@
     "flags": "Fling_10"
   },
   {
+    "name": "Staraptite",
+    "id": "STARAPTITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Staraptor hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Researcher (Professor Verde's Lab)"
+    ],
+    "namePlural": "Staraptites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Stardust",
     "id": "STARDUST",
     "description": "Lovely, red-colored sand with a loose, silky feel. It can be sold at a high price to shops.",
@@ -6022,6 +6490,18 @@
     "pocket": "5",
     "price": "20",
     "flags": "Berry,Fling_10,NaturalGift_PSYCHIC_100"
+  },
+  {
+    "name": "Starminite",
+    "id": "STARMINITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Starmie hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Starminites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   },
   {
     "name": "Steel Memory",
@@ -6241,6 +6721,18 @@
     "flags": "EvolutionStone,Fling_30"
   },
   {
+    "name": "Tatsugirinite",
+    "id": "TATSUGIRINITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Tatsugiri hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Tatsugirinites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Teal Mask",
     "id": "TEALMASK",
     "description": "A teal mask patterned after the face of an ogre. Dropped by Ogerpon after visiting the Festival of Masks.",
@@ -6249,7 +6741,7 @@
     ],
     "namePlural": "Teal Masks",
     "pocket": "8",
-    "price": "10000",
+    "price": "0",
     "flags": "KeyItem,Fling_60"
   },
   {
@@ -6520,6 +7012,18 @@
     "flags": "MegaStone,Fling_80"
   },
   {
+    "name": "Victreebelite",
+    "id": "VICTREEBELITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Victreebel hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Victreebelites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Wacan Berry",
     "id": "WACANBERRY",
     "description": "Weakens a supereffective Electric-type attack against the holding Pokémon.",
@@ -6606,7 +7110,7 @@
     ],
     "namePlural": "Wellspring Masks",
     "pocket": "1",
-    "price": "10000",
+    "price": "0",
     "flags": "Fling_60"
   },
   {
@@ -6800,6 +7304,18 @@
     "flags": "Fling_90"
   },
   {
+    "name": "Zeraorite",
+    "id": "ZERAORITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Zeraora hold it, and it will be able to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Zeraorites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
+  },
+  {
     "name": "Zinc",
     "id": "ZINC",
     "description": "A nutritious drink for Pokémon. It raises the base Sp. Def (Special Defense) stat of a single Pokémon.",
@@ -6839,5 +7355,17 @@
     "price": "20000",
     "fieldUse": "OnPokemon",
     "flags": "KeyItem"
+  },
+  {
+    "name": "Zygardite",
+    "id": "ZYGARDITE",
+    "description": "One of a variety of mysterious Mega Stones. Have Complete Forme Zygarde hold it to Mega Evolve.",
+    "locations": [
+      "Azori Terrarium (Captain Worldwide)"
+    ],
+    "namePlural": "Zygardites",
+    "pocket": "1",
+    "price": "0",
+    "flags": "MegaStone,Fling_80"
   }
 ]
