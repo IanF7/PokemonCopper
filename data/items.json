@@ -2361,7 +2361,10 @@
     "id": "FULLRESTORE",
     "description": "A medicine that fully restores the HP and heals any status problems of a single Pokémon.",
     "locations": [
-      "Pokemarts"
+      "Pokemarts",
+      "Tethys Desert",
+      "Statera Canyon",
+      "Victory Road"
     ],
     "namePlural": "Full Restores",
     "pocket": "2",
@@ -2996,7 +2999,15 @@
     "description": "A spray-type medicine for treating wounds. It can be used to restore 120 HP to a single Pokémon.",
     "locations": [
       "Pokemarts",
-      "Route 12"
+      "Route 12",
+      "Route 13",
+      "Lake Trtiron",
+      "Calisto Cave",
+      "Route 19",
+      "Route 17",
+      "Route 18",
+      "Statera Canyon",
+      "Victory Road"
     ],
     "namePlural": "Hyper Potions",
     "pocket": "2",
@@ -4039,7 +4050,9 @@
     "id": "MAXPOTION",
     "description": "A spray-type medicine for treating wounds. It can completely restore the max HP of a single Pokémon.",
     "locations": [
-      "Pokemarts"
+      "Pokemarts",
+      "Route 14",
+      "Route 15"
     ],
     "namePlural": "Max Potions",
     "pocket": "2",
@@ -4052,7 +4065,8 @@
     "id": "MAXREPEL",
     "description": "An item that prevents weak wild Pokémon from appearing for 250 steps after its use.",
     "locations": [
-      "Pokemarts"
+      "Pokemarts",
+      "Calisto Cave"
     ],
     "namePlural": "Max Repels",
     "pocket": "1",
@@ -4067,6 +4081,8 @@
     "locations": [
       "Callisto Cave",
       "Victory Road",
+      "Route 8",
+      "Statera Canyon",
       "Azori Terrarium"
     ],
     "namePlural": "Max Revives",
@@ -4978,7 +4994,12 @@
     "locations": [
       "Pokemarts",
       "Route 1",
-      "Omno Town"
+      "Spiral Cave",
+      "Route 3",
+      "Omno Town",
+      "Route 4",
+      "Route 5",
+      "Route 22"
     ],
     "namePlural": "Potions",
     "pocket": "2",
@@ -5616,6 +5637,7 @@
     "id": "REVIVALHERB",
     "description": "A very bitter medicinal herb. It revives a fainted Pokémon, fully restoring its HP.",
     "locations": [
+      "Nuves Forest",
       "Route 15",
       "Azori Terrarium"
     ],
@@ -5631,7 +5653,12 @@
     "description": "A medicine that revives a fainted Pokémon. It restores half the Pokémon's maximum HP.",
     "locations": [
       "Wooded Ruins",
-      "Pokemarts"
+      "Pokemarts",
+      "Route 11",
+      "Route 13",
+      "Route 7",
+      "Tethys Desert",
+      "Route 17"
     ],
     "namePlural": "Revives",
     "pocket": "2",
@@ -6584,7 +6611,19 @@
     "locations": [
       "Pokemarts",
       "Spiral Cave",
-      "Route 3"
+      "Route 3",
+      "Route 11",
+      "Route 12",
+      "Route 13",
+      "Hilo Mountain",
+      "Route 8",
+      "Route 5",
+      "Route 7",
+      "Route 6",
+      "Route 20",
+      "Tethys Desert",
+      "Route 16",
+      "Statera Canyon"
     ],
     "namePlural": "Super Potions",
     "pocket": "2",
@@ -6597,7 +6636,8 @@
     "id": "SUPERREPEL",
     "description": "An item that prevents weak wild Pokémon from appearing for 200 steps after its use.",
     "locations": [
-      "Pokemarts"
+      "Pokemarts",
+      "Statera Canyon"
     ],
     "namePlural": "Super Repels",
     "pocket": "1",
