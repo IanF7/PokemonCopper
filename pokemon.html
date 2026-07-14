@@ -1073,6 +1073,20 @@
 
   function pokemonHasLocation(pokemon, locationName) {
     return safeArray(pokemon.locations).some(loc => {
+      const text = `${loc.location || ""} ${loc.method || ""}`.toLowerCase();
+
+      if (locationName === "__TRADE__") {
+        return text.includes("trade");
+      }
+
+      if (locationName === "__GIFT__") {
+        return text.includes("gift");
+      }
+
+      if (locationName === "__STATIC__") {
+        return text.includes("static");
+      }
+
       return !isExcludedLocation(loc) && getLocationFilterValue(loc) === locationName;
     });
   }
@@ -1182,11 +1196,22 @@
 
   function populateLocationFilter() {
     const locations = new Set();
+    let hasTradePokemon = false;
+    let hasGiftPokemon = false;
+    let hasStaticEncounters = false;
 
     allPokemon.forEach(pokemon => {
       safeArray(pokemon.locations).forEach(loc => {
         const locationName = getLocationFilterValue(loc);
-        if (locationName && !isExcludedLocation(loc)) {
+        const text = `${loc.location || ""} ${loc.method || ""}`.toLowerCase();
+
+        if (text.includes("trade")) {
+          hasTradePokemon = true;
+        } else if (text.includes("gift")) {
+          hasGiftPokemon = true;
+        } else if (text.includes("static")) {
+          hasStaticEncounters = true;
+        } else if (locationName) {
           locations.add(locationName);
         }
       });
@@ -1196,6 +1221,9 @@
 
     locationFilter.innerHTML = `
       <option value="ALL">All Locations</option>
+      ${hasTradePokemon ? `<option value="__TRADE__">Trade Pokémon</option>` : ""}
+      ${hasGiftPokemon ? `<option value="__GIFT__">Gift Pokémon</option>` : ""}
+      ${hasStaticEncounters ? `<option value="__STATIC__">Static Encounters</option>` : ""}
       ${sortedLocations.map(location => `
         <option value="${escapeHtml(location)}">${escapeHtml(location)}</option>
       `).join("")}
