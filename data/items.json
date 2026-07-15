@@ -3730,7 +3730,7 @@
   {
     "name": "Lucky Horn",
     "id": "LUCKYHORN",
-    "description": "An item to be held by a Pokémon. It boosts the holder's critical-hit ratio, but costs some HP on each hit.",
+    "description": "An item to be held by a Pokémon. It boosts the likelihood of added effects appearing for the holder.",
     "locations": [
       "Nuves Forest",
       "Azori Terrarium"
