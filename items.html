@@ -144,6 +144,12 @@
       gap: 18px;
     }
 
+    /* Applied to the card named by ?item= so it stands out on arrival. */
+    .item-card.highlighted {
+      border-color: var(--border-light);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18);
+    }
+
     .item-card {
       background: var(--panel);
       border: 1px solid var(--border);
@@ -360,7 +366,7 @@
         : `<p class="no-locations">No listed location.</p>`;
 
       return `
-        <article class="item-card">
+        <article class="item-card" data-id="${escapeHtml(item.id || "")}">
           <div class="item-header">
             <h2 class="item-name">${escapeHtml(item.name || "Unknown Item")}</h2>
           </div>
@@ -396,6 +402,29 @@
       itemsGrid.innerHTML = filtered.map(createItemCard).join("");
     }
 
+    /**
+     * Handles ?item=ID links from other pages. The search box is filled in with
+     * the item's name so it is obvious why the list is narrowed, and the card is
+     * highlighted and scrolled to.
+     */
+    function focusItemFromQueryString() {
+      const requested = new URLSearchParams(window.location.search).get("item");
+      if (!requested) return;
+
+      const wanted = requested.trim().toUpperCase();
+      const item = allItems.find(entry => (entry.id || "").toString().toUpperCase() === wanted);
+      if (!item) return;
+
+      searchInput.value = item.name || "";
+      renderItems();
+
+      const card = itemsGrid.querySelector(`.item-card[data-id="${CSS.escape(item.id)}"]`);
+      if (!card) return;
+
+      card.classList.add("highlighted");
+      card.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
     async function loadItems() {
       try {
         const response = await fetch(DATA_URL);
@@ -405,6 +434,7 @@
 
         allItems = await response.json();
         renderItems();
+        focusItemFromQueryString();
       } catch (error) {
         loadingState.style.display = "none";
         errorState.style.display = "block";

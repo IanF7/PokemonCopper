@@ -663,6 +663,20 @@
     .info-item span {
       color: var(--muted-2);
     }
+
+    /* Cross-page links (to the moves, items and Pokedex pages). */
+    .xlink {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dotted var(--border-light);
+      transition: 0.2s;
+    }
+
+    .xlink:hover,
+    .xlink:focus-visible {
+      color: #fff;
+      border-bottom-color: #fff;
+    }
   </style>
 </head>
 
@@ -765,6 +779,8 @@
 
 <script>
   const DATA_URL = "data/pokemon.json";
+  const TM_MOVES_URL = "data/tm-and-move-tutors.json";
+  const ITEMS_URL = "data/items.json";
   const MEGA_SYMBOL_URL = "images/mega-symbol.png";
 
   const TYPE_COLORS = {
@@ -791,6 +807,12 @@
   const DISPLAY_STAT_LABELS = ["HP", "ATK", "DEF", "SPA", "SPD", "SPE"];
 
   let allPokemon = [];
+  // Internal names of the moves that have a page on tm-and-move-tutors.html.
+  // Only those get linked; the rest render as plain text.
+  let tmMoveIds = new Set();
+  // Ids of the items that have an entry on items.html. A handful of wild held
+  // items are not listed there, so those render unlinked.
+  let itemPageIds = new Set();
   let currentView = "azori";
   let modalShinyState = false;
   let modalFamily = [];
@@ -822,6 +844,44 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
+  }
+
+  function pokemonPageUrl(id) {
+    return `pokemon.html?pokemon=${encodeURIComponent(id)}`;
+  }
+
+  function movePageUrl(id) {
+    return `tm-and-move-tutors.html?move=${encodeURIComponent(id)}`;
+  }
+
+  function itemPageUrl(id) {
+    return `items.html?item=${encodeURIComponent(id)}`;
+  }
+
+  function renderCrossLink(url, label, extraAttrs = "") {
+    return `<a class="xlink" href="${escapeHtml(url)}"${extraAttrs ? " " + extraAttrs : ""}>${escapeHtml(label)}</a>`;
+  }
+
+  function renderItemName(item) {
+    const label = item.name || item.id || "Unknown Item";
+    const itemId = item.id ? String(item.id).toUpperCase() : "";
+
+    if (!itemId || !itemPageIds.has(itemId)) {
+      return escapeHtml(label);
+    }
+
+    return renderCrossLink(itemPageUrl(itemId), label);
+  }
+
+  function renderMoveNameCell(move) {
+    const label = move.name || move.id || "Unknown Move";
+    const moveId = move.id ? String(move.id).toUpperCase() : "";
+
+    if (!moveId || !tmMoveIds.has(moveId)) {
+      return escapeHtml(label);
+    }
+
+    return renderCrossLink(movePageUrl(moveId), label);
   }
 
   function getTypeColor(type) {
@@ -1304,18 +1364,94 @@
       .join(", ");
   }
 
-  function renderTrainingInfo(pokemon) {
+  function getCategoryText(pokemon) {
+    const category = pokemon.category || pokemon.kind || "";
+    return category ? `${category} Pokémon` : "Unknown";
+  }
+
+  function getHeightText(pokemon) {
+    if (pokemon.height_text) return pokemon.height_text;
+    if (pokemon.height === null || pokemon.height === undefined || pokemon.height === "") return "Unknown";
+    return `${pokemon.height} m`;
+  }
+
+  function getWeightText(pokemon) {
+    if (pokemon.weight_text) return pokemon.weight_text;
+    if (pokemon.weight === null || pokemon.weight === undefined || pokemon.weight === "") return "Unknown";
+    return `${pokemon.weight} kg`;
+  }
+
+  function getEggGroupsText(pokemon) {
+    if (pokemon.egg_groups_text) return pokemon.egg_groups_text;
+
+    const groups = safeArray(pokemon.egg_groups_display || pokemon.egg_groups);
+    if (!groups.length) return "Unknown";
+
+    return groups.join(", ");
+  }
+
+  function getHatchStepsText(pokemon) {
+    if (pokemon.hatch_steps_text) return pokemon.hatch_steps_text;
+    if (pokemon.hatch_steps === null || pokemon.hatch_steps === undefined || pokemon.hatch_steps === "") return "Unknown";
+    return `${Number(pokemon.hatch_steps).toLocaleString()} steps`;
+  }
+
+  function renderInfoList(items) {
     return `
       <div class="info-list">
-        <div class="info-item">
-          <strong>Gender Ratio</strong>
-          <span>${escapeHtml(getGenderRatioText(pokemon))}</span>
-        </div>
+        ${items.map(([label, value]) => `
+          <div class="info-item">
+            <strong>${escapeHtml(label)}</strong>
+            <span>${escapeHtml(value)}</span>
+          </div>
+        `).join("")}
+      </div>
+    `;
+  }
 
-        <div class="info-item">
-          <strong>EV Yield</strong>
-          <span>${escapeHtml(getEvYieldText(pokemon))}</span>
-        </div>
+  function renderSpeciesData(pokemon) {
+    return renderInfoList([
+      ["Category", getCategoryText(pokemon)],
+      ["Height", getHeightText(pokemon)],
+      ["Weight", getWeightText(pokemon)]
+    ]);
+  }
+
+  function renderTrainingInfo(pokemon) {
+    return renderInfoList([
+      ["Gender Ratio", getGenderRatioText(pokemon)],
+      ["EV Yield", getEvYieldText(pokemon)]
+    ]);
+  }
+
+  function renderBreedingInfo(pokemon) {
+    return renderInfoList([
+      ["Egg Groups", getEggGroupsText(pokemon)],
+      ["Hatch Steps", getHatchStepsText(pokemon)]
+    ]);
+  }
+
+  function getWildItemRarityText(item) {
+    const rarity = item.rarity || "Unknown";
+    const chance = item.chance_text || (item.chance !== null && item.chance !== undefined ? `${item.chance}%` : "");
+    return chance ? `${rarity} — ${chance} chance` : rarity;
+  }
+
+  function renderWildItems(pokemon) {
+    const items = safeArray(pokemon.wild_items);
+    if (!items.length) {
+      return `<div class="section-note">None</div>`;
+    }
+
+    return `
+      <div class="next-stage-row">
+        ${items.map(item => `
+          <div class="next-stage-pill">
+            <strong>${renderItemName(item)}</strong>
+            <div class="desc">${escapeHtml(getWildItemRarityText(item))}</div>
+            <div class="desc">${escapeHtml(item.description || "No description available.")}</div>
+          </div>
+        `).join("")}
       </div>
     `;
   }
@@ -1338,7 +1474,11 @@
         <div class="next-stage-row">
           ${list.map(evo => `
             <div class="next-stage-pill">
-              <strong>${escapeHtml(evo.name || evo.species_id || "Unknown")}</strong>
+              <strong>${
+                evo.species_id
+                  ? renderCrossLink(pokemonPageUrl(evo.species_id), evo.name || evo.species_id, `data-pokemon-link="${escapeHtml(evo.species_id)}"`)
+                  : escapeHtml(evo.name || "Unknown")
+              }</strong>
               <div class="desc">
                 ${escapeHtml(evo.method ? `Method: ${evo.method}` : "Method: —")}
                 ${evo.parameter ? ` (${escapeHtml(evo.parameter)})` : ""}
@@ -1348,6 +1488,16 @@
         </div>
       </div>
     `;
+  }
+
+  function sortMovesByName(moves) {
+    return safeArray(moves)
+      .slice()
+      .sort((a, b) => {
+        const nameA = a.name || a.id || "";
+        const nameB = b.name || b.id || "";
+        return nameA.localeCompare(nameB, undefined, { sensitivity: "base" });
+      });
   }
 
   function renderMoveTable(moves, includeLevel = false) {
@@ -1374,7 +1524,7 @@
             ${list.map(move => `
               <tr>
                 ${includeLevel ? `<td>${formatMoveLevel(move.level)}</td>` : ""}
-                <td>${escapeHtml(move.name || move.id || "Unknown Move")}</td>
+                <td>${renderMoveNameCell(move)}</td>
                 <td>${renderMoveType(move.type)}</td>
                 <td>${move.power ?? "—"}</td>
                 <td>${formatMoveAccuracy(move.accuracy)}</td>
@@ -1498,14 +1648,64 @@
     return pokemon.name || "Alternate Form";
   }
 
-  function openPokemonModal(pokemonId) {
+  function openPokemonModal(pokemonId, selectedFormId = null) {
     const pokemon = allPokemon.find(p => String(p.id) === String(pokemonId));
     if (!pokemon) return;
 
     modalShinyState = false;
     modalFamily = getFamilyForms(pokemon);
-    modalSelectedPokemonId = String(pokemon.id);
+
+    // A deep link may point at a nested form (a Mega, say), which lives inside
+    // its base entry rather than at the top level.
+    const requested = selectedFormId
+      ? modalFamily.find(form => String(form.id) === String(selectedFormId))
+      : null;
+
+    modalSelectedPokemonId = String((requested || pokemon).id);
     renderPokemonModal();
+  }
+
+  /**
+   * Resolves an id from a ?pokemon= link or an evolution entry. Falls back to
+   * searching nested forms so links to Megas and other in-entry forms still work.
+   */
+  function findPokemonForLink(rawId) {
+    const wanted = String(rawId ?? "").trim().toUpperCase();
+    if (!wanted) return null;
+
+    const direct = allPokemon.find(entry => String(entry.id).toUpperCase() === wanted);
+    if (direct) return { entryId: direct.id, formId: null };
+
+    for (const entry of allPokemon) {
+      const form = safeArray(entry.forms).find(f => String(f.id).toUpperCase() === wanted);
+      if (form) return { entryId: entry.id, formId: form.id };
+    }
+
+    // Some form ids used elsewhere (trainer teams, for instance) have no Pokedex
+    // entry of their own, so fall back to the base species.
+    const baseId = wanted.replace(/_\d+$/, "");
+    if (baseId !== wanted) {
+      const base = allPokemon.find(entry => String(entry.id).toUpperCase() === baseId);
+      if (base) return { entryId: base.id, formId: null };
+    }
+
+    return null;
+  }
+
+  function openPokemonFromLink(rawId) {
+    const match = findPokemonForLink(rawId);
+    if (!match) return false;
+
+    openPokemonModal(match.entryId, match.formId);
+    return true;
+  }
+
+  /** Opens the entry named by ?pokemon= on load, if there is one. */
+  function openPokemonFromQueryString() {
+    const requested = new URLSearchParams(window.location.search).get("pokemon");
+    if (requested) {
+      openPokemonFromLink(requested);
+    }
   }
 
   function renderPokemonModal() {
@@ -1574,6 +1774,11 @@
         </div>
 
         <div class="detail-card">
+          <h3>Species Data</h3>
+          ${renderSpeciesData(selectedPokemon)}
+        </div>
+
+        <div class="detail-card">
           <h3>Abilities</h3>
           ${renderAbilityList(selectedPokemon.abilities)}
         </div>
@@ -1588,9 +1793,19 @@
           ${renderTrainingInfo(selectedPokemon)}
         </div>
 
+        <div class="detail-card">
+          <h3>Breeding</h3>
+          ${renderBreedingInfo(selectedPokemon)}
+        </div>
+
         <div class="detail-card full">
           <h3>Locations Found</h3>
           ${renderLocations(selectedPokemon.locations)}
+        </div>
+
+        <div class="detail-card full">
+          <h3>Wild Held Items</h3>
+          ${renderWildItems(selectedPokemon)}
         </div>
 
         <div class="detail-card full">
@@ -1603,7 +1818,7 @@
             ? `
               <div class="detail-card full">
                 <h3>Tutorable Moves</h3>
-                ${renderMoveTable(selectedPokemon.moves.tutor, false)}
+                ${renderMoveTable(sortMovesByName(selectedPokemon.moves.tutor), false)}
               </div>
             `
             : ""
@@ -1652,9 +1867,49 @@
     modalSelectedPokemonId = null;
   }
 
+  /**
+   * Which moves have a page on tm-and-move-tutors.html. Failure is not fatal:
+   * without it move names simply render unlinked.
+   */
+  async function loadTmMoveIds() {
+    try {
+      const response = await fetch(TM_MOVES_URL);
+      if (!response.ok) return;
+
+      const data = await response.json();
+      const moves = Array.isArray(data) ? data : safeArray(data.moves);
+      tmMoveIds = new Set(
+        moves
+          .map(move => (move.internalName || move.id || "").toString().toUpperCase())
+          .filter(Boolean)
+      );
+    } catch (error) {
+      tmMoveIds = new Set();
+    }
+  }
+
+  /**
+   * Which items have an entry on items.html. Failure is not fatal: without it
+   * item names simply render unlinked.
+   */
+  async function loadItemPageIds() {
+    try {
+      const response = await fetch(ITEMS_URL);
+      if (!response.ok) return;
+
+      const data = await response.json();
+      const items = Array.isArray(data) ? data : safeArray(data.items);
+      itemPageIds = new Set(
+        items.map(item => (item.id || "").toString().toUpperCase()).filter(Boolean)
+      );
+    } catch (error) {
+      itemPageIds = new Set();
+    }
+  }
+
   async function loadPokemon() {
     try {
-      const response = await fetch(DATA_URL);
+      const [response] = await Promise.all([fetch(DATA_URL), loadTmMoveIds(), loadItemPageIds()]);
       if (!response.ok) {
         throw new Error(`Failed to load ${DATA_URL} (${response.status})`);
       }
@@ -1664,6 +1919,7 @@
       populateTypeFilter();
       populateLocationFilter();
       renderPokemon();
+      openPokemonFromQueryString();
     } catch (error) {
       loadingState.style.display = "none";
       errorState.style.display = "block";
@@ -1689,6 +1945,19 @@
     const card = event.target.closest(".pokemon-card");
     if (!card) return;
     openPokemonModal(card.dataset.id);
+  });
+
+  // Evolution links point at this same page, so handle them in place rather than
+  // reloading. Modified clicks (new tab, etc.) are left to the browser.
+  modalBody.addEventListener("click", event => {
+    const link = event.target.closest("a[data-pokemon-link]");
+    if (!link) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+
+    if (openPokemonFromLink(link.dataset.pokemonLink)) {
+      event.preventDefault();
+      modalBody.scrollTop = 0;
+    }
   });
 
   closeModalBtn.addEventListener("click", closePokemonModal);

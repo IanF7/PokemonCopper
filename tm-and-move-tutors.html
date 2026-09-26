@@ -304,6 +304,129 @@
         grid-template-columns: 1fr;
       }
     }
+    /* --- Clickable move cards --- */
+    .move-card {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .move-card:hover,
+    .move-card:focus-visible {
+      border-color: var(--border-light);
+    }
+
+    .card-hint {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* --- Learner modal --- */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.78);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-content {
+      width: min(1100px, 100%);
+      max-height: 92vh;
+      overflow-y: auto;
+      background: #151515;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 22px;
+      position: relative;
+    }
+
+    .modal-close {
+      position: sticky;
+      top: 0;
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+      z-index: 2;
+      margin-bottom: 10px;
+    }
+
+    .modal-close button {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      border-radius: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .modal-close button:hover {
+      background: white;
+      color: black;
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .modal-header h2 {
+      font-size: 1.9rem;
+    }
+
+    .modal-section {
+      margin-top: 22px;
+    }
+
+    .modal-section h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .modal-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .learner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+      gap: 10px;
+    }
+
+    .learner-link {
+      display: block;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.02);
+      color: var(--muted-2);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .learner-link:hover,
+    .learner-link:focus-visible {
+      color: #fff;
+      border-color: var(--border-light);
+      background: rgba(255,255,255,0.06);
+    }
   </style>
 </head>
 
@@ -357,6 +480,15 @@
     <div id="movesGrid" class="moves-grid" style="display:none;"></div>
   </div>
 
+  <div id="moveModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-close">
+        <button id="closeModalBtn" type="button">Close</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
   <footer class="footer">
     <p>
       Pokémon Copper is a fan-made project and is not affiliated with, endorsed, sponsored, or specifically approved by Nintendo, Game Freak, or The Pokémon Company.
@@ -392,14 +524,22 @@
       FAIRY: "#D685AD"
     };
 
+    const LEARNERS_URL = "data/move-learners.json";
+
     let allMoves = [];
     let currentSource = "TM";
+    // {pokemon: {ID: "Name"}, moves: {MOVEID: [ID, ...] }} - ids already sorted
+    // by display name when the file is generated.
+    let moveLearners = { pokemon: {}, moves: {} };
 
     const loadingState = document.getElementById("loadingState");
     const errorState = document.getElementById("errorState");
     const emptyState = document.getElementById("emptyState");
     const resultsCount = document.getElementById("resultsCount");
     const movesGrid = document.getElementById("movesGrid");
+    const moveModal = document.getElementById("moveModal");
+    const modalBody = document.getElementById("modalBody");
+    const closeModalBtn = document.getElementById("closeModalBtn");
 
     const searchInput = document.getElementById("searchInput");
     const typeFilter = document.getElementById("typeFilter");
@@ -525,6 +665,105 @@
       return filtered;
     }
 
+    function pokemonPageUrl(id) {
+      return `pokemon.html?pokemon=${encodeURIComponent(id)}`;
+    }
+
+    function getLearnerIds(move) {
+      const moveId = (move.internalName || "").toString().toUpperCase();
+      const ids = moveId ? moveLearners.moves[moveId] : null;
+      return Array.isArray(ids) ? ids : [];
+    }
+
+    function learnerCountText(move) {
+      const count = getLearnerIds(move).length;
+      if (!count) return "No Pokémon learn this move — click for details.";
+      return `Click to see the ${count} Pokémon that can learn this move.`;
+    }
+
+    function renderLearners(move) {
+      const ids = getLearnerIds(move);
+
+      if (!ids.length) {
+        return `<p class="modal-note">No Pokémon in the Pokédex learn this move.</p>`;
+      }
+
+      return `
+        <p class="modal-note">
+          ${ids.length} Pokémon can learn this move, by level-up, tutor or breeding.
+          Select one to open its Pokédex entry.
+        </p>
+        <div class="learner-grid">
+          ${ids.map(id => `
+            <a class="learner-link" href="${escapeHtml(pokemonPageUrl(id))}">
+              ${escapeHtml(moveLearners.pokemon[id] || id)}
+            </a>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function openMoveModal(move) {
+      if (!move) return;
+
+      const displayType = move.type ? move.type.toUpperCase() : "";
+
+      modalBody.innerHTML = `
+        <div class="modal-header">
+          <h2>${escapeHtml(move.name || "Unknown Move")}</h2>
+          ${renderTypePill(displayType)}
+        </div>
+
+        <div class="move-meta">
+          <div class="meta-line"><span>Category</span><strong>${escapeHtml(move.category || "Unknown")}</strong></div>
+          <div class="meta-line"><span>Power</span><strong>${escapeHtml(formatStat(move.power))}</strong></div>
+          <div class="meta-line"><span>Accuracy</span><strong>${escapeHtml(formatStat(move.accuracy))}</strong></div>
+          <div class="meta-line"><span>PP</span><strong>${escapeHtml(formatStat(move.pp))}</strong></div>
+          ${
+            move.tmNumber != null
+              ? `<div class="meta-line"><span>TM Number</span><strong>${escapeHtml(String(move.tmNumber))}</strong></div>`
+              : ""
+          }
+        </div>
+
+        <p class="move-description">${escapeHtml(move.description || "No description available.")}</p>
+
+        <div class="modal-section">
+          <h3>Location</h3>
+          <p class="location-text">${escapeHtml(move.location || "No listed location.")}</p>
+        </div>
+
+        <div class="modal-section">
+          <h3>Pokémon That Learn This Move</h3>
+          ${renderLearners(move)}
+        </div>
+      `;
+
+      moveModal.classList.add("open");
+      moveModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      modalBody.scrollTop = 0;
+    }
+
+    function closeMoveModal() {
+      moveModal.classList.remove("open");
+      moveModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function findMoveById(moveId) {
+      const wanted = String(moveId || "").trim().toUpperCase();
+      if (!wanted) return null;
+
+      const matches = allMoves.filter(
+        move => (move.internalName || "").toString().toUpperCase() === wanted
+      );
+      if (!matches.length) return null;
+
+      // A few moves are both a TM and a tutor move; prefer the view already open.
+      return matches.find(move => move.sourceType === currentSource) || matches[0];
+    }
+
     function createMoveCard(move) {
       const description = move.description || "No description available.";
       const location = move.location || "No listed location.";
@@ -535,7 +774,7 @@
       const pp = formatStat(move.pp);
 
       return `
-        <article class="move-card">
+        <article class="move-card" data-move-id="${escapeHtml(move.internalName || "")}" tabindex="0" role="button">
             <div class="move-header">
               <h2 class="move-name">${escapeHtml(move.name || "Unknown Move")}</h2>
                 ${renderTypePill(displayType)}
@@ -556,6 +795,8 @@
 
           <h3 class="section-title">Location</h3>
           <p class="location-text">${escapeHtml(location)}</p>
+
+          <p class="card-hint">${escapeHtml(learnerCountText(move))}</p>
         </article>
       `;
     }
@@ -581,9 +822,46 @@
       movesGrid.innerHTML = filtered.map(createMoveCard).join("");
     }
 
+    /**
+     * Which Pokemon learn each move. Optional: without it the cards still work,
+     * they just report no learners.
+     */
+    async function loadMoveLearners() {
+      try {
+        const response = await fetch(LEARNERS_URL);
+        if (!response.ok) throw new Error(`${LEARNERS_URL} not found`);
+
+        const data = await response.json();
+        moveLearners = {
+          pokemon: data.pokemon || {},
+          moves: data.moves || {}
+        };
+      } catch (error) {
+        moveLearners = { pokemon: {}, moves: {} };
+      }
+    }
+
+    /**
+     * Opens the move named by ?move=ID, switching to the TM or Move Tutor view
+     * as needed so the card behind the modal is the right one.
+     */
+    function openMoveFromQueryString() {
+      const requested = new URLSearchParams(window.location.search).get("move");
+      if (!requested) return;
+
+      const move = findMoveById(requested);
+      if (!move) return;
+
+      if (move.sourceType && move.sourceType !== currentSource) {
+        setActiveSource(move.sourceType);
+      }
+
+      openMoveModal(move);
+    }
+
     async function loadMoves() {
       try {
-        const response = await fetch(DATA_URL);
+        const [response] = await Promise.all([fetch(DATA_URL), loadMoveLearners()]);
         if (!response.ok) {
           throw new Error(`Failed to load ${DATA_URL} (${response.status})`);
         }
@@ -594,6 +872,7 @@
         updateTypeFilter();
         updateSortOptions();
         renderMoves();
+        openMoveFromQueryString();
       } catch (error) {
         loadingState.style.display = "none";
         errorState.style.display = "block";
@@ -601,15 +880,47 @@
       }
     }
 
-    document.querySelectorAll(".view-btn").forEach(button => {
-      button.addEventListener("click", () => {
-        document.querySelectorAll(".view-btn").forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
-        currentSource = button.dataset.source;
-        updateTypeFilter();
-        updateSortOptions();
-        renderMoves();
+    function setActiveSource(source) {
+      currentSource = source;
+
+      document.querySelectorAll(".view-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.source === source);
       });
+
+      updateTypeFilter();
+      updateSortOptions();
+      renderMoves();
+    }
+
+    document.querySelectorAll(".view-btn").forEach(button => {
+      button.addEventListener("click", () => setActiveSource(button.dataset.source));
+    });
+
+    movesGrid.addEventListener("click", event => {
+      const card = event.target.closest(".move-card");
+      if (card) openMoveModal(findMoveById(card.dataset.moveId));
+    });
+
+    movesGrid.addEventListener("keydown", event => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+
+      const card = event.target.closest(".move-card");
+      if (!card) return;
+
+      event.preventDefault();
+      openMoveModal(findMoveById(card.dataset.moveId));
+    });
+
+    closeModalBtn.addEventListener("click", closeMoveModal);
+
+    moveModal.addEventListener("click", event => {
+      if (event.target === moveModal) closeMoveModal();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && moveModal.classList.contains("open")) {
+        closeMoveModal();
+      }
     });
 
     [searchInput, typeFilter, sortSelect].forEach(control => {

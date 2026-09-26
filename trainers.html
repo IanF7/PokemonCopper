@@ -461,6 +461,31 @@
       gap: 8px;
     }
 
+    /* Cross-page links (to the Pokedex and moves pages). */
+    .xlink {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dotted var(--border-light);
+      transition: 0.2s;
+    }
+
+    .xlink:hover,
+    .xlink:focus-visible {
+      color: #fff;
+      border-bottom-color: #fff;
+    }
+
+    a.move-chip {
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    a.move-chip:hover,
+    a.move-chip:focus-visible {
+      background: #2a2a2a;
+      border-color: var(--border-light);
+    }
+
     .move-chip {
       display: inline-flex;
       align-items: center;
@@ -621,6 +646,8 @@
 
     let allTrainers = [];
     let itemNameMap = {};
+    // Internal names of the moves that have a page on tm-and-move-tutors.html.
+    let tmMoveIds = new Set();
 
     function normalize(value) {
       return (value || "").toString().trim().toLowerCase();
@@ -628,6 +655,34 @@
 
     function safeArray(value) {
       return Array.isArray(value) ? value : [];
+    }
+
+    function pokemonPageUrl(id) {
+      return `pokemon.html?pokemon=${encodeURIComponent(id)}`;
+    }
+
+    function movePageUrl(id) {
+      return `tm-and-move-tutors.html?move=${encodeURIComponent(id)}`;
+    }
+
+    /** Matches the id scheme used by pokemon.json, including form suffixes. */
+    function getPokemonLinkId(pokemon) {
+      const baseId = (pokemon.id || pokemon.species_id || "").toString().trim().toUpperCase();
+      if (!baseId) return "";
+
+      const formNumber = Number(pokemon.form_number || 0);
+      return formNumber > 0 ? `${baseId}_${formNumber}` : baseId;
+    }
+
+    function renderMoveChip(move) {
+      const label = typeof move === "string" ? move : (move.name || move.id || "");
+      const moveId = (typeof move === "string" ? move : (move.id || "")).toString().toUpperCase();
+
+      if (!moveId || !tmMoveIds.has(moveId)) {
+        return `<span class="move-chip">${escapeHtml(label || "Unknown Move")}</span>`;
+      }
+
+      return `<a class="move-chip" href="${escapeHtml(movePageUrl(moveId))}">${escapeHtml(label)}</a>`;
     }
 
     function escapeHtml(str) {
@@ -785,7 +840,11 @@
             </div>
 
             <div class="card-main">
-              <h3 class="pokemon-name">${escapeHtml(pokemon.name || pokemon.id || "Unknown")}</h3>
+              <h3 class="pokemon-name">${
+                getPokemonLinkId(pokemon)
+                  ? `<a class="xlink" href="${escapeHtml(pokemonPageUrl(getPokemonLinkId(pokemon)))}">${escapeHtml(pokemon.name || pokemon.id || "Unknown")}</a>`
+                  : escapeHtml(pokemon.name || "Unknown")
+              }</h3>
                 <div class="pokemon-sub">
                 Level ${escapeHtml(level)}${gender ? ` • ${escapeHtml(gender)}` : ""}
                 </div>
@@ -808,7 +867,7 @@
             <div class="moves-title">Moves</div>
             <div class="move-list">
               ${moves.length
-                ? moves.map(move => `<span class="move-chip">${escapeHtml(move.name || move.id || move)}</span>`).join("")
+                ? moves.map(renderMoveChip).join("")
                 : `<span class="move-chip">No moves listed</span>`}
             </div>
           </div>
@@ -1028,6 +1087,24 @@
       }
     }
 
+    /** Optional: without it, move chips simply render unlinked. */
+    async function loadTmMoveIds() {
+      try {
+        const response = await fetch("data/tm-and-move-tutors.json");
+        if (!response.ok) throw new Error("tm-and-move-tutors.json not found");
+
+        const data = await response.json();
+        const moves = Array.isArray(data) ? data : safeArray(data.moves);
+        tmMoveIds = new Set(
+          moves
+            .map(move => (move.internalName || move.id || "").toString().toUpperCase())
+            .filter(Boolean)
+        );
+      } catch (error) {
+        tmMoveIds = new Set();
+      }
+    }
+
     async function loadTrainers() {
       try {
         const response = await fetch("data/trainers.json");
@@ -1053,7 +1130,7 @@
     }
 
     async function initPage() {
-      await loadItems();
+      await Promise.all([loadItems(), loadTmMoveIds()]);
       await loadTrainers();
     }
 
