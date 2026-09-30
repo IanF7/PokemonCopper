@@ -347,6 +347,17 @@
       overflow: hidden;
     }
 
+    .mega-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      opacity: 0.95;
+      pointer-events: none;
+    }
+
     .pokemon-card:hover {
       background: var(--panel-2);
       border-color: var(--border-light);
@@ -644,8 +655,13 @@
       FAIRY: "#D685AD"
     };
 
+    const MEGA_SYMBOL_URL = "images/mega-symbol.png";
+
     let allTrainers = [];
     let itemNameMap = {};
+    // Mega Stones, keyed by both internal name and display name, since trainer
+    // teams record held items by display name ("Charizardite X").
+    let megaStoneKeys = new Set();
     // Internal names of the moves that have a page on tm-and-move-tutors.html.
     let tmMoveIds = new Set();
 
@@ -741,6 +757,35 @@
       return map;
     }
 
+    /** Strips spacing and punctuation so "Charizardite X" matches CHARIZARDITEX. */
+    function itemKey(value) {
+      return String(value || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+    }
+
+    function buildMegaStoneKeys(itemsData) {
+      const keys = new Set();
+      if (!Array.isArray(itemsData)) return keys;
+
+      for (const item of itemsData) {
+        if (!item || typeof item !== "object") continue;
+
+        const flags = String(item.flags || "").toLowerCase();
+        if (!flags.split(",").some(flag => flag.trim() === "megastone")) continue;
+
+        for (const value of [item.id, item.name]) {
+          const key = itemKey(value);
+          if (key) keys.add(key);
+        }
+      }
+
+      return keys;
+    }
+
+    function holdsMegaStone(pokemon) {
+      const key = itemKey(pokemon && pokemon.item);
+      return Boolean(key) && megaStoneKeys.has(key);
+    }
+
     function formatItemName(itemId) {
       if (!itemId) return "None";
       const key = String(itemId).toUpperCase();
@@ -830,8 +875,14 @@
       const level = pokemon.level ?? "";
       const spritePath = getPokemonImagePath(pokemon);
 
+      const canMegaEvolve = holdsMegaStone(pokemon);
+      const megaTitle = `Can Mega Evolve — holds ${formatItemName(item)}`;
+
       return `
         <article class="pokemon-card">
+          ${canMegaEvolve
+            ? `<img class="mega-badge" src="${MEGA_SYMBOL_URL}" alt="Can Mega Evolve" title="${escapeHtml(megaTitle)}">`
+            : ""}
           <div class="card-top">
             <div class="sprite-box">
               ${spritePath
@@ -1075,15 +1126,15 @@
         if (!response.ok) throw new Error("items.json not found");
         const data = await response.json();
 
-        if (Array.isArray(data)) {
-          itemNameMap = buildItemNameMap(data);
-        } else if (Array.isArray(data.items)) {
-          itemNameMap = buildItemNameMap(data.items);
-        } else {
-          itemNameMap = {};
-        }
+        const items = Array.isArray(data)
+          ? data
+          : (Array.isArray(data.items) ? data.items : null);
+
+        itemNameMap = items ? buildItemNameMap(items) : {};
+        megaStoneKeys = items ? buildMegaStoneKeys(items) : new Set();
       } catch (error) {
         itemNameMap = {};
+        megaStoneKeys = new Set();
       }
     }
 
