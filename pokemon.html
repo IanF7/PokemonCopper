@@ -811,7 +811,7 @@
 
 <script>
   const DATA_URL = "data/pokemon.json";
-  const TM_MOVES_URL = "data/tm-and-move-tutors.json";
+  const MOVES_URL = "data/moves.json";
   const ITEMS_URL = "data/items.json";
   const MEGA_SYMBOL_URL = "images/mega-symbol.png";
 
@@ -839,9 +839,9 @@
   const DISPLAY_STAT_LABELS = ["HP", "ATK", "DEF", "SPA", "SPD", "SPE"];
 
   let allPokemon = [];
-  // Internal names of the moves that have a page on tm-and-move-tutors.html.
-  // Only those get linked; the rest render as plain text.
-  let tmMoveIds = new Set();
+  // Internal names of the moves that have an entry on moves.html. Any move
+  // missing from it renders as plain text.
+  let movePageIds = new Set();
   // Ids of the items that have an entry on items.html. A handful of wild held
   // items are not listed there, so those render unlinked.
   let itemPageIds = new Set();
@@ -883,7 +883,7 @@
   }
 
   function movePageUrl(id) {
-    return `tm-and-move-tutors.html?move=${encodeURIComponent(id)}`;
+    return `moves.html?move=${encodeURIComponent(id)}`;
   }
 
   function itemPageUrl(id) {
@@ -909,7 +909,7 @@
     const label = move.name || move.id || "Unknown Move";
     const moveId = move.id ? String(move.id).toUpperCase() : "";
 
-    if (!moveId || !tmMoveIds.has(moveId)) {
+    if (!moveId || !movePageIds.has(moveId)) {
       return escapeHtml(label);
     }
 
@@ -1971,23 +1971,23 @@
   }
 
   /**
-   * Which moves have a page on tm-and-move-tutors.html. Failure is not fatal:
+   * Which moves have an entry on moves.html. Failure is not fatal:
    * without it move names simply render unlinked.
    */
-  async function loadTmMoveIds() {
+  async function loadMovePageIds() {
     try {
-      const response = await fetch(TM_MOVES_URL);
+      const response = await fetch(MOVES_URL);
       if (!response.ok) return;
 
       const data = await response.json();
       const moves = Array.isArray(data) ? data : safeArray(data.moves);
-      tmMoveIds = new Set(
+      movePageIds = new Set(
         moves
           .map(move => (move.internalName || move.id || "").toString().toUpperCase())
           .filter(Boolean)
       );
     } catch (error) {
-      tmMoveIds = new Set();
+      movePageIds = new Set();
     }
   }
 
@@ -2012,7 +2012,7 @@
 
   async function loadPokemon() {
     try {
-      const [response] = await Promise.all([fetch(DATA_URL), loadTmMoveIds(), loadItemPageIds()]);
+      const [response] = await Promise.all([fetch(DATA_URL), loadMovePageIds(), loadItemPageIds()]);
       if (!response.ok) {
         throw new Error(`Failed to load ${DATA_URL} (${response.status})`);
       }

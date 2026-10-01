@@ -662,8 +662,8 @@
     // Mega Stones, keyed by both internal name and display name, since trainer
     // teams record held items by display name ("Charizardite X").
     let megaStoneKeys = new Set();
-    // Internal names of the moves that have a page on tm-and-move-tutors.html.
-    let tmMoveIds = new Set();
+    // Internal names of the moves that have an entry on moves.html.
+    let movePageIds = new Set();
 
     function normalize(value) {
       return (value || "").toString().trim().toLowerCase();
@@ -678,7 +678,7 @@
     }
 
     function movePageUrl(id) {
-      return `tm-and-move-tutors.html?move=${encodeURIComponent(id)}`;
+      return `moves.html?move=${encodeURIComponent(id)}`;
     }
 
     /** Matches the id scheme used by pokemon.json, including form suffixes. */
@@ -694,7 +694,7 @@
       const label = typeof move === "string" ? move : (move.name || move.id || "");
       const moveId = (typeof move === "string" ? move : (move.id || "")).toString().toUpperCase();
 
-      if (!moveId || !tmMoveIds.has(moveId)) {
+      if (!moveId || !movePageIds.has(moveId)) {
         return `<span class="move-chip">${escapeHtml(label || "Unknown Move")}</span>`;
       }
 
@@ -1139,20 +1139,20 @@
     }
 
     /** Optional: without it, move chips simply render unlinked. */
-    async function loadTmMoveIds() {
+    async function loadMovePageIds() {
       try {
-        const response = await fetch("data/tm-and-move-tutors.json");
-        if (!response.ok) throw new Error("tm-and-move-tutors.json not found");
+        const response = await fetch("data/moves.json");
+        if (!response.ok) throw new Error("moves.json not found");
 
         const data = await response.json();
         const moves = Array.isArray(data) ? data : safeArray(data.moves);
-        tmMoveIds = new Set(
+        movePageIds = new Set(
           moves
             .map(move => (move.internalName || move.id || "").toString().toUpperCase())
             .filter(Boolean)
         );
       } catch (error) {
-        tmMoveIds = new Set();
+        movePageIds = new Set();
       }
     }
 
@@ -1181,7 +1181,7 @@
     }
 
     async function initPage() {
-      await Promise.all([loadItems(), loadTmMoveIds()]);
+      await Promise.all([loadItems(), loadMovePageIds()]);
       await loadTrainers();
     }
 
