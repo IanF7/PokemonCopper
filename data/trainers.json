@@ -7542,13 +7542,13 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 0,
             "name": "Volstrika",
             "types": [
               "ELECTRIC",
               "GROUND"
             ],
-            "ability": "Electric Surge"
+            "ability": "Lightning Rod"
           },
           {
             "id": "MAGNEZONE",
@@ -7706,14 +7706,14 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 2,
             "item": "Magnet",
             "name": "Volstrika",
             "types": [
               "ELECTRIC",
               "GROUND"
             ],
-            "ability": "Electric Surge"
+            "ability": "Sap Sipper"
           },
           {
             "id": "EELEKTROSS",
