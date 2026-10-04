@@ -182,15 +182,47 @@
       border-color: var(--border-light);
     }
 
-    .mega-badge {
+    /* The Mega symbol, as a button: flips the card between its base and Mega stats. */
+    .mega-toggle {
       position: absolute;
-      top: 12px;
-      right: 12px;
+      top: 8px;
+      right: 8px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      padding: 4px;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .mega-toggle img {
       width: 30px;
       height: 30px;
       object-fit: contain;
       opacity: 0.95;
       pointer-events: none;
+    }
+
+    .mega-toggle:hover,
+    .mega-toggle:focus-visible {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: var(--border-light);
+      outline: none;
+    }
+
+    .mega-toggle:hover img,
+    .mega-toggle:focus-visible img {
+      opacity: 1;
+    }
+
+    .pokemon-card.showing-mega {
+      border-color: var(--border-light);
     }
 
     .dex-line {
@@ -779,7 +811,7 @@
 
 <script>
   const DATA_URL = "data/pokemon.json";
-  const TM_MOVES_URL = "data/tm-and-move-tutors.json";
+  const MOVES_URL = "data/moves.json";
   const ITEMS_URL = "data/items.json";
   const MEGA_SYMBOL_URL = "images/mega-symbol.png";
 
@@ -807,9 +839,9 @@
   const DISPLAY_STAT_LABELS = ["HP", "ATK", "DEF", "SPA", "SPD", "SPE"];
 
   let allPokemon = [];
-  // Internal names of the moves that have a page on tm-and-move-tutors.html.
-  // Only those get linked; the rest render as plain text.
-  let tmMoveIds = new Set();
+  // Internal names of the moves that have an entry on moves.html. Any move
+  // missing from it renders as plain text.
+  let movePageIds = new Set();
   // Ids of the items that have an entry on items.html. A handful of wild held
   // items are not listed there, so those render unlinked.
   let itemPageIds = new Set();
@@ -851,7 +883,7 @@
   }
 
   function movePageUrl(id) {
-    return `tm-and-move-tutors.html?move=${encodeURIComponent(id)}`;
+    return `moves.html?move=${encodeURIComponent(id)}`;
   }
 
   function itemPageUrl(id) {
@@ -877,7 +909,7 @@
     const label = move.name || move.id || "Unknown Move";
     const moveId = move.id ? String(move.id).toUpperCase() : "";
 
-    if (!moveId || !tmMoveIds.has(moveId)) {
+    if (!moveId || !movePageIds.has(moveId)) {
       return escapeHtml(label);
     }
 
@@ -949,16 +981,26 @@
     `).join("");
   }
 
-  function hasMegaEvolution(pokemon) {
-    return safeArray(pokemon.forms).some(form => {
-      const text = `${form.form_name || ""} ${form.name || ""}`.toLowerCase();
-      return text.includes("mega");
-    });
-  }
+  /**
+   * Anchored so species whose names merely contain "mega" (Meganium, Yanmega)
+   * aren't mistaken for Mega Evolutions. Every real Mega form is named
+   * "Mega <Species>".
+   */
+  const MEGA_NAME_PATTERN = /^mega\b/i;
 
   function isMegaFormEntry(pokemon) {
-    const text = `${pokemon.form_name || ""} ${pokemon.name || ""}`.toLowerCase();
-    return text.includes("mega");
+    return [pokemon.form_name, pokemon.name].some(value =>
+      MEGA_NAME_PATTERN.test(String(value || "").trim())
+    );
+  }
+
+  /** Mega forms in the order they appear in the entry (Mega X, then Mega Y). */
+  function getMegaForms(pokemon) {
+    return safeArray(pokemon.forms).filter(isMegaFormEntry);
+  }
+
+  function hasMegaEvolution(pokemon) {
+    return getMegaForms(pokemon).length > 0;
   }
 
   function isNewPokemon(pokemon) {
@@ -1052,25 +1094,31 @@
     const primaryType = safeArray(pokemon.types)[0] || "ZZZ";
     const name = (pokemon.name || "").toLowerCase();
 
+    // Stat sorts rank by the numbers the card is actually showing, so sorting a
+    // Mega-filtered list orders it by Mega stats rather than base ones. Name,
+    // type and dex stay on the base species: Mega names would all bunch under
+    // "M", and Mega forms have no dex number of their own.
+    const face = getCardFace(pokemon);
+
     switch (sortMode) {
       case "name":
         return name;
       case "type":
         return `${primaryType}-${name}`;
       case "bst":
-        return -getBST(pokemon);
+        return -getBST(face);
       case "hp":
-        return -getDisplayStat(pokemon, "HP");
+        return -getDisplayStat(face, "HP");
       case "atk":
-        return -getDisplayStat(pokemon, "ATK");
+        return -getDisplayStat(face, "ATK");
       case "def":
-        return -getDisplayStat(pokemon, "DEF");
+        return -getDisplayStat(face, "DEF");
       case "spa":
-        return -getDisplayStat(pokemon, "SPA");
+        return -getDisplayStat(face, "SPA");
       case "spd":
-        return -getDisplayStat(pokemon, "SPD");
+        return -getDisplayStat(face, "SPD");
       case "spe":
-        return -getDisplayStat(pokemon, "SPE");
+        return -getDisplayStat(face, "SPE");
       case "dex":
       default:
         if (currentView === "azori") {
@@ -1094,8 +1142,8 @@
       if (av < bv) return -1;
       if (av > bv) return 1;
 
-      const bstA = getBST(a);
-      const bstB = getBST(b);
+      const bstA = getBST(getCardFace(a));
+      const bstB = getBST(getCardFace(b));
       if (bstA !== bstB) return bstB - bstA;
 
       return (a.name || "").localeCompare(b.name || "");
@@ -1180,24 +1228,62 @@
     return sortPokemon(filtered);
   }
 
+  /**
+   * Which face each card is showing: 0 is the base species, 1+ index into
+   * getMegaForms(). Survives re-renders so searching doesn't reset flipped
+   * cards; cleared when the Filter changes so its default takes over.
+   */
+  const megaViewIndex = new Map();
+
+  /** With the Mega filter active, cards open on the Mega side. */
+  function getDefaultFaceIndex(pokemon) {
+    return filterSelect.value === "mega" && hasMegaEvolution(pokemon) ? 1 : 0;
+  }
+
+  function getFaceIndex(pokemon) {
+    const faceCount = getMegaForms(pokemon).length + 1;
+    const stored = megaViewIndex.has(pokemon.id)
+      ? megaViewIndex.get(pokemon.id)
+      : getDefaultFaceIndex(pokemon);
+
+    return ((stored % faceCount) + faceCount) % faceCount;
+  }
+
+  /** The entry a card is currently displaying: the species, or one of its Megas. */
+  function getCardFace(pokemon) {
+    const index = getFaceIndex(pokemon);
+    return index === 0 ? pokemon : getMegaForms(pokemon)[index - 1];
+  }
+
   function createCard(pokemon) {
-    const sprite = getCardSprite(pokemon);
-    const typeHtml = renderTypes(pokemon.types);
-    const statsHtml = renderStats(pokemon);
-    const bst = getBST(pokemon);
+    const face = getCardFace(pokemon);
+    const showingMega = face !== pokemon;
+    const megaCount = getMegaForms(pokemon).length;
+    const sprite = getCardSprite(face);
+    const typeHtml = renderTypes(face.types);
+    const statsHtml = renderStats(face);
+    const bst = getBST(face);
+
+    const toggleLabel = showingMega
+      ? (megaCount > 1 ? `Showing ${face.name} — click for the next form` : `Showing ${face.name} — click to go back`)
+      : `Show ${megaCount > 1 ? "Mega Evolutions" : "Mega Evolution"} for ${pokemon.name}`;
 
     return `
-      <article class="pokemon-card" data-id="${escapeHtml(pokemon.id)}">
-        ${hasMegaEvolution(pokemon) ? `<img class="mega-badge" src="${MEGA_SYMBOL_URL}" alt="Mega Evolution">` : ""}
+      <article class="pokemon-card${showingMega ? " showing-mega" : ""}" data-id="${escapeHtml(pokemon.id)}"${showingMega ? ` data-form-id="${escapeHtml(face.id)}"` : ""}>
+        ${megaCount ? `
+          <button type="button" class="mega-toggle" title="${escapeHtml(toggleLabel)}" aria-label="${escapeHtml(toggleLabel)}" aria-pressed="${showingMega}">
+            <img src="${MEGA_SYMBOL_URL}" alt="">
+          </button>
+        ` : ""}
         <div class="dex-line">${escapeHtml(getDexText(pokemon))}</div>
 
         <div class="card-top">
           <div class="sprite-box">
-            ${sprite ? `<img src="${escapeHtml(sprite)}" alt="${escapeHtml(pokemon.name)} sprite">` : `<span style="color:#777;font-size:.85rem;">No Image</span>`}
+            ${sprite ? `<img src="${escapeHtml(sprite)}" alt="${escapeHtml(face.name)} sprite">` : `<span style="color:#777;font-size:.85rem;">No Image</span>`}
           </div>
 
           <div class="card-main">
-            <h2 class="pokemon-name">${escapeHtml(pokemon.name)}</h2>
+            <h2 class="pokemon-name">${escapeHtml(face.name)}</h2>
             <div class="type-row">${typeHtml}</div>
           </div>
         </div>
@@ -1212,6 +1298,23 @@
         </div>
       </article>
     `;
+  }
+
+  /**
+   * Advances one card to its next face, swapping the displayed information in
+   * place. Only this card re-renders, so the rest of the grid doesn't shift and
+   * the card keeps its position in the current sort.
+   */
+  function flipCard(card) {
+    const pokemon = allPokemon.find(p => String(p.id) === String(card.dataset.id));
+    if (!pokemon || !hasMegaEvolution(pokemon)) return;
+
+    megaViewIndex.set(pokemon.id, getFaceIndex(pokemon) + 1);
+    card.outerHTML = createCard(pokemon);
+
+    pokemonGrid
+      .querySelector(`.pokemon-card[data-id="${CSS.escape(String(pokemon.id))}"] .mega-toggle`)
+      ?.focus({ preventScroll: true });
   }
 
   function renderPokemon() {
@@ -1868,23 +1971,23 @@
   }
 
   /**
-   * Which moves have a page on tm-and-move-tutors.html. Failure is not fatal:
+   * Which moves have an entry on moves.html. Failure is not fatal:
    * without it move names simply render unlinked.
    */
-  async function loadTmMoveIds() {
+  async function loadMovePageIds() {
     try {
-      const response = await fetch(TM_MOVES_URL);
+      const response = await fetch(MOVES_URL);
       if (!response.ok) return;
 
       const data = await response.json();
       const moves = Array.isArray(data) ? data : safeArray(data.moves);
-      tmMoveIds = new Set(
+      movePageIds = new Set(
         moves
           .map(move => (move.internalName || move.id || "").toString().toUpperCase())
           .filter(Boolean)
       );
     } catch (error) {
-      tmMoveIds = new Set();
+      movePageIds = new Set();
     }
   }
 
@@ -1909,7 +2012,7 @@
 
   async function loadPokemon() {
     try {
-      const [response] = await Promise.all([fetch(DATA_URL), loadTmMoveIds(), loadItemPageIds()]);
+      const [response] = await Promise.all([fetch(DATA_URL), loadMovePageIds(), loadItemPageIds()]);
       if (!response.ok) {
         throw new Error(`Failed to load ${DATA_URL} (${response.status})`);
       }
@@ -1936,15 +2039,30 @@
     });
   });
 
-  [searchInput, typeFilter, locationFilter, sortSelect, filterSelect].forEach(control => {
+  [searchInput, typeFilter, locationFilter, sortSelect].forEach(control => {
     control.addEventListener("input", renderPokemon);
     control.addEventListener("change", renderPokemon);
+  });
+
+  // Changing the Filter drops any manual flips so its default face applies.
+  filterSelect.addEventListener("change", () => {
+    megaViewIndex.clear();
+    renderPokemon();
   });
 
   pokemonGrid.addEventListener("click", event => {
     const card = event.target.closest(".pokemon-card");
     if (!card) return;
-    openPokemonModal(card.dataset.id);
+
+    // The Mega symbol flips the card in place; it must not also open the modal.
+    if (event.target.closest(".mega-toggle")) {
+      event.stopPropagation();
+      flipCard(card);
+      return;
+    }
+
+    // A flipped card opens its modal on the Mega form it's showing.
+    openPokemonModal(card.dataset.id, card.dataset.formId || null);
   });
 
   // Evolution links point at this same page, so handle them in place rather than

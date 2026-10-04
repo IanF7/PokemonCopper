@@ -6842,8 +6842,8 @@
                 "name": "Toxic"
               },
               {
-                "id": "HEATWAVE",
-                "name": "Heat Wave"
+                "id": "FLAMETHROWER",
+                "name": "Flamethrower"
               }
             ],
             "gender": "Female",
@@ -7017,7 +7017,7 @@
               }
             ],
             "gender": "Female",
-            "item": "Assault Vest",
+            "item": "Leftovers",
             "name": "Naiphoria",
             "types": [
               "WATER",
@@ -7043,8 +7043,8 @@
                 "name": "Toxic"
               },
               {
-                "id": "HEATWAVE",
-                "name": "Heat Wave"
+                "id": "FLAMETHROWER",
+                "name": "Flamethrower"
               }
             ],
             "gender": "Female",
@@ -7365,7 +7365,7 @@
             ],
             "gender": "Female",
             "ability_index": 1,
-            "item": "Cell Battery",
+            "item": "Loaded Dice",
             "name": "Cloyster",
             "types": [
               "WATER",
@@ -7542,13 +7542,13 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 0,
             "name": "Volstrika",
             "types": [
               "ELECTRIC",
               "GROUND"
             ],
-            "ability": "Electric Surge"
+            "ability": "Lightning Rod"
           },
           {
             "id": "MAGNEZONE",
@@ -7706,14 +7706,14 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 2,
             "item": "Magnet",
             "name": "Volstrika",
             "types": [
               "ELECTRIC",
               "GROUND"
             ],
-            "ability": "Electric Surge"
+            "ability": "Sap Sipper"
           },
           {
             "id": "EELEKTROSS",
@@ -7782,8 +7782,8 @@
             "level": 72,
             "moves": [
               {
-                "id": "THUNDER",
-                "name": "Thunder"
+                "id": "BLITZ",
+                "name": "Blitz"
               },
               {
                 "id": "THUNDERSLASH",
@@ -7901,8 +7901,8 @@
                 "name": "Venoshock"
               },
               {
-                "id": "BELCH",
-                "name": "Belch"
+                "id": "POISONJAB",
+                "name": "Poison Jab"
               },
               {
                 "id": "OUTRAGE",
@@ -8064,8 +8064,8 @@
                 "name": "Venoshock"
               },
               {
-                "id": "BELCH",
-                "name": "Belch"
+                "id": "POISONJAB",
+                "name": "Poison Jab"
               },
               {
                 "id": "OUTRAGE",
@@ -8121,8 +8121,8 @@
             "level": 72,
             "moves": [
               {
-                "id": "DRAGONDARTS",
-                "name": "Dragon Darts"
+                "id": "DRACOMETEOR",
+                "name": "Draco Meteor"
               },
               {
                 "id": "SHADOWBALL",
@@ -8191,12 +8191,12 @@
                 "name": "Draco Meteor"
               },
               {
-                "id": "MINERALBURST",
-                "name": "Mineral Burst"
+                "id": "FLASHCANNON",
+                "name": "Flash Cannon"
               },
               {
-                "id": "EARTHQUAKE",
-                "name": "Earthquake"
+                "id": "EARTHPOWER",
+                "name": "Earth Power"
               }
             ],
             "gender": "Female",
@@ -14658,8 +14658,8 @@
                 "name": "Psychic"
               },
               {
-                "id": "STUNSPORE",
-                "name": "Stun Spore"
+                "id": "STRENGTHSAP",
+                "name": "Strength Sap"
               },
               {
                 "id": "REFLECT",
@@ -14793,8 +14793,8 @@
                 "name": "Psychic"
               },
               {
-                "id": "STUNSPORE",
-                "name": "Stun Spore"
+                "id": "STRENGTHSAP",
+                "name": "Strength Sap"
               },
               {
                 "id": "REFLECT",
@@ -16654,8 +16654,8 @@
                 "name": "Ice Fang"
               },
               {
-                "id": "IRONTAIL",
-                "name": "Iron Tail"
+                "id": "EARTHQUAKE",
+                "name": "Earthquake"
               }
             ],
             "gender": "Female",
@@ -16677,8 +16677,8 @@
                 "name": "Heavy Slam"
               },
               {
-                "id": "EARTHQUAKE",
-                "name": "Earthquake"
+                "id": "STOMPINGTANTRUM",
+                "name": "Stomping Tantrum"
               },
               {
                 "id": "KNOCKOFF",

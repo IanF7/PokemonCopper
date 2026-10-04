@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokémon Copper - Moves</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    :root {
+      --bg: #111;
+      --panel: #181818;
+      --panel-2: #202020;
+      --border: #333;
+      --border-light: #555;
+      --text: #fff;
+      --muted: #aaa;
+      --muted-2: #ccc;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1450px;
+      margin: 0 auto;
+      padding: 50px 20px 80px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      background: white;
+      color: black;
+    }
+
+    .controls {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 14px;
+      align-items: end;
+    }
+
+    .controls-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 170px;
+      flex: 1;
+    }
+
+    .control-group.small {
+      min-width: 140px;
+      flex: 0 0 auto;
+    }
+
+    .control-group label {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    input[type="text"],
+    select {
+      background: #101010;
+      color: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding-right: 28px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5 7l5 6 5-6H5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+      border-color: var(--border-light);
+    }
+
+    .view-toggle {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .view-btn {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.25s;
+      font-size: 0.95rem;
+    }
+
+    .view-btn:hover,
+    .view-btn.active {
+      background: white;
+      color: black;
+    }
+
+    .results-count {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .moves-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px;
+    }
+
+    .move-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      transition: 0.25s;
+    }
+
+    .move-card:hover {
+      transform: translateY(-5px);
+      background: var(--panel-2);
+      border-color: var(--border-light);
+    }
+
+    .move-name {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      line-height: 1.2;
+      color: white;
+    }
+
+    .move-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .move-header .type-pill {
+        flex-shrink: 0;
+    }
+
+    .type-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 72px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .move-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7px 12px;
+      margin-top: 8px;
+      margin-bottom: 14px;
+    }
+
+    .meta-line {
+      font-size: 0.9rem;
+      color: var(--muted-2);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 3px;
+    }
+
+    .meta-line strong {
+      color: white;
+      font-weight: 600;
+    }
+
+    .move-description {
+      color: var(--muted-2);
+      line-height: 1.55;
+      margin-top: 8px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: white;
+    }
+
+    .location-text {
+      color: var(--muted-2);
+      line-height: 1.55;
+    }
+
+    .location-text strong {
+      color: white;
+      font-weight: 600;
+    }
+
+    .loading-state,
+    .error-state,
+    .empty-state {
+      text-align: center;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px 20px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .footer {
+      background: #0a0a0a;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-top: 60px;
+    }
+
+    .footer p {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .page {
+        padding-top: 40px;
+      }
+
+      .move-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .moves-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* --- Clickable move cards --- */
+    .move-card {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .move-card:hover,
+    .move-card:focus-visible {
+      border-color: var(--border-light);
+    }
+
+    .card-hint {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* --- Learner modal --- */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.78);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-content {
+      width: min(1100px, 100%);
+      max-height: 92vh;
+      overflow-y: auto;
+      background: #151515;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 22px;
+      position: relative;
+    }
+
+    .modal-close {
+      position: sticky;
+      top: 0;
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+      z-index: 2;
+      margin-bottom: 10px;
+    }
+
+    .modal-close button {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      border-radius: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .modal-close button:hover {
+      background: white;
+      color: black;
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .modal-header h2 {
+      font-size: 1.9rem;
+    }
+
+    .modal-section {
+      margin-top: 22px;
+    }
+
+    .modal-section h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .modal-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .learner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+      gap: 10px;
+    }
+
+    .learner-link {
+      display: block;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.02);
+      color: var(--muted-2);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .learner-link:hover,
+    .learner-link:focus-visible {
+      color: #fff;
+      border-color: var(--border-light);
+      background: rgba(255,255,255,0.06);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <h1>Moves</h1>
+    <p class="subtitle">
+      Browse every move in Pokémon Copper, including TM and Move Tutor locations.
+    </p>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="info.html">Game Info</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="https://discord.gg/pavpnHGPYh" target="_blank" rel="noopener noreferrer">Discord</a>
+    </div>
+
+    <section class="controls">
+      <div class="controls-row">
+        <div class="control-group" style="flex: 1.3;">
+          <label>Move View</label>
+          <div class="view-toggle">
+            <button class="view-btn active" data-view="all" type="button">All Moves</button>
+            <button class="view-btn" data-view="tm" type="button">TMs</button>
+            <button class="view-btn" data-view="tutor" type="button">Tutorable Moves</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label for="searchInput">Search by Name</label>
+          <input type="text" id="searchInput" placeholder="Search moves..." />
+        </div>
+
+        <div class="control-group small">
+          <label for="typeFilter">Type</label>
+          <select id="typeFilter">
+            <option value="all">All Types</option>
+          </select>
+        </div>
+
+        <div class="control-group small">
+          <label for="sortSelect">Sort By</label>
+          <select id="sortSelect"></select>
+        </div>
+      </div>
+    </section>
+
+    <div id="loadingState" class="loading-state">Loading move data...</div>
+    <div id="errorState" class="error-state" style="display:none;"></div>
+    <div id="emptyState" class="empty-state" style="display:none;">No moves match the current filters.</div>
+    <div id="resultsCount" class="results-count" style="display:none;"></div>
+    <div id="movesGrid" class="moves-grid" style="display:none;"></div>
+  </div>
+
+  <div id="moveModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-close">
+        <button id="closeModalBtn" type="button">Close</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      Pokémon Copper is a fan-made project and is not affiliated with, endorsed, sponsored, or specifically approved by Nintendo, Game Freak, or The Pokémon Company.
+    </p>
+    <p>
+      Pokémon and all related trademarks, names, and characters are owned by Nintendo, Game Freak, The Pokémon Company and Creatures Inc.
+    </p>
+    <p>
+      This game is distributed for free and no copyright infringement is intended. Please support the official releases.
+    </p>
+
+  <script>
+    const DATA_URL = "data/moves.json";
+
+    const TYPE_COLORS = {
+      NORMAL: "#A8A77A",
+      FIRE: "#EE8130",
+      WATER: "#6390F0",
+      ELECTRIC: "#F7D02C",
+      GRASS: "#7AC74C",
+      ICE: "#96D9D6",
+      FIGHTING: "#C22E28",
+      POISON: "#A33EA1",
+      GROUND: "#E2BF65",
+      FLYING: "#A98FF3",
+      PSYCHIC: "#F95587",
+      BUG: "#A6B91A",
+      ROCK: "#B6A136",
+      GHOST: "#735797",
+      DRAGON: "#6F35FC",
+      DARK: "#705746",
+      STEEL: "#B7B7CE",
+      FAIRY: "#D685AD"
+    };
+
+    const LEARNERS_URL = "data/move-learners.json";
+
+    let allMoves = [];
+    // "all", "tm" or "tutor"
+    let currentView = "all";
+    // {pokemon: {ID: "Name"}, moves: {MOVEID: [ID, ...] }} - ids already sorted
+    // by display name when the file is generated.
+    let moveLearners = { pokemon: {}, moves: {} };
+
+    const loadingState = document.getElementById("loadingState");
+    const errorState = document.getElementById("errorState");
+    const emptyState = document.getElementById("emptyState");
+    const resultsCount = document.getElementById("resultsCount");
+    const movesGrid = document.getElementById("movesGrid");
+    const moveModal = document.getElementById("moveModal");
+    const modalBody = document.getElementById("modalBody");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+
+    const searchInput = document.getElementById("searchInput");
+    const typeFilter = document.getElementById("typeFilter");
+    const sortSelect = document.getElementById("sortSelect");
+
+    function getTypeColor(type) {
+      return TYPE_COLORS[(type || "").toUpperCase()] || "#666";
+    }
+
+    function escapeHtml(text) {
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function formatTypeName(type) {
+      if (!type) return "";
+      return type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
+    }
+
+    function formatStat(value) {
+      if (value === null || value === undefined || value === "") return "—";
+      return String(value);
+    }
+
+    function isTmMove(move) {
+      return move.tmNumber != null;
+    }
+
+    function isTutorMove(move) {
+      return Boolean(move.tutorLocation);
+    }
+
+    function getCurrentViewMoves() {
+      if (currentView === "tm") return allMoves.filter(isTmMove);
+      if (currentView === "tutor") return allMoves.filter(isTutorMove);
+      return allMoves.slice();
+    }
+
+    function updateTypeFilter() {
+      const sourceMoves = getCurrentViewMoves();
+      const currentValue = typeFilter.value;
+
+      const types = [...new Set(
+        sourceMoves
+          .map(move => (move.type || "").toUpperCase().trim())
+          .filter(Boolean)
+      )].sort((a, b) => a.localeCompare(b));
+
+      typeFilter.innerHTML = `
+        <option value="all">All Types</option>
+        ${types.map(type => `<option value="${escapeHtml(type)}">${escapeHtml(formatTypeName(type))}</option>`).join("")}
+      `;
+
+      if (types.includes(currentValue)) {
+        typeFilter.value = currentValue;
+      } else {
+        typeFilter.value = "all";
+      }
+    }
+
+    function updateSortOptions() {
+      if (currentView === "tm") {
+        sortSelect.innerHTML = `
+          <option value="az">Name (A-Z)</option>
+          <option value="za">Name (Z–A)</option>
+          <option value="type">Type</option>
+          <option value="tm">TM Number</option>
+        `;
+      } else {
+        sortSelect.innerHTML = `
+          <option value="az">Name (A-Z)</option>
+          <option value="za">Name (Z–A)</option>
+          <option value="type">Type</option>
+        `;
+      }
+    }
+
+    function renderTypePill(type) {
+      if (!type) return "";
+      return `<span class="type-pill" style="background:${getTypeColor(type)};">${escapeHtml(type)}</span>`;
+    }
+
+    function filterAndSortMoves() {
+      const searchValue = searchInput.value.trim().toLowerCase();
+      const selectedType = typeFilter.value;
+
+      let filtered = getCurrentViewMoves();
+
+      if (searchValue) {
+        filtered = filtered.filter(move =>
+          (move.name || "").toLowerCase().includes(searchValue)
+        );
+      }
+
+      if (selectedType !== "all") {
+        filtered = filtered.filter(move =>
+          (move.type || "").toUpperCase() === selectedType
+        );
+      }
+
+      const mode = sortSelect.value;
+
+      filtered.sort((a, b) => {
+        const nameA = (a.name || "").toLowerCase();
+        const nameB = (b.name || "").toLowerCase();
+        const typeA = (a.type || "").toLowerCase();
+        const typeB = (b.type || "").toLowerCase();
+
+        if (mode === "za") {
+          return nameB.localeCompare(nameA);
+        }
+
+        if (mode === "type") {
+          const typeCompare = typeA.localeCompare(typeB);
+          if (typeCompare !== 0) return typeCompare;
+          return nameA.localeCompare(nameB);
+        }
+
+        if (mode === "tm" && currentView === "tm") {
+          const aTm = Number.isFinite(Number(a.tmNumber)) ? Number(a.tmNumber) : 999999;
+          const bTm = Number.isFinite(Number(b.tmNumber)) ? Number(b.tmNumber) : 999999;
+          if (aTm !== bTm) return aTm - bTm;
+          return nameA.localeCompare(nameB);
+        }
+
+        return nameA.localeCompare(nameB);
+      });
+
+      return filtered;
+    }
+
+    /** Where the move is obtained as a TM and/or from a Move Tutor; empty for ordinary moves. */
+    function renderLocations(move, headingTag, headingClass) {
+      const lines = [];
+      if (isTmMove(move)) lines.push(["TM", move.tmLocation]);
+      if (isTutorMove(move)) lines.push(["Move Tutor", move.tutorLocation]);
+      if (!lines.length) return "";
+
+      return `
+        <${headingTag}${headingClass ? ` class="${headingClass}"` : ""}>Location</${headingTag}>
+        ${lines.map(([label, location]) => `
+          <p class="location-text"><strong>${label}:</strong> ${escapeHtml(location || "No listed location.")}</p>
+        `).join("")}
+      `;
+    }
+
+    function pokemonPageUrl(id) {
+      return `pokemon.html?pokemon=${encodeURIComponent(id)}`;
+    }
+
+    function getLearnerIds(move) {
+      const moveId = (move.internalName || "").toString().toUpperCase();
+      const ids = moveId ? moveLearners.moves[moveId] : null;
+      return Array.isArray(ids) ? ids : [];
+    }
+
+    function learnerCountText(move) {
+      const count = getLearnerIds(move).length;
+      if (!count) return "No Pokémon learn this move — click for details.";
+      return `Click to see the ${count} Pokémon that can learn this move.`;
+    }
+
+    function renderLearners(move) {
+      const ids = getLearnerIds(move);
+
+      if (!ids.length) {
+        return `<p class="modal-note">No Pokémon in the Pokédex learn this move.</p>`;
+      }
+
+      return `
+        <p class="modal-note">
+          ${ids.length} Pokémon can learn this move, by level-up, tutor or breeding.
+          Select one to open its Pokédex entry.
+        </p>
+        <div class="learner-grid">
+          ${ids.map(id => `
+            <a class="learner-link" href="${escapeHtml(pokemonPageUrl(id))}">
+              ${escapeHtml(moveLearners.pokemon[id] || id)}
+            </a>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function openMoveModal(move) {
+      if (!move) return;
+
+      const displayType = move.type ? move.type.toUpperCase() : "";
+
+      modalBody.innerHTML = `
+        <div class="modal-header">
+          <h2>${escapeHtml(move.name || "Unknown Move")}</h2>
+          ${renderTypePill(displayType)}
+        </div>
+
+        <div class="move-meta">
+          <div class="meta-line"><span>Category</span><strong>${escapeHtml(move.category || "Unknown")}</strong></div>
+          <div class="meta-line"><span>Power</span><strong>${escapeHtml(formatStat(move.power))}</strong></div>
+          <div class="meta-line"><span>Accuracy</span><strong>${escapeHtml(formatStat(move.accuracy))}</strong></div>
+          <div class="meta-line"><span>PP</span><strong>${escapeHtml(formatStat(move.pp))}</strong></div>
+          ${
+            move.tmNumber != null
+              ? `<div class="meta-line"><span>TM Number</span><strong>${escapeHtml(String(move.tmNumber))}</strong></div>`
+              : ""
+          }
+        </div>
+
+        <p class="move-description">${escapeHtml(move.description || "No description available.")}</p>
+
+        ${isTmMove(move) || isTutorMove(move) ? `<div class="modal-section">${renderLocations(move, "h3", "")}</div>` : ""}
+
+        <div class="modal-section">
+          <h3>Pokémon That Learn This Move</h3>
+          ${renderLearners(move)}
+        </div>
+      `;
+
+      moveModal.classList.add("open");
+      moveModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      modalBody.scrollTop = 0;
+    }
+
+    function closeMoveModal() {
+      moveModal.classList.remove("open");
+      moveModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function findMoveById(moveId) {
+      const wanted = String(moveId || "").trim().toUpperCase();
+      if (!wanted) return null;
+
+      return allMoves.find(
+        move => (move.internalName || "").toString().toUpperCase() === wanted
+      ) || null;
+    }
+
+    function createMoveCard(move) {
+      const description = move.description || "No description available.";
+      const displayType = move.type ? move.type.toUpperCase() : "";
+      const category = move.category || "Unknown";
+      const power = formatStat(move.power);
+      const accuracy = formatStat(move.accuracy);
+      const pp = formatStat(move.pp);
+
+      return `
+        <article class="move-card" data-move-id="${escapeHtml(move.internalName || "")}" tabindex="0" role="button">
+            <div class="move-header">
+              <h2 class="move-name">${escapeHtml(move.name || "Unknown Move")}</h2>
+                ${renderTypePill(displayType)}
+            </div>
+          <div class="move-meta">
+            <div class="meta-line"><span>Category</span><strong>${escapeHtml(category)}</strong></div>
+            <div class="meta-line"><span>Power</span><strong>${escapeHtml(power)}</strong></div>
+            <div class="meta-line"><span>Accuracy</span><strong>${escapeHtml(accuracy)}</strong></div>
+            <div class="meta-line"><span>PP</span><strong>${escapeHtml(pp)}</strong></div>
+            ${
+              move.tmNumber != null
+                ? `<div class="meta-line"><span>TM Number</span><strong>${escapeHtml(String(move.tmNumber))}</strong></div>`
+                : ""
+            }
+          </div>
+
+          <p class="move-description">${escapeHtml(description)}</p>
+
+          ${renderLocations(move, "h3", "section-title")}
+
+          <p class="card-hint">${escapeHtml(learnerCountText(move))}</p>
+        </article>
+      `;
+    }
+
+    function renderMoves() {
+      const filtered = filterAndSortMoves();
+
+      loadingState.style.display = "none";
+      errorState.style.display = "none";
+
+      if (!filtered.length) {
+        movesGrid.style.display = "none";
+        resultsCount.style.display = "none";
+        emptyState.style.display = "block";
+        return;
+      }
+
+      emptyState.style.display = "none";
+      resultsCount.style.display = "block";
+      movesGrid.style.display = "grid";
+
+      resultsCount.textContent = `${filtered.length} move${filtered.length === 1 ? "" : "s"} found`;
+      movesGrid.innerHTML = filtered.map(createMoveCard).join("");
+    }
+
+    /**
+     * Which Pokemon learn each move. Optional: without it the cards still work,
+     * they just report no learners.
+     */
+    async function loadMoveLearners() {
+      try {
+        const response = await fetch(LEARNERS_URL);
+        if (!response.ok) throw new Error(`${LEARNERS_URL} not found`);
+
+        const data = await response.json();
+        moveLearners = {
+          pokemon: data.pokemon || {},
+          moves: data.moves || {}
+        };
+      } catch (error) {
+        moveLearners = { pokemon: {}, moves: {} };
+      }
+    }
+
+    /** Opens the move named by ?move=ID. */
+    function openMoveFromQueryString() {
+      const requested = new URLSearchParams(window.location.search).get("move");
+      if (!requested) return;
+
+      const move = findMoveById(requested);
+      if (!move) return;
+
+      openMoveModal(move);
+    }
+
+    async function loadMoves() {
+      try {
+        const [response] = await Promise.all([fetch(DATA_URL), loadMoveLearners()]);
+        if (!response.ok) {
+          throw new Error(`Failed to load ${DATA_URL} (${response.status})`);
+        }
+
+        const data = await response.json();
+        allMoves = Array.isArray(data) ? data : (Array.isArray(data.moves) ? data.moves : []);
+
+        updateTypeFilter();
+        updateSortOptions();
+        renderMoves();
+        openMoveFromQueryString();
+      } catch (error) {
+        loadingState.style.display = "none";
+        errorState.style.display = "block";
+        errorState.textContent = `Could not load move data. ${error.message}`;
+      }
+    }
+
+    function setActiveView(view) {
+      currentView = view;
+
+      document.querySelectorAll(".view-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.view === view);
+      });
+
+      updateTypeFilter();
+      updateSortOptions();
+      renderMoves();
+    }
+
+    document.querySelectorAll(".view-btn").forEach(button => {
+      button.addEventListener("click", () => setActiveView(button.dataset.view));
+    });
+
+    movesGrid.addEventListener("click", event => {
+      const card = event.target.closest(".move-card");
+      if (card) openMoveModal(findMoveById(card.dataset.moveId));
+    });
+
+    movesGrid.addEventListener("keydown", event => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+
+      const card = event.target.closest(".move-card");
+      if (!card) return;
+
+      event.preventDefault();
+      openMoveModal(findMoveById(card.dataset.moveId));
+    });
+
+    closeModalBtn.addEventListener("click", closeMoveModal);
+
+    moveModal.addEventListener("click", event => {
+      if (event.target === moveModal) closeMoveModal();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && moveModal.classList.contains("open")) {
+        closeMoveModal();
+      }
+    });
+
+    [searchInput, typeFilter, sortSelect].forEach(control => {
+      control.addEventListener("input", renderMoves);
+      control.addEventListener("change", renderMoves);
+    });
+
+    loadMoves();
+  </script>
+</body>
+</html>

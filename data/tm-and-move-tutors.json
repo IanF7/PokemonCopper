@@ -1,5 +1,5 @@
 {
-  "count": 446,
+  "count": 443,
   "moves": [
     {
       "name": "Focus Punch",
@@ -6241,23 +6241,6 @@
       "description": "The user cuts the foe with sharp shells. It may also lower the target's Defense stat."
     },
     {
-      "name": "Recycle",
-      "sourceType": "Move Tutor",
-      "tmNumber": null,
-      "location": "Resec Pokecenter",
-      "type": "NORMAL",
-      "internalName": "RECYCLE",
-      "id": null,
-      "category": "Status",
-      "power": null,
-      "accuracy": null,
-      "pp": 10,
-      "priority": null,
-      "target": "User",
-      "functionCode": "RestoreUserConsumedItem",
-      "description": "The user recycles a held item that has been used in battle so it can be used again."
-    },
-    {
       "name": "Refresh",
       "sourceType": "Move Tutor",
       "tmNumber": null,
@@ -6853,23 +6836,6 @@
       "description": "The user unleashes its grudge on the move last used by the target by cutting 4 PP from it."
     },
     {
-      "name": "Stealth Rock",
-      "sourceType": "Move Tutor",
-      "tmNumber": null,
-      "location": "Uhaema Town Hs 2",
-      "type": "ROCK",
-      "internalName": "STEALTHROCK",
-      "id": null,
-      "category": "Status",
-      "power": null,
-      "accuracy": null,
-      "pp": 20,
-      "priority": null,
-      "target": "FoeSide",
-      "functionCode": "AddStealthRocksToFoeSide",
-      "description": "The user lays a trap of levitating stones around the foe. The trap hurts foes that switch into battle."
-    },
-    {
       "name": "Steel Beam",
       "sourceType": "Move Tutor",
       "tmNumber": null,
@@ -7123,23 +7089,6 @@
       "target": "NearOther",
       "functionCode": "RecoilQuarterOfDamageDealt",
       "description": "A reckless, full-body charge attack for slamming into the foe. It also damages the user a little."
-    },
-    {
-      "name": "Taunt",
-      "sourceType": "Move Tutor",
-      "tmNumber": null,
-      "location": "Spiral Cave",
-      "type": "DARK",
-      "internalName": "TAUNT",
-      "id": null,
-      "category": "Status",
-      "power": null,
-      "accuracy": 100,
-      "pp": 20,
-      "priority": null,
-      "target": "NearOther",
-      "functionCode": "DisableTargetStatusMoves",
-      "description": "The target is taunted into a rage that allows it to use only attack moves for three turns."
     },
     {
       "name": "Telekinesis",
