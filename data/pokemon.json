@@ -102,7 +102,7 @@
       {
         "map_id": "",
         "location": "Professor Verde's House",
-        "method": "Starer",
+        "method": "Starter",
         "method_rate": null,
         "chance": null,
         "encounter_rate": null,
@@ -3909,7 +3909,7 @@
       {
         "map_id": "",
         "location": "Professor Verde's House",
-        "method": "Starer",
+        "method": "Starter",
         "method_rate": null,
         "chance": null,
         "encounter_rate": null,
@@ -7308,7 +7308,7 @@
       {
         "map_id": "",
         "location": "Professor Verde's House",
-        "method": "Starer",
+        "method": "Starter",
         "method_rate": null,
         "chance": null,
         "encounter_rate": null,
@@ -24785,7 +24785,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 3840,
     "hatch_steps_text": "3,840 steps",
-    "color": "Purple",
+    "color": "Black",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "With its incisors, it gnaws through doors and infiltrates people's homes. Then, with a twitch of its whiskers, it steals whatever food it finds.",
@@ -25668,16 +25668,16 @@
     "evolution": {
       "next": [
         {
-          "species_id": "RATICATE",
-          "name": "Raticate",
-          "method": "Level",
+          "species_id": "RATICATE_1",
+          "name": "Raticate Alolan",
+          "method": "LevelNight",
           "parameter": "20"
         }
       ],
       "final": [
         {
-          "species_id": "RATICATE",
-          "name": "Raticate"
+          "species_id": "RATICATE_1",
+          "name": "Raticate Alolan"
         }
       ]
     },
@@ -26707,7 +26707,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 3840,
     "hatch_steps_text": "3,840 steps",
-    "color": "Brown",
+    "color": "Black",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "It forms a group of Rattata, which it assumes command of. Each group has its own territory, and disputes over food happen often.",
@@ -33951,7 +33951,7 @@
     "egg_groups_text": "Flying",
     "hatch_steps": 3840,
     "hatch_steps_text": "3,840 steps",
-    "color": "Brown",
+    "color": "Black",
     "shape": "Winged",
     "habitat": "RoughTerrain",
     "pokedex": "Somehow, Spearow native to Azori have become even more vicious, developing poison-tipped beaks to more easily catch their prey.",
@@ -34903,8 +34903,8 @@
     "height_text": "1.2 m",
     "weight": 38.0,
     "weight_text": "38.0 kg",
-    "category": "Posion Beak",
-    "kind": "Posion Beak",
+    "category": "Poison Beak",
+    "kind": "Poison Beak",
     "egg_groups": [
       "Flying"
     ],
@@ -34914,7 +34914,7 @@
     "egg_groups_text": "Flying",
     "hatch_steps": 3840,
     "hatch_steps_text": "3,840 steps",
-    "color": "Brown",
+    "color": "Black",
     "shape": "Winged",
     "habitat": "RoughTerrain",
     "pokedex": "The poison on Azorian Fearow's massive beak is enough to kill a full grown adult several times over if left unchecked.",
@@ -42638,7 +42638,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 3840,
     "hatch_steps_text": "3,840 steps",
-    "color": "Brown",
+    "color": "White",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "Its restlessness has it constantly running around. If it sees another Pokémon, it will purposely run into them in order to start a fight.",
@@ -45439,8 +45439,20 @@
       "egg": []
     },
     "evolution": {
-      "next": [],
-      "final": []
+      "next": [
+        {
+          "species_id": "OBSTAGOON",
+          "name": "Obstagoon",
+          "method": "LevelNight",
+          "parameter": "35"
+        }
+      ],
+      "final": [
+        {
+          "species_id": "OBSTAGOON",
+          "name": "Obstagoon"
+        }
+      ]
     },
     "sprites": {
       "regular": "images/pokemon/LINOONE_1.png",
@@ -52082,6 +52094,17 @@
     "has_wild_items": false,
     "locations": [
       {
+        "map_id": "006",
+        "location": "Hilo Mountain Spring",
+        "method": "Water",
+        "method_rate": 3,
+        "chance": 15,
+        "encounter_rate": 15,
+        "encounter_rate_text": "15%",
+        "min_level": 54,
+        "max_level": 60
+      },
+      {
         "map_id": "112",
         "location": "Lake Triton",
         "method": "LandDay",
@@ -52104,15 +52127,26 @@
         "max_level": 5
       },
       {
-        "map_id": "006",
-        "location": "Hilo Mountain Spring",
-        "method": "Water",
-        "method_rate": 3,
-        "chance": 15,
-        "encounter_rate": 15,
-        "encounter_rate_text": "15%",
-        "min_level": 54,
-        "max_level": 60
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandNight",
+        "method_rate": 16,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
       }
     ],
     "moves": {
@@ -53963,6 +53997,28 @@
     "wild_items_text": "Metronome (Uncommon, 5%)",
     "has_wild_items": true,
     "locations": [
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandNight",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
       {
         "map_id": "179",
         "location": "Lake Umbriel",
@@ -61183,9 +61239,9 @@
     "egg_groups_text": "Field, Fairy",
     "hatch_steps": 2560,
     "hatch_steps_text": "2,560 steps",
-    "color": "Yellow",
+    "color": "Brown",
     "shape": "BipedalTail",
-    "habitat": "Forest",
+    "habitat": "WatersEdge",
     "pokedex": "It uses psychokinesis to control electricity. It hops aboard its own tail, using psychic power to lift the tail and move about while riding it.",
     "wild_items": [],
     "wild_items_text": "",
@@ -62933,6 +62989,28 @@
       {
         "map_id": "112",
         "location": "Lake Triton",
+        "method": "LandNight",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
         "method": "LandNight",
         "method_rate": 16,
         "chance": 8,
@@ -68911,7 +68989,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Yellow",
+    "color": "White",
     "shape": "BipedalTail",
     "habitat": "RoughTerrain",
     "pokedex": "The skin on its back is as hard as steel. Predators go after its soft belly, so it clings to the ground desperately.",
@@ -69718,16 +69796,16 @@
     "evolution": {
       "next": [
         {
-          "species_id": "SANDSLASH",
-          "name": "Sandslash",
-          "method": "Level",
-          "parameter": "22"
+          "species_id": "SANDSLASH_1",
+          "name": "Sandslash Alolan",
+          "method": "Item",
+          "parameter": "ICESTONE"
         }
       ],
       "final": [
         {
-          "species_id": "SANDSLASH",
-          "name": "Sandslash"
+          "species_id": "SANDSLASH_1",
+          "name": "Sandslash Alolan"
         }
       ]
     },
@@ -70698,7 +70776,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Yellow",
+    "color": "Blue",
     "shape": "BipedalTail",
     "habitat": "RoughTerrain",
     "pokedex": "It runs across snow-covered plains at high speeds. It developed thick, sharp claws to plow through the snow.",
@@ -71542,7 +71620,13 @@
         "description": "Reduces damage done to allies."
       }
     ],
-    "hidden_abilities": [],
+    "hidden_abilities": [
+      {
+        "id": "FLUFFY",
+        "name": "Fluffy",
+        "description": "Resists contact damage but weaker to Fire-type."
+      }
+    ],
     "base_stats": [
       100,
       80,
@@ -83334,17 +83418,6 @@
       "level_up": [
         {
           "level": 0,
-          "id": "STOCKPILE",
-          "name": "Stockpile",
-          "type": "NORMAL",
-          "category": "Status",
-          "power": null,
-          "pp": 20,
-          "accuracy": 0,
-          "description": "The user charges up power and raises both its Defense and Sp. Def. The move can be used three times."
-        },
-        {
-          "level": 0,
           "id": "SWALLOW",
           "name": "Swallow",
           "type": "NORMAL",
@@ -84289,8 +84362,8 @@
     "height_text": "0.5 m",
     "weight": 4.7,
     "weight_text": "4.7 kg",
-    "category": "Stary Fish",
-    "kind": "Stary Fish",
+    "category": "Starry Fish",
+    "kind": "Starry Fish",
     "egg_groups": [
       "Water2",
       "Amorphous"
@@ -85698,8 +85771,8 @@
     "height_text": "0.8 m",
     "weight": 19.5,
     "weight_text": "19.5 kg",
-    "category": "Stary Fish",
-    "kind": "Stary Fish",
+    "category": "Starry Fish",
+    "kind": "Starry Fish",
     "egg_groups": [
       "Water2",
       "Amorphous"
@@ -86508,8 +86581,8 @@
     "height_text": "1.7 m",
     "weight": 60.4,
     "weight_text": "60.4 kg",
-    "category": "Stary Fish",
-    "kind": "Stary Fish",
+    "category": "Starry Fish",
+    "kind": "Starry Fish",
     "egg_groups": [
       "Water2",
       "Amorphous"
@@ -87431,7 +87504,7 @@
     "color": "Brown",
     "shape": "Quadruped",
     "habitat": "Forest",
-    "pokedex": "Trainers that have managed to catch a Whimsijack often have better luck for a few days. This has lead to many gamblers seeking out their mystic powers.",
+    "pokedex": "Trainers that have managed to catch a Whimsijack often have better luck for a few days. This has led to many gamblers seeking out their mystic powers.",
     "wild_items": [
       {
         "id": "LUCKYHORN",
@@ -92438,7 +92511,7 @@
     "egg_groups_text": "Fairy, Grass",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Pink",
+    "color": "Green",
     "shape": "BipedalTail",
     "habitat": "Grassland",
     "pokedex": "In Azori, Hoppip has taken on the form of a cactus. If one gets stuck to something, they can be incredibly difficult to remove.",
@@ -93359,7 +93432,7 @@
     "color": "Green",
     "shape": "BipedalTail",
     "habitat": "Grassland",
-    "pokedex": "The happy expression on this Pokèmon's face is heavily contrasted by the pain that is felt when one gets stuck on you.",
+    "pokedex": "The happy expression on this Pokémon's face is heavily contrasted by the pain that is felt when one gets stuck on you.",
     "wild_items": [],
     "wild_items_text": "",
     "has_wild_items": false,
@@ -94128,7 +94201,7 @@
     "egg_groups_text": "Fairy, Grass",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Blue",
+    "color": "Green",
     "shape": "BipedalTail",
     "habitat": "Grassland",
     "pokedex": "They like to jump out from behind cacti and try and attach themselves to people for fun. They have been known to follow people for miles to accomplish this goal.",
@@ -117863,6 +117936,28 @@
       {
         "map_id": "113",
         "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandNight",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
         "method": "OldRod",
         "method_rate": 40,
         "chance": 20,
@@ -117892,39 +117987,6 @@
         "encounter_rate_text": "8%",
         "min_level": 2,
         "max_level": 5
-      },
-      {
-        "map_id": "139",
-        "location": "Penetun Gym",
-        "method": "OldRod",
-        "method_rate": 100,
-        "chance": 10,
-        "encounter_rate": 10,
-        "encounter_rate_text": "10%",
-        "min_level": 5,
-        "max_level": 15
-      },
-      {
-        "map_id": "139",
-        "location": "Penetun Gym",
-        "method": "GoodRod",
-        "method_rate": 100,
-        "chance": 10,
-        "encounter_rate": 10,
-        "encounter_rate_text": "10%",
-        "min_level": 5,
-        "max_level": 15
-      },
-      {
-        "map_id": "139",
-        "location": "Penetun Gym",
-        "method": "SuperRod",
-        "method_rate": 100,
-        "chance": 10,
-        "encounter_rate": 10,
-        "encounter_rate_text": "10%",
-        "min_level": 5,
-        "max_level": 15
       },
       {
         "map_id": "117",
@@ -117958,6 +118020,39 @@
         "encounter_rate_text": "12%",
         "min_level": 2,
         "max_level": 5
+      },
+      {
+        "map_id": "139",
+        "location": "Penetun Gym",
+        "method": "OldRod",
+        "method_rate": 100,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 5,
+        "max_level": 15
+      },
+      {
+        "map_id": "139",
+        "location": "Penetun Gym",
+        "method": "GoodRod",
+        "method_rate": 100,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 5,
+        "max_level": 15
+      },
+      {
+        "map_id": "139",
+        "location": "Penetun Gym",
+        "method": "SuperRod",
+        "method_rate": 100,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 5,
+        "max_level": 15
       },
       {
         "map_id": "179",
@@ -120634,7 +120729,7 @@
     "egg_groups_text": "Mineral",
     "hatch_steps": 3840,
     "hatch_steps_text": "3,840 steps",
-    "color": "Brown",
+    "color": "Gray",
     "shape": "HeadArms",
     "habitat": "Mountain",
     "pokedex": "Geodude compete against each other with headbutts. The iron sand on their heads will stick to whichever one has stronger magnetism.",
@@ -122199,7 +122294,7 @@
     "egg_groups_text": "Mineral",
     "hatch_steps": 3840,
     "hatch_steps_text": "3,840 steps",
-    "color": "Brown",
+    "color": "Gray",
     "shape": "Bipedal",
     "habitat": "Mountain",
     "pokedex": "They eat rocks and often get into a scrap over them. The shock of Graveler smashing together causes a flash of light and a booming noise.",
@@ -123749,7 +123844,7 @@
     "egg_groups_text": "Mineral",
     "hatch_steps": 3840,
     "hatch_steps_text": "3,840 steps",
-    "color": "Brown",
+    "color": "Gray",
     "shape": "Bipedal",
     "habitat": "Mountain",
     "pokedex": "It fires rocks charged with electricity. Even if the rock isn't fired that accurately, just grazing an opponent will cause numbness and fainting.",
@@ -123761,17 +123856,9 @@
         "rarity": "Common",
         "chance": 50,
         "chance_text": "50%"
-      },
-      {
-        "id": "EVERSTONE",
-        "name": "Everstone",
-        "description": "An item to be held by a Pokémon. The Pokémon holding this peculiar stone is prevented from evolving.",
-        "rarity": "Uncommon",
-        "chance": 5,
-        "chance_text": "5%"
       }
     ],
-    "wild_items_text": "Cell Battery (Common, 50%), Everstone (Uncommon, 5%)",
+    "wild_items_text": "Cell Battery (Common, 50%)",
     "has_wild_items": true,
     "locations": [],
     "moves": {
@@ -139272,7 +139359,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Brown",
+    "color": "White",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "In hot weather, this Pokémon makes ice shards with its six tails and sprays them around to cool itself off.",
@@ -139967,16 +140054,16 @@
     "evolution": {
       "next": [
         {
-          "species_id": "NINETALES",
-          "name": "Ninetales",
+          "species_id": "NINETALES_1",
+          "name": "Ninetales Alolan",
           "method": "Item",
-          "parameter": "FIRESTONE"
+          "parameter": "ICESTONE"
         }
       ],
       "final": [
         {
-          "species_id": "NINETALES",
-          "name": "Ninetales"
+          "species_id": "NINETALES_1",
+          "name": "Ninetales Alolan"
         }
       ]
     },
@@ -140875,7 +140962,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Yellow",
+    "color": "Blue",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "It lives on mountains perpetually covered in snow and is revered as a deity incarnate. It appears draped in a blizzard.",
@@ -141785,6 +141872,28 @@
         "location": "Nuves Forest",
         "method": "SuperRod",
         "method_rate": 80,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandNight",
+        "method_rate": 16,
         "chance": 10,
         "encounter_rate": 10,
         "encounter_rate_text": "10%",
@@ -142744,7 +142853,7 @@
     "egg_groups_text": "Water 1, Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Blue",
+    "color": "Brown",
     "shape": "HeadLegs",
     "habitat": "WatersEdge",
     "pokedex": "After losing a territorial struggle, Wooper began living on land. The Pokémon changed over time, developing a poisonous film to protect its body.",
@@ -143477,16 +143586,16 @@
     "evolution": {
       "next": [
         {
-          "species_id": "QUAGSIRE",
-          "name": "Quagsire",
+          "species_id": "CLODSIRE",
+          "name": "Clodsire",
           "method": "Level",
           "parameter": "20"
         }
       ],
       "final": [
         {
-          "species_id": "QUAGSIRE",
-          "name": "Quagsire"
+          "species_id": "CLODSIRE",
+          "name": "Clodsire"
         }
       ]
     },
@@ -146926,11 +147035,33 @@
       {
         "map_id": "097",
         "location": "Route 9",
+        "method": "LandDay) (Own Tempo Form",
+        "method_rate": 16,
+        "chance": 2,
+        "encounter_rate": 2,
+        "encounter_rate_text": "2%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "097",
+        "location": "Route 9",
         "method": "LandNight",
         "method_rate": 16,
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "097",
+        "location": "Route 9",
+        "method": "LandNight) (Own Tempo Form",
+        "method_rate": 16,
+        "chance": 2,
+        "encounter_rate": 2,
+        "encounter_rate_text": "2%",
         "min_level": 2,
         "max_level": 5
       },
@@ -146946,6 +147077,17 @@
         "max_level": 5
       },
       {
+        "map_id": "104",
+        "location": "Route 14",
+        "method": "Land) (Own Tempo Form",
+        "method_rate": 16,
+        "chance": 2,
+        "encounter_rate": 2,
+        "encounter_rate_text": "2%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
         "map_id": "193",
         "location": "Route 17",
         "method": "Land",
@@ -146953,6 +147095,17 @@
         "chance": 12,
         "encounter_rate": 12,
         "encounter_rate_text": "12%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "193",
+        "location": "Route 17",
+        "method": "Land) (Own Tempo Form",
+        "method_rate": 16,
+        "chance": 2,
+        "encounter_rate": 2,
+        "encounter_rate_text": "2%",
         "min_level": 2,
         "max_level": 5
       },
@@ -146970,11 +147123,33 @@
       {
         "map_id": "270",
         "location": "Statera Canyon",
+        "method": "LandDay) (Own Tempo Form",
+        "method_rate": 16,
+        "chance": 2,
+        "encounter_rate": 2,
+        "encounter_rate_text": "2%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "270",
+        "location": "Statera Canyon",
         "method": "LandNight",
         "method_rate": 16,
         "chance": 6,
         "encounter_rate": 6,
         "encounter_rate_text": "6%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "270",
+        "location": "Statera Canyon",
+        "method": "LandNight) (Own Tempo Form",
+        "method_rate": 16,
+        "chance": 2,
+        "encounter_rate": 2,
+        "encounter_rate_text": "2%",
         "min_level": 2,
         "max_level": 5
       }
@@ -152504,8 +152679,20 @@
       ]
     },
     "evolution": {
-      "next": [],
-      "final": []
+      "next": [
+        {
+          "species_id": "JIGGLYPUFF",
+          "name": "Jigglypuff",
+          "method": "Happiness",
+          "parameter": ""
+        }
+      ],
+      "final": [
+        {
+          "species_id": "WIGGLYTUFF",
+          "name": "Wigglytuff"
+        }
+      ]
     },
     "sprites": {
       "regular": "images/pokemon/IGGLYBUFF.png",
@@ -167916,7 +168103,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Yellow",
+    "color": "Blue",
     "shape": "Quadruped",
     "habitat": "Urban",
     "pokedex": "It's impulsive, selfish, and fickle. It's very popular with some Trainers who like giving it the attention it needs.",
@@ -168742,8 +168929,8 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Yellow",
-    "shape": "Quadruped",
+    "color": "Brown",
+    "shape": "BipedalTail",
     "habitat": "Urban",
     "pokedex": "Living with a savage, seafaring people has toughened this Pokémon's body so much that parts of it have turned to iron.",
     "wild_items": [
@@ -169535,16 +169722,16 @@
     "evolution": {
       "next": [
         {
-          "species_id": "PERSIAN",
-          "name": "Persian",
+          "species_id": "PERRSERKER",
+          "name": "Perrserker",
           "method": "Level",
           "parameter": "28"
         }
       ],
       "final": [
         {
-          "species_id": "PERSIAN",
-          "name": "Persian"
+          "species_id": "PERRSERKER",
+          "name": "Perrserker"
         }
       ]
     },
@@ -170441,7 +170628,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Yellow",
+    "color": "Blue",
     "shape": "Quadruped",
     "habitat": "Urban",
     "pokedex": "Its round face is a symbol of wealth. Persian that have bigger, plumper faces are considered more beautiful.",
@@ -171287,6 +171474,17 @@
       {
         "map_id": "112",
         "location": "Lake Triton",
+        "method": "LandNight",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
         "method": "LandNight",
         "method_rate": 16,
         "chance": 8,
@@ -172938,6 +173136,28 @@
         "chance": 10,
         "encounter_rate": 10,
         "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandNight",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
         "min_level": 2,
         "max_level": 5
       },
@@ -194990,6 +195210,28 @@
       {
         "map_id": "113",
         "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandNight",
+        "method_rate": 16,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
         "method": "GoodRod",
         "method_rate": 60,
         "chance": 7,
@@ -195006,6 +195248,28 @@
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "117",
+        "location": "Route 12",
+        "method": "GoodRod",
+        "method_rate": 60,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "117",
+        "location": "Route 12",
+        "method": "SuperRod",
+        "method_rate": 80,
+        "chance": 12,
+        "encounter_rate": 12,
+        "encounter_rate_text": "12%",
         "min_level": 2,
         "max_level": 5
       },
@@ -195041,28 +195305,6 @@
         "encounter_rate_text": "20%",
         "min_level": 5,
         "max_level": 15
-      },
-      {
-        "map_id": "117",
-        "location": "Route 12",
-        "method": "GoodRod",
-        "method_rate": 60,
-        "chance": 10,
-        "encounter_rate": 10,
-        "encounter_rate_text": "10%",
-        "min_level": 2,
-        "max_level": 5
-      },
-      {
-        "map_id": "117",
-        "location": "Route 12",
-        "method": "SuperRod",
-        "method_rate": 80,
-        "chance": 12,
-        "encounter_rate": 12,
-        "encounter_rate_text": "12%",
-        "min_level": 2,
-        "max_level": 5
       },
       {
         "map_id": "140",
@@ -212094,6 +212336,17 @@
         "max_level": 5
       },
       {
+        "map_id": "179",
+        "location": "Lake Umbriel",
+        "method": "Land) (East Sea Form",
+        "method_rate": 16,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
         "map_id": "",
         "location": "Seri House 4",
         "method": "Gift",
@@ -225240,8 +225493,20 @@
       ]
     },
     "evolution": {
-      "next": [],
-      "final": []
+      "next": [
+        {
+          "species_id": "LOPUNNY",
+          "name": "Lopunny",
+          "method": "Happiness",
+          "parameter": ""
+        }
+      ],
+      "final": [
+        {
+          "species_id": "LOPUNNY",
+          "name": "Lopunny"
+        }
+      ]
     },
     "sprites": {
       "regular": "images/pokemon/BUNEARY.png",
@@ -238347,7 +238612,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Yellow",
+    "color": "White",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "Its small horn hides a healing power. With a few rubs from this Pokémon's horn, any slight wound you have will be healed.",
@@ -240021,7 +240286,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Yellow",
+    "color": "White",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "Little can stand up to its psycho cut. Unleashed from this Pokémon's horn, the move will punch a hole right through a thick metal sheet.",
@@ -244596,7 +244861,7 @@
     "color": "Blue",
     "shape": "Finned",
     "habitat": "WatersEdge",
-    "pokedex": "One Marling have caught their prey, they use their sword-like horn to chop their prey into smaller chunks to make them easier to eat.",
+    "pokedex": "Once Marling have caught their prey, they use their sword-like horn to chop their prey into smaller chunks to make them easier to eat.",
     "wild_items": [],
     "wild_items_text": "",
     "has_wild_items": false,
@@ -248915,6 +249180,28 @@
         "encounter_rate_text": "8%",
         "min_level": 2,
         "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandNight",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
       }
     ],
     "moves": {
@@ -250577,26 +250864,26 @@
     "evolution": {
       "next": [
         {
-          "species_id": "SLOWBRO",
-          "name": "Slowbro",
-          "method": "Level",
-          "parameter": "37"
+          "species_id": "SLOWBRO_1",
+          "name": "Slowbro Galarian",
+          "method": "Item",
+          "parameter": "GALARICACUFF"
         },
         {
-          "species_id": "SLOWKING",
-          "name": "Slowking",
-          "method": "HoldItem",
-          "parameter": "KINGSROCK"
+          "species_id": "SLOWKING_1",
+          "name": "Slowking Galarian",
+          "method": "Item",
+          "parameter": "GALARICAWREATH"
         }
       ],
       "final": [
         {
-          "species_id": "SLOWBRO",
-          "name": "Slowbro"
+          "species_id": "SLOWBRO_1",
+          "name": "Slowbro Galarian"
         },
         {
-          "species_id": "SLOWKING",
-          "name": "Slowking"
+          "species_id": "SLOWKING_1",
+          "name": "Slowking Galarian"
         }
       ]
     },
@@ -257099,7 +257386,7 @@
     "color": "Blue",
     "shape": "BipedalTail",
     "habitat": "",
-    "pokedex": "There are many little pockets inside of it's coat-like fur that it uses to store berries to snack on.",
+    "pokedex": "There are many little pockets inside of its coat-like fur that it uses to store berries to snack on.",
     "wild_items": [
       {
         "id": "SITRUSBERRY",
@@ -259123,7 +259410,7 @@
     "color": "Brown",
     "shape": "Quadruped",
     "habitat": "Mountain",
-    "pokedex": "After gaining legs when it evolved, Adolem is now able wonder around freely to collect more mud.",
+    "pokedex": "After gaining legs when it evolved, Adolem is now able to wander around freely to collect more mud.",
     "wild_items": [
       {
         "id": "HEATROCK",
@@ -264665,9 +264952,9 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Black",
+    "color": "Gray",
     "shape": "BipedalTail",
-    "habitat": "Forest",
+    "habitat": "Mountain",
     "pokedex": "Its sturdy, curved claws are ideal for traversing precipitous cliffs. From the tips of these claws drips a venom that infiltrates the nerves of any prey caught in Sneasel's grasp.",
     "wild_items": [
       {
@@ -265408,16 +265695,16 @@
     "evolution": {
       "next": [
         {
-          "species_id": "WEAVILE",
-          "name": "Weavile",
-          "method": "NightHoldItem",
+          "species_id": "SNEASLER",
+          "name": "Sneasler",
+          "method": "DayHoldItem",
           "parameter": "RAZORCLAW"
         }
       ],
       "final": [
         {
-          "species_id": "WEAVILE",
-          "name": "Weavile"
+          "species_id": "SNEASLER",
+          "name": "Sneasler"
         }
       ]
     },
@@ -284766,7 +285053,7 @@
     "egg_groups_text": "Amorphous",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Purple",
+    "color": "Green",
     "shape": "HeadArms",
     "habitat": "Urban",
     "pokedex": "A Grimer, which had been brought in to solve a problem with garbage, developed over time into this form.",
@@ -286620,7 +286907,7 @@
     "egg_groups_text": "Amorphous",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Purple",
+    "color": "Green",
     "shape": "HeadArms",
     "habitat": "Urban",
     "pokedex": "The garbage it eats causes continuous chemical changes in its body, which produce its exceedingly vivid coloration.",
@@ -290389,7 +290676,7 @@
     "color": "Brown",
     "shape": "Head",
     "habitat": "Mountain",
-    "pokedex": "Despite its intimidating appearance, Horeburn are quite gentle. Their flames are often serve as beacons for those that travel the deserts at night.",
+    "pokedex": "Despite its intimidating appearance, Horeburn are quite gentle. Their flames often serve as beacons for those that travel the deserts at night.",
     "wild_items": [
       {
         "id": "CHARCOAL",
@@ -303998,7 +304285,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Red",
+    "color": "White",
     "shape": "Bipedal",
     "habitat": "RoughTerrain",
     "pokedex": "The colder they get, the more energetic they are. They freeze their breath to make snowballs, using them as ammo for playful snowball fights.",
@@ -304503,16 +304790,16 @@
     "evolution": {
       "next": [
         {
-          "species_id": "DARMANITAN",
-          "name": "Darmanitan",
-          "method": "Level",
-          "parameter": "35"
+          "species_id": "DARMANITAN_2",
+          "name": "Darmanitan Galarian Standard Mode",
+          "method": "Item",
+          "parameter": "ICESTONE"
         }
       ],
       "final": [
         {
-          "species_id": "DARMANITAN",
-          "name": "Darmanitan"
+          "species_id": "DARMANITAN_2",
+          "name": "Darmanitan Galarian Standard Mode"
         }
       ]
     },
@@ -306821,7 +307108,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Red",
+    "color": "White",
     "shape": "Quadruped",
     "habitat": "RoughTerrain",
     "pokedex": "On days when blizzards blow through, it comes down to where people live. It stashes food in the snowball on its head, taking it home for later.",
@@ -307795,7 +308082,7 @@
     ],
     "ev_yield_text": "2 Special Attack",
     "catch_rate": 60,
-    "base_exp": 168,
+    "base_exp": 189,
     "height": 1.7,
     "height_text": "1.7 m",
     "weight": 120.0,
@@ -307811,7 +308098,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Red",
+    "color": "White",
     "shape": "Quadruped",
     "habitat": "RoughTerrain",
     "pokedex": "Anger has reignited its atrophied flame sac. This Pokémon spews fire everywhere as it rampages indiscriminately.",
@@ -317603,7 +317890,7 @@
             "id": "TOUGHCLAWS",
             "name": "Tough Claws",
             "description": "Powers up moves that make direct contact."
-          } 
+          }
         ],
         "hidden_abilities": [
           {
@@ -350149,7 +350436,7 @@
     "egg_groups_text": "Monster",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Brown",
+    "color": "Purple",
     "shape": "BipedalTail",
     "habitat": "Mountain",
     "pokedex": "Its custom is to mourn its lost companions. Mounds of dirt by the side of the road mark the graves of the Marowak.",
@@ -356825,6 +357112,17 @@
         "max_level": 5
       },
       {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
         "map_id": "117",
         "location": "Route 12",
         "method": "LandDay",
@@ -360118,6 +360416,28 @@
         "location": "Lake Triton",
         "method": "SuperRod",
         "method_rate": 80,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 8,
+        "encounter_rate": 8,
+        "encounter_rate_text": "8%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandNight",
+        "method_rate": 16,
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
@@ -373028,7 +373348,7 @@
     "color": "Blue",
     "shape": "BipedalTail",
     "habitat": "Sea",
-    "pokedex": "It hides in waters dense with algae to avoid predators. Its curiosity often gets the better of it though and it peaks its head out at the worst moments.",
+    "pokedex": "It hides in waters dense with algae to avoid predators. Its curiosity often gets the better of it though and it peeks its head out at the worst moments.",
     "wild_items": [
       {
         "id": "WAVEINCENSE",
@@ -377391,7 +377711,7 @@
     "egg_groups_text": "Amorphous",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Purple",
+    "color": "Gray",
     "shape": "MultiBody",
     "habitat": "Urban",
     "pokedex": "This Pokémon consumes particles that contaminate the air. Instead of leaving droppings, it expels clean air.",
@@ -378161,8 +378481,8 @@
     "height_text": "0.4 m",
     "weight": 11.3,
     "weight_text": "11.3 kg",
-    "category": "Racoon",
-    "kind": "Racoon",
+    "category": "Raccoon",
+    "kind": "Raccoon",
     "egg_groups": [
       "Undiscovered"
     ],
@@ -379389,8 +379709,8 @@
     "height_text": "1.4 m",
     "weight": 49.9,
     "weight_text": "49.9 kg",
-    "category": "Racoon",
-    "kind": "Racoon",
+    "category": "Raccoon",
+    "kind": "Raccoon",
     "egg_groups": [
       "Undiscovered"
     ],
@@ -388088,6 +388408,28 @@
         "max_level": 5
       },
       {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandDay",
+        "method_rate": 16,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandNight",
+        "method_rate": 16,
+        "chance": 10,
+        "encounter_rate": 10,
+        "encounter_rate_text": "10%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
         "map_id": "179",
         "location": "Lake Umbriel",
         "method": "Land",
@@ -390875,7 +391217,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Brown",
+    "color": "Gray",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "Bouffalant in Azori were hunted to near extinction when settlers from other regions first arrived. This form was brought about by the vengeful spirits of those slain Bouffalant.",
@@ -395436,9 +395778,20 @@
         "location": "Penetun City",
         "method": "LandDay",
         "method_rate": 16,
-        "chance": 100,
-        "encounter_rate": 100,
-        "encounter_rate_text": "100%",
+        "chance": 4,
+        "encounter_rate": 4,
+        "encounter_rate_text": "4%",
+        "min_level": 2,
+        "max_level": 5
+      },
+      {
+        "map_id": "113",
+        "location": "Penetun City",
+        "method": "LandNight",
+        "method_rate": 16,
+        "chance": 4,
+        "encounter_rate": 4,
+        "encounter_rate_text": "4%",
         "min_level": 2,
         "max_level": 5
       }
@@ -409805,8 +410158,8 @@
     },
     "base_stat_total": 282,
     "growth_rate": "Parabolic",
-    "gender_ratio": "",
-    "gender_ratio_display": "",
+    "gender_ratio": "Female50Percent",
+    "gender_ratio_display": "Male: 1/2, Female: 1/2",
     "evs": [
       {
         "stat": "ATTACK",
@@ -410743,8 +411096,8 @@
     },
     "base_stat_total": 382,
     "growth_rate": "Parabolic",
-    "gender_ratio": "",
-    "gender_ratio_display": "",
+    "gender_ratio": "Female50Percent",
+    "gender_ratio_display": "Male: 1/2, Female: 1/2",
     "evs": [
       {
         "stat": "ATTACK",
@@ -411640,8 +411993,8 @@
     },
     "base_stat_total": 512,
     "growth_rate": "Parabolic",
-    "gender_ratio": "",
-    "gender_ratio_display": "",
+    "gender_ratio": "Female50Percent",
+    "gender_ratio_display": "Male: 1/2, Female: 1/2",
     "evs": [
       {
         "stat": "ATTACK",
@@ -413867,7 +414220,7 @@
     "color": "White",
     "shape": "Winged",
     "habitat": "Forest",
-    "pokedex": "Between their sharp eyes and ability to turn they heads 180 degrees, Fridglet's vision is nearly unmatched.",
+    "pokedex": "Between their sharp eyes and ability to turn their heads 180 degrees, Fridglet's vision is nearly unmatched.",
     "wild_items": [
       {
         "id": "GENIUSFEATHER",
@@ -418172,7 +418525,7 @@
     "egg_groups_text": "Fairy",
     "hatch_steps": 10240,
     "hatch_steps_text": "10,240 steps",
-    "color": "Pink",
+    "color": "Purple",
     "shape": "Bipedal",
     "habitat": "Urban",
     "pokedex": "Blissey in Azori had to develop more questionable healing methods due to the lack of resources in the desert. Some of these methods even work.",
@@ -432255,7 +432608,7 @@
       "SPE": 90
     },
     "base_stat_total": 485,
-    "growth_rate": "",
+    "growth_rate": "Medium",
     "gender_ratio": "AlwaysFemale",
     "gender_ratio_display": "Always Female",
     "evs": [
@@ -443172,7 +443525,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Brown",
+    "color": "Black",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "It swims by jetting water from its horns. The most notable characteristic of the Aqua Breed is its high body fat, which allows it to float easily.",
@@ -443909,7 +444262,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Brown",
+    "color": "Black",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "People call this kind of Tauros the Blaze Breed due to the hot air it snorts from its nostrils. Its three tails are intertwined.",
@@ -444675,7 +445028,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Brown",
+    "color": "Black",
     "shape": "Quadruped",
     "habitat": "Grassland",
     "pokedex": "This kind of Tauros, known as the Combat Breed, is distinguished by its thick, powerful muscles and its fierce disposition.",
@@ -482287,7 +482640,7 @@
     "egg_groups_text": "Flying",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Red",
+    "color": "White",
     "shape": "Winged",
     "habitat": "Mountain",
     "pokedex": "Screaming a bloodcurdling battle cry, this huge and ferocious bird Pokémon goes out on the hunt. It blasts lakes with shock waves, then scoops up any prey that float to the water's surface.",
@@ -497884,8 +498237,8 @@
         {
           "species_id": "SYLVEON",
           "name": "Sylveon",
-          "method": "HappinessWithFairyMove",
-          "parameter": ""
+          "method": "HappinessMoveType",
+          "parameter": "FAIRY"
         }
       ],
       "final": [
@@ -547101,8 +547454,8 @@
     "egg_groups_text": "Water 1, Dragon",
     "hatch_steps": 10240,
     "hatch_steps_text": "10,240 steps",
-    "color": "Brown",
-    "shape": "BipedalTail",
+    "color": "Blue",
+    "shape": "Serpentine",
     "habitat": "WatersEdge",
     "pokedex": "In order to adapt to the heat, Dragonite in Azori shed weight and embraced their dormant psychic powers to enable them to fly further and for longer.",
     "wild_items": [
@@ -552091,7 +552444,7 @@
     "color": "Blue",
     "shape": "Winged",
     "habitat": "",
-    "pokedex": "Azordin will often appear after times of great strife to help people rebuild. Its ice is cold enough to freeze even magma. instantly.",
+    "pokedex": "Azordin will often appear after times of great strife to help people rebuild. Its ice is cold enough to freeze even magma instantly.",
     "wild_items": [],
     "wild_items_text": "",
     "has_wild_items": false,
@@ -587281,17 +587634,9 @@
         "rarity": "Common",
         "chance": 50,
         "chance_text": "50%"
-      },
-      {
-        "id": "LEEK",
-        "name": "Leek",
-        "description": "An item to be held by Farfetch'd. It is a very long and stiff stalk of leek that boosts the critical-hit ratio.",
-        "rarity": "Uncommon",
-        "chance": 5,
-        "chance_text": "5%"
       }
     ],
-    "wild_items_text": "Leek (Common, 50%), Leek (Uncommon, 5%)",
+    "wild_items_text": "Leek (Common, 50%)",
     "has_wild_items": true,
     "locations": [
       {
@@ -587990,8 +588335,20 @@
       ]
     },
     "evolution": {
-      "next": [],
-      "final": []
+      "next": [
+        {
+          "species_id": "SIRFETCHD",
+          "name": "Sirfetch'd",
+          "method": "BattleDealCriticalHit",
+          "parameter": "3"
+        }
+      ],
+      "final": [
+        {
+          "species_id": "SIRFETCHD",
+          "name": "Sirfetch'd"
+        }
+      ]
     },
     "sprites": {
       "regular": "images/pokemon/FARFETCHD_1.png",
@@ -595374,7 +595731,7 @@
     "hatch_steps_text": "5,120 steps",
     "color": "Red",
     "shape": "Head",
-    "habitat": "Urban",
+    "habitat": "Grassland",
     "pokedex": "An enigmatic Pokémon that happens to bear a resemblance to a Poké Ball. When excited, it discharges the electric current it has stored in its belly, then lets out a great, uproarious laugh.",
     "wild_items": [],
     "wild_items_text": "",
@@ -595990,16 +596347,16 @@
     "evolution": {
       "next": [
         {
-          "species_id": "ELECTRODE",
-          "name": "Electrode",
-          "method": "Level",
-          "parameter": "30"
+          "species_id": "ELECTRODE_1",
+          "name": "Electrode Hisuian",
+          "method": "Item",
+          "parameter": "LEAFSTONE"
         }
       ],
       "final": [
         {
-          "species_id": "ELECTRODE",
-          "name": "Electrode"
+          "species_id": "ELECTRODE_1",
+          "name": "Electrode Hisuian"
         }
       ]
     },
@@ -596773,7 +597130,7 @@
     "hatch_steps_text": "5,120 steps",
     "color": "Red",
     "shape": "Head",
-    "habitat": "Urban",
+    "habitat": "Grassland",
     "pokedex": "The tissue on the surface of its body is curiously similar in composition to an Apricorn. When irritated, this Pokémon lets loose an electric current equal to 20 lightning bolts.",
     "wild_items": [],
     "wild_items_text": "",
@@ -604816,8 +605173,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 12,
         "encounter_rate": 12,
         "encounter_rate_text": "12%",
@@ -604827,8 +605184,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
@@ -606039,8 +606396,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "OldRod",
+        "method_rate": null,
         "chance": 25,
         "encounter_rate": 25,
         "encounter_rate_text": "25%",
@@ -606050,8 +606407,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 13,
         "encounter_rate": 13,
         "encounter_rate_text": "13%",
@@ -606061,8 +606418,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 9,
         "encounter_rate": 9,
         "encounter_rate_text": "9%",
@@ -607735,8 +608092,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
@@ -612040,7 +612397,7 @@
     "egg_groups_text": "Human-Like",
     "hatch_steps": 6400,
     "hatch_steps_text": "6,400 steps",
-    "color": "Pink",
+    "color": "White",
     "shape": "Bipedal",
     "habitat": "Urban",
     "pokedex": "Its talent is tap-dancing. It can also manipulate temperatures to create a floor of ice, which this Pokémon can kick up to use as a barrier.",
@@ -613475,8 +613832,20 @@
       ]
     },
     "evolution": {
-      "next": [],
-      "final": []
+      "next": [
+        {
+          "species_id": "MRRIME",
+          "name": "Mr. Rime",
+          "method": "Level",
+          "parameter": "42"
+        }
+      ],
+      "final": [
+        {
+          "species_id": "MRRIME",
+          "name": "Mr. Rime"
+        }
+      ]
     },
     "sprites": {
       "regular": "images/pokemon/MRMIME_1.png",
@@ -617011,8 +617380,8 @@
       {
         "map_id": "303",
         "location": "Ruin Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 20,
         "encounter_rate": 20,
         "encounter_rate_text": "20%",
@@ -618950,8 +619319,8 @@
       {
         "map_id": "303",
         "location": "Ruin Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 20,
         "encounter_rate": 20,
         "encounter_rate_text": "20%",
@@ -623993,7 +624362,7 @@
     "egg_groups_text": "Undiscovered",
     "hatch_steps": 20480,
     "hatch_steps_text": "20,480 steps",
-    "color": "Blue",
+    "color": "Purple",
     "shape": "Winged",
     "habitat": "Rare",
     "pokedex": "Its feather-like blades are composed of psychic energy and can shear through thick iron sheets as if they were paper.",
@@ -626740,7 +627109,7 @@
     "egg_groups_text": "Undiscovered",
     "hatch_steps": 20480,
     "hatch_steps_text": "20,480 steps",
-    "color": "Yellow",
+    "color": "Red",
     "shape": "Winged",
     "habitat": "Rare",
     "pokedex": "This Pokémon's sinister, flame-like aura will consume the spirit of any creature it hits. Victims become burned-out shadows of themselves.",
@@ -654154,9 +654523,9 @@
         "location": "Ancient Cave",
         "method": "Cave",
         "method_rate": 3,
-        "chance": 3,
-        "encounter_rate": 3,
-        "encounter_rate_text": "3%",
+        "chance": 84,
+        "encounter_rate": 84,
+        "encounter_rate_text": "84%",
         "min_level": 48,
         "max_level": 55
       }
@@ -662407,8 +662776,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 12,
         "encounter_rate": 12,
         "encounter_rate_text": "12%",
@@ -662418,8 +662787,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
@@ -663338,8 +663707,8 @@
       {
         "map_id": "303",
         "location": "Ruin Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 50,
         "encounter_rate": 50,
         "encounter_rate_text": "50%",
@@ -663349,8 +663718,8 @@
       {
         "map_id": "303",
         "location": "Ruin Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 20,
         "encounter_rate": 20,
         "encounter_rate_text": "20%",
@@ -664134,8 +664503,20 @@
       ]
     },
     "evolution": {
-      "next": [],
-      "final": []
+      "next": [
+        {
+          "species_id": "OVERQWIL",
+          "name": "Overqwil",
+          "method": "LevelUseMoveCount",
+          "parameter": "BARBBARRAGE"
+        }
+      ],
+      "final": [
+        {
+          "species_id": "OVERQWIL",
+          "name": "Overqwil"
+        }
+      ]
     },
     "sprites": {
       "regular": "images/pokemon/QWILFISH_1.png",
@@ -665776,8 +666157,8 @@
       {
         "map_id": "296",
         "location": "Beach Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 30,
         "encounter_rate": 30,
         "encounter_rate_text": "30%",
@@ -665787,8 +666168,8 @@
       {
         "map_id": "296",
         "location": "Beach Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 25,
         "encounter_rate": 25,
         "encounter_rate_text": "25%",
@@ -666888,7 +667269,7 @@
     "egg_groups_text": "Water 1, Water 3",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Pink",
+    "color": "White",
     "shape": "Insectoid",
     "habitat": "Sea",
     "pokedex": "Sudden climate change wiped out this ancient kind of Corsola. This Pokémon absorbs others' life-force through its branches.",
@@ -667769,8 +668150,20 @@
       ]
     },
     "evolution": {
-      "next": [],
-      "final": []
+      "next": [
+        {
+          "species_id": "CURSOLA",
+          "name": "Cursola",
+          "method": "Level",
+          "parameter": "38"
+        }
+      ],
+      "final": [
+        {
+          "species_id": "CURSOLA",
+          "name": "Cursola"
+        }
+      ]
     },
     "sprites": {
       "regular": "images/pokemon/CORSOLA_1.png",
@@ -667886,8 +668279,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 12,
         "encounter_rate": 12,
         "encounter_rate_text": "12%",
@@ -667897,8 +668290,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
@@ -720862,8 +721255,8 @@
       {
         "map_id": "305",
         "location": "Arctic Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 35,
         "encounter_rate": 35,
         "encounter_rate_text": "35%",
@@ -720873,8 +721266,8 @@
       {
         "map_id": "305",
         "location": "Arctic Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 30,
         "encounter_rate": 30,
         "encounter_rate_text": "30%",
@@ -738212,8 +738605,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
@@ -740365,8 +740758,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
@@ -741415,8 +741808,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "OldRod",
+        "method_rate": null,
         "chance": 25,
         "encounter_rate": 25,
         "encounter_rate_text": "25%",
@@ -741426,8 +741819,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 13,
         "encounter_rate": 13,
         "encounter_rate_text": "13%",
@@ -741437,8 +741830,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 9,
         "encounter_rate": 9,
         "encounter_rate_text": "9%",
@@ -763215,8 +763608,8 @@
       {
         "map_id": "305",
         "location": "Arctic Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 10,
         "encounter_rate": 10,
         "encounter_rate_text": "10%",
@@ -782863,8 +783256,8 @@
       {
         "map_id": "305",
         "location": "Arctic Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "OldRod",
+        "method_rate": null,
         "chance": 100,
         "encounter_rate": 100,
         "encounter_rate_text": "100%",
@@ -782874,8 +783267,8 @@
       {
         "map_id": "305",
         "location": "Arctic Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 35,
         "encounter_rate": 35,
         "encounter_rate_text": "35%",
@@ -782885,8 +783278,8 @@
       {
         "map_id": "305",
         "location": "Arctic Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 30,
         "encounter_rate": 30,
         "encounter_rate_text": "30%",
@@ -863544,8 +863937,19 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
+        "method": "Water) (Blue-Striped Form",
         "method_rate": 3,
+        "chance": 3,
+        "encounter_rate": 3,
+        "encounter_rate_text": "3%",
+        "min_level": 48,
+        "max_level": 55
+      },
+      {
+        "map_id": "298",
+        "location": "Ocean Zone",
+        "method": "OldRod",
+        "method_rate": null,
         "chance": 25,
         "encounter_rate": 25,
         "encounter_rate_text": "25%",
@@ -863555,8 +863959,19 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "OldRod) (Blue-Striped Form",
+        "method_rate": null,
+        "chance": 25,
+        "encounter_rate": 25,
+        "encounter_rate_text": "25%",
+        "min_level": 48,
+        "max_level": 55
+      },
+      {
+        "map_id": "298",
+        "location": "Ocean Zone",
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 13,
         "encounter_rate": 13,
         "encounter_rate_text": "13%",
@@ -863566,11 +863981,77 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod) (Blue-Striped Form",
+        "method_rate": null,
+        "chance": 13,
+        "encounter_rate": 13,
+        "encounter_rate_text": "13%",
+        "min_level": 48,
+        "max_level": 55
+      },
+      {
+        "map_id": "298",
+        "location": "Ocean Zone",
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 9,
         "encounter_rate": 9,
         "encounter_rate_text": "9%",
+        "min_level": 48,
+        "max_level": 55
+      },
+      {
+        "map_id": "298",
+        "location": "Ocean Zone",
+        "method": "SuperRod) (Blue-Striped Form",
+        "method_rate": null,
+        "chance": 9,
+        "encounter_rate": 9,
+        "encounter_rate_text": "9%",
+        "min_level": 48,
+        "max_level": 55
+      },
+      {
+        "map_id": "303",
+        "location": "Ruin Zone",
+        "method": "Water) (White-Striped Form",
+        "method_rate": 3,
+        "chance": 16,
+        "encounter_rate": 16,
+        "encounter_rate_text": "16%",
+        "min_level": 48,
+        "max_level": 55
+      },
+      {
+        "map_id": "303",
+        "location": "Ruin Zone",
+        "method": "OldRod) (White-Striped Form",
+        "method_rate": null,
+        "chance": 100,
+        "encounter_rate": 100,
+        "encounter_rate_text": "100%",
+        "min_level": 48,
+        "max_level": 55
+      },
+      {
+        "map_id": "303",
+        "location": "Ruin Zone",
+        "method": "GoodRod) (White-Striped Form",
+        "method_rate": null,
+        "chance": 50,
+        "encounter_rate": 50,
+        "encounter_rate_text": "50%",
+        "min_level": 48,
+        "max_level": 55
+      },
+      {
+        "map_id": "303",
+        "location": "Ruin Zone",
+        "method": "SuperRod) (White-Striped Form",
+        "method_rate": null,
+        "chance": 20,
+        "encounter_rate": 20,
+        "encounter_rate_text": "20%",
         "min_level": 48,
         "max_level": 55
       }
@@ -867344,16 +867825,16 @@
     "evolution": {
       "next": [
         {
-          "species_id": "COFAGRIGUS",
-          "name": "Cofagrigus",
+          "species_id": "RUNERIGUS",
+          "name": "Runerigus",
           "method": "Level",
-          "parameter": "34"
+          "parameter": "49"
         }
       ],
       "final": [
         {
-          "species_id": "COFAGRIGUS",
-          "name": "Cofagrigus"
+          "species_id": "RUNERIGUS",
+          "name": "Runerigus"
         }
       ]
     },
@@ -868479,8 +868960,8 @@
       {
         "map_id": "303",
         "location": "Ruin Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 20,
         "encounter_rate": 20,
         "encounter_rate_text": "20%",
@@ -875021,7 +875502,7 @@
     "egg_groups_text": "Field",
     "hatch_steps": 6400,
     "hatch_steps_text": "6,400 steps",
-    "color": "Gray",
+    "color": "White",
     "shape": "Quadruped",
     "habitat": "Forest",
     "pokedex": "A once-departed soul, returned to life in Hisui. Derives power from resentment, which rises as energy atop its head and takes on the forms of foes. In this way, Zorua vents lingering malice.",
@@ -889631,8 +890112,8 @@
       {
         "map_id": "296",
         "location": "Beach Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "OldRod",
+        "method_rate": null,
         "chance": 100,
         "encounter_rate": 100,
         "encounter_rate_text": "100%",
@@ -889642,8 +890123,8 @@
       {
         "map_id": "296",
         "location": "Beach Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 40,
         "encounter_rate": 40,
         "encounter_rate_text": "40%",
@@ -889653,8 +890134,8 @@
       {
         "map_id": "296",
         "location": "Beach Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 25,
         "encounter_rate": 25,
         "encounter_rate_text": "25%",
@@ -891479,8 +891960,8 @@
       {
         "map_id": "296",
         "location": "Beach Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 30,
         "encounter_rate": 30,
         "encounter_rate_text": "30%",
@@ -891490,8 +891971,8 @@
       {
         "map_id": "296",
         "location": "Beach Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 25,
         "encounter_rate": 25,
         "encounter_rate_text": "25%",
@@ -900889,9 +901370,9 @@
     "egg_groups_text": "Water 1, Amorphous",
     "hatch_steps": 5120,
     "hatch_steps_text": "5,120 steps",
-    "color": "Brown",
+    "color": "Green",
     "shape": "Finned",
-    "habitat": "Sea",
+    "habitat": "Cave",
     "pokedex": "Its conspicuous lips lure prey in as it lies in wait in the mud. When prey gets close, Stunfisk clamps its jagged steel fins down on them.",
     "wild_items": [
       {
@@ -982412,8 +982893,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
@@ -1025306,7 +1025787,19 @@
     ],
     "wild_items_text": "Red Nectar (Uncommon, 5%)",
     "has_wild_items": true,
-    "locations": [],
+    "locations": [
+      {
+        "map_id": "300",
+        "location": "Flower Zone",
+        "method": "Land) (Pom-Pom Style Form",
+        "method_rate": 16,
+        "chance": 4,
+        "encounter_rate": 4,
+        "encounter_rate_text": "4%",
+        "min_level": 48,
+        "max_level": 55
+      }
+    ],
     "moves": {
       "level_up": [
         {
@@ -1067924,8 +1068417,8 @@
       {
         "map_id": "305",
         "location": "Arctic Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 30,
         "encounter_rate": 30,
         "encounter_rate_text": "30%",
@@ -1067935,8 +1068428,8 @@
       {
         "map_id": "305",
         "location": "Arctic Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 30,
         "encounter_rate": 30,
         "encounter_rate_text": "30%",
@@ -1118791,8 +1119284,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "GoodRod",
+        "method_rate": null,
         "chance": 12,
         "encounter_rate": 12,
         "encounter_rate_text": "12%",
@@ -1118802,8 +1119295,8 @@
       {
         "map_id": "298",
         "location": "Ocean Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 8,
         "encounter_rate": 8,
         "encounter_rate_text": "8%",
@@ -1186422,8 +1186915,8 @@
       ],
       "final": [
         {
-          "species_id": "PAWMO",
-          "name": "Pawmo"
+          "species_id": "PAWMOT",
+          "name": "Pawmot"
         }
       ]
     },
@@ -1187140,8 +1187633,20 @@
       "egg": []
     },
     "evolution": {
-      "next": [],
-      "final": []
+      "next": [
+        {
+          "species_id": "PAWMOT",
+          "name": "Pawmot",
+          "method": "Happiness",
+          "parameter": ""
+        }
+      ],
+      "final": [
+        {
+          "species_id": "PAWMOT",
+          "name": "Pawmot"
+        }
+      ]
     },
     "sprites": {
       "regular": "images/pokemon/PAWMO.png",
@@ -1206044,8 +1206549,20 @@
       ]
     },
     "evolution": {
-      "next": [],
-      "final": []
+      "next": [
+        {
+          "species_id": "BRAMBLEGHAST",
+          "name": "Brambleghast",
+          "method": "Happiness",
+          "parameter": ""
+        }
+      ],
+      "final": [
+        {
+          "species_id": "BRAMBLEGHAST",
+          "name": "Brambleghast"
+        }
+      ]
     },
     "sprites": {
       "regular": "images/pokemon/BRAMBLIN.png",
@@ -1211440,8 +1211957,20 @@
       ]
     },
     "evolution": {
-      "next": [],
-      "final": []
+      "next": [
+        {
+          "species_id": "RABSCA",
+          "name": "Rabsca",
+          "method": "Happiness",
+          "parameter": ""
+        }
+      ],
+      "final": [
+        {
+          "species_id": "RABSCA",
+          "name": "Rabsca"
+        }
+      ]
     },
     "sprites": {
       "regular": "images/pokemon/RELLOR.png",
@@ -1217792,8 +1218321,8 @@
       {
         "map_id": "296",
         "location": "Beach Zone",
-        "method": "Water",
-        "method_rate": 3,
+        "method": "SuperRod",
+        "method_rate": null,
         "chance": 25,
         "encounter_rate": 25,
         "encounter_rate_text": "25%",

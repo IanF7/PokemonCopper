@@ -11,7 +11,6 @@
         "version": "0 Badges",
         "battle_type": "",
         "items": [
-          "Potion",
           "Potion"
         ],
         "pokemon": [
@@ -3180,7 +3179,7 @@
               }
             ],
             "gender": "Male",
-            "ability_index": 1,
+            "ability_index": 2,
             "item": "Choice Band",
             "name": "Diablaze",
             "types": [
@@ -4220,8 +4219,8 @@
                 "name": "Will-O-Wisp"
               },
               {
-                "id": "GIGADRAIN",
-                "name": "Giga Drain"
+                "id": "HORNLEECH",
+                "name": "Horn Leech"
               }
             ],
             "gender": "Female",
@@ -6173,7 +6172,7 @@
               "BUG",
               "FLYING"
             ],
-            "ability": "Unaware"
+            "ability": "Oblivious"
           },
           {
             "id": "PARAPOSSUM",
@@ -6338,12 +6337,12 @@
                 "name": "Stealth Rock"
               },
               {
-                "id": "EARTHQUAKE",
-                "name": "Earthquake"
-              },
-              {
                 "id": "ROCKSLIDE",
                 "name": "Rock Slide"
+              },
+              {
+                "id": "EARTHQUAKE",
+                "name": "Earthquake"
               }
             ],
             "gender": "Female",
@@ -8004,7 +8003,7 @@
               }
             ],
             "gender": "Female",
-            "item": "Jinglongite",
+            "item": "Jinlongite",
             "name": "Jinlong",
             "types": [
               "DRAGON",
@@ -8200,7 +8199,7 @@
               }
             ],
             "gender": "Female",
-            "item": "Jinglongite",
+            "item": "Jinlongite",
             "name": "Jinlong",
             "types": [
               "DRAGON",
@@ -14228,8 +14227,8 @@
             "level": 54,
             "moves": [
               {
-                "id": "IRONHEAD",
-                "name": "Iron Head"
+                "id": "HEAVYSLAM",
+                "name": "Heavy Slam"
               },
               {
                 "id": "ROCKSLIDE",
@@ -14240,8 +14239,8 @@
                 "name": "Earthquake"
               },
               {
-                "id": "ICEPUNCH",
-                "name": "Ice Punch"
+                "id": "BODYPRESS",
+                "name": "Body Press"
               }
             ],
             "gender": "Female",
@@ -14251,7 +14250,8 @@
               "STEEL",
               "ROCK"
             ],
-            "ability": "Rock Head"
+            "ability": "Rock Head",
+            "item": "Scope Lens"
           },
           {
             "id": "DIABLAZE",
@@ -16536,34 +16536,34 @@
             "ability": "Sand Veil"
           },
           {
-            "id": "GARDEVOIR",
-            "species_id": "GARDEVOIR",
-            "level": 53,
+            "id": "VOLCARONA",
+            "species_id": "VOLCARONA",
+            "level": 55,
             "moves": [
               {
-                "id": "PSYCHIC",
-                "name": "Psychic"
+                "id": "OVERHEAT",
+                "name": "Overheat"
               },
               {
-                "id": "MOONBLAST",
-                "name": "Moonblast"
+                "id": "HYPERBEAM",
+                "name": "Hyper Beam"
               },
               {
-                "id": "SHADOWBALL",
-                "name": "Shadow Ball"
+                "id": "BUGBUZZ",
+                "name": "Bug Buzz"
               },
               {
-                "id": "DRAININGKISS",
-                "name": "Draining Kiss"
+                "id": "QUIVERDANCE",
+                "name": "Quiver Dance"
               }
             ],
-            "gender": "Female",
-            "name": "Gardevoir",
+            "gender": "Male",
+            "name": "Volcarona",
             "types": [
-              "PSYCHIC",
-              "FAIRY"
+              "BUG",
+              "FIRE"
             ],
-            "ability": "Synchronize"
+            "ability": "Flame Body"
           },
           {
             "id": "PHANTOHM",
@@ -16730,35 +16730,35 @@
             "ability": "Sand Veil"
           },
           {
-            "id": "GARDEVOIR",
-            "species_id": "GARDEVOIR",
+            "id": "VOLCARONA",
+            "species_id": "VOLCARONA",
             "level": 72,
             "moves": [
               {
-                "id": "PSYCHIC",
-                "name": "Psychic"
+                "id": "FIREBLAST",
+                "name": "Fire Blast"
               },
               {
-                "id": "MOONBLAST",
-                "name": "Moonblast"
+                "id": "GIGADRAIN",
+                "name": "Giga Drain"
               },
               {
-                "id": "SHADOWBALL",
-                "name": "Shadow Ball"
+                "id": "BUGBUZZ",
+                "name": "Bug Buzz"
               },
               {
-                "id": "DRAININGKISS",
-                "name": "Draining Kiss"
+                "id": "QUIVERDANCE",
+                "name": "Quiver Dance"
               }
             ],
-            "gender": "Female",
-            "item": "Choice Scarf",
-            "name": "Gardevoir",
+            "gender": "Male",
+            "item": "Charti Berry",
+            "name": "Volcarona",
             "types": [
-              "PSYCHIC",
-              "FAIRY"
+              "BUG",
+              "FIRE"
             ],
-            "ability": "Synchronize"
+            "ability": "Flame Body"
           },
           {
             "id": "PHANTOHM",
@@ -16916,7 +16916,7 @@
               "PSYCHIC",
               "POISON"
             ],
-            "ability": "Poison Point"
+            "ability": "Long Reach"
           }
         ]
       },
