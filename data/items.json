@@ -2573,7 +2573,9 @@
     "name": "Gracidea",
     "id": "GRACIDEA",
     "description": "A flower sometimes bundled in bouquets to convey gratitude on special occasions like birthdays.",
-    "locations": [],
+    "locations": [
+      "Ancient Cave Vendor (Azori Terrarium)"
+    ],
     "namePlural": "Gracideas",
     "pocket": "8",
     "price": "0",
@@ -5351,7 +5353,6 @@
     "description": "A candy that is packed with energy. It raises the level of a single Pokémon by one.",
     "locations": [
       "Jepitur Dept Store Floor 2",
-      "Trash Cans (10)",
       "Pokemarts (Post Game)",
       "Rasm Game Corner (Prize Vendor)"
     ],
