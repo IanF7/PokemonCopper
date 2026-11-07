@@ -180,6 +180,68 @@
     .trailer-link a:hover {
       color: #9fd6ff;
     }
+
+    /* Upcoming update announcement */
+    .update-announcement {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      padding: 30px 24px;
+      background: #181818;
+      border: 1px solid #c87533;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .update-label {
+      color: #e08b4a;
+      font-size: 0.85rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .update-announcement h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .update-details {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+
+    .update-trailer {
+      display: inline-block;
+      text-decoration: none;
+      color: #e08b4a;
+      border: 2px solid #e08b4a;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .update-trailer:hover {
+      background: #e08b4a;
+      color: #111;
+    }
+
+    @media (max-width: 700px) {
+      .update-announcement {
+        padding: 24px 18px;
+      }
+
+      .update-announcement h2 {
+        font-size: 1.6rem;
+      }
+
+      .update-details {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 
@@ -202,6 +264,15 @@
     <div class="trailer-link">
       <a href="https://youtu.be/OZwxlhL_mUo?si=evJvYeDne2FfWh-P" target="_blank" rel="noopener noreferrer">
         Check out the Trailer Here!
+      </a>
+    </div>
+
+    <div class="update-announcement">
+      <p class="update-label">Coming Soon</p>
+      <h2>The Battle Frontier Update</h2>
+      <p class="update-details">Pokémon Copper v2.0.0 &middot; Releases December 12th, 2026</p>
+      <a class="update-trailer" href="https://youtu.be/t4d3iieZKAE" target="_blank" rel="noopener noreferrer">
+        &#9654; Watch the Trailer
       </a>
     </div>
 
